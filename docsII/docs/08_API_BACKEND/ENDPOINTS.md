@@ -1,0 +1,2 @@
+# ENDPOINTS
+Rutas del sistema

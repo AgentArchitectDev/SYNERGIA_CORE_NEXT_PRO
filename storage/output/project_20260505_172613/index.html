@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Proyecto IA | </title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@900&display=swap" rel="stylesheet">
+
+<style>
+body { background:#000; color:#fff; font-family:'Space Grotesk',sans-serif; overflow-x:hidden;}
+.retro { font-family:'Bungee',cursive;}
+.neon-border { border:2px solid #111; transition:.4s; overflow:hidden;}
+.neon-border:hover { border-color:#00ff41; box-shadow:0 0 20px rgba(0,255,65,0.2);}
+.img-reveal { filter:grayscale(100%); transition:.6s;}
+.neon-border:hover .img-reveal { filter:grayscale(0%); transform:scale(1.05);}
+
+@keyframes slide {
+    0% {transform:translateX(0);}
+    100% {transform:translateX(-50%);}
+}
+.marquee {
+    display:flex;
+    animation:slide 15s linear infinite;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="p-6 border-b border-white/10 flex justify-between sticky top-0 bg-black z-50">
+    <div class="retro text-2xl">Proyecto IA</div>
+    <button class="bg-white text-black px-6 py-2 text-xs font-bold">
+        
+    </button>
+</nav>
+
+<!-- HERO -->
+<section class="h-screen flex flex-col justify-center px-10">
+    <h1 class="retro text-6xl md:text-[9rem] leading-none text-[#00ff41]">
+        Proyecto generado
+    </h1>
+    <p class="text-xl italic text-gray-500 mt-4 max-w-xl">
+        Venta de mates premium en Córdoba estilo artesanal moderno
+    </p>
+</section>
+
+<!-- MENU GRID -->
+<section class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- ITEM 1 -->
+    <div class="neon-border p-4 bg-[#0a0a0a]">
+        <div class="h-80 overflow-hidden mb-4">
+            <img src="" class="img-reveal w-full h-full object-cover">
+        </div>
+        <div class="flex justify-between">
+            <span class="retro text-lg"></span>
+            <span class="text-[#00ff41]"></span>
+        </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="neon-border p-4 bg-[#0a0a0a]">
+        <div class="h-80 overflow-hidden mb-4">
+            <img src="" class="img-reveal w-full h-full object-cover">
+        </div>
+        <div class="flex justify-between">
+            <span class="retro text-lg"></span>
+            <span class="text-[#00ff41]"></span>
+        </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="neon-border p-4 bg-[#0a0a0a]">
+        <div class="h-80 overflow-hidden mb-4">
+            <img src="" class="img-reveal w-full h-full object-cover">
+        </div>
+        <div class="flex justify-between">
+            <span class="retro text-lg"></span>
+            <span class="text-[#00ff41]"></span>
+        </div>
+    </div>
+
+</section>
+
+<!-- MARQUEE -->
+<div class="overflow-hidden py-10">
+    <div class="marquee bg-[#00ff41] text-black text-3xl font-black uppercase py-4">
+        <span class="mx-6"></span>
+        <span class="mx-6"></span>
+    </div>
+</div>
+
+<!-- CTA FINAL -->
+<section class="text-center py-20 border-t border-white/10">
+    <h2 class="text-4xl font-black mb-6">Contactanos</h2>
+    <button class="bg-[#00ff41] text-black px-10 py-4 font-bold rounded-full">
+        Quiero info
+    </button>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center text-xs text-gray-500 py-10 border-t border-white/10">
+    © 2026 Proyecto IA — 
+</footer>
+
+</body>
+</html>

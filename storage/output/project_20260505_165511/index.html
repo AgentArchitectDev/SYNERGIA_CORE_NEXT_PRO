@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SYNERGIA SPACE | Arquitectura de Vanguardia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;900&family=Syne:wght@400;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<style>
+:root {
+    --bg: #050505;
+    --accent: #f4ff4d;
+    --card: #111;
+    --border: #222;
+}
+
+body {
+    background: var(--bg);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* MARQUEE */
+.marquee {
+    overflow: hidden;
+    border-bottom: 1px solid #222;
+}
+.marquee-inner {
+    display: flex;
+    width: 200%;
+    animation: scroll 25s linear infinite;
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* GRID */
+.bento {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5rem;
+}
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    transition: .4s;
+}
+.card:hover {
+    border-color: var(--accent);
+}
+
+/* IMAGES */
+.img {
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.card:hover .img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MARQUEE -->
+<div class="marquee py-3">
+    <div class="marquee-inner text-xs tracking-widest uppercase text-gray-500">
+        <span class="mx-6">Arquitectura • Diseño 3D • IA Generativa • Córdoba → Mundo</span>
+        <span class="mx-6">Arquitectura • Diseño 3D • IA Generativa • Córdoba → Mundo</span>
+    </div>
+</div>
+
+<!-- NAV -->
+<nav class="flex justify-between items-center p-6">
+    <h1 class="font-black text-2xl">SYNERGIA SPACE</h1>
+    <button class="bg-white text-black px-6 py-2 rounded-full text-xs font-bold">
+        Contacto
+    </button>
+</nav>
+
+<!-- HERO -->
+<section class="max-w-6xl mx-auto py-20">
+    <h1 class="text-6xl md:text-9xl font-black leading-none mb-6">
+        Arquitectura que impacta
+    </h1>
+    <p class="text-gray-400 max-w-xl">
+        Diseñamos experiencias, no espacios
+    </p>
+</section>
+
+<!-- GRID -->
+<section class="bento max-w-6xl mx-auto mb-32">
+
+    <div class="card col-span-2 h-[400px]">
+        <img src="" class="img w-full h-full object-cover">
+    </div>
+
+    <div class="card col-span-2 h-[400px] p-8 flex flex-col justify-end">
+        <h3 class="text-3xl font-black"></h3>
+    </div>
+
+    <div class="card col-span-4 h-[200px] p-8 flex items-center justify-between">
+        <p></p>
+        <span class="text-[#f4ff4d] font-bold">→</span>
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="text-center py-32 border-t border-gray-800">
+    <h2 class="text-5xl font-black mb-6">Trabajemos juntos</h2>
+    <button class="bg-[#f4ff4d] text-black px-10 py-4 rounded-full font-bold">
+        Solicitar proyecto
+    </button>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-xs text-gray-500 border-t border-gray-800">
+    © 2026 SYNERGIA SPACE — Córdoba, Argentina
+</footer>
+
+<script>
+ScrollReveal().reveal('section, .card', {
+    delay: 200,
+    distance: '40px',
+    duration: 800,
+    origin: 'bottom'
+});
+</script>
+
+</body>
+</html>

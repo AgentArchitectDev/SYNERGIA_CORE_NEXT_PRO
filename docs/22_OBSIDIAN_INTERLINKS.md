@@ -1,0 +1,6 @@
+[[CORE]]
+[[BACKEND]]
+[[AI]]
+[[RENDER]]
+[[EDITOR]]
+[[BLOCKS]]

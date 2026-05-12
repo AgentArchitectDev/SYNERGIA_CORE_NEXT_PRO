@@ -1,0 +1,20 @@
+{
+  "project_id": "prompt_generated",
+  "template": "05_gastronomia_experiencial",
+  "data": {
+    "brand_name": "Gastro AI",
+    "hero_title": "Experiencia Gastronómica",
+    "hero_subtitle": "Venta de mates premium en Córdoba estilo artesanal moderno",
+    "item_1_img": "https://images.unsplash.com/photo-1544025162-d76694265947",
+    "item_2_img": "https://images.unsplash.com/photo-1551218808-94e220e084d2",
+    "item_3_img": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+    "item_2_name": "Menú Especial",
+    "item_2_price": "$10.000",
+    "item_3_name": "Experiencia Premium",
+    "item_3_price": "$15.000",
+    "marquee_text": "RESERVAS ABIERTAS • CUPOS LIMITADOS",
+    "cta_title": "Reservar ahora",
+    "cta_button": "Quiero mi mesa",
+    "location": "Córdoba, Argentina"
+  }
+}

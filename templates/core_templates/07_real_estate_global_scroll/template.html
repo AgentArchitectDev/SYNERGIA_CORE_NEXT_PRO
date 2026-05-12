@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Synergia Lands | Global Estate</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Montserrat:wght@100;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    background:#050505;
+    color:#fff;
+    font-family:'Montserrat',sans-serif;
+    margin:0;
+    overflow:hidden;
+}
+
+.serif{font-family:'Cormorant Garamond',serif;}
+
+.main-container{
+    height:100vh;
+    overflow-y:scroll;
+    scroll-snap-type:y mandatory;
+}
+
+.section{
+    height:100vh;
+    scroll-snap-align:start;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    position:relative;
+}
+
+/* IMÁGENES EFECTO */
+.img-wrap{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#111;
+}
+
+.img-box{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:grayscale(100%) brightness(0.4);
+    transition:1.2s;
+}
+
+.section:hover .img-box{
+    filter:grayscale(0%) brightness(1);
+    transform:scale(1.05);
+}
+
+/* MARQUEE */
+.marquee{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    overflow:hidden;
+}
+
+.marquee span{
+    display:inline-block;
+    white-space:nowrap;
+    padding:15px 0;
+    font-size:12px;
+    letter-spacing:6px;
+    color:#00ff41;
+    animation:scroll 20s linear infinite;
+}
+
+@keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+}
+
+.social-link{
+    color:rgba(255,255,255,0.4);
+    transition:.4s;
+}
+.social-link:hover{
+    color:#00ff41;
+    transform:translateY(-3px);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full p-8 flex justify-between z-[100] mix-blend-difference">
+    <div class="text-[12px] font-black tracking-[8px] uppercase">
+        {{brand | default:"SYNERGIA LANDS"}}
+    </div>
+
+    <div class="flex gap-6">
+        <i class="fab fa-instagram social-link"></i>
+        <i class="fab fa-linkedin social-link"></i>
+        <i class="fab fa-whatsapp social-link"></i>
+    </div>
+</nav>
+
+<div class="main-container">
+
+<!-- HERO -->
+<section class="section">
+    <div class="grid md:grid-cols-12 gap-10 w-full">
+
+        <div class="md:col-span-7">
+            <h1 class="text-[8vw] font-black leading-[0.85]">
+                {{titulo | default:"Tierra"}}<br>
+                <span class="serif italic text-gray-400 lowercase font-light">
+                    {{subtitulo | default:"sin fronteras"}}
+                </span>
+            </h1>
+
+            <p class="mt-8 text-[10px] tracking-[6px] text-[#00ff41] uppercase">
+                {{locations | default:"Córdoba • Miami • Madrid"}}
+            </p>
+        </div>
+
+        <div class="md:col-span-5 img-wrap h-[60vh] rounded-2xl">
+            <img src="{{hero_img | default:'https://images.unsplash.com/photo-1500382017468-9049fed747ef'}}" class="img-box">
+        </div>
+
+    </div>
+
+    <div class="marquee">
+        <span>
+            {{marquee | default:"SYNERGIA LANDS • GLOBAL REAL ESTATE • INVERSIONES • DESARROLLOS •"}}
+        </span>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section class="section bg-[#080808]">
+    <div class="w-full">
+        <h2 class="serif italic text-5xl mb-12">
+            {{team_title | default:"Nuestro Board"}}
+        </h2>
+
+        <div class="grid md:grid-cols-5 gap-4">
+
+            <div class="img-wrap h-64"><img src="{{team1 | default:'https://images.unsplash.com/photo-1560250097-0b93528c311a'}}" class="img-box"></div>
+            <div class="img-wrap h-64"><img src="{{team2 | default:'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2'}}" class="img-box"></div>
+            <div class="img-wrap h-64"><img src="{{team3 | default:'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7'}}" class="img-box"></div>
+            <div class="img-wrap h-64"><img src="{{team4 | default:'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e'}}" class="img-box"></div>
+            <div class="img-wrap h-64"><img src="{{team5 | default:'https://images.unsplash.com/photo-1580489944761-15a19d654956'}}" class="img-box"></div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LOCACIONES -->
+<section class="section bg-black !p-0">
+    <div class="grid md:grid-cols-2 w-full h-full">
+
+        <div class="relative group">
+            <img src="{{loc1 | default:'https://images.unsplash.com/photo-1533106497176-45ae19e68ba2'}}" class="img-box">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <h3 class="text-4xl font-black uppercase">
+                    {{loc1_name | default:"MIAMI"}}
+                </h3>
+            </div>
+        </div>
+
+        <div class="relative group border-l border-white/5">
+            <img src="{{loc2 | default:'https://images.unsplash.com/photo-1539037116277-4db20889f2d4'}}" class="img-box">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <h3 class="text-4xl font-black uppercase">
+                    {{loc2_name | default:"MADRID"}}
+                </h3>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- INTERIOR -->
+<section class="section">
+    <div class="w-full">
+
+        <p class="text-[#00ff41] text-[10px] tracking-[6px] mb-8 text-center uppercase">
+            {{interior_title | default:"Nodos estratégicos"}}
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 h-[50vh]">
+
+            <div class="img-wrap"><img src="{{int1 | default:'https://images.unsplash.com/photo-1592982537447-7440770cbfc9'}}" class="img-box"></div>
+            <div class="img-wrap"><img src="{{int2 | default:'https://images.unsplash.com/photo-1620138546344-7b2c0b057edc'}}" class="img-box"></div>
+            <div class="img-wrap"><img src="{{int3 | default:'https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0'}}" class="img-box"></div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section bg-black !p-0">
+    <div class="grid md:grid-cols-2 w-full h-full">
+
+        <div class="flex items-center justify-center">
+            <p class="text-center text-lg">
+                {{direccion | default:"Güemes, Córdoba"}}
+            </p>
+        </div>
+
+        <div class="flex flex-col justify-center p-20">
+            <h3 class="text-5xl font-black mb-6">
+                {{contact_title | default:"Conectemos"}}
+            </h3>
+
+            <p class="text-gray-400">
+                {{contact_desc | default:"Córdoba • Miami • Madrid • Uruguay"}}
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FINAL -->
+<section class="section">
+    <div class="text-center w-full">
+        <h2 class="text-[8vw] font-black">
+            {{final | default:"Global Heritage"}}
+        </h2>
+    </div>
+</section>
+
+</div>
+
+<!-- 🔧 SIMULADOR JSON (tu futuro engine) -->
+<script>
+const data = window.templateData || {};
+
+document.body.innerHTML = document.body.innerHTML.replace(/\{\{(.*?)\}\}/g, (_, key) => {
+    let parts = key.split('|');
+    let k = parts[0].trim();
+    let def = parts[1]?.replace('default:', '').replace(/"/g,'').trim();
+    return data[k] || def || '';
+});
+</script>
+
+</body>
+</html>

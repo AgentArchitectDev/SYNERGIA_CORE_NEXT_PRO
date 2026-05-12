@@ -1,0 +1,13 @@
+{
+  "name": "04 Arquitectura Interiorismo",
+  "category": "arquitectura",
+  "version": "1.0",
+  "sections": [
+    "hero",
+    "content",
+    "gallery",
+    "cta",
+    "footer"
+  ],
+  "status": "base_template"
+}

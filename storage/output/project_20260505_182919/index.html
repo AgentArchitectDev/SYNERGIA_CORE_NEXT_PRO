@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITULO}}</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<style>
+:root { --bg:#0b0f19; --card:#111827; --border:#1f2937; --blue:#3b82f6; }
+body { background:var(--bg); color:#e5e7eb; font-family:'Inter',sans-serif; }
+
+.hf-card { background:var(--card); border:1px solid var(--border); }
+.img-reveal { filter:grayscale(100%); transition:.6s; }
+.group:hover .img-reveal { filter:grayscale(0%); transform:scale(1.05); }
+
+.sidebar { border-left:1px solid var(--border); height:100vh; position:sticky; top:0; }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="h-16 border-b border-gray-800 px-6 flex justify-between items-center">
+
+<div class="flex gap-3 items-center">
+<span>{{EMOJI}}</span>
+<span class="font-bold">{{MARCA}} <span class="text-gray-500">{{SUBMARCA}}</span></span>
+</div>
+
+<button class="bg-blue-600 px-4 py-2 text-xs">{{CTA_NAV}}</button>
+
+</nav>
+
+<div class="flex">
+
+<!-- MAIN -->
+<main class="flex-1 p-10">
+
+<!-- HERO -->
+<section class="mb-20">
+<h1 class="text-5xl font-black mb-6">
+{{HERO_TITULO}} <br><span class="text-blue-500">{{HERO_RESALTADO}}</span>
+</h1>
+
+<p class="text-gray-500 max-w-xl">
+{{HERO_DESC}}
+</p>
+</section>
+
+<!-- ABOUT -->
+<section class="mb-20 grid md:grid-cols-2 gap-10">
+
+<div>
+<h2 class="text-xs text-blue-500 mb-4">{{ABOUT_TAG}}</h2>
+<p class="text-gray-300 mb-6">{{ABOUT_DESC}}</p>
+
+<div class="grid grid-cols-2 gap-4">
+<div class="hf-card p-4">
+<p class="text-xl">{{STAT_1}}</p>
+<p class="text-xs text-gray-500">{{STAT_1_LABEL}}</p>
+</div>
+<div class="hf-card p-4">
+<p class="text-xl">{{STAT_2}}</p>
+<p class="text-xs text-gray-500">{{STAT_2_LABEL}}</p>
+</div>
+</div>
+
+</div>
+
+<img src="{{ABOUT_IMG}}" class="rounded-xl">
+
+</section>
+
+<!-- STAFF -->
+<section class="mb-20">
+<h2 class="text-xs text-gray-500 mb-8">{{STAFF_TITULO}}</h2>
+
+<div class="grid md:grid-cols-4 gap-6">
+
+<div class="group text-center">
+<img src="{{STAFF_1_IMG}}" class="w-24 h-24 mx-auto rounded-full img-reveal">
+<h4>{{STAFF_1_NOMBRE}}</h4>
+<p class="text-xs text-blue-500">{{STAFF_1_ROL}}</p>
+</div>
+
+<div class="group text-center">
+<img src="{{STAFF_2_IMG}}" class="w-24 h-24 mx-auto rounded-full img-reveal">
+<h4>{{STAFF_2_NOMBRE}}</h4>
+<p class="text-xs text-blue-500">{{STAFF_2_ROL}}</p>
+</div>
+
+<div class="group text-center">
+<img src="{{STAFF_3_IMG}}" class="w-24 h-24 mx-auto rounded-full img-reveal">
+<h4>{{STAFF_3_NOMBRE}}</h4>
+<p class="text-xs text-blue-500">{{STAFF_3_ROL}}</p>
+</div>
+
+<div class="group text-center">
+<img src="{{STAFF_4_IMG}}" class="w-24 h-24 mx-auto rounded-full img-reveal">
+<h4>{{STAFF_4_NOMBRE}}</h4>
+<p class="text-xs text-blue-500">{{STAFF_4_ROL}}</p>
+</div>
+
+</div>
+</section>
+
+<!-- CLIENTS -->
+<section class="mb-20 text-center">
+<h2 class="text-xs text-gray-500 mb-6">{{CLIENTES_TITULO}}</h2>
+
+<div class="flex justify-center gap-8 text-3xl text-gray-500">
+<i class="fab fa-amazon"></i>
+<i class="fab fa-google"></i>
+<i class="fab fa-microsoft"></i>
+<i class="fab fa-apple"></i>
+</div>
+
+</section>
+
+<!-- LOCATION -->
+<section class="mb-20">
+<h2 class="text-xs text-gray-500 mb-6">{{UBICACION_TITULO}}</h2>
+
+<div class="hf-card p-6">
+<p class="font-bold">{{UBICACION_NOMBRE}}</p>
+<p class="text-gray-500 text-sm">{{UBICACION_DESC}}</p>
+</div>
+
+</section>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="hidden xl:block w-64 sidebar p-6">
+
+<h3 class="text-xs mb-6">{{SIDEBAR_TITULO}}</h3>
+
+<div class="space-y-4">
+<div class="hf-card p-4">
+<p class="text-xs">Uptime</p>
+<p>{{UPTIME}}</p>
+</div>
+
+<div class="hf-card p-4">
+<p class="text-xs">Proyectos</p>
+<p>{{PROYECTOS}}</p>
+</div>
+</div>
+
+</aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-gray-600 text-xs">
+{{FOOTER}}
+</footer>
+
+<script>
+ScrollReveal().reveal('*',{distance:'20px',duration:800});
+</script>
+
+</body>
+</html>

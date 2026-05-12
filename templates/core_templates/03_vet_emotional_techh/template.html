@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITULO}}</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<style>
+:root { --green:#2d5a27; --soft:#e8f5e8; --deep:#0a1a0a; }
+body { background:var(--soft); color:var(--deep); font-family:'Space Grotesk',sans-serif; }
+
+.serif { font-family:'Instrument Serif',serif; }
+
+.card { border-radius:40px; overflow:hidden; cursor:pointer; }
+.card img { filter:grayscale(100%); transition:.8s; }
+.card:hover img { filter:grayscale(0%); transform:scale(1.05); }
+
+.glass {
+  background:rgba(255,255,255,.6);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(0,0,0,.05);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full flex justify-between p-6 bg-white/60 backdrop-blur z-50">
+
+<div class="font-black text-xl">
+{{MARCA}}<span class="text-green-600">{{MARCA_RESALTADA}}</span>
+</div>
+
+<a href="{{WHATSAPP}}" class="bg-green-700 text-white px-6 py-2 rounded-full text-xs">
+{{CTA_URGENTE}}
+</a>
+
+</nav>
+
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+<h1 class="text-6xl md:text-8xl font-black mb-6">
+{{HERO_TITULO}} <br>
+<span class="serif text-green-700">{{HERO_RESALTADO}}</span>
+</h1>
+
+<p class="max-w-xl text-gray-500">
+{{HERO_DESC}}
+</p>
+
+</section>
+
+<!-- SERVICIOS -->
+<section class="py-20 px-6 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+<div class="card" onclick="openModal('{{S1_TIT}}','{{S1_DESC}}')">
+<img src="{{S1_IMG}}">
+<div class="glass p-6">
+<h3>{{S1_TIT}}</h3>
+</div>
+</div>
+
+<div class="card" onclick="openModal('{{S2_TIT}}','{{S2_DESC}}')">
+<img src="{{S2_IMG}}">
+<div class="glass p-6">
+<h3>{{S2_TIT}}</h3>
+</div>
+</div>
+
+<div class="card" onclick="openModal('{{S3_TIT}}','{{S3_DESC}}')">
+<img src="{{S3_IMG}}">
+<div class="glass p-6">
+<h3>{{S3_TIT}}</h3>
+</div>
+</div>
+
+</section>
+
+<!-- TECNOLOGIA -->
+<section class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+<div>
+<h2 class="text-4xl mb-6">{{TEC_TITULO}}</h2>
+<p class="text-gray-600 mb-6">{{TEC_DESC}}</p>
+
+<div class="grid grid-cols-2 gap-4">
+<div class="glass p-4">
+<p>{{TEC_1}}</p>
+</div>
+<div class="glass p-4">
+<p>{{TEC_2}}</p>
+</div>
+</div>
+
+</div>
+
+<img src="{{TEC_IMG}}" class="rounded-3xl">
+
+</section>
+
+<!-- CONTACTO -->
+<section class="py-20 text-center">
+
+<h2 class="text-4xl mb-6">{{CONTACTO_TITULO}}</h2>
+
+<p>{{CONTACTO_DESC}}</p>
+
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="hidden fixed inset-0 bg-black/90 text-white flex items-center justify-center">
+
+<div class="bg-white text-black p-10 max-w-md">
+<h2 id="mTitle"></h2>
+<p id="mDesc"></p>
+<button onclick="closeModal()">Cerrar</button>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-10 text-center text-xs">
+{{FOOTER}}
+</footer>
+
+<script>
+function openModal(t,d){
+document.getElementById("modal").classList.remove("hidden");
+document.getElementById("mTitle").innerText=t;
+document.getElementById("mDesc").innerText=d;
+}
+function closeModal(){
+document.getElementById("modal").classList.add("hidden");
+}
+
+ScrollReveal().reveal('*',{distance:'40px',duration:800});
+</script>
+
+</body>
+</html>

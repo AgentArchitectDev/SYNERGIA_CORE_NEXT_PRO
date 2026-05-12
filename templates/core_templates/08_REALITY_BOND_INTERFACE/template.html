@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITULO}}</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;900&family=Space+Mono&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue: #0070ff;
+  --red: #ff004c;
+  --bg: rgba(10,10,12,0.9);
+}
+
+body {
+  background:#050505;
+  color:#fff;
+  font-family:'Outfit',sans-serif;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* FIELD */
+.reality-field {
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at center, rgba(0,112,255,0.1), transparent 70%);
+  z-index:-1;
+}
+
+/* CORE */
+.core {
+  background:var(--bg);
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:blur(40px);
+  padding:3rem;
+  border-radius:100px;
+  text-align:center;
+  box-shadow:0 0 100px rgba(0,112,255,0.2);
+  position:relative;
+}
+
+.ring {
+  position:absolute;
+  inset:-10px;
+  border:2px solid var(--blue);
+  border-radius:110px;
+  border-top-color:transparent;
+  animation:spin 4s linear infinite;
+}
+
+@keyframes spin { 100%{transform:rotate(360deg);} }
+
+.node {
+  background:rgba(255,255,255,0.05);
+  padding:1rem 2rem;
+  border-radius:50px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.node.active {
+  border-color:var(--blue);
+  color:var(--blue);
+  box-shadow:0 0 20px rgba(0,112,255,0.3);
+}
+
+.mono { font-family:'Space Mono',monospace; font-size:10px; }
+</style>
+</head>
+
+<body class="flex items-center justify-center">
+
+<div class="reality-field"></div>
+
+<main class="relative">
+
+  <div class="ring"></div>
+
+  <div class="core">
+
+    <!-- HEADER -->
+    <header class="mb-6">
+      <span class="mono opacity-40 uppercase tracking-[0.5em]">
+        {{HEADER_TAG}}
+      </span>
+
+      <h1 class="text-6xl font-black uppercase tracking-tighter mt-4">
+        {{TITULO}}
+      </h1>
+    </header>
+
+    <!-- NODOS -->
+    <div class="flex gap-4 justify-center mb-10">
+
+      <div class="node active">{{NODO_1}}</div>
+      <div class="node">{{NODO_2}}</div>
+      <div class="node active">{{NODO_3}}</div>
+
+    </div>
+
+    <!-- MENSAJE -->
+    <div class="space-y-4">
+
+      <p class="text-sm opacity-60 italic max-w-xs mx-auto">
+        {{MENSAJE}}
+      </p>
+
+      <div class="mt-8">
+        <span class="mono text-[var(--blue)] animate-pulse">
+          {{STATUS}}
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- DATA LEFT -->
+  <div class="absolute -top-20 -right-20 mono opacity-30 text-right">
+    {{DATA_RIGHT}}
+  </div>
+
+  <!-- DATA RIGHT -->
+  <div class="absolute -bottom-20 -left-20 mono opacity-30 text-left">
+    {{DATA_LEFT}}
+  </div>
+
+</main>
+
+<!-- CTA -->
+<a href="{{LINK_CTA}}" style="position: fixed; bottom: 30px; background: #fff; color: #000; font-weight: 900; font-size: 12px; padding: 20px 40px; border-radius: 5px; text-transform: uppercase; letter-spacing: 3px;">
+  {{CTA}}
+</a>
+
+</body>
+</html>

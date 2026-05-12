@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITULO}}</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root { --cyan: #00f2ff; --pink: #ff00ff; --dark: #050508; }
+
+body {
+  background: var(--dark);
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  overflow-x: hidden;
+}
+
+.retro-title {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+/* NOISE */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* GRID */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,242,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,242,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* IMG STYLE */
+.retro-img {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 242, 255, 0.3);
+  filter: sepia(100%) hue-rotate(140deg) contrast(1.2) brightness(0.8);
+  transition: 0.5s;
+}
+
+.retro-img:hover { filter: none; }
+
+.retro-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, rgba(0,0,0,0.2) 50%);
+  background-size: 100% 4px;
+}
+
+.glow-cyan { text-shadow: 0 0 10px var(--cyan); }
+</style>
+</head>
+
+<body class="grid-bg">
+
+<!-- NAV -->
+<nav class="fixed w-full p-6 flex justify-between items-center z-[110] bg-black/80 backdrop-blur-sm border-b border-cyan-500/20">
+  <div class="retro-title text-xl font-black italic text-cyan-400">
+    {{LOGO}}
+  </div>
+
+  <div class="hidden md:flex gap-8 text-[9px] font-bold tracking-[3px]">
+    <a href="#about">HISTORY</a>
+    <a href="#services">PROTOCOLS</a>
+    <a href="#staff">OPERATORS</a>
+    <a href="#map">BASE_LOCATION</a>
+  </div>
+
+  <button class="bg-cyan-500 text-black px-4 py-2 text-[9px] font-black uppercase tracking-tighter hover:bg-pink-500 transition">
+    {{CTA_BOTON}}
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="about" class="h-screen flex items-center justify-center relative px-6">
+  
+  <div class="text-center z-10">
+    <h1 class="retro-title text-[10vw] md:text-[7vw] leading-none glow-cyan">
+      {{TITULO}}
+    </h1>
+
+    <p class="text-cyan-400 text-xs md:text-sm tracking-[12px] mt-4 uppercase italic">
+      {{SUBTITULO}}
+    </p>
+
+    <div class="max-w-2xl mx-auto mt-12 bg-black/60 p-6 border border-white/10 backdrop-blur-md">
+      <p class="text-[11px] leading-relaxed text-gray-400">
+        {{CUERPO}}
+      </p>
+    </div>
+  </div>
+
+  <div class="absolute inset-0 opacity-20">
+    <img src="{{IMG_HERO}}" class="w-full h-full object-cover grayscale">
+  </div>
+
+</section>
+
+<!-- SERVICIOS -->
+<section id="services" class="py-32 px-6 md:px-20 bg-black/40 border-y border-white/5">
+
+  <h2 class="retro-title text-4xl mb-16 text-center italic text-pink-500">
+    {{SERVICIOS_TITULO}}
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+    <div class="border border-cyan-500/30 p-8 hover:bg-cyan-500/5 transition">
+      <div class="text-cyan-400 mb-4 font-bold text-xl">01 //</div>
+      <h3 class="retro-title text-lg mb-4">{{SERVICIO_1}}</h3>
+      <p class="text-[10px] text-gray-500">{{DESC_1}}</p>
+    </div>
+
+    <div class="border border-cyan-500/30 p-8 hover:bg-cyan-500/5 transition">
+      <div class="text-cyan-400 mb-4 font-bold text-xl">02 //</div>
+      <h3 class="retro-title text-lg mb-4">{{SERVICIO_2}}</h3>
+      <p class="text-[10px] text-gray-500">{{DESC_2}}</p>
+    </div>
+
+    <div class="border border-cyan-500/30 p-8 hover:bg-cyan-500/5 transition">
+      <div class="text-cyan-400 mb-4 font-bold text-xl">03 //</div>
+      <h3 class="retro-title text-lg mb-4">{{SERVICIO_3}}</h3>
+      <p class="text-[10px] text-gray-500">{{DESC_3}}</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section id="staff" class="py-32 px-6">
+
+  <h2 class="retro-title text-4xl mb-16 text-center italic">
+    {{EQUIPO_TITULO}}
+  </h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+
+    <div class="text-center">
+      <div class="retro-img aspect-square mb-4">
+        <img src="{{IMG_TEAM_1}}" class="w-full h-full object-cover">
+      </div>
+      <p class="retro-title text-sm text-cyan-400">{{TEAM_1}}</p>
+      <p class="text-[8px] opacity-50 uppercase tracking-widest mt-1">{{TEAM_ROLE_1}}</p>
+    </div>
+
+    <div class="text-center">
+      <div class="retro-img aspect-square mb-4">
+        <img src="{{IMG_TEAM_2}}" class="w-full h-full object-cover">
+      </div>
+      <p class="retro-title text-sm text-cyan-400">{{TEAM_2}}</p>
+      <p class="text-[8px] opacity-50 uppercase tracking-widest mt-1">{{TEAM_ROLE_2}}</p>
+    </div>
+
+    <div class="text-center">
+      <div class="retro-img aspect-square mb-4">
+        <img src="{{IMG_TEAM_3}}" class="w-full h-full object-cover">
+      </div>
+      <p class="retro-title text-sm text-cyan-400">{{TEAM_3}}</p>
+      <p class="text-[8px] opacity-50 uppercase tracking-widest mt-1">{{TEAM_ROLE_3}}</p>
+    </div>
+
+    <div class="text-center">
+      <div class="retro-img aspect-square mb-4">
+        <img src="{{IMG_TEAM_4}}" class="w-full h-full object-cover">
+      </div>
+      <p class="retro-title text-sm text-cyan-400">{{TEAM_4}}</p>
+      <p class="text-[8px] opacity-50 uppercase tracking-widest mt-1">{{TEAM_ROLE_4}}</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- UBICACION -->
+<section id="map" class="py-32 bg-black/60 px-6">
+
+  <div class="max-w-7xl mx-auto border border-cyan-500/20 p-4">
+
+    <h2 class="retro-title text-2xl mb-8 italic">
+      {{UBICACION_TITULO}}
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-12 items-center">
+
+      <div class="md:col-span-2 bg-[#0a0a0f] h-[400px] flex items-center justify-center relative">
+
+        <div class="absolute text-pink-500 font-black text-xl">
+          X
+        </div>
+
+        <div class="text-cyan-500 text-[10px] z-10 bg-black px-4 py-2 border border-cyan-500 italic">
+          {{COORDENADAS}}
+        </div>
+
+      </div>
+
+      <div class="space-y-6">
+        <h3 class="retro-title text-sm text-pink-500 tracking-widest">
+          {{DIRECCION_TITULO}}
+        </h3>
+
+        <p class="text-[10px] text-gray-400">
+          {{DIRECCION}}
+        </p>
+
+        <p class="text-[10px] text-cyan-400 font-bold">
+          {{CONTACTO}}
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center opacity-30 text-[9px] tracking-[5px] uppercase">
+  {{FOOTER}}
+</footer>
+
+</body>
+</html>

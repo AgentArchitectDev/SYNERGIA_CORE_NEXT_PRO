@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SYNERGIA CMS</title>
+</head>
+
+<body style="margin:0;background:#111;color:#fff;font-family:sans-serif">
+
+<div style="padding:10px;background:#000">
+<button onclick="guardar()">💾 Guardar</button>
+<button onclick="preview()">👁 Preview</button>
+<button onclick="volver()">⬅ Volver</button>
+</div>
+
+<textarea id="editor" style="width:100%;height:50vh;background:#000;color:#0f0;font-family:monospace"></textarea>
+
+<iframe id="frame" style="width:100%;height:50vh;background:#fff"></iframe>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const project_id = params.get("project_id") || "demo";
+
+async function cargar(){
+    const res = await fetch(`http://127.0.0.1:8000/load_project?project_id=${project_id}`);
+    const data = await res.json();
+
+    document.getElementById("editor").value = data.html;
+    preview();
+}
+
+async function guardar(){
+    const html = document.getElementById("editor").value;
+
+    await fetch("http://127.0.0.1:8000/save_project", {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({project_id, html})
+    });
+
+    alert("Guardado OK");
+}
+
+function preview(){
+    document.getElementById("frame").srcdoc =
+        document.getElementById("editor").value;
+}
+
+function volver(){
+    window.location.href = "dashboard.html";
+}
+
+cargar();
+
+</script>
+
+</body>
+</html>

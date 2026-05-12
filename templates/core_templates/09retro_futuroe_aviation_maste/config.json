@@ -1,0 +1,13 @@
+{
+  "name": "09Retro Futuroe Aviation Maste",
+  "category": "general",
+  "version": "1.0",
+  "sections": [
+    "hero",
+    "content",
+    "gallery",
+    "cta",
+    "footer"
+  ],
+  "status": "base_template"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Demo Site",
+
+  "blocks": [
+
+    {
+      "type": "navbar",
+
+      "data": {
+        "logo": "SYNERGIA"
+      }
+    },
+
+    {
+      "type": "hero",
+
+      "data": {
+        "title": "SYNERGIA CMS",
+        "subtitle": "Visual AI Builder",
+        "button": "Comenzar"
+      }
+    },
+
+    {
+      "type": "footer",
+
+      "data": {
+        "copyright": "2026 SYNERGIA"
+      }
+    }
+
+  ]
+}

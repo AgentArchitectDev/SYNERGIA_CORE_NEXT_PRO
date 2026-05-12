@@ -1,0 +1,13 @@
+{
+  "template": "05_gastronomia_experiencial",
+  "data": {
+    "brand_name": "Mates Córdoba",
+    "hero_title": "Mates premium",
+    "hero_subtitle": "Artesanales modernos en Córdoba",
+
+    "cta_title": "Comprar ahora",
+    "cta_text": "Envíos a todo el país",
+
+    "footer_text": "© 2026 Mates Córdoba"
+  }
+}

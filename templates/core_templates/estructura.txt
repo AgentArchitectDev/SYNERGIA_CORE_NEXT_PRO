@@ -1,0 +1,58 @@
+.
+├── 00_CONTROL
+├── 01 SYNERGIA_CORE final_HTML
+├── 01_ACADEMIA_IDIOMAS_ELITE
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+├── 02_SKYCODE_TECH_HUB
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+├── 02_Synergia_Core_html
+├── 03_vet_emotional_techh
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+├── 04_arquitectura_interiorismo
+│   ├── auto_setup_templates.py
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+├── 05_gastronomia_experiencial
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+├── 07_real_estate_global_scroll
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+├── 08_REALITY_BOND_INTERFACE
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+├── 09retro_futuroe_aviation_maste
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+├── 10_arq_bento
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+├── 11_Ejemplo1
+│   ├── config.json
+│   ├── demo.html
+│   ├── doc.md
+│   └── template.html
+└── estructura.txt
+
+12 directories, 44 files

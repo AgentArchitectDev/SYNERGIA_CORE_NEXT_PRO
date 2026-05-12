@@ -1,0 +1,19 @@
+{
+  "name": "Hero Modern",
+  "editable": true,
+  "category": "hero",
+  "fields": [
+    {
+      "id": "title",
+      "type": "text"
+    },
+    {
+      "id": "subtitle",
+      "type": "textarea"
+    },
+    {
+      "id": "button",
+      "type": "text"
+    }
+  ]
+}

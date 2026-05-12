@@ -1,0 +1,14 @@
+{
+  "slug": "contact",
+  "title": "Contacto",
+  "blocks": [
+    {
+      "type": "hero",
+      "data": {
+        "title": "Contactanos",
+        "subtitle": "Estamos online",
+        "button": "Enviar"
+      }
+    }
+  ]
+}

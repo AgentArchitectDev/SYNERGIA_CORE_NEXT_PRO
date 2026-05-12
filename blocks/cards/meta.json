@@ -1,0 +1,12 @@
+{
+  "name": "Cards Services",
+  "editable": true,
+  "category": "content",
+
+  "fields": [
+    {
+      "id": "title",
+      "type": "text"
+    }
+  ]
+}

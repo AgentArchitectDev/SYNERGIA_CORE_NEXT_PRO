@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAB S.O. — CMS Editor</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0a0a0a; color:#fff; font-family:'Segoe UI',sans-serif; height:100vh; display:flex; flex-direction:column; }
+
+/* TOOLBAR */
+.toolbar { background:#111; border-bottom:1px solid #222; padding:8px 16px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.toolbar-logo { font-weight:700; font-size:14px; color:#00f2ff; letter-spacing:2px; margin-right:8px; }
+.btn { background:#1a1a1a; border:1px solid #333; color:#ccc; padding:6px 14px; border-radius:6px; cursor:pointer; font-size:12px; transition:all .2s; }
+.btn:hover { background:#222; border-color:#00f2ff; color:#00f2ff; }
+.btn-primary { background:#00f2ff; color:#000; border-color:#00f2ff; font-weight:700; }
+.btn-primary:hover { background:#00d4e0; }
+.btn-danger { border-color:#ff4444; color:#ff4444; }
+.btn-danger:hover { background:#ff444422; }
+.sep { width:1px; height:24px; background:#333; }
+.toolbar-group { display:flex; align-items:center; gap:6px; }
+.label { font-size:11px; color:#666; }
+
+/* MAIN LAYOUT */
+.main { display:flex; flex:1; overflow:hidden; }
+
+/* PANEL IZQUIERDO */
+.panel-left { width:260px; background:#0f0f0f; border-right:1px solid #1a1a1a; display:flex; flex-direction:column; overflow-y:auto; }
+.panel-section { border-bottom:1px solid #1a1a1a; }
+.panel-header { padding:10px 14px; font-size:11px; font-weight:700; color:#555; letter-spacing:2px; text-transform:uppercase; cursor:pointer; display:flex; justify-content:space-between; }
+.panel-header:hover { color:#00f2ff; }
+.panel-body { padding:10px 14px; display:flex; flex-direction:column; gap:8px; }
+
+.field-group { display:flex; flex-direction:column; gap:4px; }
+.field-label { font-size:11px; color:#666; }
+.field-input { background:#1a1a1a; border:1px solid #2a2a2a; color:#fff; padding:6px 10px; border-radius:6px; font-size:12px; width:100%; }
+.field-input:focus { outline:none; border-color:#00f2ff; }
+textarea.field-input { resize:vertical; min-height:60px; }
+
+.color-row { display:flex; gap:6px; align-items:center; }
+.color-input { width:36px; height:28px; border:none; border-radius:4px; cursor:pointer; background:none; }
+
+.img-preview { width:100%; height:80px; background:#1a1a1a; border:1px dashed #333; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#444; font-size:11px; cursor:pointer; overflow:hidden; }
+.img-preview img { width:100%; height:100%; object-fit:cover; }
+.img-preview:hover { border-color:#00f2ff; color:#00f2ff; }
+
+/* BLOQUES */
+.block-list { display:flex; flex-direction:column; gap:4px; }
+.block-item { background:#1a1a1a; border:1px solid #2a2a2a; border-radius:6px; padding:8px 10px; display:flex; align-items:center; gap:8px; cursor:grab; font-size:12px; color:#aaa; }
+.block-item:hover { border-color:#00f2ff; color:#fff; }
+.block-item .drag-handle { color:#444; font-size:14px; }
+.block-item .block-name { flex:1; }
+.block-item .block-actions { display:flex; gap:4px; }
+.block-btn { background:none; border:none; color:#555; cursor:pointer; font-size:12px; padding:2px 4px; }
+.block-btn:hover { color:#00f2ff; }
+
+/* CENTRO — EDITOR + PREVIEW */
+.center { flex:1; display:flex; flex-direction:column; overflow:hidden; }
+
+.tabs { background:#111; border-bottom:1px solid #1a1a1a; display:flex; }
+.tab { padding:10px 20px; font-size:12px; color:#555; cursor:pointer; border-bottom:2px solid transparent; }
+.tab.active { color:#00f2ff; border-bottom-color:#00f2ff; }
+.tab:hover { color:#ccc; }
+
+.editor-area { flex:1; overflow:hidden; display:flex; }
+.CodeMirror { height:100% !important; font-size:13px !important; }
+.preview-area { flex:1; overflow:hidden; display:none; }
+.preview-area iframe { width:100%; height:100%; border:none; background:#fff; }
+.preview-area.active { display:block; }
+.editor-area.hidden { display:none; }
+
+/* PANEL DERECHO */
+.panel-right { width:220px; background:#0f0f0f; border-left:1px solid #1a1a1a; display:flex; flex-direction:column; overflow-y:auto; }
+
+.prop-section { padding:10px 14px; border-bottom:1px solid #1a1a1a; }
+.prop-title { font-size:11px; color:#555; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
+
+.slider-group { display:flex; flex-direction:column; gap:6px; }
+.slider-row { display:flex; align-items:center; gap:8px; }
+.slider-label { font-size:11px; color:#666; width:60px; }
+.slider { flex:1; accent-color:#00f2ff; }
+.slider-val { font-size:11px; color:#00f2ff; width:30px; text-align:right; }
+
+.select-input { background:#1a1a1a; border:1px solid #2a2a2a; color:#fff; padding:6px 10px; border-radius:6px; font-size:12px; width:100%; }
+
+/* STATUS BAR */
+.statusbar { background:#0a0a0a; border-top:1px solid #1a1a1a; padding:4px 16px; display:flex; align-items:center; gap:16px; font-size:11px; color:#444; }
+.status-dot { width:6px; height:6px; border-radius:50%; background:#00f2ff; }
+
+/* MODAL */
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.8); z-index:1000; align-items:center; justify-content:center; }
+.modal.open { display:flex; }
+.modal-box { background:#111; border:1px solid #333; border-radius:12px; padding:24px; width:500px; max-width:90vw; }
+.modal-title { font-size:16px; font-weight:700; margin-bottom:16px; color:#00f2ff; }
+.modal-actions { display:flex; gap:8px; justify-content:flex-end; margin-top:16px; }
+</style>
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <span class="toolbar-logo">GAB S.O.</span>
+  <span class="sep"></span>
+  <div class="toolbar-group">
+    <span class="label">Archivo:</span>
+    <button class="btn" onclick="nuevoHTML()">Nuevo</button>
+    <button class="btn" onclick="document.getElementById('fileInput').click()">Abrir HTML</button>
+    <input type="file" id="fileInput" accept=".html" style="display:none" onchange="abrirArchivo(this)">
+    <button class="btn btn-primary" onclick=guardarEnBackend()">Guardar</button>
+    <button class="btn" onclick="exportarHTML()">Exportar ZIP</button>
+  </div>
+  <span class="sep"></span>
+  <div class="toolbar-group">
+    <span class="label">Vista:</span>
+    <button class="btn" id="btnEditor" onclick="mostrarEditor()" style="border-color:#00f2ff;color:#00f2ff">Código</button>
+    <button class="btn" id="btnPreview" onclick="mostrarPreview()">Preview</button>
+    <button class="btn" id="btnSplit" onclick="mostrarSplit()">Split</button>
+  </div>
+  <span class="sep"></span>
+  <div class="toolbar-group">
+    <span class="label">Dispositivo:</span>
+    <button class="btn" onclick="setDevice('100%','100%')">Desktop</button>
+    <button class="btn" onclick="setDevice('768px','100%')">Tablet</button>
+    <button class="btn" onclick="setDevice('390px','100%')">Mobile</button>
+  </div>
+  <span class="sep"></span>
+  <button class="btn" onclick="buscarReemplazar()">Buscar / Reemplazar</button>
+  <button class="btn btn-danger" onclick="limpiarTodo()">Limpiar</button>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- PANEL IZQUIERDO -->
+  <div class="panel-left">
+
+    <!-- TEXTOS RÁPIDOS -->
+    <div class="panel-section">
+      <div class="panel-header" onclick="toggleSection('sec-textos')">
+        Textos rápidos <span>▼</span>
+      </div>
+      <div class="panel-body" id="sec-textos">
+        <div class="field-group">
+          <span class="field-label">Título principal</span>
+          <input class="field-input" id="txt-titulo" placeholder="Ej: Mates Sierras" oninput="reemplazarTexto('TITULO_PRINCIPAL', this.value)">
+        </div>
+        <div class="field-group">
+          <span class="field-label">Subtítulo / Eslogan</span>
+          <input class="field-input" id="txt-eslogan" placeholder="Ej: Artesanal desde Córdoba" oninput="reemplazarTexto('ESLOGAN', this.value)">
+        </div>
+        <div class="field-group">
+          <span class="field-label">Descripción hero</span>
+          <textarea class="field-input" id="txt-desc" placeholder="Descripción principal..." oninput="reemplazarTexto('DESCRIPCION_HERO', this.value)"></textarea>
+        </div>
+        <div class="field-group">
+          <span class="field-label">Texto botón principal</span>
+          <input class="field-input" id="txt-btn" placeholder="Ej: Ver productos" oninput="reemplazarTexto('BTN_PRINCIPAL', this.value)">
+        </div>
+        <div class="field-group">
+          <span class="field-label">WhatsApp (número)</span>
+          <input class="field-input" id="txt-wsp" placeholder="5493512345678" oninput="reemplazarWsp(this.value)">
+        </div>
+        <button class="btn btn-primary" style="width:100%;margin-top:4px" onclick="aplicarTextos()">Aplicar textos</button>
+      </div>
+    </div>
+
+    <!-- COLORES -->
+    <div class="panel-section">
+      <div class="panel-header" onclick="toggleSection('sec-colores')">
+        Colores <span>▼</span>
+      </div>
+      <div class="panel-body" id="sec-colores">
+        <div class="field-group">
+          <span class="field-label">Fondo principal</span>
+          <div class="color-row">
+            <input type="color" class="color-input" id="col-fondo" value="#000000" oninput="reemplazarColor('fondo', this.value)">
+            <input class="field-input" style="flex:1" id="col-fondo-hex" value="#000000" oninput="sincronizarColor('fondo', this.value)">
+          </div>
+        </div>
+        <div class="field-group">
+          <span class="field-label">Acento / primario</span>
+          <div class="color-row">
+            <input type="color" class="color-input" id="col-acento" value="#00f2ff" oninput="reemplazarColor('acento', this.value)">
+            <input class="field-input" style="flex:1" id="col-acento-hex" value="#00f2ff" oninput="sincronizarColor('acento', this.value)">
+          </div>
+        </div>
+        <div class="field-group">
+          <span class="field-label">Texto principal</span>
+          <div class="color-row">
+            <input type="color" class="color-input" id="col-texto" value="#ffffff" oninput="reemplazarColor('texto', this.value)">
+            <input class="field-input" style="flex:1" id="col-texto-hex" value="#ffffff" oninput="sincronizarColor('texto', this.value)">
+          </div>
+        </div>
+        <button class="btn" style="width:100%;margin-top:4px" onclick="aplicarColores()">Aplicar colores</button>
+      </div>
+    </div>
+
+    <!-- IMÁGENES -->
+    <div class="panel-section">
+      <div class="panel-header" onclick="toggleSection('sec-imgs')">
+        Imágenes <span>▼</span>
+      </div>
+      <div class="panel-body" id="sec-imgs">
+        <div class="field-group">
+          <span class="field-label">Imagen hero / banner</span>
+          <div class="img-preview" onclick="subirImagen('hero')" id="prev-hero">
+            + Subir imagen
+          </div>
+          <input type="file" id="img-hero" accept="image/*" style="display:none" onchange="procesarImagen(this,'hero')">
+        </div>
+        <div class="field-group">
+          <span class="field-label">Logo</span>
+          <div class="img-preview" onclick="subirImagen('logo')" id="prev-logo">
+            + Subir logo
+          </div>
+          <input type="file" id="img-logo" accept="image/*" style="display:none" onchange="procesarImagen(this,'logo')">
+        </div>
+        <div class="field-group">
+          <span class="field-label">URL de imagen externa</span>
+          <input class="field-input" id="img-url" placeholder="https://...jpg">
+          <button class="btn" style="margin-top:4px;width:100%" onclick="insertarImagenUrl()">Insertar URL</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUES -->
+    <div class="panel-section">
+      <div class="panel-header" onclick="toggleSection('sec-bloques')">
+        Agregar bloques <span>▼</span>
+      </div>
+      <div class="panel-body" id="sec-bloques">
+        <div class="block-list">
+          <div class="block-item" onclick="insertarBloque('hero')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Hero / Banner</span>
+          </div>
+          <div class="block-item" onclick="insertarBloque('productos')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Grid de productos</span>
+          </div>
+          <div class="block-item" onclick="insertarBloque('servicios')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Servicios / Features</span>
+          </div>
+          <div class="block-item" onclick="insertarBloque('galeria')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Galería / Slider</span>
+          </div>
+          <div class="block-item" onclick="insertarBloque('testimonios')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Testimonios</span>
+          </div>
+          <div class="block-item" onclick="insertarBloque('contacto')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Contacto / Formulario</span>
+          </div>
+          <div class="block-item" onclick="insertarBloque('video')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Video embed</span>
+          </div>
+          <div class="block-item" onclick="insertarBloque('mapa')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Mapa Google</span>
+          </div>
+          <div class="block-item" onclick="insertarBloque('wsp')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Botón WhatsApp</span>
+          </div>
+          <div class="block-item" onclick="insertarBloque('carrusel')">
+            <span class="drag-handle">⊞</span>
+            <span class="block-name">Carrusel / Slides</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CENTRO -->
+  <div class="center">
+    <div class="tabs">
+      <div class="tab active" id="tab-code" onclick="mostrarEditor()">Código HTML</div>
+      <div class="tab" id="tab-preview" onclick="mostrarPreview()">Preview</div>
+    </div>
+    <div class="editor-area" id="editorArea">
+      <textarea id="htmlEditor"></textarea>
+    </div>
+    <div class="preview-area" id="previewArea">
+      <iframe id="previewFrame"></iframe>
+    </div>
+  </div>
+
+  <!-- PANEL DERECHO -->
+  <div class="panel-right">
+
+    <div class="prop-section">
+      <div class="prop-title">Tipografía</div>
+      <div class="field-group">
+        <span class="field-label">Fuente principal</span>
+        <select class="select-input" onchange="cambiarFuente(this.value)">
+          <option>Inter</option>
+          <option>Playfair Display</option>
+          <option>Orbitron</option>
+          <option>Roboto</option>
+          <option>Montserrat</option>
+          <option>Raleway</option>
+          <option>Oswald</option>
+          <option>Lato</option>
+          <option>Space Mono</option>
+          <option>JetBrains Mono</option>
+        </select>
+      </div>
+      <div class="slider-group" style="margin-top:8px">
+        <div class="slider-row">
+          <span class="slider-label">Tamaño</span>
+          <input type="range" class="slider" min="12" max="24" value="16" oninput="this.nextElementSibling.textContent=this.value+'px'">
+          <span class="slider-val">16px</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="prop-section">
+      <div class="prop-title">Layout</div>
+      <div class="slider-group">
+        <div class="slider-row">
+          <span class="slider-label">Espaciado</span>
+          <input type="range" class="slider" min="0" max="100" value="40" oninput="this.nextElementSibling.textContent=this.value+'px'">
+          <span class="slider-val">40px</span>
+        </div>
+        <div class="slider-row">
+          <span class="slider-label">Border R.</span>
+          <input type="range" class="slider" min="0" max="40" value="8" oninput="this.nextElementSibling.textContent=this.value+'px'">
+          <span class="slider-val">8px</span>
+        </div>
+        <div class="slider-row">
+          <span class="slider-label">Opacidad</span>
+          <input type="range" class="slider" min="0" max="100" value="100" oninput="this.nextElementSibling.textContent=this.value+'%'">
+          <span class="slider-val">100%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="prop-section">
+      <div class="prop-title">Animaciones</div>
+      <div class="field-group">
+        <select class="select-input" id="sel-anim">
+          <option value="">Sin animación</option>
+          <option value="fadeIn">Fade In</option>
+          <option value="slideUp">Slide Up</option>
+          <option value="slideLeft">Slide Left</option>
+          <option value="zoom">Zoom</option>
+          <option value="bounce">Bounce</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="prop-section">
+      <div class="prop-title">Scroll</div>
+      <div class="field-group">
+        <select class="select-input">
+          <option>Vertical (normal)</option>
+          <option>Horizontal</option>
+          <option>Parallax</option>
+          <option>Sticky sections</option>
+          <option>Full page scroll</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="prop-section">
+      <div class="prop-title">Exportar</div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <button class="btn btn-primary" style="width:100%" onclick="guardarHTML()">Guardar HTML</button>
+        <button class="btn" style="width:100%" onclick="copiarHTML()">Copiar código</button>
+        <button class="btn" style="width:100%" onclick="exportarHTML()">Exportar ZIP</button>
+        <button class="btn" style="width:100%;margin-top:4px" onclick="abrirEnNuevaPestana()">Abrir en nueva pestaña</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- STATUS BAR -->
+<div class="statusbar">
+  <div class="status-dot"></div>
+  <span id="status-msg">GAB S.O. CMS Editor — Listo</span>
+  <span style="margin-left:auto" id="status-chars">0 chars</span>
+</div>
+
+<!-- MODAL BUSCAR/REEMPLAZAR -->
+<div class="modal" id="modalBuscar">
+  <div class="modal-box">
+    <div class="modal-title">Buscar y Reemplazar</div>
+    <div class="field-group" style="margin-bottom:10px">
+      <span class="field-label">Buscar</span>
+      <input class="field-input" id="search-term" placeholder="Texto a buscar...">
+    </div>
+    <div class="field-group">
+      <span class="field-label">Reemplazar con</span>
+      <input class="field-input" id="replace-term" placeholder="Nuevo texto...">
+    </div>
+    <div class="modal-actions">
+      <button class="btn" onclick="cerrarModal()">Cancelar</button>
+      <button class="btn btn-primary" onclick="ejecutarReemplazo()">Reemplazar todo</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── INIT CODEMIRROR ──────────────────────────
+const editor = CodeMirror.fromTextArea(document.getElementById('htmlEditor'), {
+  mode: 'htmlmixed',
+  theme: 'dracula',
+  lineNumbers: true,
+  lineWrapping: true,
+  autoCloseTags: true,
+  matchBrackets: true,
+  indentUnit: 2,
+  tabSize: 2,
+});
+
+editor.on('change', () => {
+  const len = editor.getValue().length;
+  document.getElementById('status-chars').textContent = len.toLocaleString() + ' chars';
+  if (document.getElementById('previewArea').classList.contains('active')) {
+    actualizarPreview();
+  }
+});
+
+// HTML inicial de bienvenida
+const htmlInicial = `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi Sitio</title>
+<style>
+  body { margin:0; font-family:'Inter',sans-serif; background:#000; color:#fff; }
+  .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; background:linear-gradient(135deg,#0a0a0a,#1a1a2e); }
+  h1 { font-size:4rem; font-weight:800; color:#00f2ff; margin-bottom:1rem; }
+  p { font-size:1.2rem; color:#aaa; max-width:600px; }
+  .btn { display:inline-block; margin-top:2rem; padding:14px 32px; background:#00f2ff; color:#000; font-weight:700; border-radius:50px; text-decoration:none; }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div>
+      <h1>TITULO_PRINCIPAL</h1>
+      <p>DESCRIPCION_HERO</p>
+      <a href="#" class="btn">BTN_PRINCIPAL</a>
+    </div>
+  </section>
+</body>
+</html>`;
+
+// ── CARGAR DESDE GALERÍA (localStorage) ─────
+(function() {
+  try {
+    const desdeGaleria = localStorage.getItem('gab_template_desde_galeria');
+    const templateHtml = localStorage.getItem('gab_template_html');
+    const templateNombre = localStorage.getItem('gab_template_nombre');
+
+    if (desdeGaleria === '1' && templateHtml) {
+      // Limpiar la clave para que no recargue en próxima apertura
+      localStorage.removeItem('gab_template_desde_galeria');
+
+      // Cargar el template en el editor
+      editor.setValue(templateHtml);
+
+      // Actualizar título
+      if (templateNombre) {
+        document.title = `GAB CMS — ${templateNombre}`;
+        const logo = document.querySelector('.toolbar-logo');
+        if (logo) logo.textContent = `GAB CMS · ${templateNombre}`;
+      }
+
+      // Mostrar botón "Volver a la galería"
+      const toolbar = document.querySelector('.toolbar');
+      if (toolbar) {
+        const sep = document.createElement('div');
+        sep.className = 'sep';
+        const btnVolver = document.createElement('button');
+        btnVolver.className = 'btn';
+        btnVolver.style.cssText = 'border-color:#00f2ff;color:#00f2ff;';
+        btnVolver.innerHTML = '← Galería';
+        btnVolver.title = 'Volver a la galería de templates';
+        btnVolver.onclick = () => { window.location.href = 'gab_template_gallery.html'; };
+        toolbar.insertBefore(sep, toolbar.children[1]);
+        toolbar.insertBefore(btnVolver, toolbar.children[1]);
+      }
+
+      setStatus(`Template cargado: ${templateNombre || 'desde galería'}`);
+    } else {
+      editor.setValue(htmlInicial);
+    }
+  } catch(e) {
+    editor.setValue(htmlInicial);
+  }
+})();
+
+// ── VISTAS ───────────────────────────────────
+function mostrarEditor() {
+  document.getElementById('editorArea').classList.remove('hidden');
+  document.getElementById('previewArea').classList.remove('active');
+  document.getElementById('tab-code').classList.add('active');
+  document.getElementById('tab-preview').classList.remove('active');
+  editor.refresh();
+}
+
+function mostrarPreview() {
+  document.getElementById('editorArea').classList.add('hidden');
+  document.getElementById('previewArea').classList.add('active');
+  document.getElementById('tab-code').classList.remove('active');
+  document.getElementById('tab-preview').classList.add('active');
+  actualizarPreview();
+}
+
+function mostrarSplit() {
+  document.getElementById('editorArea').classList.remove('hidden');
+  document.getElementById('previewArea').classList.add('active');
+  document.getElementById('editorArea').style.flex = '1';
+  document.getElementById('previewArea').style.flex = '1';
+  actualizarPreview();
+  editor.refresh();
+}
+
+function actualizarPreview() {
+  const frame = document.getElementById('previewFrame');
+  const html = editor.getValue();
+  frame.srcdoc = html;
+}
+
+function setDevice(w, h) {
+  const frame = document.getElementById('previewFrame');
+  frame.style.width = w;
+  frame.style.maxWidth = w;
+  actualizarPreview();
+}
+
+// ── TEXTOS RÁPIDOS ───────────────────────────
+function reemplazarTexto(clave, valor) {
+  // Solo marca visual, se aplica con el botón
+}
+
+function aplicarTextos() {
+  let html = editor.getValue();
+  const titulo = document.getElementById('txt-titulo').value;
+  const eslogan = document.getElementById('txt-eslogan').value;
+  const desc = document.getElementById('txt-desc').value;
+  const btn = document.getElementById('txt-btn').value;
+
+  if (titulo) html = html.replace(/TITULO_PRINCIPAL/g, titulo);
+  if (eslogan) html = html.replace(/ESLOGAN/g, eslogan);
+  if (desc) html = html.replace(/DESCRIPCION_HERO/g, desc);
+  if (btn) html = html.replace(/BTN_PRINCIPAL/g, btn);
+
+  editor.setValue(html);
+  setStatus('Textos aplicados');
+}
+
+function reemplazarWsp(num) {
+  let html = editor.getValue();
+  html = html.replace(/wa\.me\/\d+/g, `wa.me/${num}`);
+  html = html.replace(/5493510000000/g, num);
+  editor.setValue(html);
+}
+
+// ── COLORES ──────────────────────────────────
+const colorMap = { fondo: null, acento: null, texto: null };
+
+function reemplazarColor(tipo, valor) {
+  document.getElementById(`col-${tipo}-hex`).value = valor;
+  colorMap[tipo] = valor;
+}
+
+function sincronizarColor(tipo, valor) {
+  document.getElementById(`col-${tipo}`).value = valor;
+  colorMap[tipo] = valor;
+}
+
+function aplicarColores() {
+  let html = editor.getValue();
+  if (colorMap.acento) {
+    html = html.replace(/#00f2ff/gi, colorMap.acento);
+    html = html.replace(/#D4AF37/gi, colorMap.acento);
+    html = html.replace(/--acento:[^;]+;/gi, `--acento:${colorMap.acento};`);
+  }
+  if (colorMap.fondo) {
+    html = html.replace(/background:#000000/gi, `background:${colorMap.fondo}`);
+    html = html.replace(/background:#0a0a0a/gi, `background:${colorMap.fondo}`);
+    html = html.replace(/--fondo:[^;]+;/gi, `--fondo:${colorMap.fondo};`);
+  }
+  editor.setValue(html);
+  setStatus('Colores aplicados');
+}
+
+// ── IMÁGENES ─────────────────────────────────
+function subirImagen(tipo) {
+  document.getElementById(`img-${tipo}`).click();
+}
+
+function procesarImagen(input, tipo) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const base64 = e.target.result;
+    const prev = document.getElementById(`prev-${tipo}`);
+    prev.innerHTML = `<img src="${base64}">`;
+
+    let html = editor.getValue();
+    if (tipo === 'hero') {
+      html = html.replace(/src="[^"]*hero[^"]*"/gi, `src="${base64}"`);
+      html = html.replace(/background-image:[^;]*url\([^)]*\)/gi, `background-image:url(${base64})`);
+    } else if (tipo === 'logo') {
+      html = html.replace(/<img[^>]*logo[^>]*>/gi, `<img src="${base64}" alt="Logo" style="height:50px">`);
+    }
+    editor.setValue(html);
+    setStatus(`Imagen ${tipo} insertada`);
+  };
+  reader.readAsDataURL(file);
+}
+
+function insertarImagenUrl() {
+  const url = document.getElementById('img-url').value;
+  if (!url) return;
+  const tag = `<img src="${url}" alt="Imagen" style="max-width:100%;border-radius:8px;">`;
+  const cursor = editor.getCursor();
+  editor.replaceRange(tag, cursor);
+  setStatus('URL de imagen insertada');
+}
+
+// ── BLOQUES ──────────────────────────────────
+const BLOQUES = {
+  hero: `
+<section style="min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#0a0a0a,#1a1a2e);padding:60px 20px;">
+  <div>
+    <h1 style="font-size:3rem;font-weight:800;color:#00f2ff;margin-bottom:1rem;">Título Principal</h1>
+    <p style="font-size:1.2rem;color:#aaa;max-width:600px;margin:0 auto 2rem;">Descripción del negocio o servicio</p>
+    <a href="#" style="display:inline-block;padding:14px 32px;background:#00f2ff;color:#000;font-weight:700;border-radius:50px;text-decoration:none;">Ver más</a>
+  </div>
+</section>`,
+  productos: `
+<section style="padding:60px 20px;background:#0f0f0f;">
+  <h2 style="text-align:center;font-size:2rem;color:#fff;margin-bottom:40px;">Nuestros Productos</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:1200px;margin:0 auto;">
+    <div style="background:#1a1a1a;border-radius:12px;padding:24px;border:1px solid #333;">
+      <h3 style="color:#00f2ff;margin-bottom:8px;">Producto 1</h3>
+      <p style="color:#aaa;">Descripción del producto</p>
+      <p style="color:#fff;font-size:1.5rem;font-weight:700;margin-top:12px;">$0.000</p>
+    </div>
+    <div style="background:#1a1a1a;border-radius:12px;padding:24px;border:1px solid #333;">
+      <h3 style="color:#00f2ff;margin-bottom:8px;">Producto 2</h3>
+      <p style="color:#aaa;">Descripción del producto</p>
+      <p style="color:#fff;font-size:1.5rem;font-weight:700;margin-top:12px;">$0.000</p>
+    </div>
+    <div style="background:#1a1a1a;border-radius:12px;padding:24px;border:1px solid #333;">
+      <h3 style="color:#00f2ff;margin-bottom:8px;">Producto 3</h3>
+      <p style="color:#aaa;">Descripción del producto</p>
+      <p style="color:#fff;font-size:1.5rem;font-weight:700;margin-top:12px;">$0.000</p>
+    </div>
+  </div>
+</section>`,
+  carrusel: `
+<section style="padding:60px 20px;background:#0a0a0a;overflow:hidden;">
+  <h2 style="text-align:center;font-size:2rem;color:#fff;margin-bottom:40px;">Galería</h2>
+  <div style="display:flex;gap:20px;overflow-x:auto;padding-bottom:20px;scroll-snap-type:x mandatory;">
+    <div style="min-width:300px;height:200px;background:#1a1a1a;border-radius:12px;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;color:#555;border:1px dashed #333;">Slide 1</div>
+    <div style="min-width:300px;height:200px;background:#1a1a1a;border-radius:12px;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;color:#555;border:1px dashed #333;">Slide 2</div>
+    <div style="min-width:300px;height:200px;background:#1a1a1a;border-radius:12px;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;color:#555;border:1px dashed #333;">Slide 3</div>
+  </div>
+</section>`,
+  testimonios: `
+<section style="padding:60px 20px;background:#111;">
+  <h2 style="text-align:center;font-size:2rem;color:#fff;margin-bottom:40px;">Lo que dicen nuestros clientes</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto;">
+    <div style="background:#1a1a1a;border-radius:12px;padding:24px;border-left:3px solid #00f2ff;">
+      <p style="color:#ccc;font-style:italic;margin-bottom:16px;">"Excelente calidad y atención. Lo recomiendo!"</p>
+      <p style="color:#00f2ff;font-weight:700;">— Cliente feliz</p>
+    </div>
+    <div style="background:#1a1a1a;border-radius:12px;padding:24px;border-left:3px solid #00f2ff;">
+      <p style="color:#ccc;font-style:italic;margin-bottom:16px;">"Superó mis expectativas. Volveré a comprar."</p>
+      <p style="color:#00f2ff;font-weight:700;">— Otro cliente</p>
+    </div>
+  </div>
+</section>`,
+  contacto: `
+<section style="padding:60px 20px;background:#0f0f0f;" id="contacto">
+  <h2 style="text-align:center;font-size:2rem;color:#fff;margin-bottom:40px;">Contacto</h2>
+  <div style="max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
+    <input placeholder="Tu nombre" style="background:#1a1a1a;border:1px solid #333;color:#fff;padding:14px;border-radius:8px;font-size:16px;outline:none;">
+    <input placeholder="Tu email" style="background:#1a1a1a;border:1px solid #333;color:#fff;padding:14px;border-radius:8px;font-size:16px;outline:none;">
+    <textarea placeholder="Tu mensaje" rows="4" style="background:#1a1a1a;border:1px solid #333;color:#fff;padding:14px;border-radius:8px;font-size:16px;outline:none;resize:vertical;"></textarea>
+    <button style="background:#00f2ff;color:#000;padding:14px;border:none;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;">Enviar mensaje</button>
+  </div>
+</section>`,
+  video: `
+<section style="padding:60px 20px;background:#0a0a0a;text-align:center;">
+  <h2 style="font-size:2rem;color:#fff;margin-bottom:32px;">Nuestro Video</h2>
+  <div style="max-width:800px;margin:0 auto;border-radius:16px;overflow:hidden;">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen style="display:block;"></iframe>
+  </div>
+</section>`,
+  mapa: `
+<section style="padding:60px 20px;background:#111;">
+  <h2 style="text-align:center;font-size:2rem;color:#fff;margin-bottom:32px;">Dónde estamos</h2>
+  <div style="max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid #333;">
+    <iframe src="https://maps.google.com/maps?q=Córdoba,Argentina&output=embed" width="100%" height="400" frameborder="0" style="display:block;"></iframe>
+  </div>
+</section>`,
+  wsp: `
+<a href="https://wa.me/5493510000000" target="_blank" style="position:fixed;bottom:30px;right:30px;background:#25d366;color:#fff;padding:16px 24px;border-radius:50px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);z-index:9999;font-family:sans-serif;">
+  💬 WhatsApp
+</a>`,
+  galeria: `
+<section style="padding:60px 20px;background:#0a0a0a;">
+  <h2 style="text-align:center;font-size:2rem;color:#fff;margin-bottom:40px;">Galería</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:1200px;margin:0 auto;">
+    <div style="aspect-ratio:1;background:#1a1a1a;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#555;border:1px dashed #333;font-size:12px;">Foto 1</div>
+    <div style="aspect-ratio:1;background:#1a1a1a;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#555;border:1px dashed #333;font-size:12px;">Foto 2</div>
+    <div style="aspect-ratio:1;background:#1a1a1a;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#555;border:1px dashed #333;font-size:12px;">Foto 3</div>
+    <div style="aspect-ratio:1;background:#1a1a1a;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#555;border:1px dashed #333;font-size:12px;">Foto 4</div>
+  </div>
+</section>`,
+  servicios: `
+<section style="padding:60px 20px;background:#111;">
+  <h2 style="text-align:center;font-size:2rem;color:#fff;margin-bottom:40px;">Nuestros Servicios</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:1000px;margin:0 auto;">
+    <div style="text-align:center;padding:32px 20px;">
+      <div style="font-size:3rem;margin-bottom:16px;">⭐</div>
+      <h3 style="color:#00f2ff;margin-bottom:8px;">Servicio 1</h3>
+      <p style="color:#aaa;">Descripción breve del servicio</p>
+    </div>
+    <div style="text-align:center;padding:32px 20px;">
+      <div style="font-size:3rem;margin-bottom:16px;">🚀</div>
+      <h3 style="color:#00f2ff;margin-bottom:8px;">Servicio 2</h3>
+      <p style="color:#aaa;">Descripción breve del servicio</p>
+    </div>
+    <div style="text-align:center;padding:32px 20px;">
+      <div style="font-size:3rem;margin-bottom:16px;">💎</div>
+      <h3 style="color:#00f2ff;margin-bottom:8px;">Servicio 3</h3>
+      <p style="color:#aaa;">Descripción breve del servicio</p>
+    </div>
+  </div>
+</section>`
+};
+
+function insertarBloque(tipo) {
+  const bloque = BLOQUES[tipo];
+  if (!bloque) return;
+  let html = editor.getValue();
+  const pos = html.lastIndexOf('</body>');
+  if (pos !== -1) {
+    html = html.slice(0, pos) + bloque + '\n' + html.slice(pos);
+  } else {
+    html += bloque;
+  }
+  editor.setValue(html);
+  setStatus(`Bloque "${tipo}" insertado`);
+}
+
+// ── ARCHIVOS ─────────────────────────────────
+function abrirArchivo(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    editor.setValue(e.target.result);
+    setStatus(`Archivo cargado: ${file.name}`);
+  };
+  reader.readAsText(file, 'utf-8');
+}
+
+function guardarHTML() {
+  const html = editor.getValue();
+  const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'sitio_gab_so.html';
+  a.click();
+  setStatus('HTML guardado');
+}
+
+function copiarHTML() {
+  navigator.clipboard.writeText(editor.getValue());
+  setStatus('Código copiado al portapapeles');
+}
+
+function exportarHTML() {
+  guardarHTML();
+  setStatus('HTML exportado');
+}
+
+function nuevoHTML() {
+  if (confirm('¿Limpiar el editor y empezar de cero?')) {
+    editor.setValue(htmlInicial);
+    setStatus('Nuevo documento');
+  }
+}
+
+function limpiarTodo() {
+  if (confirm('¿Vaciar completamente el editor?')) {
+    editor.setValue('');
+    setStatus('Editor limpiado');
+  }
+}
+
+function abrirEnNuevaPestana() {
+  const html = editor.getValue();
+  const blob = new Blob([html], { type: 'text/html' });
+  window.open(URL.createObjectURL(blob), '_blank');
+}
+
+// ── BUSCAR / REEMPLAZAR ───────────────────────
+function buscarReemplazar() {
+  document.getElementById('modalBuscar').classList.add('open');
+}
+
+function cerrarModal() {
+  document.getElementById('modalBuscar').classList.remove('open');
+}
+
+function ejecutarReemplazo() {
+  const buscar = document.getElementById('search-term').value;
+  const reemplazar = document.getElementById('replace-term').value;
+  if (!buscar) return;
+  let html = editor.getValue();
+  const regex = new RegExp(buscar.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+  const count = (html.match(regex) || []).length;
+  html = html.replace(regex, reemplazar);
+  editor.setValue(html);
+  cerrarModal();
+  setStatus(`${count} ocurrencias reemplazadas`);
+}
+
+// ── FUENTE ────────────────────────────────────
+function cambiarFuente(fuente) {
+  let html = editor.getValue();
+  const linkTag = `<link href="https://fonts.googleapis.com/css2?family=${fuente.replace(' ','+')}:wght@400;700&display=swap" rel="stylesheet">`;
+  if (!html.includes(fuente)) {
+    html = html.replace('</head>', linkTag + '\n</head>');
+    html = html.replace(/font-family:[^;]+;/gi, `font-family:'${fuente}',sans-serif;`);
+    editor.setValue(html);
+  }
+  setStatus(`Fuente cambiada a ${fuente}`);
+}
+
+// ── UTILS ─────────────────────────────────────
+function toggleSection(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'none' ? '' : 'none';
+}
+
+function setStatus(msg) {
+  document.getElementById('status-msg').textContent = msg;
+  setTimeout(() => {
+    document.getElementById('status-msg').textContent = 'GAB S.O. CMS Editor — Listo';
+  }, 3000);
+}
+
+// Cerrar modal con ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') cerrarModal();
+  if (e.ctrlKey && e.key === 's') { e.preventDefault(); guardarHTML(); }
+  if (e.ctrlKey && e.key === 'p') { e.preventDefault(); mostrarPreview(); }
+});
+</script>
+</body>
+</html>
+// ─────────────────────────────
+// CONFIG
+// ─────────────────────────────
+const API_URL = "http://127.0.0.1:8000";
+
+// tomar project_id desde URL
+const urlParams = new URLSearchParams(window.location.search);
+const PROJECT_ID = urlParams.get("project") || "demo";
+
+// ─────────────────────────────
+// CARGAR PROYECTO
+// ─────────────────────────────
+async function cargarProyecto() {
+  try {
+    const res = await fetch(`${API_URL}/load_project?project_id=${PROJECT_ID}`);
+    const data = await res.json();
+
+    if (data.html) {
+      editor.setValue(data.html);
+      setStatus("Proyecto cargado desde backend");
+    }
+  } catch (e) {
+    console.error(e);
+    setStatus("Error al cargar");
+  }
+}
+
+// ─────────────────────────────
+// GUARDAR PROYECTO
+// ─────────────────────────────
+async function guardarEnBackend() {
+  try {
+    const html = editor.getValue();
+
+    await fetch(`${API_URL}/save_project`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        project_id: PROJECT_ID,
+        html: html
+      })
+    });
+
+    setStatus("Guardado en servidor ✔");
+  } catch (e) {
+    console.error(e);
+    setStatus("Error al guardar");
+  }
+}
+

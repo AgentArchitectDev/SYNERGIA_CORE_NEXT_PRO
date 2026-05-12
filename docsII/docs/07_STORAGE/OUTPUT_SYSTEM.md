@@ -1,0 +1,2 @@
+# OUTPUT SYSTEM
+Outputs generados

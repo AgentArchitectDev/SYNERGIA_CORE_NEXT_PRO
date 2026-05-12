@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "f09e7f7286f516e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3b9c5c3e2bba596",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a6323b9a554f4534",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Sin título.base",
+                "viewName": "Tabla"
+              },
+              "icon": "lucide-table",
+              "title": "Sin título"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0051b8a3bb36f391",
+    "type": "split",
+    "children": [
+      {
+        "id": "60389e811dbe0d2c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4f9e2159a27aba46",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "ffd2afbdbb082fe5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "2920f2fb125194f4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ba886bbdba900eb1",
+    "type": "split",
+    "children": [
+      {
+        "id": "25bad4d71fb09e6c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "686d749292c7638e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Sin título.base",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Sin título"
+            }
+          },
+          {
+            "id": "c021ef6fa350990d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Sin título.base",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Sin título"
+            }
+          },
+          {
+            "id": "80c0672192d73791",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "b6d3d13b765c48ac",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "ccd2aeff1f029f62",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sin título.base",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Sin título"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "a6323b9a554f4534",
+  "lastOpenFiles": [
+    "02_AI_SYETEM/10_AI_MODELS.md",
+    "Sin título.base",
+    "05_BLOCK_SYSTEM/02_BLOCK_SYSTEM.md",
+    "00_MASTER/19_SYNERGIA_OVERVIEW.md",
+    "08_BUSINESS_ENGINE/11_BUSINESS_HISTORY_ENGINE.md",
+    "03_RENDER_ENGINE/03_RENDER_ENGINE.md",
+    "02_AI_SYETEM/🤖 01 — AI.md",
+    "09_SOCIAL_ENGINE/SOCIAL_AUTOMATION_ENGINE.md",
+    "12_MAQ_SYSTEM/MAQ docs.md",
+    "11_FUTURE/27_FUTURE_SYSTEM.md",
+    "10_GRAPH_SYSTEN/20_OBSIDIAN_WIKI_SYSTEM.md",
+    "10_GRAPH_SYSTEN/15_VISUAL_GRAPH_SYSTEM.md",
+    "08_BUSINESS_ENGINE/29_BUSINESS_PLANNER_ENGINE.md",
+    "07_STORAGE/06_STORAGE_SYSTEM.md",
+    "06_TEMPLATES/05_TEMPLATE_ENGINE.md",
+    "04_EDITOR/04_VISUAL_EDITOR.md",
+    "01_ARCHITECTURE/08_CORE_SYSTEM.md",
+    "01_ARCHITECTURE/00_BACKEND_SYSTEM.md",
+    "00_MASTER/README.md",
+    "00_MASTER.md",
+    "00_MASTER",
+    "README.md",
+    "99_MASTER_BOOK",
+    "12_MAQ_SYSTEM",
+    "11_FUTURE",
+    "10_GRAPH_SYSTEN",
+    "09_SOCIAL_ENGINE",
+    "08_BUSINESS_ENGINE",
+    "07_STORAGE",
+    "06_TEMPLATES"
+  ]
+}

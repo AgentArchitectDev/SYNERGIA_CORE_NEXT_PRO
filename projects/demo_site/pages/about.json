@@ -1,0 +1,14 @@
+{
+  "slug": "about",
+  "title": "Nosotros",
+  "blocks": [
+    {
+      "type": "hero",
+      "data": {
+        "title": "Quiénes Somos",
+        "subtitle": "SYNERGIA CORE NEXT",
+        "button": "Leer Más"
+      }
+    }
+  ]
+}

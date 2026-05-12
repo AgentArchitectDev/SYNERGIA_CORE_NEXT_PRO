@@ -1,0 +1,27 @@
+{
+  "project_id": "project_001",
+  "template": "04_arquitectura_interiorismo",
+
+  "data": {
+    "brand_name": "SYNERGIA SPACE",
+    "hero_title": "Arquitectura que impacta",
+    "hero_subtitle": "Diseñamos experiencias, no espacios",
+
+    "item_1_img": "https://images.unsplash.com/photo-1544025162-d76694265947",
+    "item_1_name": "Casa Minimalista",
+    "item_1_price": "$10.000",
+
+    "item_2_img": "https://images.unsplash.com/photo-1551218808-94e220e084d2",
+    "item_2_name": "Interior Moderno",
+    "item_2_price": "$12.000",
+
+    "item_3_img": "https://images.unsplash.com/photo-1600585154526-990dbea46e06",
+    "item_3_name": "Espacio Premium",
+    "item_3_price": "$15.000",
+
+    "marquee_text": "Arquitectura • Diseño 3D • IA Generativa • Córdoba → Mundo",
+    "cta_title": "Trabajemos juntos",
+    "cta_button": "Solicitar proyecto",
+    "location": "Córdoba, Argentina"
+  }
+}

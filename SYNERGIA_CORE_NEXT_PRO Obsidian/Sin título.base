@@ -1,0 +1,9 @@
+properties:
+  file.name:SYNERGIA_CORE_NEXT_PRO
+    displayName: Indice Carpetas
+views:
+  - type: table
+    name: Tabla
+    sort:
+      - property: file.name
+        direction: ASC

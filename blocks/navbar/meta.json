@@ -1,0 +1,12 @@
+{
+  "name": "Navbar Modern",
+  "editable": true,
+  "category": "navigation",
+
+  "fields": [
+    {
+      "id": "logo",
+      "type": "text"
+    }
+  ]
+}

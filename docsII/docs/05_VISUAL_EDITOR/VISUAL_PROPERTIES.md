@@ -1,0 +1,2 @@
+# VISUAL PROPERTIES
+Propiedades visuales

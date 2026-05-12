@@ -1,0 +1,12 @@
+{
+  "name": "Footer Minimal",
+  "editable": true,
+  "category": "footer",
+
+  "fields": [
+    {
+      "id": "copyright",
+      "type": "text"
+    }
+  ]
+}

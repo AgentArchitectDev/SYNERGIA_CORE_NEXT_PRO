@@ -1,0 +1,13 @@
+{
+  "name": "03 Vet Emotional Techh",
+  "category": "tecnologia",
+  "version": "1.0",
+  "sections": [
+    "hero",
+    "content",
+    "gallery",
+    "cta",
+    "footer"
+  ],
+  "status": "base_template"
+}

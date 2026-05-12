@@ -1,0 +1,2 @@
+# SYNERGIA OVERVIEW
+Sistema base del proyecto SYNERGIA CORE NEXT

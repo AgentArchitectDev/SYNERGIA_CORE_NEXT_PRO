@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<title>SYNERGIA CMS PRO</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>⚡ SYNERGIA CMS</h2>
+
+    <button onclick="addBlock('navbar')">
+        + Navbar
+    </button>
+
+    <button onclick="addBlock('hero')">
+        + Hero
+    </button>
+
+    <button onclick="addBlock('cards')">
+        + Cards
+    </button>
+
+    <button onclick="addBlock('footer')">
+        + Footer
+    </button>
+
+    <button onclick="savePage()">
+        💾 Guardar
+    </button>
+
+</div>
+
+<div class="editor" id="editor"></div>
+
+<iframe id="preview"></iframe>
+
+<script src="blocks.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

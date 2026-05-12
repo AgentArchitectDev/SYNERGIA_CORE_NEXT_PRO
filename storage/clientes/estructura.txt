@@ -1,0 +1,7 @@
+.
+├── cliente_001.json
+├── cliente_gastro_001.json
+├── estructura.txt
+└── mates_cordoba.json
+
+1 directory, 4 files

@@ -1,0 +1,13 @@
+{
+  "blocks":[
+    {
+      "type":"hero",
+      "template":"modern_dark",
+      "data":{
+        "title":"SYNERGIA AI",
+        "subtitle":"Plataforma IA generativa cinematográfica",
+        "button":"Comenzar"
+      }
+    }
+  ]
+}

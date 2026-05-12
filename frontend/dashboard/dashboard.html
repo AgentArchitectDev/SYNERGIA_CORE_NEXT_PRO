@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SYNERGIA DASHBOARD</title>
+</head>
+
+<body style="background:#000;color:#fff;font-family:sans-serif;padding:40px">
+
+<h1>SYNERGIA DASHBOARD</h1>
+
+<input id="project" placeholder="cliente_001">
+
+<br><br>
+
+<input id="prompt" placeholder="Texto de la web" style="width:300px">
+
+<br><br>
+
+<button onclick="generar()">🚀 Generar Web</button>
+<button onclick="abrirCMS()">✏️ Editar en CMS</button>
+
+<br><br>
+
+<iframe id="preview" style="width:100%;height:400px;background:#fff"></iframe>
+
+<script>
+
+async function generar(){
+    const project_id = document.getElementById("project").value;
+    const prompt = document.getElementById("prompt").value;
+
+    if(!project_id || !prompt){
+        alert("Faltan datos");
+        return;
+    }
+
+    const res = await fetch("http://127.0.0.1:8000/generate", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({project_id, prompt})
+    });
+
+    const data = await res.json();
+
+    document.getElementById("preview").srcdoc = data.html;
+}
+
+function abrirCMS(){
+    const project_id = document.getElementById("project").value;
+
+    if(!project_id){
+        alert("Ingresá project_id");
+        return;
+    }
+
+    window.location.href = `cms_editor.html?project_id=${project_id}`;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "05 Gastronomia Experiencial",
+  "category": "gastronomia",
+  "version": "1.0",
+  "sections": [
+    "hero",
+    "content",
+    "gallery",
+    "cta",
+    "footer"
+  ],
+  "status": "base_template"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "08 Reality Bond Interface",
+  "category": "real_estate",
+  "version": "1.0",
+  "sections": [
+    "hero",
+    "content",
+    "gallery",
+    "cta",
+    "footer"
+  ],
+  "status": "base_template"
+}
