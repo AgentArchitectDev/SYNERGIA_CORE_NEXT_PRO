@@ -1,25 +1,58 @@
-import requests
+import ollama
 
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
+class OllamaProvider:
+    """
+    SYNERGIA CORE NEXT PRO
+    Provider simple para generación sin memoria compleja aún
+    """
 
+    def __init__(self):
+        print("[OLLAMA PROVIDER LOADED]")
 
-def generate(
-    model,
-    prompt,
-    system=""
-):
+    # =====================================================
+    # SIMPLE CHAT
+    # =====================================================
+    def generate(self, model_name, prompt):
 
-    payload = {
-        "model": model,
-        "prompt": prompt,
-        "system": system,
-        "stream": False
-    }
+        try:
+            response = ollama.chat(
+                model=model_name,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
 
-    response = requests.post(
-        OLLAMA_URL,
-        json=payload
-    )
+            return response["message"]["content"]
 
-    return response.json()["response"]
+        except Exception as e:
+            print("[OLLAMA ERROR]", e)
+            return None
+
+    # =====================================================
+    # STREAM CHAT (CLI)
+    # =====================================================
+    def generate_stream(self, model_name, prompt):
+
+        try:
+            stream = ollama.chat(
+                model=model_name,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ],
+                stream=True
+            )
+
+            full = ""
+
+            for chunk in stream:
+                token = chunk["message"]["content"]
+                print(token, end="", flush=True)
+                full += token
+
+            print()
+            return full
+
+        except Exception as e:
+            print("[OLLAMA STREAM ERROR]", e)
+            return None

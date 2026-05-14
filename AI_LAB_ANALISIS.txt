@@ -1,0 +1,1467 @@
+ai
+├── core_ai
+│   └── core_ai.py
+├── image
+│   ├── image_generator.py
+│   └── image_search.py
+├── __init__.py
+├── memory
+│   ├── conversations
+│   │   ├── maq2_dev.json
+│   │   └── maq2_real.json
+│   ├── memory_manager.py
+│   ├── prompts
+│   ├── __pycache__
+│   │   └── memory_manager.cpython-312.pyc
+│   └── sessions
+├── orchestrator.py
+├── prompts
+│   ├── hero_prompt.txt
+│   ├── seo_prompt.txt
+│   └── website_prompt.txt
+├── providers
+│   ├── gemini_provider.py
+│   ├── groq_provider.py
+│   ├── __init__.py
+│   ├── ollama_provider.py
+│   ├── openai_provider.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── ollama_provider.cpython-312.pyc
+│   │   └── registry.cpython-312.pyc
+│   └── registry.py
+└── __pycache__
+    ├── __init__.cpython-312.pyc
+    └── orchestrator.cpython-312.pyc
+tools/ai_lab
+├── ai_lab_panel.py
+├── models_manager.py
+├── monitor.py
+├── ollama_connector.py
+├── prompt_console.py
+└── __pycache__
+    ├── models_manager.cpython-312.pyc
+    └── ollama_connector.cpython-312.pyc
+
+14 directories, 30 files
+
+
+====================
+ai/memory/memory_manager.py
+====================
+import os
+import json
+from datetime import datetime
+
+
+# =========================================================
+# SYNERGIA CORE NEXT PRO
+# AI MEMORY SYSTEM
+# memory_manager.py
+# =========================================================
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+CONVERSATIONS_PATH = os.path.join(
+    BASE_DIR,
+    "conversations"
+)
+
+SESSIONS_PATH = os.path.join(
+    BASE_DIR,
+    "sessions"
+)
+
+PROMPTS_PATH = os.path.join(
+    BASE_DIR,
+    "prompts"
+)
+
+
+class MemoryManager:
+
+    # =====================================================
+    # INIT
+    # =====================================================
+
+    def __init__(self):
+
+        self.ensure_directories()
+
+    # =====================================================
+    # CREATE DIRECTORIES
+    # =====================================================
+
+    def ensure_directories(self):
+
+        os.makedirs(CONVERSATIONS_PATH, exist_ok=True)
+        os.makedirs(SESSIONS_PATH, exist_ok=True)
+        os.makedirs(PROMPTS_PATH, exist_ok=True)
+
+    # =====================================================
+    # SESSION FILE PATH
+    # =====================================================
+
+    def get_session_filepath(self, session_id):
+
+        filename = f"{session_id}.json"
+
+        return os.path.join(
+            CONVERSATIONS_PATH,
+            filename
+        )
+
+    # =====================================================
+    # CREATE SESSION
+    # =====================================================
+
+    def create_session(self, session_id):
+
+        filepath = self.get_session_filepath(session_id)
+
+        if not os.path.exists(filepath):
+
+            with open(filepath, "w", encoding="utf-8") as f:
+
+                json.dump(
+                    [],
+                    f,
+                    indent=4,
+                    ensure_ascii=False
+                )
+
+            print(f"[SESSION CREATED] {session_id}")
+
+        return filepath
+
+    # =====================================================
+    # SAVE INTERACTION
+    # =====================================================
+
+    def save_interaction(
+        self,
+        session_id,
+        model,
+        prompt,
+        response
+    ):
+
+        self.create_session(session_id)
+
+        filepath = self.get_session_filepath(session_id)
+
+        interaction = {
+
+            "timestamp": datetime.now().strftime(
+                "%Y-%m-%d %H:%M:%S"
+            ),
+
+            "session_id": session_id,
+
+            "model": model,
+
+            "prompt": prompt,
+
+            "response": response
+        }
+
+        history = []
+
+        # =============================================
+        # LOAD OLD HISTORY
+        # =============================================
+
+        if os.path.exists(filepath):
+
+            try:
+
+                with open(filepath, "r", encoding="utf-8") as f:
+
+                    history = json.load(f)
+
+            except Exception as e:
+
+                print("[MEMORY LOAD ERROR]")
+                print(e)
+
+                history = []
+
+        # =============================================
+        # APPEND NEW INTERACTION
+        # =============================================
+
+        history.append(interaction)
+
+        # =============================================
+        # SAVE UPDATED HISTORY
+        # =============================================
+
+        try:
+
+            with open(filepath, "w", encoding="utf-8") as f:
+
+                json.dump(
+                    history,
+                    f,
+                    indent=4,
+                    ensure_ascii=False
+                )
+
+            print(f"[MEMORY SAVED] {filepath}")
+
+        except Exception as e:
+
+            print("[MEMORY SAVE ERROR]")
+            print(e)
+
+    # =====================================================
+    # LOAD CONVERSATION
+    # =====================================================
+
+    def load_conversation(self, session_id):
+
+        filepath = self.get_session_filepath(session_id)
+
+        if not os.path.exists(filepath):
+
+            print("[SESSION NOT FOUND]")
+
+            return []
+
+        try:
+
+            with open(filepath, "r", encoding="utf-8") as f:
+
+                return json.load(f)
+
+        except Exception as e:
+
+            print("[LOAD CONVERSATION ERROR]")
+            print(e)
+
+            return []
+
+    # =====================================================
+    # LIST SESSIONS
+    # =====================================================
+
+    def list_sessions(self):
+
+        self.ensure_directories()
+
+        sessions = []
+
+        for file in os.listdir(CONVERSATIONS_PATH):
+
+            if file.endswith(".json"):
+
+                sessions.append(
+                    file.replace(".json", "")
+                )
+
+        sessions.sort()
+
+        return sessions
+
+    # =====================================================
+    # GET LAST MESSAGES
+    # =====================================================
+
+    def get_last_messages(
+        self,
+        session_id,
+        limit=5
+    ):
+
+        history = self.load_conversation(session_id)
+
+        if not history:
+            return []
+
+        return history[-limit:]
+
+    # =====================================================
+    # DELETE SESSION
+    # =====================================================
+
+    def delete_session(self, session_id):
+
+        filepath = self.get_session_filepath(session_id)
+
+        if not os.path.exists(filepath):
+
+            print("[SESSION DOES NOT EXIST]")
+
+            return
+
+        try:
+
+            os.remove(filepath)
+
+            print(f"[SESSION DELETED] {session_id}")
+
+        except Exception as e:
+
+            print("[DELETE SESSION ERROR]")
+            print(e)
+
+    # =====================================================
+    # SEARCH IN CONVERSATION
+    # =====================================================
+
+    def search_in_conversation(
+        self,
+        session_id,
+        keyword
+    ):
+
+        history = self.load_conversation(session_id)
+
+        if not history:
+            return []
+
+        keyword = keyword.lower()
+
+        results = []
+
+        for item in history:
+
+            prompt = item.get(
+                "prompt",
+                ""
+            ).lower()
+
+            response = item.get(
+                "response",
+                ""
+            ).lower()
+
+            if keyword in prompt or keyword in response:
+
+                results.append(item)
+
+        return results
+
+    # =====================================================
+    # EXPORT SESSION TXT
+    # =====================================================
+
+    def export_session_txt(
+        self,
+        session_id
+    ):
+
+        history = self.load_conversation(session_id)
+
+        if not history:
+
+            print("[NO HISTORY FOUND]")
+
+            return
+
+        export_path = os.path.join(
+            SESSIONS_PATH,
+            f"{session_id}.txt"
+        )
+
+        try:
+
+            with open(export_path, "w", encoding="utf-8") as f:
+
+                f.write(
+                    "=====================================\n"
+                )
+
+                f.write(
+                    "SYNERGIA SESSION EXPORT\n"
+                )
+
+                f.write(
+                    "=====================================\n\n"
+                )
+
+                for item in history:
+
+                    f.write(
+                        f"TIMESTAMP: {item['timestamp']}\n"
+                    )
+
+                    f.write(
+                        f"MODEL: {item['model']}\n"
+                    )
+
+                    f.write(
+                        f"PROMPT:\n{item['prompt']}\n\n"
+                    )
+
+                    f.write(
+                        f"RESPONSE:\n{item['response']}\n"
+                    )
+
+                    f.write(
+                        "\n-------------------------------------\n\n"
+                    )
+
+            print(f"[SESSION EXPORTED] {export_path}")
+
+        except Exception as e:
+
+            print("[EXPORT ERROR]")
+            print(e)
+
+    # =====================================================
+    # CLEAR CONVERSATION
+    # =====================================================
+
+    def clear_conversation(self, session_id):
+
+        filepath = self.get_session_filepath(session_id)
+
+        if not os.path.exists(filepath):
+
+            print("[SESSION NOT FOUND]")
+
+            return
+
+        try:
+
+            with open(filepath, "w", encoding="utf-8") as f:
+
+                json.dump(
+                    [],
+                    f,
+                    indent=4,
+                    ensure_ascii=False
+                )
+
+            print(f"[CONVERSATION CLEARED] {session_id}")
+
+        except Exception as e:
+
+            print("[CLEAR CONVERSATION ERROR]")
+            print(e)
+
+    # =====================================================
+    # GET SESSION STATS
+    # =====================================================
+
+    def get_session_stats(self, session_id):
+
+        history = self.load_conversation(session_id)
+
+        if not history:
+
+            return {
+                "messages": 0,
+                "models": [],
+                "last_timestamp": None
+            }
+
+        models = list(set(
+            item["model"]
+            for item in history
+        ))
+
+        return {
+
+            "messages": len(history),
+
+            "models": models,
+
+            "last_timestamp": history[-1]["timestamp"]
+        }
+
+
+# =========================================================
+# GLOBAL MEMORY INSTANCE
+# =========================================================
+
+memory = MemoryManager()
+
+
+====================
+ai/orchestrator.py
+====================
+from ai.providers.registry import MODELS
+from ai.providers.ollama_provider import generate
+
+import json
+import re
+
+
+class AIOrchestrator:
+
+    # =========================================
+    # HERO SIMPLE
+    # =========================================
+
+    def generate_hero(
+        self,
+        business
+    ):
+
+        prompt = f"""
+
+        Crear hero premium para:
+
+        {business}
+
+        devolver:
+        title
+        subtitle
+        button
+
+        """
+
+        response = generate(
+
+            model=MODELS["copy"],
+
+            prompt=prompt
+        )
+
+        return response
+
+    # =========================================
+    # HTML COMPLETO
+    # =========================================
+
+    def generate_html(
+        self,
+        description
+    ):
+
+        prompt = f"""
+
+        Crear HTML premium moderno.
+
+        descripción:
+
+        {description}
+
+        requisitos:
+
+        - diseño moderno
+        - responsive
+        - dark mode
+        - sección hero
+        - cards
+        - footer
+        - html completo
+        - css incluido
+        - visual premium
+
+        """
+
+        response = generate(
+
+            model=MODELS["frontend"],
+
+            prompt=prompt
+        )
+
+        return response
+
+    # =========================================
+    # GENERAR PAGE JSON
+    # =========================================
+
+    def generate_page(
+        self,
+        business
+    ):
+
+        prompt = f"""
+
+        Crear JSON de página web para:
+
+        {business}
+
+        devolver SOLO JSON válido.
+
+        estructura:
+
+        {{
+          "blocks":[
+            {{
+              "type":"navbar",
+              "data":{{
+                "logo":"SYNERGIA"
+              }}
+            }},
+            {{
+              "type":"hero",
+              "data":{{
+                "title":"...",
+                "subtitle":"...",
+                "button":"..."
+              }}
+            }},
+            {{
+              "type":"cards",
+              "data":{{
+                "title":"..."
+              }}
+            }},
+            {{
+              "type":"footer",
+              "data":{{
+                "copyright":"..."
+              }}
+            }}
+          ]
+        }}
+
+        """
+
+        response = generate(
+
+            model=MODELS["frontend"],
+
+            prompt=prompt
+        )
+
+        return response
+
+    # =========================================
+    # GENERAR Y LIMPIAR JSON
+    # =========================================
+
+    def generate_clean_json(
+        self,
+        business
+    ):
+
+        raw = self.generate_page(
+            business
+        )
+
+        try:
+
+            match = re.search(
+                r"\{.*\}",
+                raw,
+                re.DOTALL
+            )
+
+            if match:
+
+                clean = match.group(0)
+
+                parsed = json.loads(clean)
+
+                return parsed
+
+            return {
+                "status": "error",
+                "detail": "No se encontró JSON"
+            }
+
+        except Exception as e:
+
+            return {
+                "status": "error",
+                "detail": str(e),
+                "raw": raw
+            }
+
+    # =========================================
+    # GENERAR MULTI PAGE SITE
+    # =========================================
+
+    def generate_site_structure(
+        self,
+        business
+    ):
+
+        prompt = f"""
+
+        Crear estructura JSON para sitio web completo.
+
+        negocio:
+
+        {business}
+
+        devolver SOLO JSON válido.
+
+        estructura:
+
+        {{
+          "site_name":"...",
+          "pages":[
+            {{
+              "slug":"home",
+              "title":"Inicio"
+            }},
+            {{
+              "slug":"about",
+              "title":"Nosotros"
+            }},
+            {{
+              "slug":"services",
+              "title":"Servicios"
+            }},
+            {{
+              "slug":"contact",
+              "title":"Contacto"
+            }}
+          ]
+        }}
+
+        """
+
+        response = generate(
+
+            model=MODELS["copy"],
+
+            prompt=prompt
+        )
+
+        return response
+
+    # =========================================
+    # GENERAR SEO
+    # =========================================
+
+    def generate_seo(
+        self,
+        business
+    ):
+
+        prompt = f"""
+
+        Crear SEO profesional para:
+
+        {business}
+
+        devolver:
+
+        - meta title
+        - meta description
+        - keywords
+
+        """
+
+        response = generate(
+
+            model=MODELS["seo"],
+
+            prompt=prompt
+        )
+
+        return response
+
+    # =========================================
+    # GENERAR TEXTOS DE CARDS
+    # =========================================
+
+    def generate_services(
+        self,
+        business
+    ):
+
+        prompt = f"""
+
+        Crear 3 servicios premium para:
+
+        {business}
+
+        devolver:
+        - titulo
+        - descripción corta
+
+        """
+
+        response = generate(
+
+            model=MODELS["copy"],
+
+            prompt=prompt
+        )
+
+        return response
+
+    # =========================================
+    # GENERAR CTA
+    # =========================================
+
+    def generate_cta(
+        self,
+        business
+    ):
+
+        prompt = f"""
+
+        Crear CTA premium para:
+
+        {business}
+
+        devolver:
+        - titulo
+        - subtitulo
+        - botón
+
+        """
+
+        response = generate(
+
+            model=MODELS["copy"],
+
+            prompt=prompt
+        )
+
+        return response
+
+    # =========================================
+    # GENERAR ESTILO VISUAL
+    # =========================================
+
+    def generate_style(
+        self,
+        business
+    ):
+
+        prompt = f"""
+
+        Crear estilo visual para:
+
+        {business}
+
+        devolver:
+        - colores
+        - tipografía
+        - estilo visual
+        - tipo de diseño
+
+        """
+
+        response = generate(
+
+            model=MODELS["ux"],
+
+            prompt=prompt
+        )
+
+        return response
+
+
+# =============================================
+# INSTANCIA GLOBAL
+# =============================================
+
+ai = AIOrchestrator()
+
+
+====================
+ai/__init__.py
+====================
+
+
+====================
+ai/core_ai/core_ai.py
+====================
+import re
+
+def detect_category(prompt: str):
+    prompt = prompt.lower()
+
+    if "gastronom" in prompt or "restaurante" in prompt:
+        return "05_gastronomia_experiencial"
+
+    if "arquitectura" in prompt or "casa" in prompt:
+        return "04_arquitectura_interiorismo"
+
+    return "11_Ejemplo1"
+
+
+def build_json(prompt: str):
+    return {
+        "tagline": prompt,
+        "item_1_name": "Item generado IA",
+        "item_1_img": "https://images.unsplash.com/photo-1544025162-d76694265947",
+        "item_1_price": "$10.000"
+    }
+
+
+def build_from_prompt(prompt: str):
+    template = detect_category(prompt)
+    data = build_json(prompt)
+
+    return {
+        "status": "ok",
+        "template": template,
+        "data": data
+    }
+
+
+====================
+ai/providers/groq_provider.py
+====================
+
+
+
+====================
+ai/providers/ollama_provider.py
+====================
+import ollama
+
+from ai.memory.memory_manager import memory
+
+
+# =========================================================
+# SYNERGIA CORE NEXT PRO
+# OLLAMA PROVIDER
+# =========================================================
+
+
+class OllamaProvider:
+
+    # =====================================================
+    # INIT
+    # =====================================================
+
+    def __init__(self):
+
+        print("[OLLAMA PROVIDER LOADED]")
+
+    # =====================================================
+    # SIMPLE GENERATE
+    # =====================================================
+
+    def generate(
+        self,
+        model_name,
+        prompt,
+        session_id="default_session"
+    ):
+
+        try:
+
+            response = ollama.chat(
+
+                model=model_name,
+
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ]
+            )
+
+            content = response["message"]["content"]
+
+            # =============================================
+            # SAVE MEMORY
+            # =============================================
+
+            memory.save_interaction(
+
+                session_id=session_id,
+
+                model=model_name,
+
+                prompt=prompt,
+
+                response=content
+            )
+
+            return content
+
+        except Exception as e:
+
+            print("[OLLAMA GENERATE ERROR]")
+            print(e)
+
+            return None
+
+    # =====================================================
+    # STREAM GENERATE
+    # =====================================================
+
+    def generate_stream(
+
+        self,
+
+        model_name,
+
+        prompt,
+
+        session_id="default_session"
+    ):
+
+        full_response = ""
+
+        try:
+
+            stream = ollama.chat(
+
+                model=model_name,
+
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+
+                stream=True
+            )
+
+            for chunk in stream:
+
+                token = chunk["message"]["content"]
+
+                print(token, end="", flush=True)
+
+                full_response += token
+
+            print("\n")
+
+            # =============================================
+            # SAVE MEMORY
+            # =============================================
+
+            memory.save_interaction(
+
+                session_id=session_id,
+
+                model=model_name,
+
+                prompt=prompt,
+
+                response=full_response
+            )
+
+            return full_response
+
+        except Exception as e:
+
+            print("[OLLAMA STREAM ERROR]")
+            print(e)
+
+            return None
+
+    # =====================================================
+    # GENERATE WITH CONTEXT
+    # =====================================================
+
+    def generate_with_context(
+
+        self,
+
+        model_name,
+
+        prompt,
+
+        session_id="default_session",
+
+        context_limit=5
+    ):
+
+        try:
+
+            history = memory.get_last_messages(
+
+                session_id=session_id,
+
+                limit=context_limit
+            )
+
+            messages = []
+
+            # =============================================
+            # LOAD HISTORY
+            # =============================================
+
+            for item in history:
+
+                messages.append(
+                    {
+                        "role": "user",
+                        "content": item["prompt"]
+                    }
+                )
+
+                messages.append(
+                    {
+                        "role": "assistant",
+                        "content": item["response"]
+                    }
+                )
+
+            # =============================================
+            # NEW PROMPT
+            # =============================================
+
+            messages.append(
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            )
+
+            response = ollama.chat(
+
+                model=model_name,
+
+                messages=messages
+            )
+
+            content = response["message"]["content"]
+
+            # =============================================
+            # SAVE MEMORY
+            # =============================================
+
+            memory.save_interaction(
+
+                session_id=session_id,
+
+                model=model_name,
+
+                prompt=prompt,
+
+                response=content
+            )
+
+            return content
+
+        except Exception as e:
+
+            print("[OLLAMA CONTEXT ERROR]")
+            print(e)
+
+            return None
+
+
+# =========================================================
+# GLOBAL INSTANCE
+# =========================================================
+
+ollama_provider = OllamaProvider()
+
+
+====================
+ai/providers/__init__.py
+====================
+
+
+
+====================
+ai/providers/registry.py
+====================
+MODELS = {
+
+    "frontend": "qwen2.5-coder:7b",
+
+    "backend": "deepseek-coder-v2:16b",
+
+    "copy": "llama3:8b",
+
+    "seo": "mistral:latest",
+
+    "light": "phi3:mini",
+
+    "ux": "gemma3:4b"
+}
+
+
+====================
+ai/providers/gemini_provider.py
+====================
+
+
+
+====================
+ai/providers/openai_provider.py
+====================
+
+
+
+====================
+ai/image/image_generator.py
+====================
+
+
+
+====================
+ai/image/image_search.py
+====================
+
+
+
+====================
+tools/ai_lab/models_manager.py
+====================
+import subprocess
+
+
+class ModelsManager:
+
+    def __init__(self):
+        self.models = []
+
+    def load_models(self):
+
+        try:
+            result = subprocess.run(
+                ["ollama", "list"],
+                capture_output=True,
+                text=True
+            )
+
+            output = result.stdout
+
+            lines = output.splitlines()[1:]
+
+            self.models = []
+
+            for line in lines:
+
+                if line.strip():
+
+                    parts = line.split()
+
+                    model_name = parts[0]
+
+                    self.models.append(model_name)
+
+            return self.models
+
+        except Exception as e:
+
+            print("ERROR LOADING MODELS:", e)
+
+            return []
+
+
+if __name__ == "__main__":
+
+    manager = ModelsManager()
+
+    models = manager.load_models()
+
+    print("\n=== MODELOS DETECTADOS ===\n")
+
+    for model in models:
+        print("✔", model)
+
+
+====================
+tools/ai_lab/monitor.py
+====================
+
+
+====================
+tools/ai_lab/prompt_console.py
+====================
+
+
+====================
+tools/ai_lab/ollama_connector.py
+====================
+import requests
+import json
+
+
+class OllamaConnector:
+
+    def __init__(self):
+
+        self.url = "http://localhost:11434/api/generate"
+
+    def generate_stream(self, model, prompt):
+
+        payload = {
+            "model": model,
+            "prompt": prompt,
+            "stream": True
+        }
+
+        try:
+
+            response = requests.post(
+                self.url,
+                json=payload,
+                stream=True
+            )
+
+            for line in response.iter_lines():
+
+                if line:
+
+                    data = json.loads(line)
+
+                    token = data.get("response", "")
+
+                    yield token
+
+        except Exception as e:
+
+            yield f"ERROR: {e}"
+
+
+====================
+tools/ai_lab/ai_lab_panel.py
+====================
+from PyQt6.QtWidgets import (
+    QApplication,
+    QWidget,
+    QVBoxLayout,
+    QLabel,
+    QPushButton,
+    QTextEdit,
+    QListWidget
+)
+
+from PyQt6.QtCore import (
+    QThread,
+    pyqtSignal
+)
+
+from models_manager import ModelsManager
+from ollama_connector import OllamaConnector
+
+import sys
+
+
+class StreamWorker(QThread):
+
+    token_received = pyqtSignal(str)
+
+    def __init__(self, model, prompt):
+
+        super().__init__()
+
+        self.model = model
+        self.prompt = prompt
+
+    def run(self):
+
+        ollama = OllamaConnector()
+
+        for token in ollama.generate_stream(
+            self.model,
+            self.prompt
+        ):
+
+            self.token_received.emit(token)
+
+
+class AILabPanel(QWidget):
+
+    def __init__(self):
+
+        super().__init__()
+
+        self.setWindowTitle(
+            "SYNERGIA AI LAB"
+        )
+
+        self.resize(900, 700)
+
+        self.models_manager = ModelsManager()
+
+        self.layout = QVBoxLayout()
+
+        self.title = QLabel(
+            "SYNERGIA AI LAB"
+        )
+
+        self.layout.addWidget(self.title)
+
+        self.models_list = QListWidget()
+
+        models = self.models_manager.load_models()
+
+        for model in models:
+
+            self.models_list.addItem(model)
+
+        self.layout.addWidget(
+            self.models_list
+        )
+
+        self.prompt_input = QTextEdit()
+
+        self.prompt_input.setPlaceholderText(
+            "Escribí tu prompt..."
+        )
+
+        self.layout.addWidget(
+            self.prompt_input
+        )
+
+        self.send_button = QPushButton(
+            "ENVIAR PROMPT"
+        )
+
+        self.send_button.clicked.connect(
+            self.send_prompt
+        )
+
+        self.layout.addWidget(
+            self.send_button
+        )
+
+        self.output = QTextEdit()
+
+        self.output.setReadOnly(True)
+
+        self.layout.addWidget(
+            self.output
+        )
+
+        self.setLayout(self.layout)
+
+    def send_prompt(self):
+
+        selected = self.models_list.currentItem()
+
+        if not selected:
+
+            self.output.setText(
+                "Seleccioná un modelo."
+            )
+
+            return
+
+        model = selected.text()
+
+        prompt = self.prompt_input.toPlainText()
+
+        self.output.clear()
+
+        self.worker = StreamWorker(
+            model,
+            prompt
+        )
+
+        self.worker.token_received.connect(
+            self.update_output
+        )
+
+        self.worker.start()
+
+    def update_output(self, token):
+
+        self.output.insertPlainText(token)
+
+        scrollbar = self.output.verticalScrollBar()
+
+        scrollbar.setValue(
+            scrollbar.maximum()
+        )
+
+
+if __name__ == "__main__":
+
+    app = QApplication(sys.argv)
+
+    window = AILabPanel()
+
+    window.show()
+
+    sys.exit(app.exec())
