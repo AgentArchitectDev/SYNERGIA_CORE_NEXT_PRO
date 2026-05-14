@@ -1,0 +1,582 @@
+===== AI LAB PANEL =====
+import sys
+
+from PyQt6.QtWidgets import (
+    QWidget, QVBoxLayout, QPushButton,
+    QTextEdit, QComboBox, QLabel
+)
+from PyQt6.QtCore import QThread, pyqtSignal
+
+from ai.models.models_manager import ModelsManager
+from ai.providers.ollama_connector import OllamaConnector
+from ai.memory.memory_manager import MemoryManager
+
+
+# =========================================================
+# WORKER THREAD (STREAMING)
+# =========================================================
+class StreamWorker(QThread):
+    token_signal = pyqtSignal(str)
+
+    def __init__(self, model, messages):
+        super().__init__()
+        self.model = model
+        self.messages = messages
+        self.connector = OllamaConnector()
+
+    def run(self):
+        def callback(token):
+            self.token_signal.emit(token)
+
+        self.connector.chat_stream(
+            self.model,
+            self.messages,
+            callback
+        )
+
+
+# =========================================================
+# MAIN PANEL
+# =========================================================
+class AILabPanel(QWidget):
+
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("SYNERGIA AI LAB")
+        self.resize(900, 600)
+
+        self.models_manager = ModelsManager()
+
+        self.init_ui()
+        self.load_models()
+
+    # =====================================================
+    # UI
+    # =====================================================
+    def init_ui(self):
+        layout = QVBoxLayout()
+
+        self.label = QLabel("Modelo:")
+        layout.addWidget(self.label)
+
+        self.model_selector = QComboBox()
+        layout.addWidget(self.model_selector)
+
+        self.input_box = QTextEdit()
+        self.input_box.setPlaceholderText("Escribí tu prompt...")
+        layout.addWidget(self.input_box)
+
+        self.run_button = QPushButton("Ejecutar IA")
+        self.run_button.clicked.connect(self.run_prompt)
+        layout.addWidget(self.run_button)
+
+        self.output_box = QTextEdit()
+        self.output_box.setReadOnly(True)
+        layout.addWidget(self.output_box)
+
+        self.setLayout(layout)
+
+    # =====================================================
+    # LOAD MODELS
+    # =====================================================
+    def load_models(self):
+        models = self.models_manager.get_model_names()
+        self.model_selector.addItems(models)
+
+    # =====================================================
+    # RUN PROMPT
+    # =====================================================
+    def run_prompt(self):
+        prompt = self.input_box.toPlainText()
+        model = self.model_selector.currentText()
+
+        self.output_box.clear()
+
+        messages = [
+            {"role": "user", "content": prompt}
+        ]
+
+        memory.save_prompt(prompt)
+
+        self.worker = StreamWorker(model, messages)
+        self.worker.token_signal.connect(self.update_output)
+        self.worker.start()
+
+    # =====================================================
+    # STREAM UPDATE
+    # =====================================================
+    def update_output(self, token):
+        self.output_box.insertPlainText(token)
+
+
+===== MEMORY =====
+import os
+import json
+from datetime import datetime
+
+
+class MemoryManager:
+    """
+    SYNERGIA MEMORY ENGINE (PRO)
+    - Manejo de sesiones
+    - Persistencia de prompts
+    - Contexto de conversación
+    """
+
+    def __init__(self):
+        self.base_path = "ai/memory"
+        self.conversations_path = os.path.join(self.base_path, "conversations")
+        self.sessions_path = os.path.join(self.base_path, "sessions")
+        self.prompts_path = os.path.join(self.base_path, "prompts")
+
+        self._ensure_dirs()
+        self.current_session = self._create_session()
+
+    # =====================================================
+    # INIT STRUCTURE
+    # =====================================================
+    def _ensure_dirs(self):
+        os.makedirs(self.conversations_path, exist_ok=True)
+        os.makedirs(self.sessions_path, exist_ok=True)
+        os.makedirs(self.prompts_path, exist_ok=True)
+
+    def _create_session(self):
+        session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        session_file = os.path.join(self.sessions_path, f"{session_id}.json")
+
+        data = {
+            "session_id": session_id,
+            "created_at": datetime.now().isoformat(),
+            "history": []
+        }
+
+        with open(session_file, "w") as f:
+            json.dump(data, f, indent=2)
+
+        return session_file
+
+    # =====================================================
+    # SAVE PROMPT (OBLIGATORIO)
+    # =====================================================
+    def save_prompt(self, prompt, response=None):
+        entry = {
+            "timestamp": datetime.now().isoformat(),
+            "prompt": prompt,
+            "response": response
+        }
+
+        self._save_to_session(entry)
+        self._save_global(entry)
+
+    # =====================================================
+    # SESSION STORAGE
+    # =====================================================
+    def _save_to_session(self, entry):
+        with open(self.current_session, "r") as f:
+            data = json.load(f)
+
+        data["history"].append(entry)
+
+        with open(self.current_session, "w") as f:
+            json.dump(data, f, indent=2)
+
+    # =====================================================
+    # GLOBAL STORAGE
+    # =====================================================
+    def _save_global(self, entry):
+        global_file = os.path.join(self.conversations_path, "global.json")
+
+        if not os.path.exists(global_file):
+            with open(global_file, "w") as f:
+                json.dump([], f)
+
+        with open(global_file, "r") as f:
+            data = json.load(f)
+
+        data.append(entry)
+
+        with open(global_file, "w") as f:
+            json.dump(data, f, indent=2)
+
+    # =====================================================
+    # CONTEXT (FUTURO AGENTES)
+    # =====================================================
+    def get_context(self, limit=10):
+        with open(self.current_session, "r") as f:
+            data = json.load(f)
+
+        return data["history"][-limit:]
+
+
+===== MODELS =====
+import requests
+
+
+class ModelsManager:
+    """
+    Detecta modelos disponibles en Ollama local
+    """
+
+    def __init__(self, base_url="http://localhost:11434"):
+        self.base_url = base_url
+
+    # =====================================================
+    # FETCH MODELS
+    # =====================================================
+    def get_models(self):
+        try:
+            url = f"{self.base_url}/api/tags"
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+
+            data = response.json()
+
+            models = []
+            for m in data.get("models", []):
+                models.append({
+                    "name": m.get("name"),
+                    "size": m.get("size"),
+                    "modified": m.get("modified_at")
+                })
+
+            return models
+
+        except Exception as e:
+            print(f"[ModelsManager] Error: {e}")
+            return []
+
+    # =====================================================
+    # SIMPLE LIST (UI FRIENDLY)
+    # =====================================================
+    def get_model_names(self):
+        return [m["name"] for m in self.get_models()]
+
+
+===== PROVIDERS =====
+
+
+
+import requests
+
+
+class OllamaConnector:
+    """
+    Conector directo a Ollama con streaming real
+    """
+
+    def __init__(self, base_url="http://localhost:11434"):
+        self.base_url = base_url
+
+    # =====================================================
+    # STREAM CHAT
+    # =====================================================
+    def chat_stream(self, model, messages, callback):
+        """
+        callback(token: str)
+        """
+
+        url = f"{self.base_url}/api/chat"
+
+        payload = {
+            "model": model,
+            "messages": messages,
+            "stream": True
+        }
+
+        try:
+            response = requests.post(url, json=payload, stream=True)
+            response.raise_for_status()
+
+            for line in response.iter_lines():
+                if not line:
+                    continue
+
+                try:
+                    import json
+                    data = json.loads(line.decode("utf-8"))
+
+                    if "message" in data:
+                        token = data["message"].get("content", "")
+                        if token:
+                            callback(token)
+
+                except Exception:
+                    continue
+
+        except Exception as e:
+            callback(f"\n[ERROR OLLAMA]: {str(e)}")
+import ollama
+
+from ai.memory.memory_manager import memory
+
+
+# =========================================================
+# SYNERGIA CORE NEXT PRO
+# OLLAMA PROVIDER
+# =========================================================
+
+
+class OllamaProvider:
+
+    # =====================================================
+    # INIT
+    # =====================================================
+
+    def __init__(self):
+
+        print("[OLLAMA PROVIDER LOADED]")
+
+    # =====================================================
+    # SIMPLE GENERATE
+    # =====================================================
+
+    def generate(
+        self,
+        model_name,
+        prompt,
+        session_id="default_session"
+    ):
+
+        try:
+
+            response = ollama.chat(
+
+                model=model_name,
+
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ]
+            )
+
+            content = response["message"]["content"]
+
+            # =============================================
+            # SAVE MEMORY
+            # =============================================
+
+            memory.save_interaction(
+
+                session_id=session_id,
+
+                model=model_name,
+
+                prompt=prompt,
+
+                response=content
+            )
+
+            return content
+
+        except Exception as e:
+
+            print("[OLLAMA GENERATE ERROR]")
+            print(e)
+
+            return None
+
+    # =====================================================
+    # STREAM GENERATE
+    # =====================================================
+
+    def generate_stream(
+
+        self,
+
+        model_name,
+
+        prompt,
+
+        session_id="default_session"
+    ):
+
+        full_response = ""
+
+        try:
+
+            stream = ollama.chat(
+
+                model=model_name,
+
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+
+                stream=True
+            )
+
+            for chunk in stream:
+
+                token = chunk["message"]["content"]
+
+                print(token, end="", flush=True)
+
+                full_response += token
+
+            print("\n")
+
+            # =============================================
+            # SAVE MEMORY
+            # =============================================
+
+            memory.save_interaction(
+
+                session_id=session_id,
+
+                model=model_name,
+
+                prompt=prompt,
+
+                response=full_response
+            )
+
+            return full_response
+
+        except Exception as e:
+
+            print("[OLLAMA STREAM ERROR]")
+            print(e)
+
+            return None
+
+    # =====================================================
+    # GENERATE WITH CONTEXT
+    # =====================================================
+
+    def generate_with_context(
+
+        self,
+
+        model_name,
+
+        prompt,
+
+        session_id="default_session",
+
+        context_limit=5
+    ):
+
+        try:
+
+            history = memory.get_last_messages(
+
+                session_id=session_id,
+
+                limit=context_limit
+            )
+
+            messages = []
+
+            # =============================================
+            # LOAD HISTORY
+            # =============================================
+
+            for item in history:
+
+                messages.append(
+                    {
+                        "role": "user",
+                        "content": item["prompt"]
+                    }
+                )
+
+                messages.append(
+                    {
+                        "role": "assistant",
+                        "content": item["response"]
+                    }
+                )
+
+            # =============================================
+            # NEW PROMPT
+            # =============================================
+
+            messages.append(
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            )
+
+            response = ollama.chat(
+
+                model=model_name,
+
+                messages=messages
+            )
+
+            content = response["message"]["content"]
+
+            # =============================================
+            # SAVE MEMORY
+            # =============================================
+
+            memory.save_interaction(
+
+                session_id=session_id,
+
+                model=model_name,
+
+                prompt=prompt,
+
+                response=content
+            )
+
+            return content
+
+        except Exception as e:
+
+            print("[OLLAMA CONTEXT ERROR]")
+            print(e)
+
+            return None
+
+
+# =========================================================
+# GLOBAL INSTANCE
+# =========================================================
+
+ollama_provider = OllamaProvider()
+
+MODELS = {
+
+    "frontend": "qwen2.5-coder:7b",
+
+    "backend": "deepseek-coder-v2:16b",
+
+    "copy": "llama3:8b",
+
+    "seo": "mistral:latest",
+
+    "light": "phi3:mini",
+
+    "ux": "gemma3:4b"
+}
+
+
+===== RUN FILE =====
+import sys
+from PyQt6.QtWidgets import QApplication
+
+print(">>> SYNERGIA STARTING")
+
+from ai.ui.ai_lab_panel import AILabPanel
+
+print(">>> IMPORT OK")
+
+if __name__ == "__main__":
+    print(">>> ENTER MAIN")
+    app = QApplication(sys.argv)
+
+    window = AILabPanel()
+    window.show()
+
+    print(">>> WINDOW CREATED")
+
+    sys.exit(app.exec())
