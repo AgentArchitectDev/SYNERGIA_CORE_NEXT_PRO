@@ -1,0 +1,18 @@
+{
+    "mode": "DEV",
+    "machine": "MAQ1",
+
+    "ollama_model": "llama3.2:3b",
+
+    "coding_model": "codellama:7b",
+
+    "memory_enabled": true,
+
+    "agents_enabled": false,
+
+    "streaming": true,
+
+    "provider": "ollama",
+
+    "project_root": "/mnt/SCN_BACKUP/PROYECTOS_MAQ1/AI/SYNERGIA_CORE_NEXT_PRO"
+}

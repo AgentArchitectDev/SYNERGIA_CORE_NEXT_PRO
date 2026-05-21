@@ -1,0 +1,622 @@
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.chat.history.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174223
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174223/social
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174223/exports
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174223/business_plan
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174223/branding
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174223/docs
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174223/website
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174223/website/website.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/pizza_premium_ia_20260515_165722
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/pizza_premium_ia_20260515_165722/social
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/pizza_premium_ia_20260515_165722/exports
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/pizza_premium_ia_20260515_165722/business_plan
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/pizza_premium_ia_20260515_165722/branding
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/pizza_premium_ia_20260515_165722/docs
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/pizza_premium_ia_20260515_165722/website
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312/social
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312/social/social.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312/exports
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312/business_plan
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312/branding
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312/branding/branding.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312/docs
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312/website
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_180312/website/website.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174048
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174048/social
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174048/exports
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174048/business_plan
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174048/branding
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174048/docs
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_174048/website
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_175748
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_175748/social
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_175748/exports
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_175748/business_plan
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_175748/branding
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_175748/docs
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/outputs/crear_agencia_premium_ia_para__20260515_175748/website
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/test_business_generator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_AI_LAB_PANEL_V2.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/03_RENDER_ENGINE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/03_RENDER_ENGINE/03_RENDER_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/07_STORAGE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/07_STORAGE/06_STORAGE_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/01_ARCHITECTURE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/01_ARCHITECTURE/08_CORE_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/01_ARCHITECTURE/00_BACKEND_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/08_BUSINESS_ENGINE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/08_BUSINESS_ENGINE/29_BUSINESS_PLANNER_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/08_BUSINESS_ENGINE/11_BUSINESS_HISTORY_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/core-plugins.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/workspace.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/app.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/graph.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/appearance.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.stfolder
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/05_BLOCK_SYSTEM
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/05_BLOCK_SYSTEM/02_BLOCK_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/Sin título.base
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/09_SOCIAL_ENGINE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/09_SOCIAL_ENGINE/SOCIAL_AUTOMATION_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/06_TEMPLATES
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/06_TEMPLATES/05_TEMPLATE_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/99_MASTER_BOOK
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/11_FUTURE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/11_FUTURE/27_FUTURE_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/00_MASTER
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/00_MASTER/README.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/00_MASTER/19_SYNERGIA_OVERVIEW.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/10_GRAPH_SYSTEN
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/10_GRAPH_SYSTEN/20_OBSIDIAN_WIKI_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/10_GRAPH_SYSTEN/15_VISUAL_GRAPH_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/02_AI_SYETEM
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/02_AI_SYETEM/10_AI_MODELS.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/02_AI_SYETEM/🤖 01 — AI.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/04_EDITOR
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/04_EDITOR/04_VISUAL_EDITOR.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/12_MAQ_SYSTEM
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/12_MAQ_SYSTEM/MAQ docs.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/venv
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/api
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.gitignore
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/AI_LAB_ANALISIS.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.input.history
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_FULL_EXPORT.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/scripts 
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/test_ollama_memory.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/prompts
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/conversations
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/conversations/global.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/conversations/maq2_dev.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/conversations/maq2_real.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/__pycache__
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_152021.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_182940.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_190209.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_161814.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_162837.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_164413.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_182347.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_163533.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_193307.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_184151.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_181344.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/memory_manager.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/orchestrator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/prompts
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/prompts/website_prompt.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/prompts/hero_prompt.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/prompts/seo_prompt.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/models
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/models/models_manager.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/models/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/models/__pycache__
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/docs_generator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/website_generator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/project_builder.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/master_business.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/__pycache__
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/export_engine.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/branding_generator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/Documento sin título
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/business_generator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/business/social_generator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/AI_TREE.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core_ai
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core_ai/core_ai.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/__pycache__
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/brain
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/brain/model_ranker.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/brain/model_ranking.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/brain/__pycache__
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/brain/prompt_optimizer.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/brain/memory_global.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/brain/memory_global.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/router
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/router/agent_router.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/router/__pycache__
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/router/test_multi_model.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/router/multi_model_engine.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/router/model_router.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/providers
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/providers/groq_provider.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/providers/ollama_provider.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/providers/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/providers/ollama_connector.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/providers/__pycache__
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/providers/registry.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/providers/gemini_provider.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/providers/openai_provider.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core/task_engine.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core/ai_orchestrator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core/progress_manager.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core/export_manager.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core/memory_context_builder.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core/__pycache__
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core/prompt_optimizer.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/core/cms_bridge.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/ui
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/ui/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/ui/__pycache__
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/ui/ai_lab_panel (copia).py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/ui/ai_lab_panel.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/image
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/image/image_generator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/image/image_search.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/env_settings.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/mypy.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/version.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/types.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/_hypothesis_plugin.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/networks.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/config.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/annotated_types.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/tools.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/json.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/error_wrappers.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/main.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/validators.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/decorator.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/parse.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/py.typed
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/dataclasses.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/class_validators.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/generics.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/color.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/datetime_parse.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/fields.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/typing.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/errors.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/schema.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/v1/utils.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/99_BACKUP_OLD
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/tests
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/tests/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/tests/ansi_test.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/tests/ansitowin32_test.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/tests/isatty_test.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/tests/initialise_test.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/tests/winterm_test.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/tests/utils.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/experimental
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/experimental/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/experimental/missing_sentinel.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/experimental/arguments_schema.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/legacy/experimental/pipeline.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/estructura_total.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/requirements.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine/client_data
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine/client_data/clientes
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine/client_data/clientes/cliente_001.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine/client_data/clientes/mates_cordoba.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine/client_data/clientes/cliente_gastro_001.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine/client_data/clientes/estructura.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/config
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/config/maq2_dev.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/config/maq1_dev.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/synergiaGab.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/run_ai_lab (copia).py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_MASTER_BOOK_v1.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_AI_LAB_PANEL_V2.docx
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/gibhub.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render/block_engine
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render/block_engine/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render/templates
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render/templates/cards
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render/templates/footer
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render/templates/hero
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render/templates/hero/modern_dark.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/render/templates/navbar
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.git
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/04_arquitectura_interiorismo
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/04_arquitectura_interiorismo/auto_setup_templates.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/04_arquitectura_interiorismo/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/04_arquitectura_interiorismo/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/04_arquitectura_interiorismo/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/04_arquitectura_interiorismo/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/00_CONTROL
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/05_gastronomia_experiencial
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/05_gastronomia_experiencial/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/05_gastronomia_experiencial/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/05_gastronomia_experiencial/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/05_gastronomia_experiencial/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/09retro_futuroe_aviation_maste
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/09retro_futuroe_aviation_maste/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/09retro_futuroe_aviation_maste/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/09retro_futuroe_aviation_maste/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/09retro_futuroe_aviation_maste/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/02_SKYCODE_TECH_HUB
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/02_SKYCODE_TECH_HUB/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/02_SKYCODE_TECH_HUB/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/02_SKYCODE_TECH_HUB/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/02_SKYCODE_TECH_HUB/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/08_REALITY_BOND_INTERFACE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/08_REALITY_BOND_INTERFACE/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/08_REALITY_BOND_INTERFACE/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/08_REALITY_BOND_INTERFACE/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/08_REALITY_BOND_INTERFACE/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/estructura.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/11_Ejemplo1
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/11_Ejemplo1/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/11_Ejemplo1/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/11_Ejemplo1/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/11_Ejemplo1/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/07_real_estate_global_scroll
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/07_real_estate_global_scroll/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/07_real_estate_global_scroll/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/07_real_estate_global_scroll/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/07_real_estate_global_scroll/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/02_Synergia_Core_html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/10_arq_bento
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/10_arq_bento/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/10_arq_bento/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/10_arq_bento/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/10_arq_bento/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/01 SYNERGIA_CORE final_HTML
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/03_vet_emotional_techh
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/03_vet_emotional_techh/demo.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/03_vet_emotional_techh/template.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/03_vet_emotional_techh/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/03_vet_emotional_techh/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/visual_editor
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/visual_editor/app.js
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/visual_editor/blocks.js
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/visual_editor/styles.css
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/visual_editor/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/preview
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/assets
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/cms_panel
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/cms_editor
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/cms_editor/app.js
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/cms_editor/styles.css  
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/cms_editor/config.json 
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/editor/cms_editor/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/36
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/36/6c
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/36/6c/24d5ceb0735ec27b59946dc60fd2.val
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/db
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/db/31
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/db/31/0f2d75b3a1965b5a44ca0a5fbc70.val
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/58
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/58/b5
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/58/b5/9ecc2591d0b2cfe20cdcec7a82e3.val
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/.aider.tags.cache.v4/cache.db
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/BACKUP_AI_LAB
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/BACKUP_AI_LAB/ollama_connector.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/cards
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/cards/navbar.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/cards/navbar.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/cards/meta.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/cards/navbar.css
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/pricing
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/gallery
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/footer
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/footer/navbar.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/footer/navbar.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/footer/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/footer/meta.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/footer/navbar.css
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/hero
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/hero/hero.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/hero/hero.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/hero/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/hero/hero.css
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/hero/meta.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/faq
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/navbar
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/navbar/navbar.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/navbar/navbar.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/navbar/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/navbar/meta.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/navbar/navbar.css
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/contact
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site/page.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site/pages
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site/pages/home.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site/pages/about.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site/pages/contact.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/run_synergia.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/tools
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/tools/venv
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/tools/test_memory.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/tools/synergia_control_center.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/tools/ai_lab
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/tools/ai_lab/monitor.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/tools/ai_lab/prompt_console.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/clientes
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/clientes/cliente_001.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/clientes/mates_cordoba.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/clientes/cliente_gastro_001.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/clientes/estructura.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_165451
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_165451/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site/about.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site/ assets
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site/contact.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_20260507_190236
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_20260507_190236/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_172511
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_172511/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_182919
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_182919/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_165511
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_165511/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/cliente_001_20260505_183843
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_150533
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_150533/about.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_150533/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_150533/contact.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_150105
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_150105/about.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_150105/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_150105/contact.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_182710
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_182710/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_145353
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_180937
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_180937/about.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_180937/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/demo_site_site_20260508_180937/contact.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_172613
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/output/project_20260505_172613/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/projects
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/projects/cms_20260505_182919.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/projects/prompt_generated.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/projects/cms_20260505_182710.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/projects/project_001.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend/api
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend/api/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend/api/pages
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend/api/page
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend/api/page/save
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend/api/render
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend/api/render/live
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend/api/app.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/backend/__init__.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/generate_docs.sh
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/streaming.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/Next
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/Next/MASTER_Core_next_02.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/Next/Libro_Master_Core_next.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/Next/synergia_core_next_fase_consolidacion_mvp_2026_05_06.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/Next/MASTER_Core_next_01.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/brain_map
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/ LOG_2026_04_29_SYNERGIA_SAAS_II.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/MASTER_Core_next_02.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/Synergia_Core_Next_Generation_cms_pro_real_libro_documentacion_extendida.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/Libro_Master_Core_next.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/LOG_2026_04_29_SYNERGIA_SAAS.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map/08_VISUAL_GRAPH_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map/06_STORAGE_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map/07_TEMPLATE_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map/05_BACKEND_API.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map/00_MASTER_MAP.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map/03_EDITOR_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map/01_AI_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map/04_BLOCK_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/system_map/02_RENDER_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/synergia_core_next_visual_cms_progression_01.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/SKILL.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/SYNERGIA_ANALISIS_TOTALProyecto anterior.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/Synergia Cms Pro Real Libro Documentacion Extendida.odt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/doc.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/synergia_core_next_fase_consolidacion_mvp_2026_05_06.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/MASTER_Core_next_01.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/Synergia Cms Pro Real Libro Documentacion Extendida.docx
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/CMS_PRO_REAL_SYNERGIA.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/03_RENDER_ENGINE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/03_RENDER_ENGINE/LIVE_RENDER.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/03_RENDER_ENGINE/RENDER_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/03_RENDER_ENGINE/TEMPLATE_BINDING.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/07_STORAGE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/07_STORAGE/OUTPUT_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/07_STORAGE/PROJECT_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/07_STORAGE/STORAGE_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/01_ARCHITECTURE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/01_ARCHITECTURE/CORE_ARCHITECTURE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/01_ARCHITECTURE/FOLDER_STRUCTURE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/01_ARCHITECTURE/DEPENDENCY_GRAPH.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/05_VISUAL_EDITOR
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/05_VISUAL_EDITOR/VISUAL_PROPERTIES.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/05_VISUAL_EDITOR/UI_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/05_VISUAL_EDITOR/DRAG_DROP_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/05_VISUAL_EDITOR/AI_ASSISTANT.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/05_VISUAL_EDITOR/LIVE_PREVIEW_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/05_VISUAL_EDITOR/VISUAL_EDITOR_CORE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/04_BLOCK_SYSTEM
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/04_BLOCK_SYSTEM/BLOCK_META_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/04_BLOCK_SYSTEM/BLOCK_TYPES.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/04_BLOCK_SYSTEM/BLOCKS_ARCHITECTURE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/00_OVERVIEW
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/00_OVERVIEW/SYNERGIA_OVERVIEW.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/09_TEMPLATES
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/09_TEMPLATES/CINEMATIC_TEMPLATES.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/09_TEMPLATES/TEMPLATE_MARKETPLACE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/09_TEMPLATES/TEMPLATE_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/99_MASTER_BOOK
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/99_MASTER_BOOK/SYNERGIA_MASTER_BOOK.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/12_SYSTEM_MAP
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/12_SYSTEM_MAP/GRAPH_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/12_SYSTEM_MAP/AUTO_MAP_GENERATOR.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/12_SYSTEM_MAP/OBSIDIAN_GRAPH.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/12_SYSTEM_MAP/DEPENDENCY_MAP.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/11_FUTURE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/11_FUTURE/AI_AGENCY.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/11_FUTURE/SYNERGIA_FUTURE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/11_FUTURE/SAAS_VISION.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/06_JSON_ENGINE
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/06_JSON_ENGINE/CLIENT_DATA_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/06_JSON_ENGINE/DYNAMIC_DATA.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/06_JSON_ENGINE/JSON_STRUCTURE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/02_AI_SYSTEM
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/02_AI_SYSTEM/AI_PIPELINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/02_AI_SYSTEM/AI_ORCHESTRATOR.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/02_AI_SYSTEM/OLLAMA_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/02_AI_SYSTEM/PROMPTS_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/08_API_BACKEND
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/08_API_BACKEND/API_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/08_API_BACKEND/ENDPOINTS.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/10_WORKFLOW
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/10_WORKFLOW/CLIENT_FLOW.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/docs/10_WORKFLOW/AUTOMATION_PIPELINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/dependencies.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/other-tools.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/EJECUTAR TODO VER ARCHIVO.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docsII/LICENSE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/frontend
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/frontend/dashboard
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/frontend/dashboard/dashboard.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/frontend/dashboard/cms.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/frontend/dashboard/index.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/frontend/dashboard/synergia_visual_editor.jsx
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/frontend/dashboard/cms_editor.html
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/core
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/core/graph_system
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/core/graph_system/export
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/core/auto_setup_templates.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/core/block_registry.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/core/build_index.py
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/21_WIKI_STRUCTURE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/social_engine
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/27_FUTURE_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/10_AI_MODELS.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/07_PROJECT_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/graph_system
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/06_STORAGE_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/20_OBSIDIAN_WIKI_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/wiki
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/02_BLOCK_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/PROYECTO HOY VIERNES <===> SYNERGIA CORE NEXT PRO v2.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/configurar_syncthing_en_synergia_maq_1_y_maq_2.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Session State Maq2 Synergia Core Next Pro.docx
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/18_FUTURE_VISUALIZATION.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/session_state_maq_2_synergia_core_next_pro.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/29_BUSINESS_PLANNER_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/business
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/11_BUSINESS_HISTORY_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/visto viernes 01.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/ai
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/master_book
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/23_SYSTEM_BENEFITS.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/05_TEMPLATE_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/maps
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/README.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/PARA MAÑANANA VIERNESSYNERGIA_BRAIN_SYSTEM_LOG_v2.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/30_POWERFUL_IDEAS_SYNERGIA.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/ESTADO COMPLETO MAQ2_2023_05_15_18-25.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/deployment
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves 
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/01_DIRECTORIES_ONLY.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/03_AI_STRUCTURE.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/02_KERNEL_STRUCTURE.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/00_MASTER_STRUCTURE.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/08_ALL_PYTHON_FILES.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/10_FULL_INVENTORY.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/05_CONTROL_CENTER_STRUCTURE.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/07_RENDER_STRUCTURE.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/04_CMS_STRUCTURE.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos Jueves /SYNERGIA_AI_CONTEXT/09_ALL_JSON_FILES.txt
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/future
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/MAQ docs.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/25_SYSTEM_CONCEPT.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/🤖 01 — AI.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/12_FULL_SYSTEM_DEVELOPMENT.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/SOCIAL_AUTOMATION_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/15_VISUAL_GRAPH_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/16_GRAPH_STRUCTURE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/14_SYNERGIA_COMPLETE_STRUCTURE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/vistoviernes 02.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/editor
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/19_SYNERGIA_OVERVIEW.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/13_REAL_SYNERGIA_RESPONSE_EXAMPLE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/20_05_2026
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/20_05_2026/Synergia Core Next V1 V6 Master State And Joomla Dna.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/20_05_2026/MASTER BOOK_V1_V6.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/20_05_2026/synergia_core_next_v_1_v_6_master_book_and_joomla_dna.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/20_05_2026/SYNERGIA CORE NEXT_MASTER BOOK_V1_V6THE UNIVERSAL COGNITIVE OPERATING SYSTEM
+.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/SYNERGIA_CORE_NEXT_PRO — ESTADO REAL MAQ2.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/Todo lo nuevo y completo de Synergia.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/ESTADO REAL DEL DESARROLLO SYNERGIA.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/SYNERGIA CORE NEXT PRO — MAQ2 SETUP & AI DEV STACK.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/🧠 ESTADO GUARDADO.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/Nuevos/SYNERGIA CORE NEXT _PUNTO OFICIAL DE RETOMA v1--a--v6.MD
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/26_SYSTEM_LAYERS.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/04_VISUAL_EDITOR.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/08_CORE_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/visto viernes 03.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/28_CONTENT_PUBLICATION_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/PARA MAÑANA VIERNES SYNERGIA_BRAIN_SYSTEM_LOG_v1.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/00_BACKEND_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/22_OBSIDIAN_INTERLINKS.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/03_RENDER_ENGINE.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/17_SYSTEM_RELATIONS.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/24_OPERATING_SYSTEM_LEVEL.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/09_FRONTEND_SYSTEM.md
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/architecture
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/docs/HUBICAR ARCHIVOS EN OBSIDIAN.MD
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_MASTER_BOOK_v1.docx
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/tests
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/run_ai_lab.py

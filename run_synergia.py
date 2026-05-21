@@ -1,45 +1,65 @@
+# =========================================================
+# FILE:
+# run_synergia.py
+# =========================================================
+
 import sys
-import os
 
-print(">>> SYNERGIA BOOT SEQUENCE")
+from PyQt6.QtWidgets import (
+    QApplication
+)
 
-# =========================
-# FIX PATH AUTOMATICO
-# =========================
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(BASE_DIR)
+print(
+    ">>> SYNERGIA BOOT SEQUENCE"
+)
 
-# =========================
-# CHECK DEPENDENCIES
-# =========================
-def check_import(name):
-    try:
-        __import__(name)
-        print(f"[OK] {name}")
-    except Exception as e:
-        print(f"[FAIL] {name} -> {e}")
-        return False
-    return True
+# =========================================================
+# IMPORT TEST
+# =========================================================
 
-checks = [
+modules = [
+
     "ai.ui.ai_lab_panel",
+
     "ai.memory.memory_manager",
+
     "ai.providers.ollama_connector"
 ]
 
-for c in checks:
-    check_import(c)
+for module in modules:
 
-# =========================
-# START UI
-# =========================
-from PyQt6.QtWidgets import QApplication
-from ai.ui.ai_lab_panel import AILabPanel
+    try:
 
-app = QApplication(sys.argv)
-window = AILabPanel()
-window.show()
+        __import__(module)
 
-print(">>> SYNERGIA RUNNING")
+        print(f"[OK] {module}")
 
-sys.exit(app.exec())
+    except Exception as e:
+
+        print(f"[FAIL] {module} -> {e}")
+
+# =========================================================
+# MAIN IMPORT
+# =========================================================
+
+from ai.ui.ai_lab_panel import (
+    AILabPanel
+)
+
+# =========================================================
+# RUN
+# =========================================================
+
+if __name__ == "__main__":
+
+    print(
+        ">>> SYNERGIA RUNNING"
+    )
+
+    app = QApplication(sys.argv)
+
+    window = AILabPanel()
+
+    window.show()
+
+    sys.exit(app.exec())

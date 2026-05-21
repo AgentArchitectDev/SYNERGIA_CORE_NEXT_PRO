@@ -1,0 +1,78 @@
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai
+├── AI_TREE.txt
+├── brain
+│   ├── memory_global.json
+│   ├── memory_global.py
+│   ├── model_ranker.py
+│   ├── model_ranking.json
+│   └── prompt_optimizer.py
+├── business
+│   ├── branding_generator.py
+│   ├── business_generator.py
+│   ├── docs_generator.py
+│   ├── Documento sin título
+│   ├── export_engine.py
+│   ├── master_business.txt
+│   ├── project_builder.py
+│   ├── social_generator.py
+│   └── website_generator.py
+├── core
+│   ├── ai_orchestrator.py
+│   ├── cms_bridge.py
+│   ├── export_manager.py
+│   ├── memory_context_builder.py
+│   ├── progress_manager.py
+│   ├── prompt_optimizer.py
+│   └── task_engine.py
+├── core_ai
+│   └── core_ai.py
+├── image
+│   ├── image_generator.py
+│   └── image_search.py
+├── __init__.py
+├── memory
+│   ├── conversations
+│   │   ├── global.json
+│   │   ├── maq2_dev.json
+│   │   └── maq2_real.json
+│   ├── memory_manager.py
+│   ├── prompts
+│   └── sessions
+│       ├── 20260514_181344.json
+│       ├── 20260514_182347.json
+│       ├── 20260514_182940.json
+│       ├── 20260514_184151.json
+│       ├── 20260514_190209.json
+│       ├── 20260514_193307.json
+│       ├── 20260515_152021.json
+│       ├── 20260515_161814.json
+│       ├── 20260515_162837.json
+│       ├── 20260515_163533.json
+│       └── 20260515_164413.json
+├── models
+│   ├── __init__.py
+│   └── models_manager.py
+├── orchestrator.py
+├── prompts
+│   ├── hero_prompt.txt
+│   ├── seo_prompt.txt
+│   └── website_prompt.txt
+├── providers
+│   ├── gemini_provider.py
+│   ├── groq_provider.py
+│   ├── __init__.py
+│   ├── ollama_connector.py
+│   ├── ollama_provider.py
+│   ├── openai_provider.py
+│   └── registry.py
+├── router
+│   ├── agent_router.py
+│   ├── model_router.py
+│   ├── multi_model_engine.py
+│   └── test_multi_model.py
+└── ui
+    ├── ai_lab_panel (copia).py
+    ├── ai_lab_panel.py
+    └── __init__.py
+
+15 directories, 61 files
