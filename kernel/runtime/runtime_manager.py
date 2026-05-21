@@ -1,25 +1,3 @@
-from kernel.services.config_service import ConfigService
-from kernel.state.state_manager import StateManager
-
-
-class RuntimeManager:
-
-    @staticmethod
-    def boot():
-
-        print("\n⚡ SYNERGIA RUNTIME STARTING...\n")
-
-        config = ConfigService.system_config()
-        state = StateManager.load_state()
-
-        print("SYSTEM:")
-        print(config)
-
-        print("\nSTATE:")
-        print(state)
-
-        print("\n✅ Runtime Online\n")
-
 # =========================================================
 # SYNERGIA CORE NEXT PRO
 # RUNTIME MANAGER
@@ -27,14 +5,28 @@ class RuntimeManager:
 
 import time
 
+from kernel.state.state_manager import StateManager
+
 
 class RuntimeManager:
+
+    # =====================================================
+    # INIT
+    # =====================================================
 
     def __init__(self):
 
         self.mode = "DEV"
 
+    # =====================================================
+    # INITIALIZE RUNTIME
+    # =====================================================
+
     def initialize(self):
+
+        print("\n========================================")
+        print("⚡ SYNERGIA RUNTIME START")
+        print("========================================")
 
         print("\n[RUNTIME] Initializing runtime...")
 
@@ -49,3 +41,23 @@ class RuntimeManager:
         time.sleep(1)
 
         print("[RUNTIME] AI Kernel ready.")
+
+        time.sleep(1)
+
+        print("\n[RUNTIME] Loading State Engine...")
+
+        time.sleep(1)
+
+        StateManager.show()
+
+        print("\n========================================")
+        print("✅ RUNTIME FULLY INITIALIZED")
+        print("========================================\n")
+
+    # =====================================================
+    # GET MODE
+    # =====================================================
+
+    def current_mode(self):
+
+        return self.mode

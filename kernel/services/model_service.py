@@ -1,51 +1,49 @@
 # =========================================================
 # SYNERGIA CORE NEXT PRO
-# MAQ SERVICE
+# MODEL SERVICE
 # =========================================================
 
 from kernel.state.state_manager import StateManager
 
 
-class MaqService:
+class ModelService:
 
     # =====================================================
-    # SWITCH MAQ
+    # SET MODEL
     # =====================================================
 
     @classmethod
-    def switch(cls, maq_name):
+    def set_model(cls, model_name):
 
         StateManager.update(
-            "current_maq",
-            maq_name
+            "active_model",
+            model_name
         )
 
-        print(f"\n[MAQ SERVICE] Active MAQ => {maq_name}")
+        print(f"\n[MODEL SERVICE] Active model => {model_name}")
 
     # =====================================================
-    # GET MAQ
+    # GET MODEL
     # =====================================================
 
     @classmethod
-    def current(cls):
+    def get_model(cls):
 
         return StateManager.get(
-            "current_maq"
+            "active_model"
         )
 
     # =====================================================
-    # SHOW MAQ
+    # SHOW MODEL
     # =====================================================
 
     @classmethod
     def show(cls):
 
-        maq = cls.current()
+        model = cls.get_model()
 
         print("\n========================================")
-        print("🖥️ ACTIVE MAQ SYSTEM")
+        print("🤖 ACTIVE AI MODEL")
         print("========================================")
-
-        print(f"\nACTIVE MAQ => {maq}")
-
+        print(f"\nMODEL => {model}")
         print("\n========================================")
