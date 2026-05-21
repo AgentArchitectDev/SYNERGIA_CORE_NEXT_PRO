@@ -184,6 +184,7 @@
 │   │   ├── SYNERGIA_CORE_NEXT_PRO — ESTADO REAL MAQ2.md
 │   │   └── Todo lo nuevo y completo de Synergia.md
 │   ├── Nuevos Jueves 
+│   ├── Nuevos_Jueves
 │   │   └── SYNERGIA_AI_CONTEXT
 │   │       └── 00_MASTER_STRUCTURE.txt
 │   ├── PARA MAÑANA VIERNES SYNERGIA_BRAIN_SYSTEM_LOG_v1.md
@@ -578,4 +579,4 @@
     ├── synergia_control_center.py
     └── test_memory.py
 
-185 directories, 394 files
+186 directories, 394 files

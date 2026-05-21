@@ -49,6 +49,7 @@
 │   ├── Nuevos
 │   │   └── 20_05_2026
 │   ├── Nuevos Jueves 
+│   ├── Nuevos_Jueves
 │   │   └── SYNERGIA_AI_CONTEXT
 │   ├── social_engine
 │   └── wiki
@@ -184,4 +185,4 @@
 └── tools
     └── ai_lab
 
-185 directories
+186 directories
