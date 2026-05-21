@@ -1,0 +1,187 @@
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO
+├── ai
+│   ├── brain
+│   ├── business
+│   ├── core
+│   ├── core_ai
+│   ├── image
+│   ├── memory
+│   │   ├── conversations
+│   │   ├── prompts
+│   │   └── sessions
+│   ├── models
+│   ├── prompts
+│   ├── providers
+│   ├── router
+│   └── ui
+├── api
+├── backend
+│   └── api
+│       ├── page
+│       │   └── save
+│       ├── pages
+│       └── render
+│           └── live
+├── BACKUP_AI_LAB
+├── blocks
+│   ├── cards
+│   ├── contact
+│   ├── faq
+│   ├── footer
+│   ├── gallery
+│   ├── hero
+│   ├── navbar
+│   └── pricing
+├── config
+├── core
+│   └── graph_system
+│       └── export
+├── docs
+│   ├── ai
+│   ├── architecture
+│   ├── business
+│   ├── deployment
+│   ├── editor
+│   ├── future
+│   ├── graph_system
+│   ├── maps
+│   ├── master_book
+│   ├── Nuevos
+│   │   └── 20_05_2026
+│   ├── Nuevos Jueves 
+│   │   └── SYNERGIA_AI_CONTEXT
+│   ├── social_engine
+│   └── wiki
+├── docsII
+│   ├── brain_map
+│   ├── docs
+│   │   ├── 00_OVERVIEW
+│   │   ├── 01_ARCHITECTURE
+│   │   ├── 02_AI_SYSTEM
+│   │   ├── 03_RENDER_ENGINE
+│   │   ├── 04_BLOCK_SYSTEM
+│   │   ├── 05_VISUAL_EDITOR
+│   │   ├── 06_JSON_ENGINE
+│   │   ├── 07_STORAGE
+│   │   ├── 08_API_BACKEND
+│   │   ├── 09_TEMPLATES
+│   │   ├── 10_WORKFLOW
+│   │   ├── 11_FUTURE
+│   │   ├── 12_SYSTEM_MAP
+│   │   └── 99_MASTER_BOOK
+│   ├── Next
+│   └── system_map
+├── editor
+│   ├── assets
+│   ├── cms_editor
+│   ├── cms_panel
+│   ├── preview
+│   └── visual_editor
+├── frontend
+│   └── dashboard
+├── json_engine
+│   └── client_data
+│       └── clientes
+├── legacy
+│   ├── 99_BACKUP_OLD
+│   ├── experimental
+│   ├── tests
+│   └── v1
+├── outputs
+│   ├── crear_agencia_premium_ia_para__20260515_174048
+│   │   ├── branding
+│   │   ├── business_plan
+│   │   ├── docs
+│   │   ├── exports
+│   │   ├── social
+│   │   └── website
+│   ├── crear_agencia_premium_ia_para__20260515_174223
+│   │   ├── branding
+│   │   ├── business_plan
+│   │   ├── docs
+│   │   ├── exports
+│   │   ├── social
+│   │   └── website
+│   ├── crear_agencia_premium_ia_para__20260515_175748
+│   │   ├── branding
+│   │   ├── business_plan
+│   │   ├── docs
+│   │   ├── exports
+│   │   ├── social
+│   │   └── website
+│   ├── crear_agencia_premium_ia_para__20260515_180312
+│   │   ├── branding
+│   │   ├── business_plan
+│   │   ├── docs
+│   │   ├── exports
+│   │   ├── social
+│   │   └── website
+│   └── pizza_premium_ia_20260515_165722
+│       ├── branding
+│       ├── business_plan
+│       ├── docs
+│       ├── exports
+│       ├── social
+│       └── website
+├── projects
+│   └── demo_site
+│       └── pages
+├── render
+│   ├── block_engine
+│   └── templates
+│       ├── cards
+│       ├── footer
+│       ├── hero
+│       └── navbar
+├── scripts 
+├── storage
+│   ├── clientes
+│   ├── output
+│   │   ├── cliente_001_20260505_183843
+│   │   ├── demo_site
+│   │   │   └──  assets
+│   │   ├── demo_site_20260507_190236
+│   │   ├── demo_site_site_20260508_145353
+│   │   ├── demo_site_site_20260508_150105
+│   │   ├── demo_site_site_20260508_150533
+│   │   ├── demo_site_site_20260508_180937
+│   │   ├── project_20260505_165451
+│   │   ├── project_20260505_165511
+│   │   ├── project_20260505_172511
+│   │   ├── project_20260505_172613
+│   │   ├── project_20260505_182710
+│   │   └── project_20260505_182919
+│   └── projects
+├── SYNERGIA_CORE_NEXT_PRO Obsidian
+│   ├── 00_MASTER
+│   ├── 01_ARCHITECTURE
+│   ├── 02_AI_SYETEM
+│   ├── 03_RENDER_ENGINE
+│   ├── 04_EDITOR
+│   ├── 05_BLOCK_SYSTEM
+│   ├── 06_TEMPLATES
+│   ├── 07_STORAGE
+│   ├── 08_BUSINESS_ENGINE
+│   ├── 09_SOCIAL_ENGINE
+│   ├── 10_GRAPH_SYSTEN
+│   ├── 11_FUTURE
+│   ├── 12_MAQ_SYSTEM
+│   └── 99_MASTER_BOOK
+├── templates
+│   └── core_templates
+│       ├── 00_CONTROL
+│       ├── 01_ACADEMIA_IDIOMAS_ELITE
+│       ├── 02_SKYCODE_TECH_HUB
+│       ├── 03_vet_emotional_techh
+│       ├── 04_arquitectura_interiorismo
+│       ├── 05_gastronomia_experiencial
+│       ├── 07_real_estate_global_scroll
+│       ├── 08_REALITY_BOND_INTERFACE
+│       ├── 09retro_futuroe_aviation_maste
+│       ├── 10_arq_bento
+│       └── 11_Ejemplo1
+├── tests
+└── tools
+    └── ai_lab
+
+185 directories

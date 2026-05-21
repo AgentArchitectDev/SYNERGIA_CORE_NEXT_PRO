@@ -1,0 +1,20 @@
+{
+    "mode": "DEV",
+    "machine": "MAQ2",
+
+    "ollama_model": "llama3.2:3b",
+
+    "coding_model": "qwen2.5-coder:7b",
+
+    "heavy_model": "deepseek-coder-v2:16b",
+
+    "memory_enabled": true,
+
+    "agents_enabled": true,
+
+    "streaming": true,
+
+    "provider": "ollama",
+
+    "project_root": "/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO"
+}

@@ -1,58 +1,71 @@
 import ollama
+import time
+
+
+# =========================================================
+# OLLAMA PROVIDER
+# =========================================================
+
+print("[OLLAMA PROVIDER LOADED]")
 
 
 class OllamaProvider:
-    """
-    SYNERGIA CORE NEXT PRO
-    Provider simple para generación sin memoria compleja aún
-    """
-
-    def __init__(self):
-        print("[OLLAMA PROVIDER LOADED]")
 
     # =====================================================
-    # SIMPLE CHAT
+    # GENERATE (ROBUSTO + DEBUG + FALLBACK)
     # =====================================================
-    def generate(self, model_name, prompt):
+
+    def generate(self, prompt, model="llama3.2:3b"):
 
         try:
+            print("\n[OLLAMA CALL]")
+            print(f"MODEL: {model}")
+
+            start_time = time.time()
+
+            # =================================================
+            # CALL OLLAMA
+            # =================================================
+
             response = ollama.chat(
-                model=model_name,
+                model=model,
                 messages=[
-                    {"role": "user", "content": prompt}
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
                 ]
             )
 
-            return response["message"]["content"]
+            end_time = time.time()
+
+            duration = round(end_time - start_time, 2)
+
+            print(f"[OLLAMA OK] time={duration}s")
+
+            # =================================================
+            # EXTRACT RESPONSE
+            # =================================================
+
+            content = response.get("message", {}).get("content", "")
+
+            if not content:
+
+                return "[OLLAMA ERROR] empty response"
+
+            return content
 
         except Exception as e:
-            print("[OLLAMA ERROR]", e)
-            return None
+
+            print("\n[OLLAMA ERROR]")
+            print(str(e))
+
+            return f"[OLLAMA FAIL] {str(e)}"
 
     # =====================================================
-    # STREAM CHAT (CLI)
+    # SIMPLE GENERATE (compatibilidad futura)
     # =====================================================
-    def generate_stream(self, model_name, prompt):
 
-        try:
-            stream = ollama.chat(
-                model=model_name,
-                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                stream=True
-            )
+    def simple(self, prompt):
 
-            full = ""
-
-            for chunk in stream:
-                token = chunk["message"]["content"]
-                print(token, end="", flush=True)
-                full += token
-
-            print()
-            return full
-
-        except Exception as e:
-            print("[OLLAMA STREAM ERROR]", e)
-            return None
+        return self.generate(prompt)

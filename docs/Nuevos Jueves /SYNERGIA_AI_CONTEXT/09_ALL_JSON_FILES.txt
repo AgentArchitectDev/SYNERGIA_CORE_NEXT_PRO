@@ -1,0 +1,55 @@
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/core-plugins.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/workspace.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/app.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/graph.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/appearance.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/conversations/global.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/conversations/maq2_dev.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/conversations/maq2_real.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_152021.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_182940.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_190209.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_161814.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_162837.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_164413.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_182347.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260515_163533.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_193307.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_184151.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/memory/sessions/20260514_181344.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/brain/model_ranking.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/ai/brain/memory_global.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine/client_data/clientes/cliente_001.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine/client_data/clientes/mates_cordoba.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/json_engine/client_data/clientes/cliente_gastro_001.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/config/maq2_dev.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/config/maq1_dev.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/04_arquitectura_interiorismo/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/05_gastronomia_experiencial/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/09retro_futuroe_aviation_maste/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/02_SKYCODE_TECH_HUB/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/08_REALITY_BOND_INTERFACE/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/11_Ejemplo1/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/07_real_estate_global_scroll/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/10_arq_bento/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/templates/core_templates/03_vet_emotional_techh/config.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/cards/navbar.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/cards/meta.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/footer/navbar.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/footer/meta.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/hero/hero.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/hero/meta.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/navbar/navbar.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/blocks/navbar/meta.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site/page.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site/pages/home.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site/pages/about.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/projects/demo_site/pages/contact.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/clientes/cliente_001.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/clientes/mates_cordoba.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/clientes/cliente_gastro_001.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/projects/cms_20260505_182919.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/projects/prompt_generated.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/projects/cms_20260505_182710.json
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO/storage/projects/project_001.json

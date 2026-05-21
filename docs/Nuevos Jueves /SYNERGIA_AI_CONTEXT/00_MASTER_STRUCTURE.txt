@@ -1,0 +1,581 @@
+/mnt/71392f5d/SYNERGIA_CORE_NEXT_PRO
+├── ai
+│   ├── AI_TREE.txt
+│   ├── brain
+│   │   ├── memory_global.json
+│   │   ├── memory_global.py
+│   │   ├── model_ranker.py
+│   │   ├── model_ranking.json
+│   │   └── prompt_optimizer.py
+│   ├── business
+│   │   ├── branding_generator.py
+│   │   ├── business_generator.py
+│   │   ├── docs_generator.py
+│   │   ├── Documento sin título
+│   │   ├── export_engine.py
+│   │   ├── master_business.txt
+│   │   ├── project_builder.py
+│   │   ├── social_generator.py
+│   │   └── website_generator.py
+│   ├── core
+│   │   ├── ai_orchestrator.py
+│   │   ├── cms_bridge.py
+│   │   ├── export_manager.py
+│   │   ├── memory_context_builder.py
+│   │   ├── progress_manager.py
+│   │   ├── prompt_optimizer.py
+│   │   └── task_engine.py
+│   ├── core_ai
+│   │   └── core_ai.py
+│   ├── image
+│   │   ├── image_generator.py
+│   │   └── image_search.py
+│   ├── __init__.py
+│   ├── memory
+│   │   ├── conversations
+│   │   │   ├── global.json
+│   │   │   ├── maq2_dev.json
+│   │   │   └── maq2_real.json
+│   │   ├── memory_manager.py
+│   │   ├── prompts
+│   │   └── sessions
+│   │       ├── 20260514_181344.json
+│   │       ├── 20260514_182347.json
+│   │       ├── 20260514_182940.json
+│   │       ├── 20260514_184151.json
+│   │       ├── 20260514_190209.json
+│   │       ├── 20260514_193307.json
+│   │       ├── 20260515_152021.json
+│   │       ├── 20260515_161814.json
+│   │       ├── 20260515_162837.json
+│   │       ├── 20260515_163533.json
+│   │       └── 20260515_164413.json
+│   ├── models
+│   │   ├── __init__.py
+│   │   └── models_manager.py
+│   ├── orchestrator.py
+│   ├── prompts
+│   │   ├── hero_prompt.txt
+│   │   ├── seo_prompt.txt
+│   │   └── website_prompt.txt
+│   ├── providers
+│   │   ├── gemini_provider.py
+│   │   ├── groq_provider.py
+│   │   ├── __init__.py
+│   │   ├── ollama_connector.py
+│   │   ├── ollama_provider.py
+│   │   ├── openai_provider.py
+│   │   └── registry.py
+│   ├── router
+│   │   ├── agent_router.py
+│   │   ├── model_router.py
+│   │   ├── multi_model_engine.py
+│   │   └── test_multi_model.py
+│   └── ui
+│       ├── ai_lab_panel (copia).py
+│       ├── ai_lab_panel.py
+│       └── __init__.py
+├── AI_LAB_ANALISIS.txt
+├── api
+├── backend
+│   ├── api
+│   │   ├── app.py
+│   │   ├── __init__.py
+│   │   ├── page
+│   │   │   └── save
+│   │   ├── pages
+│   │   └── render
+│   │       └── live
+│   └── __init__.py
+├── BACKUP_AI_LAB
+│   └── ollama_connector.py
+├── blocks
+│   ├── cards
+│   │   ├── meta.json
+│   │   ├── navbar.css
+│   │   ├── navbar.html
+│   │   └── navbar.json
+│   ├── contact
+│   ├── faq
+│   ├── footer
+│   │   ├── index.html
+│   │   ├── meta.json
+│   │   ├── navbar.css
+│   │   ├── navbar.html
+│   │   └── navbar.json
+│   ├── gallery
+│   ├── hero
+│   │   ├── hero.css
+│   │   ├── hero.html
+│   │   ├── hero.json
+│   │   ├── index.html
+│   │   └── meta.json
+│   ├── navbar
+│   │   ├── index.html
+│   │   ├── meta.json
+│   │   ├── navbar.css
+│   │   ├── navbar.html
+│   │   └── navbar.json
+│   └── pricing
+├── config
+│   ├── maq1_dev.json
+│   └── maq2_dev.json
+├── core
+│   ├── auto_setup_templates.py
+│   ├── block_registry.py
+│   ├── build_index.py
+│   └── graph_system
+│       └── export
+├── docs
+│   ├── 🤖 01 — AI.md
+│   ├── 00_BACKEND_SYSTEM.md
+│   ├── 02_BLOCK_SYSTEM.md
+│   ├── 03_RENDER_ENGINE.md
+│   ├── 04_VISUAL_EDITOR.md
+│   ├── 05_TEMPLATE_ENGINE.md
+│   ├── 06_STORAGE_SYSTEM.md
+│   ├── 07_PROJECT_SYSTEM.md
+│   ├── 08_CORE_SYSTEM.md
+│   ├── 09_FRONTEND_SYSTEM.md
+│   ├── 10_AI_MODELS.md
+│   ├── 11_BUSINESS_HISTORY_ENGINE.md
+│   ├── 12_FULL_SYSTEM_DEVELOPMENT.md
+│   ├── 13_REAL_SYNERGIA_RESPONSE_EXAMPLE.md
+│   ├── 14_SYNERGIA_COMPLETE_STRUCTURE.md
+│   ├── 15_VISUAL_GRAPH_SYSTEM.md
+│   ├── 16_GRAPH_STRUCTURE.md
+│   ├── 17_SYSTEM_RELATIONS.md
+│   ├── 18_FUTURE_VISUALIZATION.md
+│   ├── 19_SYNERGIA_OVERVIEW.md
+│   ├── 20_OBSIDIAN_WIKI_SYSTEM.md
+│   ├── 21_WIKI_STRUCTURE.md
+│   ├── 22_OBSIDIAN_INTERLINKS.md
+│   ├── 23_SYSTEM_BENEFITS.md
+│   ├── 24_OPERATING_SYSTEM_LEVEL.md
+│   ├── 25_SYSTEM_CONCEPT.md
+│   ├── 26_SYSTEM_LAYERS.md
+│   ├── 27_FUTURE_SYSTEM.md
+│   ├── 28_CONTENT_PUBLICATION_ENGINE.md
+│   ├── 29_BUSINESS_PLANNER_ENGINE.md
+│   ├── 30_POWERFUL_IDEAS_SYNERGIA.md
+│   ├── ai
+│   ├── architecture
+│   ├── business
+│   ├── configurar_syncthing_en_synergia_maq_1_y_maq_2.md
+│   ├── deployment
+│   ├── editor
+│   ├── ESTADO COMPLETO MAQ2_2023_05_15_18-25.md
+│   ├── future
+│   ├── graph_system
+│   ├── HUBICAR ARCHIVOS EN OBSIDIAN.MD
+│   ├── maps
+│   ├── MAQ docs.md
+│   ├── master_book
+│   ├── Nuevos
+│   │   ├── 🧠 ESTADO GUARDADO.md
+│   │   ├── 20_05_2026
+│   │   │   ├── MASTER BOOK_V1_V6.md
+│   │   │   ├── Synergia Core Next V1 V6 Master State And Joomla Dna.md
+│   │   │   ├── SYNERGIA CORE NEXT_MASTER BOOK_V1_V6THE UNIVERSAL COGNITIVE OPERATING SYSTEM\012.md
+│   │   │   └── synergia_core_next_v_1_v_6_master_book_and_joomla_dna.md
+│   │   ├── ESTADO REAL DEL DESARROLLO SYNERGIA.md
+│   │   ├── SYNERGIA CORE NEXT PRO — MAQ2 SETUP & AI DEV STACK.md
+│   │   ├── SYNERGIA CORE NEXT _PUNTO OFICIAL DE RETOMA v1--a--v6.MD
+│   │   ├── SYNERGIA_CORE_NEXT_PRO — ESTADO REAL MAQ2.md
+│   │   └── Todo lo nuevo y completo de Synergia.md
+│   ├── Nuevos Jueves 
+│   │   └── SYNERGIA_AI_CONTEXT
+│   │       └── 00_MASTER_STRUCTURE.txt
+│   ├── PARA MAÑANA VIERNES SYNERGIA_BRAIN_SYSTEM_LOG_v1.md
+│   ├── PARA MAÑANANA VIERNESSYNERGIA_BRAIN_SYSTEM_LOG_v2.md
+│   ├── PROYECTO HOY VIERNES <===> SYNERGIA CORE NEXT PRO v2.md
+│   ├── README.md
+│   ├── Session State Maq2 Synergia Core Next Pro.docx
+│   ├── session_state_maq_2_synergia_core_next_pro.md
+│   ├── SOCIAL_AUTOMATION_ENGINE.md
+│   ├── social_engine
+│   ├── visto viernes 01.md
+│   ├── visto viernes 03.md
+│   ├── vistoviernes 02.md
+│   └── wiki
+├── docsII
+│   ├──  LOG_2026_04_29_SYNERGIA_SAAS_II.md
+│   ├── brain_map
+│   ├── CMS_PRO_REAL_SYNERGIA.md
+│   ├── dependencies.md
+│   ├── doc.md
+│   ├── docs
+│   │   ├── 00_OVERVIEW
+│   │   │   └── SYNERGIA_OVERVIEW.md
+│   │   ├── 01_ARCHITECTURE
+│   │   │   ├── CORE_ARCHITECTURE.md
+│   │   │   ├── DEPENDENCY_GRAPH.md
+│   │   │   └── FOLDER_STRUCTURE.md
+│   │   ├── 02_AI_SYSTEM
+│   │   │   ├── AI_ORCHESTRATOR.md
+│   │   │   ├── AI_PIPELINE.md
+│   │   │   ├── OLLAMA_SYSTEM.md
+│   │   │   └── PROMPTS_SYSTEM.md
+│   │   ├── 03_RENDER_ENGINE
+│   │   │   ├── LIVE_RENDER.md
+│   │   │   ├── RENDER_ENGINE.md
+│   │   │   └── TEMPLATE_BINDING.md
+│   │   ├── 04_BLOCK_SYSTEM
+│   │   │   ├── BLOCK_META_SYSTEM.md
+│   │   │   ├── BLOCKS_ARCHITECTURE.md
+│   │   │   └── BLOCK_TYPES.md
+│   │   ├── 05_VISUAL_EDITOR
+│   │   │   ├── AI_ASSISTANT.md
+│   │   │   ├── DRAG_DROP_SYSTEM.md
+│   │   │   ├── LIVE_PREVIEW_SYSTEM.md
+│   │   │   ├── UI_SYSTEM.md
+│   │   │   ├── VISUAL_EDITOR_CORE.md
+│   │   │   └── VISUAL_PROPERTIES.md
+│   │   ├── 06_JSON_ENGINE
+│   │   │   ├── CLIENT_DATA_SYSTEM.md
+│   │   │   ├── DYNAMIC_DATA.md
+│   │   │   └── JSON_STRUCTURE.md
+│   │   ├── 07_STORAGE
+│   │   │   ├── OUTPUT_SYSTEM.md
+│   │   │   ├── PROJECT_SYSTEM.md
+│   │   │   └── STORAGE_SYSTEM.md
+│   │   ├── 08_API_BACKEND
+│   │   │   ├── API_SYSTEM.md
+│   │   │   └── ENDPOINTS.md
+│   │   ├── 09_TEMPLATES
+│   │   │   ├── CINEMATIC_TEMPLATES.md
+│   │   │   ├── TEMPLATE_ENGINE.md
+│   │   │   └── TEMPLATE_MARKETPLACE.md
+│   │   ├── 10_WORKFLOW
+│   │   │   ├── AUTOMATION_PIPELINE.md
+│   │   │   └── CLIENT_FLOW.md
+│   │   ├── 11_FUTURE
+│   │   │   ├── AI_AGENCY.md
+│   │   │   ├── SAAS_VISION.md
+│   │   │   └── SYNERGIA_FUTURE.md
+│   │   ├── 12_SYSTEM_MAP
+│   │   │   ├── AUTO_MAP_GENERATOR.md
+│   │   │   ├── DEPENDENCY_MAP.md
+│   │   │   ├── GRAPH_SYSTEM.md
+│   │   │   └── OBSIDIAN_GRAPH.md
+│   │   └── 99_MASTER_BOOK
+│   │       └── SYNERGIA_MASTER_BOOK.md
+│   ├── EJECUTAR TODO VER ARCHIVO.md
+│   ├── generate_docs.sh
+│   ├── Libro_Master_Core_next.md
+│   ├── LICENSE.md
+│   ├── LOG_2026_04_29_SYNERGIA_SAAS.md
+│   ├── MASTER_Core_next_01.md
+│   ├── MASTER_Core_next_02.md
+│   ├── Next
+│   │   ├── Libro_Master_Core_next.md
+│   │   ├── MASTER_Core_next_01.md
+│   │   ├── MASTER_Core_next_02.md
+│   │   └── synergia_core_next_fase_consolidacion_mvp_2026_05_06.md
+│   ├── other-tools.md
+│   ├── SKILL.md
+│   ├── streaming.md
+│   ├── Synergia Cms Pro Real Libro Documentacion Extendida.docx
+│   ├── Synergia Cms Pro Real Libro Documentacion Extendida.odt
+│   ├── SYNERGIA_ANALISIS_TOTALProyecto anterior.txt
+│   ├── synergia_core_next_fase_consolidacion_mvp_2026_05_06.md
+│   ├── Synergia_Core_Next_Generation_cms_pro_real_libro_documentacion_extendida.md
+│   ├── synergia_core_next_visual_cms_progression_01.md
+│   └── system_map
+│       ├── 00_MASTER_MAP.md
+│       ├── 01_AI_SYSTEM.md
+│       ├── 02_RENDER_SYSTEM.md
+│       ├── 03_EDITOR_SYSTEM.md
+│       ├── 04_BLOCK_SYSTEM.md
+│       ├── 05_BACKEND_API.md
+│       ├── 06_STORAGE_SYSTEM.md
+│       ├── 07_TEMPLATE_SYSTEM.md
+│       └── 08_VISUAL_GRAPH_SYSTEM.md
+├── editor
+│   ├── assets
+│   ├── cms_editor
+│   │   ├── app.js
+│   │   ├── config.json 
+│   │   ├── index.html
+│   │   └── styles.css  
+│   ├── cms_panel
+│   ├── preview
+│   └── visual_editor
+│       ├── app.js
+│       ├── blocks.js
+│       ├── index.html
+│       └── styles.css
+├── estructura_total.txt
+├── frontend
+│   └── dashboard
+│       ├── cms_editor.html
+│       ├── cms.html
+│       ├── dashboard.html
+│       ├── index.html
+│       └── synergia_visual_editor.jsx
+├── gibhub.md
+├── json_engine
+│   └── client_data
+│       └── clientes
+│           ├── cliente_001.json
+│           ├── cliente_gastro_001.json
+│           ├── estructura.txt
+│           └── mates_cordoba.json
+├── legacy
+│   ├── 99_BACKUP_OLD
+│   ├── experimental
+│   │   ├── arguments_schema.py
+│   │   ├── __init__.py
+│   │   ├── missing_sentinel.py
+│   │   └── pipeline.py
+│   ├── tests
+│   │   ├── ansi_test.py
+│   │   ├── ansitowin32_test.py
+│   │   ├── initialise_test.py
+│   │   ├── __init__.py
+│   │   ├── isatty_test.py
+│   │   ├── utils.py
+│   │   └── winterm_test.py
+│   └── v1
+│       ├── annotated_types.py
+│       ├── class_validators.py
+│       ├── color.py
+│       ├── config.py
+│       ├── dataclasses.py
+│       ├── datetime_parse.py
+│       ├── decorator.py
+│       ├── env_settings.py
+│       ├── errors.py
+│       ├── error_wrappers.py
+│       ├── fields.py
+│       ├── generics.py
+│       ├── _hypothesis_plugin.py
+│       ├── __init__.py
+│       ├── json.py
+│       ├── main.py
+│       ├── mypy.py
+│       ├── networks.py
+│       ├── parse.py
+│       ├── py.typed
+│       ├── schema.py
+│       ├── tools.py
+│       ├── types.py
+│       ├── typing.py
+│       ├── utils.py
+│       ├── validators.py
+│       └── version.py
+├── outputs
+│   ├── crear_agencia_premium_ia_para__20260515_174048
+│   │   ├── branding
+│   │   ├── business_plan
+│   │   ├── docs
+│   │   ├── exports
+│   │   ├── social
+│   │   └── website
+│   ├── crear_agencia_premium_ia_para__20260515_174223
+│   │   ├── branding
+│   │   ├── business_plan
+│   │   ├── docs
+│   │   ├── exports
+│   │   ├── social
+│   │   └── website
+│   │       └── website.txt
+│   ├── crear_agencia_premium_ia_para__20260515_175748
+│   │   ├── branding
+│   │   ├── business_plan
+│   │   ├── docs
+│   │   ├── exports
+│   │   ├── social
+│   │   └── website
+│   ├── crear_agencia_premium_ia_para__20260515_180312
+│   │   ├── branding
+│   │   │   └── branding.txt
+│   │   ├── business_plan
+│   │   ├── docs
+│   │   ├── exports
+│   │   ├── social
+│   │   │   └── social.txt
+│   │   └── website
+│   │       └── website.txt
+│   └── pizza_premium_ia_20260515_165722
+│       ├── branding
+│       ├── business_plan
+│       ├── docs
+│       ├── exports
+│       ├── social
+│       └── website
+├── projects
+│   └── demo_site
+│       ├── page.json
+│       └── pages
+│           ├── about.json
+│           ├── contact.json
+│           └── home.json
+├── render
+│   ├── block_engine
+│   │   └── __init__.py
+│   ├── __init__.py
+│   └── templates
+│       ├── cards
+│       ├── footer
+│       ├── hero
+│       │   └── modern_dark.html
+│       └── navbar
+├── requirements.txt
+├── run_ai_lab (copia).py
+├── run_ai_lab.py
+├── run_synergia.py
+├── scripts 
+├── storage
+│   ├── clientes
+│   │   ├── cliente_001.json
+│   │   ├── cliente_gastro_001.json
+│   │   ├── estructura.txt
+│   │   └── mates_cordoba.json
+│   ├── output
+│   │   ├── cliente_001_20260505_183843
+│   │   ├── demo_site
+│   │   │   ├──  assets
+│   │   │   ├── about.html
+│   │   │   ├── contact.html
+│   │   │   └── index.html
+│   │   ├── demo_site_20260507_190236
+│   │   │   └── index.html
+│   │   ├── demo_site_site_20260508_145353
+│   │   ├── demo_site_site_20260508_150105
+│   │   │   ├── about.html
+│   │   │   ├── contact.html
+│   │   │   └── index.html
+│   │   ├── demo_site_site_20260508_150533
+│   │   │   ├── about.html
+│   │   │   ├── contact.html
+│   │   │   └── index.html
+│   │   ├── demo_site_site_20260508_180937
+│   │   │   ├── about.html
+│   │   │   ├── contact.html
+│   │   │   └── index.html
+│   │   ├── project_20260505_165451
+│   │   │   └── index.html
+│   │   ├── project_20260505_165511
+│   │   │   └── index.html
+│   │   ├── project_20260505_172511
+│   │   │   └── index.html
+│   │   ├── project_20260505_172613
+│   │   │   └── index.html
+│   │   ├── project_20260505_182710
+│   │   │   └── index.html
+│   │   └── project_20260505_182919
+│   │       └── index.html
+│   └── projects
+│       ├── cms_20260505_182710.json
+│       ├── cms_20260505_182919.json
+│       ├── project_001.json
+│       └── prompt_generated.json
+├── SYNERGIA_AI_LAB_PANEL_V2.docx
+├── SYNERGIA_AI_LAB_PANEL_V2.md
+├── SYNERGIA_CORE_NEXT_PRO Obsidian
+│   ├── 00_MASTER
+│   │   ├── 19_SYNERGIA_OVERVIEW.md
+│   │   └── README.md
+│   ├── 01_ARCHITECTURE
+│   │   ├── 00_BACKEND_SYSTEM.md
+│   │   └── 08_CORE_SYSTEM.md
+│   ├── 02_AI_SYETEM
+│   │   ├── 🤖 01 — AI.md
+│   │   └── 10_AI_MODELS.md
+│   ├── 03_RENDER_ENGINE
+│   │   └── 03_RENDER_ENGINE.md
+│   ├── 04_EDITOR
+│   │   └── 04_VISUAL_EDITOR.md
+│   ├── 05_BLOCK_SYSTEM
+│   │   └── 02_BLOCK_SYSTEM.md
+│   ├── 06_TEMPLATES
+│   │   └── 05_TEMPLATE_ENGINE.md
+│   ├── 07_STORAGE
+│   │   └── 06_STORAGE_SYSTEM.md
+│   ├── 08_BUSINESS_ENGINE
+│   │   ├── 11_BUSINESS_HISTORY_ENGINE.md
+│   │   └── 29_BUSINESS_PLANNER_ENGINE.md
+│   ├── 09_SOCIAL_ENGINE
+│   │   └── SOCIAL_AUTOMATION_ENGINE.md
+│   ├── 10_GRAPH_SYSTEN
+│   │   ├── 15_VISUAL_GRAPH_SYSTEM.md
+│   │   └── 20_OBSIDIAN_WIKI_SYSTEM.md
+│   ├── 11_FUTURE
+│   │   └── 27_FUTURE_SYSTEM.md
+│   ├── 12_MAQ_SYSTEM
+│   │   └── MAQ docs.md
+│   ├── 99_MASTER_BOOK
+│   └── Sin título.base
+├── SYNERGIA_FULL_EXPORT.txt
+├── synergiaGab.txt
+├── SYNERGIA_MASTER_BOOK_v1.docx
+├── SYNERGIA_MASTER_BOOK_v1.md
+├── templates
+│   └── core_templates
+│       ├── 00_CONTROL
+│       ├── 01 SYNERGIA_CORE final_HTML
+│       ├── 01_ACADEMIA_IDIOMAS_ELITE
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       ├── 02_SKYCODE_TECH_HUB
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       ├── 02_Synergia_Core_html
+│       ├── 03_vet_emotional_techh
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       ├── 04_arquitectura_interiorismo
+│       │   ├── auto_setup_templates.py
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       ├── 05_gastronomia_experiencial
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       ├── 07_real_estate_global_scroll
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       ├── 08_REALITY_BOND_INTERFACE
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       ├── 09retro_futuroe_aviation_maste
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       ├── 10_arq_bento
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       ├── 11_Ejemplo1
+│       │   ├── config.json
+│       │   ├── demo.html
+│       │   ├── doc.md
+│       │   └── template.html
+│       └── estructura.txt
+├── test_business_generator.py
+├── test_ollama_memory.py
+├── tests
+└── tools
+    ├── ai_lab
+    │   ├── monitor.py
+    │   └── prompt_console.py
+    ├── synergia_control_center.py
+    └── test_memory.py
+
+185 directories, 394 files

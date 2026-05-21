@@ -1,171 +1,242 @@
-import os
-import json
+from pathlib import Path
 from datetime import datetime
 
+from ai.core.task_engine import (
+    task_engine
+)
 
-class BusinessGenerator:
-    """
-    SYNERGIA BUSINESS ENGINE v1
-    Genera negocios completos: CMS + branding + marketing + export
-    """
+from ai.core.ai_orchestrator import (
+    ai_orchestrator
+)
 
-    def __init__(self):
-        self.output_base = "outputs/business"
+from ai.business.project_builder import (
+    create_project_structure
+)
 
-    # =====================================================
-    # MAIN ENTRY
-    # =====================================================
-    def generate(self, idea: str, mode="auto"):
-        """
-        mode:
-        - auto (full AI)
-        - assisted (human review)
-        """
+from ai.business.website_generator import (
+    generate_website
+)
 
-        analysis = self.analyze_idea(idea)
-        brand = self.generate_brand(idea)
-        cms = self.generate_cms(brand)
-        social = self.generate_social(brand)
-        marketing = self.generate_marketing(brand)
+from ai.business.branding_generator import (
+    generate_branding
+)
 
-        package = {
-            "idea": idea,
-            "mode": mode,
-            "analysis": analysis,
-            "brand": brand,
-            "cms": cms,
-            "social": social,
-            "marketing": marketing,
-            "created_at": datetime.now().isoformat()
-        }
+from ai.business.social_generator import (
+    generate_social
+)
 
-        path = self.export(package)
+from ai.business.docs_generator import (
+    generate_docs
+)
 
-        return package, path
 
-    # =====================================================
-    # 1. ANALYSIS ENGINE
-    # =====================================================
-    def analyze_idea(self, idea):
-        idea = idea.lower()
+# =========================================================
+# BUSINESS GENERATOR
+# =========================================================
 
-        if "pizza" in idea or "comida" in idea:
-            business = "food"
-        elif "software" in idea or "saas" in idea:
-            business = "saas"
-        else:
-            business = "service"
+print(
 
-        return {
-            "business_type": business,
-            "complexity": "medium",
-            "target": "general public"
-        }
+    "[BUSINESS GENERATOR LOADED]"
+)
+
+
+# =========================================================
+# CREATE PROJECT
+# =========================================================
+
+def create_business_project(
+
+    prompt
+):
 
     # =====================================================
-    # 2. BRAND ENGINE
+    # TIMESTAMP
     # =====================================================
-    def generate_brand(self, idea):
-        name = "Synergia " + idea.split(" ")[0].capitalize()
 
-        return {
-            "name": name,
-            "colors": ["#ff0033", "#111111", "#ffffff"],
-            "style": "modern minimal tech",
-            "logo_prompt": f"modern logo for {idea}, clean, futuristic"
-        }
+    timestamp = datetime.now().strftime(
+
+        "%Y%m%d_%H%M%S"
+    )
 
     # =====================================================
-    # 3. CMS ENGINE (BÁSICO REAL)
+    # PROJECT NAME
     # =====================================================
-    def generate_cms(self, brand):
 
-        html = f"""
-        <html>
-        <head>
-            <title>{brand['name']}</title>
-        </head>
-        <body style="font-family:Arial;background:#111;color:white;">
-            <h1>{brand['name']}</h1>
-            <p>Bienvenido a {brand['name']} generado por SYNERGIA</p>
+    project_name = (
 
-            <h2>Productos</h2>
-            <ul>
-                <li>Producto 1</li>
-                <li>Producto 2</li>
-                <li>Producto 3</li>
-            </ul>
+        prompt.lower()
 
-            <button>Comprar ahora</button>
-        </body>
-        </html>
-        """
+        .replace(" ", "_")
 
-        return {
-            "index.html": html
-        }
+        [:30]
+    )
 
     # =====================================================
-    # 4. SOCIAL ENGINE
+    # CREATE STRUCTURE
     # =====================================================
-    def generate_social(self, brand):
 
-        return {
-            "instagram_posts": [
-                f"Descubrí {brand['name']} 🚀",
-                f"Nuevo concepto digital creado con IA",
-                f"Automatización total de negocios"
-            ],
-            "hashtags": [
-                "#IA", "#negocios", "#automatizacion", "#synergia"
-            ],
-            "reels_scripts": [
-                "Transformamos una idea en negocio en segundos",
-                "IA generando empresas automáticamente"
-            ]
-        }
+    project_path = create_project_structure(
+
+        f"{project_name}_{timestamp}"
+    )
+
+    print(
+
+        f"\n[PROJECT CREATED]\n{project_path}"
+    )
 
     # =====================================================
-    # 5. MARKETING ENGINE
+    # WEBSITE TASK
     # =====================================================
-    def generate_marketing(self, brand):
 
-        return {
-            "seo_keywords": [
-                brand["name"].lower(),
-                "negocio con ia",
-                "crear web automática"
-            ],
-            "ads_copy": [
-                f"Crea tu negocio con {brand['name']} en minutos",
-                "IA que construye empresas completas"
-            ]
-        }
+    def website_task():
+
+        model = ai_orchestrator.select_model(
+
+            "website"
+        )
+
+        print(
+
+            f"\n[WEBSITE MODEL] {model}"
+        )
+
+        generate_website(
+
+            prompt,
+
+            project_path,
+
+            model
+        )
 
     # =====================================================
-    # 6. EXPORT ENGINE
+    # BRANDING TASK
     # =====================================================
-    def export(self, package):
 
-        name = package["brand"]["name"].replace(" ", "_")
-        path = os.path.join(self.output_base, name)
+    def branding_task():
 
-        os.makedirs(path, exist_ok=True)
+        model = ai_orchestrator.select_model(
 
-        # save json full
-        with open(os.path.join(path, "business.json"), "w") as f:
-            json.dump(package, f, indent=2)
+            "branding"
+        )
 
-        # save cms
-        cms_path = os.path.join(path, "cms")
-        os.makedirs(cms_path, exist_ok=True)
+        print(
 
-        for file, content in package["cms"].items():
-            with open(os.path.join(cms_path, file), "w") as f:
-                f.write(content)
+            f"\n[BRANDING MODEL] {model}"
+        )
 
-        # social
-        with open(os.path.join(path, "social.json"), "w") as f:
-            json.dump(package["social"], f, indent=2)
+        generate_branding(
 
-        return path
+            prompt,
+
+            project_path,
+
+            model
+        )
+
+    # =====================================================
+    # SOCIAL TASK
+    # =====================================================
+
+    def social_task():
+
+        model = ai_orchestrator.select_model(
+
+            "social"
+        )
+
+        print(
+
+            f"\n[SOCIAL MODEL] {model}"
+        )
+
+        generate_social(
+
+            prompt,
+
+            project_path,
+
+            model
+        )
+
+    # =====================================================
+    # DOCS TASK
+    # =====================================================
+
+    def docs_task():
+
+        model = ai_orchestrator.select_model(
+
+            "docs"
+        )
+
+        print(
+
+            f"\n[DOCS MODEL] {model}"
+        )
+
+        generate_docs(
+
+            prompt,
+
+            project_path,
+
+            model
+        )
+
+    # =====================================================
+    # ADD TASKS
+    # =====================================================
+
+    task_engine.tasks = []
+
+    task_engine.add_task(
+
+        "WEBSITE",
+
+        website_task
+    )
+
+    task_engine.add_task(
+
+        "BRANDING",
+
+        branding_task
+    )
+
+    task_engine.add_task(
+
+        "SOCIAL",
+
+        social_task
+    )
+
+    task_engine.add_task(
+
+        "DOCS",
+
+        docs_task
+    )
+
+    # =====================================================
+    # RUN TASKS
+    # =====================================================
+
+    task_engine.run()
+
+    # =====================================================
+    # FINISHED
+    # =====================================================
+
+    print(
+
+        "\n[BUSINESS PROJECT FINISHED]"
+    )
+
+    print(
+
+        f"\nOUTPUT PATH:\n{project_path}"
+    )
+
+    return project_path
