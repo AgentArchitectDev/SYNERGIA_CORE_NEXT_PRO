@@ -1,0 +1,11 @@
+{
+    "system_name": "SYNERGIA_CORE_NEXT_PRO",
+    "current_mode": "DEV",
+    "current_maq": "MAQ1",
+    "active_model": "deepseek-coder-v2",
+    "active_project": "SYNERGIA_CORE_NEXT_PRO",
+    "runtime_status": "ONLINE",
+    "kernel_status": "ACTIVE",
+    "active_agents": [],
+    "last_boot": null
+}
