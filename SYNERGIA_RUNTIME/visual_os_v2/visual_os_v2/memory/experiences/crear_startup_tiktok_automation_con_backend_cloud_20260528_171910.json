@@ -1,0 +1,23 @@
+{
+    "task": "crear startup TikTok automation con backend cloud",
+    "mode": "AUTONOMOUS",
+    "nodes": [
+        "dev",
+        "social_media"
+    ],
+    "graph": {
+        "dev": {
+            "connections": [
+                "cms"
+            ],
+            "status": "ACTIVE"
+        },
+        "social_media": {
+            "connections": [
+                "business"
+            ],
+            "status": "ACTIVE"
+        }
+    },
+    "timestamp": "20260528_171910"
+}

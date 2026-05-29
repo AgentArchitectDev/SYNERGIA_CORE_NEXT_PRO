@@ -1,0 +1,25 @@
+{
+    "task": "crear SaaS para restaurantes con automatizaci\u00f3n Instagram e IA",
+    "mode": "AUTONOMOUS",
+    "nodes": [
+        "social_media",
+        "business"
+    ],
+    "graph": {
+        "social_media": {
+            "connections": [
+                "business"
+            ],
+            "status": "ACTIVE"
+        },
+        "business": {
+            "connections": [
+                "dev",
+                "cms",
+                "social_media"
+            ],
+            "status": "ACTIVE"
+        }
+    },
+    "timestamp": "20260528_170056"
+}

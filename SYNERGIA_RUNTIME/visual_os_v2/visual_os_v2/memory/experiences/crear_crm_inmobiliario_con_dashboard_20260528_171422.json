@@ -1,0 +1,25 @@
+{
+    "task": "crear CRM inmobiliario con dashboard",
+    "mode": "AUTONOMOUS",
+    "nodes": [
+        "business",
+        "dev"
+    ],
+    "graph": {
+        "business": {
+            "connections": [
+                "dev",
+                "cms",
+                "social_media"
+            ],
+            "status": "ACTIVE"
+        },
+        "dev": {
+            "connections": [
+                "cms"
+            ],
+            "status": "ACTIVE"
+        }
+    },
+    "timestamp": "20260528_171422"
+}

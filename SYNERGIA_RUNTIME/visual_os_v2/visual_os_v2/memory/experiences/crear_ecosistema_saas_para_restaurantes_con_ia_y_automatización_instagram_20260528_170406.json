@@ -1,0 +1,32 @@
+{
+    "task": "crear ecosistema SaaS para restaurantes con IA y automatizaci\u00f3n Instagram",
+    "mode": "AUTONOMOUS",
+    "nodes": [
+        "social_media",
+        "business",
+        "dev"
+    ],
+    "graph": {
+        "social_media": {
+            "connections": [
+                "business"
+            ],
+            "status": "ACTIVE"
+        },
+        "business": {
+            "connections": [
+                "dev",
+                "cms",
+                "social_media"
+            ],
+            "status": "ACTIVE"
+        },
+        "dev": {
+            "connections": [
+                "cms"
+            ],
+            "status": "ACTIVE"
+        }
+    },
+    "timestamp": "20260528_170406"
+}
