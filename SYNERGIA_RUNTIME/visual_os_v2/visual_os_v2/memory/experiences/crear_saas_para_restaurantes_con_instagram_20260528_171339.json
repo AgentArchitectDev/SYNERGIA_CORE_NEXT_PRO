@@ -1,0 +1,25 @@
+{
+    "task": "crear SaaS para restaurantes con Instagram",
+    "mode": "AUTONOMOUS",
+    "nodes": [
+        "business",
+        "social_media"
+    ],
+    "graph": {
+        "business": {
+            "connections": [
+                "dev",
+                "cms",
+                "social_media"
+            ],
+            "status": "ACTIVE"
+        },
+        "social_media": {
+            "connections": [
+                "business"
+            ],
+            "status": "ACTIVE"
+        }
+    },
+    "timestamp": "20260528_171339"
+}

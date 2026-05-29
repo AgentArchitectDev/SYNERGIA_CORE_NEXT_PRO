@@ -1,0 +1,18 @@
+{
+    "task": "crear SaaS inmobiliario con automatizaci\u00f3n IA",
+    "mode": "AUTONOMOUS",
+    "nodes": [
+        "business"
+    ],
+    "graph": {
+        "business": {
+            "connections": [
+                "dev",
+                "cms",
+                "social_media"
+            ],
+            "status": "ACTIVE"
+        }
+    },
+    "timestamp": "20260528_171845"
+}

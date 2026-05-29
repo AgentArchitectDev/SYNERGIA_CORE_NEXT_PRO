@@ -1,0 +1,13 @@
+{
+  "modules": [
+    "synergia-ai",
+    "synergia-api",
+    "synergia-cms",
+    "synergia-render",
+    "synergia-state",
+    "synergia-outputs",
+    "synergia-core",
+    "synergia-templates"
+  ],
+  "active": true
+}

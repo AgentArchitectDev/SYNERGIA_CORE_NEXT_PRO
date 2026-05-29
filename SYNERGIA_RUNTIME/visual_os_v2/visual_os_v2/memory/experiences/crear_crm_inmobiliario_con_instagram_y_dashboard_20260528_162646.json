@@ -1,0 +1,32 @@
+{
+    "task": "crear CRM inmobiliario con Instagram y dashboard",
+    "mode": "AUTONOMOUS",
+    "nodes": [
+        "dev",
+        "social_media",
+        "business"
+    ],
+    "graph": {
+        "dev": {
+            "connections": [
+                "cms"
+            ],
+            "status": "ACTIVE"
+        },
+        "social_media": {
+            "connections": [
+                "business"
+            ],
+            "status": "ACTIVE"
+        },
+        "business": {
+            "connections": [
+                "dev",
+                "cms",
+                "social_media"
+            ],
+            "status": "ACTIVE"
+        }
+    },
+    "timestamp": "20260528_162646"
+}
