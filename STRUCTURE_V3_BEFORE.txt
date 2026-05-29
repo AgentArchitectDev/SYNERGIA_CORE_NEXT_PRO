@@ -1,0 +1,611 @@
+.
+├── ai
+│   ├── AI_TREE.txt
+│   ├── brain
+│   │   ├── memory_global.json
+│   │   ├── memory_global.py
+│   │   ├── model_ranker.py
+│   │   ├── model_ranking.json
+│   │   ├── prompt_optimizer.py
+│   │   └── __pycache__
+│   ├── business
+│   │   ├── branding_generator.py
+│   │   ├── business_generator.py
+│   │   ├── docs_generator.py
+│   │   ├── Documento sin título
+│   │   ├── export_engine.py
+│   │   ├── master_business.txt
+│   │   ├── project_builder.py
+│   │   ├── __pycache__
+│   │   ├── social_generator.py
+│   │   └── website_generator.py
+│   ├── core
+│   │   ├── ai_orchestrator.py
+│   │   ├── cms_bridge.py
+│   │   ├── export_manager.py
+│   │   ├── memory_context_builder.py
+│   │   ├── progress_manager.py
+│   │   ├── prompt_optimizer.py
+│   │   ├── __pycache__
+│   │   └── task_engine.py
+│   ├── core_ai
+│   │   └── core_ai.py
+│   ├── image
+│   │   ├── image_generator.py
+│   │   └── image_search.py
+│   ├── __init__.py
+│   ├── memory
+│   │   ├── conversations
+│   │   ├── memory_manager.py
+│   │   ├── __pycache__
+│   │   └── sessions
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── models_manager.py
+│   │   └── __pycache__
+│   ├── orchestrator.py
+│   ├── prompts
+│   │   ├── hero_prompt.txt
+│   │   ├── seo_prompt.txt
+│   │   └── website_prompt.txt
+│   ├── providers
+│   │   ├── gemini_provider.py
+│   │   ├── groq_provider.py
+│   │   ├── __init__.py
+│   │   ├── ollama_connector.py
+│   │   ├── ollama_provider.py
+│   │   ├── openai_provider.py
+│   │   ├── __pycache__
+│   │   └── registry.py
+│   ├── __pycache__
+│   │   └── __init__.cpython-312.pyc
+│   ├── router
+│   │   ├── agent_router.py
+│   │   ├── model_router.py
+│   │   ├── multi_model_engine.py
+│   │   ├── __pycache__
+│   │   └── test_multi_model.py
+│   └── ui
+│       ├── ai_lab_panel (copia).py
+│       ├── ai_lab_panel.py
+│       ├── __init__.py
+│       └── __pycache__
+├── AI_LAB_ANALISIS.txt
+├── backend
+│   ├── api
+│   │   ├── app.py
+│   │   └── __init__.py
+│   └── __init__.py
+├── BACKUP_AI_LAB
+│   └── ollama_connector.py
+├── blocks
+│   ├── cards
+│   │   ├── meta.json
+│   │   ├── navbar.css
+│   │   ├── navbar.html
+│   │   └── navbar.json
+│   ├── footer
+│   │   ├── index.html
+│   │   ├── meta.json
+│   │   ├── navbar.css
+│   │   ├── navbar.html
+│   │   └── navbar.json
+│   ├── hero
+│   │   ├── hero.css
+│   │   ├── hero.html
+│   │   ├── hero.json
+│   │   ├── index.html
+│   │   └── meta.json
+│   └── navbar
+│       ├── index.html
+│       ├── meta.json
+│       ├── navbar.css
+│       ├── navbar.html
+│       └── navbar.json
+├── config
+│   ├── maq
+│   │   ├── maq1.json
+│   │   └── maq2.json
+│   ├── maq1_dev.json
+│   ├── maq2_dev.json
+│   ├── runtime
+│   │   └── runtime.json
+│   └── system
+│       └── system.json
+├── core
+│   ├── auto_setup_templates.py
+│   ├── block_registry.py
+│   └── build_index.py
+├── docs
+│   ├── 🤖 01 — AI.md
+│   ├── 00_BACKEND_SYSTEM.md
+│   ├── 02_BLOCK_SYSTEM.md
+│   ├── 03_RENDER_ENGINE.md
+│   ├── 04_VISUAL_EDITOR.md
+│   ├── 05_TEMPLATE_ENGINE.md
+│   ├── 06_STORAGE_SYSTEM.md
+│   ├── 07_PROJECT_SYSTEM.md
+│   ├── 08_CORE_SYSTEM.md
+│   ├── 09_FRONTEND_SYSTEM.md
+│   ├── 10_AI_MODELS.md
+│   ├── 11_BUSINESS_HISTORY_ENGINE.md
+│   ├── 12_FULL_SYSTEM_DEVELOPMENT.md
+│   ├── 13_REAL_SYNERGIA_RESPONSE_EXAMPLE.md
+│   ├── 14_SYNERGIA_COMPLETE_STRUCTURE.md
+│   ├── 15_VISUAL_GRAPH_SYSTEM.md
+│   ├── 16_GRAPH_STRUCTURE.md
+│   ├── 17_SYSTEM_RELATIONS.md
+│   ├── 18_FUTURE_VISUALIZATION.md
+│   ├── 19_SYNERGIA_OVERVIEW.md
+│   ├── 20_OBSIDIAN_WIKI_SYSTEM.md
+│   ├── 21_WIKI_STRUCTURE.md
+│   ├── 22_OBSIDIAN_INTERLINKS.md
+│   ├── 23_SYSTEM_BENEFITS.md
+│   ├── 24_OPERATING_SYSTEM_LEVEL.md
+│   ├── 25_SYSTEM_CONCEPT.md
+│   ├── 26_SYSTEM_LAYERS.md
+│   ├── 27_FUTURE_SYSTEM.md
+│   ├── 28_CONTENT_PUBLICATION_ENGINE.md
+│   ├── 29_BUSINESS_PLANNER_ENGINE.md
+│   ├── 30_POWERFUL_IDEAS_SYNERGIA.md
+│   ├── CHECKPOINTS
+│   │   ├── 🚀 AI OPERATING SYSTEM EN CONSTRUCCIÓN FASE OS v1-v2.md
+│   │   ├── 🔥 EL PRIMER ARQUITECTO IA AUTÓNOMO — SYNERGIA.md
+│   │   ├── 🔥 SISTEMA COGNITIVO OPERATIVO — SYNERGIA NEXT.md
+│   │   ├── 🤖 SYNERGIA AGENT CORE v1_Multi-Agente _CMS _Automatización _Creatividad.md
+│   │   ├── 📘 SYNERGIA CHECKPOINT — MEMORY ENGINE ERA\012VISUAL OS v2 + NODE ENGINE + RUNTIME SYSTEM\012Fecha: 2026-05-28.md
+│   │   ├── 📘 UNREAL ENGINE SYSTEM v1.2 A.I\012URE_S-V1_2-I-A.md
+│   │   ├── 280526_001-SYNERGIA OS v2\012DOCUMENTO MAESTRO COMPLETO .md
+│   │   ├── 280526_002-SYNERGIA OS v2\012DOCUMENTO MAESTRO COMPLETO .md
+│   │   ├── 280526_003-SYNERGIA OS v2\012DOCUMENTO MAESTRO COMPLETO.md
+│   │   ├── 280526_004-SYNERGIA OS v2\012DOCUMENTO MAESTRO COMPLETO.md
+│   │   ├── collab v2.md
+│   │   ├── final de hoy Collab2.md
+│   │   ├── LIBRO de HOY 280526.md
+│   │   ├── proximo paso .md
+│   │   ├── Synergia B Fase3 Runtime Automation Checkpoint 2026 05 26.md
+│   │   ├── Synergia Boot Checkpoint May 27.md
+│   │   ├── SYNERGIA CHECKPOINT — VISUAL OS v2 + NODE ENGINE (2026-05-28).md
+│   │   ├── Synergia Checkpoint Collab V2 V3.md
+│   │   ├── synergia Checpoints_18-00.md
+│   │   ├── Synergia Collab Checkpoint V.md
+│   │   ├── SYNERGIA CORE NEXT PRO\012# EVOLUCIÓN FINAL — ORCHESTRATOR v5 + AI OS\012# CHECKPOINT GENERAL\012# FECHA: 2026-05-27_16-49.md\012
+│   │   ├── Synergia Runti Me V1 Checkpoint 2026 05 26.md
+│   │   ├── SYNERGIA_B_FASE1_2026_05_26.md
+│   │   ├── SYNERGIA_B_FASE2_2026_05_26.md
+│   │   ├── SYNERGIA_CHECKPOINT_AGENT_SYSTEM_v1.md
+│   │   ├── SYNERGIA_CHECKPOINT_COGNITIVE_CORE_v1.md
+│   │   ├── SYNERGIA_CHECKPOINT_KERNEL_ORCHESTRATOR_v2.md
+│   │   ├── SYNERGIA_CHECKPOINTS_2026_05_26.zip
+│   │   ├── Synergia_CheckPonts_18-00_270226.odt
+│   │   ├── SYNERGIA_MAQ_CLUSTER_2026_05_26.md
+│   │   ├── SYNERGIA_V7_RUNTIME_2026_05_26.md
+│   │   └── URE-S_V1-2-I_A.odt
+│   ├── configurar_syncthing_en_synergia_maq_1_y_maq_2.md
+│   ├── ESTADO COMPLETO MAQ2_2023_05_15_18-25.md
+│   ├── HUBICAR ARCHIVOS EN OBSIDIAN.MD
+│   ├── MANUAL Operativo 
+│   │   ├── 📘 SYNERGIA CORE NEXT PRO.md
+│   │   ├── 290526_SynergiaOS_plan Maestro de Resestructuracion total.md
+│   │   ├── Pasos para Mañana II.md
+│   │   └── Pasos para Mañana.md
+│   ├── MAQ docs.md
+│   ├── Nuevos
+│   │   ├── 🧠 ESTADO GUARDADO.md
+│   │   ├── 20_05_2026
+│   │   ├── 22_05_2026
+│   │   ├── ESTADO REAL DEL DESARROLLO SYNERGIA.md
+│   │   ├── SYNERGIA CORE NEXT PRO — MAQ2 SETUP & AI DEV STACK.md
+│   │   ├── SYNERGIA CORE NEXT _PUNTO OFICIAL DE RETOMA v1--a--v6.MD
+│   │   ├── SYNERGIA_CORE_NEXT_PRO — ESTADO REAL MAQ2.md
+│   │   └── Todo lo nuevo y completo de Synergia.md
+│   ├── Nuevos Jueves
+│   │   └── SYNERGIA_AI_CONTEXT
+│   ├── PARA MAÑANA VIERNES SYNERGIA_BRAIN_SYSTEM_LOG_v1.md
+│   ├── PARA MAÑANANA VIERNESSYNERGIA_BRAIN_SYSTEM_LOG_v2.md
+│   ├── PROYECTO HOY VIERNES <===> SYNERGIA CORE NEXT PRO v2.md
+│   ├── README.md
+│   ├── Session State Maq2 Synergia Core Next Pro.docx
+│   ├── session_state_maq_2_synergia_core_next_pro.md
+│   ├── SOCIAL_AUTOMATION_ENGINE.md
+│   ├── visto viernes 01.md
+│   ├── visto viernes 03.md
+│   └── vistoviernes 02.md
+├── docsII
+│   ├──  LOG_2026_04_29_SYNERGIA_SAAS_II.md
+│   ├── CMS_PRO_REAL_SYNERGIA.md
+│   ├── dependencies.md
+│   ├── doc.md
+│   ├── docs
+│   │   ├── 00_OVERVIEW
+│   │   ├── 01_ARCHITECTURE
+│   │   ├── 02_AI_SYSTEM
+│   │   ├── 03_RENDER_ENGINE
+│   │   ├── 04_BLOCK_SYSTEM
+│   │   ├── 05_VISUAL_EDITOR
+│   │   ├── 06_JSON_ENGINE
+│   │   ├── 07_STORAGE
+│   │   ├── 08_API_BACKEND
+│   │   ├── 09_TEMPLATES
+│   │   ├── 10_WORKFLOW
+│   │   ├── 11_FUTURE
+│   │   ├── 12_SYSTEM_MAP
+│   │   └── 99_MASTER_BOOK
+│   ├── EJECUTAR TODO VER ARCHIVO.md
+│   ├── generate_docs.sh
+│   ├── Libro_Master_Core_next.md
+│   ├── LICENSE.md
+│   ├── LOG_2026_04_29_SYNERGIA_SAAS.md
+│   ├── MASTER_Core_next_01.md
+│   ├── MASTER_Core_next_02.md
+│   ├── Next
+│   │   ├── Libro_Master_Core_next.md
+│   │   ├── MASTER_Core_next_01.md
+│   │   ├── MASTER_Core_next_02.md
+│   │   └── synergia_core_next_fase_consolidacion_mvp_2026_05_06.md
+│   ├── other-tools.md
+│   ├── SKILL.md
+│   ├── streaming.md
+│   ├── Synergia Cms Pro Real Libro Documentacion Extendida.docx
+│   ├── Synergia Cms Pro Real Libro Documentacion Extendida.odt
+│   ├── SYNERGIA_ANALISIS_TOTALProyecto anterior.txt
+│   ├── synergia_core_next_fase_consolidacion_mvp_2026_05_06.md
+│   ├── Synergia_Core_Next_Generation_cms_pro_real_libro_documentacion_extendida.md
+│   ├── synergia_core_next_visual_cms_progression_01.md
+│   └── system_map
+│       ├── 00_MASTER_MAP.md
+│       ├── 01_AI_SYSTEM.md
+│       ├── 02_RENDER_SYSTEM.md
+│       ├── 03_EDITOR_SYSTEM.md
+│       ├── 04_BLOCK_SYSTEM.md
+│       ├── 05_BACKEND_API.md
+│       ├── 06_STORAGE_SYSTEM.md
+│       ├── 07_TEMPLATE_SYSTEM.md
+│       └── 08_VISUAL_GRAPH_SYSTEM.md
+├── editor
+│   ├── cms_editor
+│   │   ├── app.js
+│   │   ├── config.json 
+│   │   ├── index.html
+│   │   └── styles.css  
+│   └── visual_editor
+│       ├── app.js
+│       ├── blocks.js
+│       ├── index.html
+│       └── styles.css
+├── ESTADO HISTÓRICO DEL PROYECTO-F1_F2proxF3.md
+├── estructura_total.txt
+├── frontend
+│   └── dashboard
+│       ├── cms_editor.html
+│       ├── cms.html
+│       ├── dashboard.html
+│       ├── index.html
+│       └── synergia_visual_editor.jsx
+├── gibhub.md
+├── Github.md
+├── json_engine
+│   └── client_data
+│       └── clientes
+├── kernel
+│   ├── bootstrap
+│   │   ├── bootstrap.py
+│   │   └── __pycache__
+│   ├── core
+│   │   ├── module_registry.py
+│   │   └── system_state.py
+│   ├── runtime
+│   │   ├── __pycache__
+│   │   └── runtime_manager.py
+│   ├── services
+│   │   ├── config_service.py
+│   │   ├── log_service.py
+│   │   ├── maq_service.py
+│   │   ├── model_service.py
+│   │   └── __pycache__
+│   ├── state
+│   │   ├── __pycache__
+│   │   └── state_manager.py
+│   └── system_manager.py
+├── legacy
+│   ├── experimental
+│   │   ├── arguments_schema.py
+│   │   ├── __init__.py
+│   │   ├── missing_sentinel.py
+│   │   └── pipeline.py
+│   ├── tests
+│   │   ├── ansi_test.py
+│   │   ├── ansitowin32_test.py
+│   │   ├── initialise_test.py
+│   │   ├── __init__.py
+│   │   ├── isatty_test.py
+│   │   ├── utils.py
+│   │   └── winterm_test.py
+│   └── v1
+│       ├── annotated_types.py
+│       ├── class_validators.py
+│       ├── color.py
+│       ├── config.py
+│       ├── dataclasses.py
+│       ├── datetime_parse.py
+│       ├── decorator.py
+│       ├── env_settings.py
+│       ├── errors.py
+│       ├── error_wrappers.py
+│       ├── fields.py
+│       ├── generics.py
+│       ├── _hypothesis_plugin.py
+│       ├── __init__.py
+│       ├── json.py
+│       ├── main.py
+│       ├── mypy.py
+│       ├── networks.py
+│       ├── parse.py
+│       ├── py.typed
+│       ├── schema.py
+│       ├── tools.py
+│       ├── types.py
+│       ├── typing.py
+│       ├── utils.py
+│       ├── validators.py
+│       └── version.py
+├── outputs
+│   ├── crear_agencia_premium_ia_para__20260515_174223
+│   │   └── website
+│   └── crear_agencia_premium_ia_para__20260515_180312
+│       ├── branding
+│       ├── social
+│       └── website
+├── projects
+│   └── demo_site
+│       ├── page.json
+│       └── pages
+├── render
+│   ├── block_engine
+│   │   └── __init__.py
+│   ├── __init__.py
+│   └── templates
+│       └── hero
+├── requirements.txt
+├── RETOMAR EN CUALQUIER MOMONTO O PERFIL
+│   └── SYNERGIA_V6_KERNEL_BOOT_OK.md
+├── RETOMAR EN CUALQUIER MOMONTO O PERFIL 
+│   └── SYNERGIA_SAVEPOINT_BOOTSTRAP_V1_V6.md
+├── run_ai_lab (copia).py
+├── run_ai_lab.py
+├── run_synergia.py
+├── runtime
+│   ├── __pycache__
+│   │   └── runtime_manager.cpython-312.pyc
+│   ├── runtime_manager.py
+│   ├── runtime_state.py
+│   ├── savepoints
+│   │   ├── SYNERGIA_V6_KERNEL_BOOT_OK.md
+│   │   └── SYNERGIA_V6_STATE_ENGINE_OK.md
+│   └── sessions
+│       └── system_state.json
+├── storage
+│   ├── clientes
+│   │   ├── cliente_001.json
+│   │   ├── cliente_gastro_001.json
+│   │   ├── estructura.txt
+│   │   └── mates_cordoba.json
+│   ├── output
+│   │   ├── demo_site
+│   │   ├── demo_site_20260507_190236
+│   │   ├── demo_site_site_20260508_150105
+│   │   ├── demo_site_site_20260508_150533
+│   │   ├── demo_site_site_20260508_180937
+│   │   ├── project_20260505_165451
+│   │   ├── project_20260505_165511
+│   │   ├── project_20260505_172511
+│   │   ├── project_20260505_172613
+│   │   ├── project_20260505_182710
+│   │   └── project_20260505_182919
+│   └── projects
+│       ├── cms_20260505_182710.json
+│       ├── cms_20260505_182919.json
+│       ├── project_001.json
+│       └── prompt_generated.json
+├── STRUCTURE_V3_BEFORE.txt
+├── SYNERGIA B — FASE 2__HARDENING INDUSTRIAL_2026-05-26.md
+├── SYNERGIA_AGENT
+│   ├── 00_NEXT_STEPS.md
+│   ├── 00_START_HERE.md
+│   ├── 01_BOOTSTRAP_SYSTEM.sh
+│   ├── 02_EXPORT_AI_CONTEXT.sh
+│   ├── 03_SAVEPOINT.sh
+│   ├── 04_GITHUB_PUSH.sh
+│   ├── 05_MAQ_SWITCH.sh
+│   ├── 06_RUNTIME_START.sh
+│   ├── 07_UPDATE_REQUIREMENTS.sh
+│   ├── 08_PROJECT_STATUS.md
+│   ├── 09_ARCHITECTURE.md
+│   ├── run_synergia.py
+│   └── synergia_manager.sh
+├── SYNERGIA_AI_LAB_PANEL_V2.docx
+├── SYNERGIA_AI_LAB_PANEL_V2.md
+├── synergia-core
+├── SYNERGIA_CORE_NEXT_PRO Obsidian
+│   ├── 00_MASTER
+│   │   ├── 19_SYNERGIA_OVERVIEW.md
+│   │   └── README.md
+│   ├── 01_ARCHITECTURE
+│   │   ├── 00_BACKEND_SYSTEM.md
+│   │   └── 08_CORE_SYSTEM.md
+│   ├── 02_AI_SYETEM
+│   │   ├── 🤖 01 — AI.md
+│   │   └── 10_AI_MODELS.md
+│   ├── 03_RENDER_ENGINE
+│   │   └── 03_RENDER_ENGINE.md
+│   ├── 04_EDITOR
+│   │   └── 04_VISUAL_EDITOR.md
+│   ├── 05_BLOCK_SYSTEM
+│   │   └── 02_BLOCK_SYSTEM.md
+│   ├── 06_TEMPLATES
+│   │   └── 05_TEMPLATE_ENGINE.md
+│   ├── 07_STORAGE
+│   │   └── 06_STORAGE_SYSTEM.md
+│   ├── 08_BUSINESS_ENGINE
+│   │   ├── 11_BUSINESS_HISTORY_ENGINE.md
+│   │   └── 29_BUSINESS_PLANNER_ENGINE.md
+│   ├── 09_SOCIAL_ENGINE
+│   │   └── SOCIAL_AUTOMATION_ENGINE.md
+│   ├── 10_GRAPH_SYSTEN
+│   │   ├── 15_VISUAL_GRAPH_SYSTEM.md
+│   │   └── 20_OBSIDIAN_WIKI_SYSTEM.md
+│   ├── 11_FUTURE
+│   │   └── 27_FUTURE_SYSTEM.md
+│   ├── 12_MAQ_SYSTEM
+│   │   └── MAQ docs.md
+│   └── Sin título.base
+├── SYNERGIA_FULL_EXPORT.txt
+├── synergiaGab.txt
+├── SYNERGIA_MASTER_BOOK_v1.docx
+├── SYNERGIA_MASTER_BOOK_v1.md
+├── SYNERGIA_RUNTIME
+│   ├── ai_layer
+│   │   ├── agents
+│   │   ├── ai_engine.py
+│   │   ├── memory
+│   │   ├── orchestrator
+│   │   ├── __pycache__
+│   │   └── synergia_memory.json
+│   ├── ai_orchestrator.py
+│   ├── ai_orchestrator_v2.py
+│   ├── auto_sync_brain.py
+│   ├── builder_engine
+│   │   ├── api_builder.py
+│   │   ├── autonomous_builder.py
+│   │   ├── backend_builder.py
+│   │   ├── docker_builder.py
+│   │   ├── frontend_builder.py
+│   │   ├── generate_node_engine_v1.py
+│   │   ├── project_generator.py
+│   │   ├── projects
+│   │   ├── __pycache__
+│   │   └── SYNERGIA_NODE_ENGINE_V1
+│   ├── build_orchestrator_v5.py
+│   ├── build_orchestrator_v6.py
+│   ├── build_orchestrator_v7.py
+│   ├── build_synergia_orchestrator.py
+│   ├── build_system_v1.py
+│   ├── CHECKPOINTS
+│   │   ├── checkpoint_2026-05-26_19-07-07.md
+│   │   └── checkpoint_2026-05-26_19-10-00.md
+│   ├── cognitive_kernel
+│   │   ├── event_bus.py
+│   │   ├── kernel.py
+│   │   ├── runtime_manager.py
+│   │   ├── state_engine.py
+│   │   └── task_engine.py
+│   ├── control_center
+│   │   ├── agent_monitor.py
+│   │   ├── dashboard.py
+│   │   ├── live_monitor.py
+│   │   └── runtime_console.py
+│   ├── deploy
+│   ├── experiences.json
+│   ├── kernel_loader.py
+│   ├── logs
+│   ├── memory
+│   ├── module_registry.json
+│   ├── output_engine
+│   │   ├── deploy_engine.py
+│   │   ├── export_manager.py
+│   │   └── package_engine.py
+│   ├── projects
+│   │   └── 🧠_task:_crear_crm_para_inmobiliarias
+│   ├── synergia_boot.py
+│   ├── system_state.json
+│   ├── visual_os
+│   │   ├── app.py
+│   │   ├── components
+│   │   ├── core
+│   │   └── views
+│   └── visual_os_v2
+│       ├── app.py
+│       ├── generate_visual_os_v2.py
+│       └── visual_os_v2
+├── templates
+│   └── core_templates
+│       ├── 01 SYNERGIA_CORE final_HTML
+│       ├── 01_ACADEMIA_IDIOMAS_ELITE
+│       ├── 02_SKYCODE_TECH_HUB
+│       ├── 02_Synergia_Core_html
+│       ├── 03_vet_emotional_techh
+│       ├── 04_arquitectura_interiorismo
+│       ├── 05_gastronomia_experiencial
+│       ├── 07_real_estate_global_scroll
+│       ├── 08_REALITY_BOND_INTERFACE
+│       ├── 09retro_futuroe_aviation_maste
+│       ├── 10_arq_bento
+│       ├── 11_Ejemplo1
+│       └── estructura.txt
+├── test_business_generator.py
+├── test_ollama_memory.py
+├── tools
+│   ├── ai_lab
+│   │   ├── monitor.py
+│   │   └── prompt_console.py
+│   ├── synergia_control_center.py
+│   ├── test_memory.py
+│   └── venv
+│       ├── bin
+│       ├── lib
+│       ├── lib64 -> lib
+│       └── pyvenv.cfg
+└── venv
+    ├── bin
+    │   ├── activate
+    │   ├── activate.csh
+    │   ├── activate.fish
+    │   ├── Activate.ps1
+    │   ├── aider
+    │   ├── distro
+    │   ├── dotenv
+    │   ├── f2py
+    │   ├── fastapi
+    │   ├── flake8
+    │   ├── gast
+    │   ├── grep-ast
+    │   ├── hf
+    │   ├── httpx
+    │   ├── jsonschema
+    │   ├── litellm
+    │   ├── litellm-proxy
+    │   ├── markdown-it
+    │   ├── mslex-split
+    │   ├── normalizer
+    │   ├── openai
+    │   ├── pip
+    │   ├── pip3
+    │   ├── pip3.12
+    │   ├── pycodestyle
+    │   ├── pyflakes
+    │   ├── pygmentize
+    │   ├── pyjson5
+    │   ├── python -> python3
+    │   ├── python3 -> /usr/bin/python3
+    │   ├── python3.12 -> python3
+    │   ├── shtab
+    │   ├── streamlit
+    │   ├── tiny-agents
+    │   ├── tqdm
+    │   ├── typer
+    │   ├── uvicorn
+    │   ├── watchfiles
+    │   ├── watchmedo
+    │   └── websockets
+    ├── etc
+    │   └── jupyter
+    ├── include
+    │   └── python3.12
+    ├── lib
+    │   └── python3.12
+    ├── lib64 -> lib
+    ├── pyvenv.cfg
+    └── share
+        └── jupyter
+
+190 directories, 419 files

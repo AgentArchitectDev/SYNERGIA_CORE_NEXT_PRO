@@ -1,0 +1,23 @@
+{
+    "task": "crear plataforma educativa con TikTok y automatizaci\u00f3n IA",
+    "mode": "AUTONOMOUS",
+    "nodes": [
+        "dev",
+        "social_media"
+    ],
+    "graph": {
+        "dev": {
+            "connections": [
+                "cms"
+            ],
+            "status": "ACTIVE"
+        },
+        "social_media": {
+            "connections": [
+                "business"
+            ],
+            "status": "ACTIVE"
+        }
+    },
+    "timestamp": "20260528_162733"
+}

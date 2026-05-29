@@ -1,0 +1,14 @@
+{
+    "task": "crear landing page para gimnasio",
+    "mode": "AUTONOMOUS",
+    "nodes": [
+        "cms"
+    ],
+    "graph": {
+        "cms": {
+            "status": "ACTIVE",
+            "connections": []
+        }
+    },
+    "timestamp": "20260529_192528"
+}
