@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2026-07-01T15:50:01.018279",
+    "input": "hola mundo",
+    "result": {
+      "result": "ok"
+    }
+  }
+]

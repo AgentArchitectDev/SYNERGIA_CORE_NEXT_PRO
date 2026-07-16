@@ -1,0 +1,99 @@
+[
+    {
+        "id": 1,
+        "request": "crear una aplicación web gastronómica",
+        "category": "business",
+        "agents": [
+            "Business Agent",
+            "Developer Agent"
+        ],
+        "model": "qwen",
+        "result": "completed",
+        "timestamp": 1784228431.7705224
+    },
+    {
+        "id": 2,
+        "request": "optimizar código Python",
+        "category": "development",
+        "agents": [
+            "Developer Agent"
+        ],
+        "model": "deepseek-coder",
+        "result": "completed",
+        "timestamp": 1784228431.770618
+    },
+    {
+        "id": 3,
+        "request": "crear una aplicación web gastronómica",
+        "category": "business",
+        "agents": [
+            "Business Agent",
+            "Developer Agent"
+        ],
+        "model": "qwen",
+        "result": "completed",
+        "timestamp": 1784234028.0063643
+    },
+    {
+        "id": 4,
+        "request": "optimizar código Python del sistema",
+        "category": "development",
+        "agents": [
+            "Developer Agent"
+        ],
+        "model": "deepseek-coder",
+        "result": "completed",
+        "timestamp": 1784234028.0065155
+    },
+    {
+        "id": 5,
+        "request": "ejecutar modelo local Ollama",
+        "category": "ai",
+        "agents": [
+            "Runtime Agent"
+        ],
+        "model": "mistral",
+        "result": "completed",
+        "timestamp": 1784234028.0097246
+    },
+    {
+        "id": 6,
+        "request": "crear una aplicación web para un cliente",
+        "category": "omega",
+        "agents": [
+            "OMEGA Director",
+            "Agents"
+        ],
+        "model": "runtime",
+        "result": "completed",
+        "timestamp": 1784234348.457833
+    },
+    {
+        "id": 7,
+        "request": "crear una aplicación web para un cliente",
+        "category": "omega",
+        "agents": [
+            "Analysis Agent",
+            "Business Agent",
+            "Developer Agent",
+            "Developer Agent",
+            "Documentation Agent",
+            "General Agent"
+        ],
+        "model": "runtime",
+        "result": "completed",
+        "timestamp": 1784235251.1677976
+    },
+    {
+        "id": 8,
+        "request": "crear una aplicación web para un cliente",
+        "category": "omega",
+        "agents": [
+            "OMEGA Director",
+            "Agents"
+        ],
+        "model": "runtime",
+        "result": "completed",
+        "timestamp": 1784235251.1680052
+    }
+]

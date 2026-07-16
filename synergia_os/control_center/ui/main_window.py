@@ -1,9 +1,17 @@
 """
 =========================================================
 SYNERGIA OS
-Control Center V2.0 - Core Console
 
-Main Window Navigation Edition
+Main Window V3.4
+
+ACEA FINAL SHELL CONNECTED
+
+Integrated:
+
+TopBar
+Sidebar
+Workspace
+StatusBar
 
 Enterprise Cognitive Operating System AI
 =========================================================
@@ -14,7 +22,8 @@ from PySide6.QtWidgets import (
     QMainWindow,
     QWidget,
     QVBoxLayout,
-    QHBoxLayout
+    QHBoxLayout,
+    QMessageBox
 )
 
 
@@ -24,8 +33,9 @@ from constants import *
 
 from widgets.top_bar import TopBar
 from widgets.sidebar import Sidebar
-from widgets.status_bar import StatusBar
 from widgets.workspace import Workspace
+from widgets.status_bar import StatusBar
+
 
 
 
@@ -40,46 +50,56 @@ class MainWindow(QMainWindow):
 
 
 
+    # =================================================
+    # UI
+    # =================================================
+
+
     def setup_ui(self):
 
 
-        # =============================================
-        # WINDOW
-        # =============================================
-
         self.setWindowTitle(
+
             f"{APP_NAME} - {APP_MODULE} {VERSION}"
+
         )
 
 
+
         self.resize(
+
             WINDOW_WIDTH,
+
             WINDOW_HEIGHT
+
         )
 
 
         self.setMinimumSize(
+
             MIN_WIDTH,
+
             MIN_HEIGHT
+
         )
 
 
 
-        self.setStyleSheet(f"""
+        self.setStyleSheet("""
 
-            QMainWindow {{
+        QMainWindow{
 
-                background-color:{PRIMARY_COLOR};
+            background:#1B1D23;
 
-            }}
+        }
 
         """)
 
 
 
-        # =============================================
+        # ---------------------------------------------
         # CENTRAL
-        # =============================================
+        # ---------------------------------------------
 
 
         central = QWidget()
@@ -112,9 +132,9 @@ class MainWindow(QMainWindow):
 
 
 
-        # =============================================
+        # ---------------------------------------------
         # TOP BAR
-        # =============================================
+        # ---------------------------------------------
 
 
         self.top_bar = TopBar()
@@ -126,9 +146,9 @@ class MainWindow(QMainWindow):
 
 
 
-        # =============================================
+        # ---------------------------------------------
         # BODY
-        # =============================================
+        # ---------------------------------------------
 
 
         body = QWidget()
@@ -161,9 +181,9 @@ class MainWindow(QMainWindow):
 
 
 
-        # =============================================
+        # ---------------------------------------------
         # SIDEBAR
-        # =============================================
+        # ---------------------------------------------
 
 
         self.sidebar = Sidebar()
@@ -175,9 +195,9 @@ class MainWindow(QMainWindow):
 
 
 
-        # =============================================
-        # WORKSPACE DINAMICO
-        # =============================================
+        # ---------------------------------------------
+        # WORKSPACE
+        # ---------------------------------------------
 
 
         self.workspace = Workspace()
@@ -189,20 +209,38 @@ class MainWindow(QMainWindow):
 
 
 
-        # =============================================
-        # CONEXION SIDEBAR -> WORKSPACE
-        # =============================================
+        # ---------------------------------------------
+        # CONNECTIONS
+        # ---------------------------------------------
 
 
         self.sidebar.module_selected.connect(
+
             self.workspace.load_module
+
         )
 
 
 
-        # =============================================
+        self.top_bar.home_clicked.connect(
+
+            self.workspace.show_home
+
+        )
+
+
+
+        self.top_bar.exit_clicked.connect(
+
+            self.close_system
+
+        )
+
+
+
+        # ---------------------------------------------
         # STATUS BAR
-        # =============================================
+        # ---------------------------------------------
 
 
         self.status_bar = StatusBar()
@@ -211,3 +249,62 @@ class MainWindow(QMainWindow):
         main_layout.addWidget(
             self.status_bar
         )
+
+
+
+        # ---------------------------------------------
+        # INITIAL HOME
+        # ---------------------------------------------
+
+
+        self.workspace.show_home()
+
+
+
+    # =================================================
+    # EXIT
+    # =================================================
+
+
+    def close_system(self):
+
+
+        result = QMessageBox.question(
+
+            self,
+
+            "SYNERGIA OS",
+
+            "¿Desea cerrar SYNERGIA OS?",
+
+
+            QMessageBox.Yes |
+
+            QMessageBox.No
+
+        )
+
+
+        if result == QMessageBox.Yes:
+
+
+            self.close()
+
+
+
+    # =================================================
+    # WINDOW CLOSE
+    # =================================================
+
+
+    def closeEvent(
+        self,
+        event
+    ):
+
+
+        self.close_system()
+
+
+        event.accept()
+

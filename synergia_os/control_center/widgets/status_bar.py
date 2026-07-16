@@ -1,9 +1,10 @@
 """
 =========================================================
 SYNERGIA OS
-Control Center V2.0 - Core Console
 
-Status Bar Widget
+Status Bar V1.1
+
+System Monitor
 
 Enterprise Cognitive Operating System AI
 =========================================================
@@ -17,8 +18,6 @@ from PySide6.QtWidgets import (
 )
 
 
-from PySide6.QtCore import Qt
-
 
 
 class StatusBar(QWidget):
@@ -28,50 +27,15 @@ class StatusBar(QWidget):
 
         super().__init__()
 
-        self.initialize_ui()
+
+        self.setup_ui()
 
 
 
-    def initialize_ui(self):
-
-
-        self.setFixedHeight(30)
-
-
-        self.setStyleSheet("""
-
-            QWidget {
-
-                background-color:#111318;
-
-                border-top:1px solid #404552;
-
-            }
-
-
-            QLabel {
-
-                color:#BFBFBF;
-
-                font-size:12px;
-
-                padding-left:10px;
-
-            }
-
-        """)
-
+    def setup_ui(self):
 
 
         layout = QHBoxLayout()
-
-
-        layout.setContentsMargins(
-            5,
-            0,
-            5,
-            0
-        )
 
 
         self.setLayout(
@@ -79,55 +43,56 @@ class StatusBar(QWidget):
         )
 
 
-        # Estado izquierdo
 
-        self.system_status = QLabel(
-            "🟢 SYSTEM READY"
+        self.status = QLabel(
+            "🟢 SYNERGIA CORE ONLINE"
         )
 
 
-        layout.addWidget(
-            self.system_status
+        self.runtime = QLabel(
+            "Runtime ACTIVE"
         )
+
+
+        self.memory = QLabel(
+            "Memory READY"
+        )
+
+
+        self.models = QLabel(
+            "Models CONNECTED"
+        )
+
+
+
+        for item in [
+
+            self.status,
+
+            self.runtime,
+
+            self.memory,
+
+            self.models
+
+        ]:
+
+
+            item.setStyleSheet("""
+
+            color:white;
+
+            font-size:13px;
+
+            padding:8px;
+
+            """)
+
+
+            layout.addWidget(
+                item
+            )
+
 
 
         layout.addStretch()
-
-
-
-        # Kernel
-
-        self.kernel_status = QLabel(
-            "Kernel: READY"
-        )
-
-
-        layout.addWidget(
-            self.kernel_status
-        )
-
-
-
-        # Runtime
-
-        self.runtime_status = QLabel(
-            "Runtime: ONLINE"
-        )
-
-
-        layout.addWidget(
-            self.runtime_status
-        )
-
-
-
-        # Version
-
-        self.version_status = QLabel(
-            "SYNERGIA OS V2.0"
-        )
-
-
-        layout.addWidget(
-            self.version_status
-        )
