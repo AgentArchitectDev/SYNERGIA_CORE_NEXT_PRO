@@ -1,0 +1,1130 @@
+
+# CHECKPOINT GENERAL
+# EVOLUCIÓN FINAL — ORCHESTRATOR v5 + AI OS
+# FECHA: 2026-05-27_16-49.md
+## MASTER SAVEPOINT
+### PRE REAL IMPLEMENTATION ERA.md
+./ai/AI_TREE.txt
+./ai/brain/memory_global.json
+./ai/brain/memory_global.py
+./ai/brain/model_ranker.py
+./ai/brain/model_ranking.json
+./ai/brain/prompt_optimizer.py
+./ai/brain/__pycache__/memory_global.cpython-312.pyc
+./ai/brain/__pycache__/model_ranker.cpython-312.pyc
+./ai/brain/__pycache__/prompt_optimizer.cpython-312.pyc
+./ai/business/branding_generator.py
+./ai/business/business_generator.py
+./ai/business/docs_generator.py
+./ai/business/Documento sin título
+./ai/business/export_engine.py
+./ai/business/master_business.txt
+./ai/business/project_builder.py
+./ai/business/__pycache__/branding_generator.cpython-312.pyc
+./ai/business/__pycache__/business_generator.cpython-312.pyc
+./ai/business/__pycache__/docs_generator.cpython-312.pyc
+./ai/business/__pycache__/project_builder.cpython-312.pyc
+./ai/business/__pycache__/social_generator.cpython-312.pyc
+./ai/business/__pycache__/website_generator.cpython-312.pyc
+./ai/business/social_generator.py
+./ai/business/website_generator.py
+./ai/core_ai/core_ai.py
+./ai/core/ai_orchestrator.py
+./ai/core/cms_bridge.py
+./ai/core/export_manager.py
+./ai/core/memory_context_builder.py
+./ai/core/progress_manager.py
+./ai/core/prompt_optimizer.py
+./ai/core/__pycache__/ai_orchestrator.cpython-312.pyc
+./ai/core/__pycache__/progress_manager.cpython-312.pyc
+./ai/core/__pycache__/task_engine.cpython-312.pyc
+./ai/core/task_engine.py
+./.aider.chat.history.md
+./.aider.input.history
+./.aider.tags.cache.v4/36/6c/24d5ceb0735ec27b59946dc60fd2.val
+./.aider.tags.cache.v4/58/b5/9ecc2591d0b2cfe20cdcec7a82e3.val
+./.aider.tags.cache.v4/cache.db
+./.aider.tags.cache.v4/db/31/0f2d75b3a1965b5a44ca0a5fbc70.val
+./ai/image/image_generator.py
+./ai/image/image_search.py
+./ai/__init__.py
+./AI_LAB_ANALISIS.txt
+./ai/memory/conversations/global.json
+./ai/memory/conversations/maq2_dev.json
+./ai/memory/conversations/maq2_real.json
+./ai/memory/memory_manager.py
+./ai/memory/__pycache__/memory_manager.cpython-312.pyc
+./ai/memory/sessions/20260514_181344.json
+./ai/memory/sessions/20260514_182347.json
+./ai/memory/sessions/20260514_182940.json
+./ai/memory/sessions/20260514_184151.json
+./ai/memory/sessions/20260514_190209.json
+./ai/memory/sessions/20260514_193307.json
+./ai/memory/sessions/20260515_152021.json
+./ai/memory/sessions/20260515_161814.json
+./ai/memory/sessions/20260515_162837.json
+./ai/memory/sessions/20260515_163533.json
+./ai/memory/sessions/20260515_164413.json
+./ai/models/__init__.py
+./ai/models/models_manager.py
+./ai/models/__pycache__/__init__.cpython-312.pyc
+./ai/models/__pycache__/models_manager.cpython-312.pyc
+./ai/orchestrator.py
+./ai/prompts/hero_prompt.txt
+./ai/prompts/seo_prompt.txt
+./ai/prompts/website_prompt.txt
+./ai/providers/gemini_provider.py
+./ai/providers/groq_provider.py
+./ai/providers/__init__.py
+./ai/providers/ollama_connector.py
+./ai/providers/ollama_provider.py
+./ai/providers/openai_provider.py
+./ai/providers/__pycache__/__init__.cpython-312.pyc
+./ai/providers/__pycache__/ollama_connector.cpython-312.pyc
+./ai/providers/__pycache__/ollama_provider.cpython-312.pyc
+./ai/providers/__pycache__/registry.cpython-312.pyc
+./ai/providers/registry.py
+./ai/__pycache__/__init__.cpython-312.pyc
+./ai/router/agent_router.py
+./ai/router/model_router.py
+./ai/router/multi_model_engine.py
+./ai/router/__pycache__/multi_model_engine.cpython-312.pyc
+./ai/router/test_multi_model.py
+./ai/ui/ai_lab_panel (copia).py
+./ai/ui/ai_lab_panel.py
+./ai/ui/__init__.py
+./ai/ui/__pycache__/ai_lab_panel.cpython-312.pyc
+./ai/ui/__pycache__/__init__.cpython-312.pyc
+./ARCHIVOS_COMPLETOS.txt
+./ARCHIVOS_PROYECTO.txt
+./backend/api/app.py
+./backend/api/__init__.py
+./backend/__init__.py
+./BACKUP_AI_LAB/ollama_connector.py
+./blocks/cards/meta.json
+./blocks/cards/navbar.css
+./blocks/cards/navbar.html
+./blocks/cards/navbar.json
+./blocks/footer/index.html
+./blocks/footer/meta.json
+./blocks/footer/navbar.css
+./blocks/footer/navbar.html
+./blocks/footer/navbar.json
+./blocks/hero/hero.css
+./blocks/hero/hero.html
+./blocks/hero/hero.json
+./blocks/hero/index.html
+./blocks/hero/meta.json
+./blocks/navbar/index.html
+./blocks/navbar/meta.json
+./blocks/navbar/navbar.css
+./blocks/navbar/navbar.html
+./blocks/navbar/navbar.json
+./config/maq1_dev.json
+./config/maq2_dev.json
+./config/maq/maq1.json
+./config/maq/maq2.json
+./config/runtime/runtime.json
+./config/system/system.json
+./core/auto_setup_templates.py
+./core/block_registry.py
+./core/build_index.py
+./directorios.txt
+./docs/🤖 01 — AI.md
+./docs/00_BACKEND_SYSTEM.md
+./docs/02_BLOCK_SYSTEM.md
+./docs/03_RENDER_ENGINE.md
+./docs/04_VISUAL_EDITOR.md
+./docs/05_TEMPLATE_ENGINE.md
+./docs/06_STORAGE_SYSTEM.md
+./docs/07_PROJECT_SYSTEM.md
+./docs/08_CORE_SYSTEM.md
+./docs/09_FRONTEND_SYSTEM.md
+./docs/10_AI_MODELS.md
+./docs/11_BUSINESS_HISTORY_ENGINE.md
+./docs/12_FULL_SYSTEM_DEVELOPMENT.md
+./docs/13_REAL_SYNERGIA_RESPONSE_EXAMPLE.md
+./docs/14_SYNERGIA_COMPLETE_STRUCTURE.md
+./docs/15_VISUAL_GRAPH_SYSTEM.md
+./docs/16_GRAPH_STRUCTURE.md
+./docs/17_SYSTEM_RELATIONS.md
+./docs/18_FUTURE_VISUALIZATION.md
+./docs/19_SYNERGIA_OVERVIEW.md
+./docs/20_OBSIDIAN_WIKI_SYSTEM.md
+./docs/21_WIKI_STRUCTURE.md
+./docs/22_OBSIDIAN_INTERLINKS.md
+./docs/23_SYSTEM_BENEFITS.md
+./docs/24_OPERATING_SYSTEM_LEVEL.md
+./docs/25_SYSTEM_CONCEPT.md
+./docs/26_SYSTEM_LAYERS.md
+./docs/27_FUTURE_SYSTEM.md
+./docs/28_CONTENT_PUBLICATION_ENGINE.md
+./docs/29_BUSINESS_PLANNER_ENGINE.md
+./docs/30_POWERFUL_IDEAS_SYNERGIA.md
+./docs/arranque/Arranque Maq1_Maq2.md
+./docs/CHECKPOINTS/🚀 AI OPERATING SYSTEM EN CONSTRUCCIÓN FASE OS v1-v2.md
+./docs/CHECKPOINTS/🔥 EL PRIMER ARQUITECTO IA AUTÓNOMO — SYNERGIA.md
+./docs/CHECKPOINTS/🔥 SISTEMA COGNITIVO OPERATIVO — SYNERGIA NEXT.md
+./docs/CHECKPOINTS/🤖 SYNERGIA AGENT CORE v1_Multi-Agente _CMS _Automatización _Creatividad.md
+./docs/CHECKPOINTS/📘 SYNERGIA CHECKPOINT — MEMORY ENGINE ERA
+./docs/CHECKPOINTS/📘 UNREAL ENGINE SYSTEM v1.2 A.I
+./docs/CHECKPOINTS/2026 05 29 Synergia Os V3 Final Checkpoint .md
+./docs/CHECKPOINTS/280526_001-SYNERGIA OS v2
+./docs/CHECKPOINTS/280526_002-SYNERGIA OS v2
+./docs/CHECKPOINTS/280526_003-SYNERGIA OS v2
+./docs/CHECKPOINTS/280526_004-SYNERGIA OS v2
+./docs/CHECKPOINTS/290526Synergia Runtime Checkpoint Live Brain Canvas.md
+./docs/CHECKPOINTS/collab v2.md
+./docs/CHECKPOINTS/final de hoy Collab2.md
+./docs/CHECKPOINTS/LIBRO de HOY 280526.md
+./docs/CHECKPOINTS/proximo paso .md
+./docs/CHECKPOINTS/Synergia B Fase3 Runtime Automation Checkpoint 2026 05 26.md
+./docs/CHECKPOINTS/Synergia Boot Checkpoint May 27.md
+./docs/CHECKPOINTS/SYNERGIA CHECKPOINT — VISUAL OS v2 + NODE ENGINE (2026-05-28).md
+./docs/CHECKPOINTS/Synergia Checkpoint Collab V2 V3.md
+./docs/CHECKPOINTS/synergia Checpoints_18-00.md
+./docs/CHECKPOINTS/Synergia Collab Checkpoint V.md
+./docs/CHECKPOINTS/SYNERGIA CORE NEXT PRO
+./docs/CHECKPOINTS/Synergia Runti Me V1 Checkpoint 2026 05 26.md
+./docs/CHECKPOINTS/SYNERGIA_B_FASE1_2026_05_26.md
+./docs/CHECKPOINTS/SYNERGIA_B_FASE2_2026_05_26.md
+./docs/CHECKPOINTS/SYNERGIA_CHECKPOINT_AGENT_SYSTEM_v1.md
+./docs/CHECKPOINTS/SYNERGIA_CHECKPOINT_COGNITIVE_CORE_v1.md
+./docs/CHECKPOINTS/SYNERGIA_CHECKPOINT_KERNEL_ORCHESTRATOR_v2.md
+./docs/CHECKPOINTS/SYNERGIA_CHECKPOINTS_2026_05_26.zip
+./docs/CHECKPOINTS/Synergia_CheckPonts_18-00_270226.odt
+./docs/CHECKPOINTS/SYNERGIA_MAQ_CLUSTER_2026_05_26.md
+./docs/CHECKPOINTS/SYNERGIA_V7_RUNTIME_2026_05_26.md
+./docs/CHECKPOINTS/URE-S_V1-2-I_A.odt
+./docs/configurar_syncthing_en_synergia_maq_1_y_maq_2.md
+./docs/ESTADO COMPLETO MAQ2_2023_05_15_18-25.md
+./docs/HUBICAR ARCHIVOS EN OBSIDIAN.MD
+./docsII/ LOG_2026_04_29_SYNERGIA_SAAS_II.md
+./docsII/CMS_PRO_REAL_SYNERGIA.md
+./docsII/dependencies.md
+./docsII/doc.md
+./docsII/docs/00_OVERVIEW/SYNERGIA_OVERVIEW.md
+./docsII/docs/01_ARCHITECTURE/CORE_ARCHITECTURE.md
+./docsII/docs/01_ARCHITECTURE/DEPENDENCY_GRAPH.md
+./docsII/docs/01_ARCHITECTURE/FOLDER_STRUCTURE.md
+./docsII/docs/02_AI_SYSTEM/AI_ORCHESTRATOR.md
+./docsII/docs/02_AI_SYSTEM/AI_PIPELINE.md
+./docsII/docs/02_AI_SYSTEM/OLLAMA_SYSTEM.md
+./docsII/docs/02_AI_SYSTEM/PROMPTS_SYSTEM.md
+./docsII/docs/03_RENDER_ENGINE/LIVE_RENDER.md
+./docsII/docs/03_RENDER_ENGINE/RENDER_ENGINE.md
+./docsII/docs/03_RENDER_ENGINE/TEMPLATE_BINDING.md
+./docsII/docs/04_BLOCK_SYSTEM/BLOCK_META_SYSTEM.md
+./docsII/docs/04_BLOCK_SYSTEM/BLOCKS_ARCHITECTURE.md
+./docsII/docs/04_BLOCK_SYSTEM/BLOCK_TYPES.md
+./docsII/docs/05_VISUAL_EDITOR/AI_ASSISTANT.md
+./docsII/docs/05_VISUAL_EDITOR/DRAG_DROP_SYSTEM.md
+./docsII/docs/05_VISUAL_EDITOR/LIVE_PREVIEW_SYSTEM.md
+./docsII/docs/05_VISUAL_EDITOR/UI_SYSTEM.md
+./docsII/docs/05_VISUAL_EDITOR/VISUAL_EDITOR_CORE.md
+./docsII/docs/05_VISUAL_EDITOR/VISUAL_PROPERTIES.md
+./docsII/docs/06_JSON_ENGINE/CLIENT_DATA_SYSTEM.md
+./docsII/docs/06_JSON_ENGINE/DYNAMIC_DATA.md
+./docsII/docs/06_JSON_ENGINE/JSON_STRUCTURE.md
+./docsII/docs/07_STORAGE/OUTPUT_SYSTEM.md
+./docsII/docs/07_STORAGE/PROJECT_SYSTEM.md
+./docsII/docs/07_STORAGE/STORAGE_SYSTEM.md
+./docsII/docs/08_API_BACKEND/API_SYSTEM.md
+./docsII/docs/08_API_BACKEND/ENDPOINTS.md
+./docsII/docs/09_TEMPLATES/CINEMATIC_TEMPLATES.md
+./docsII/docs/09_TEMPLATES/TEMPLATE_ENGINE.md
+./docsII/docs/09_TEMPLATES/TEMPLATE_MARKETPLACE.md
+./docsII/docs/10_WORKFLOW/AUTOMATION_PIPELINE.md
+./docsII/docs/10_WORKFLOW/CLIENT_FLOW.md
+./docsII/docs/11_FUTURE/AI_AGENCY.md
+./docsII/docs/11_FUTURE/SAAS_VISION.md
+./docsII/docs/11_FUTURE/SYNERGIA_FUTURE.md
+./docsII/docs/12_SYSTEM_MAP/AUTO_MAP_GENERATOR.md
+./docsII/docs/12_SYSTEM_MAP/DEPENDENCY_MAP.md
+./docsII/docs/12_SYSTEM_MAP/GRAPH_SYSTEM.md
+./docsII/docs/12_SYSTEM_MAP/OBSIDIAN_GRAPH.md
+./docsII/docs/99_MASTER_BOOK/SYNERGIA_MASTER_BOOK.md
+./docsII/EJECUTAR TODO VER ARCHIVO.md
+./docsII/generate_docs.sh
+./docsII/Libro_Master_Core_next.md
+./docsII/LICENSE.md
+./docsII/LOG_2026_04_29_SYNERGIA_SAAS.md
+./docsII/MASTER_Core_next_01.md
+./docsII/MASTER_Core_next_02.md
+./docsII/Next/Libro_Master_Core_next.md
+./docsII/Next/MASTER_Core_next_01.md
+./docsII/Next/MASTER_Core_next_02.md
+./docsII/Next/synergia_core_next_fase_consolidacion_mvp_2026_05_06.md
+./docsII/other-tools.md
+./docsII/SKILL.md
+./docsII/streaming.md
+./docsII/Synergia Cms Pro Real Libro Documentacion Extendida.docx
+./docsII/Synergia Cms Pro Real Libro Documentacion Extendida.odt
+./docsII/SYNERGIA_ANALISIS_TOTALProyecto anterior.txt
+./docsII/synergia_core_next_fase_consolidacion_mvp_2026_05_06.md
+./docsII/Synergia_Core_Next_Generation_cms_pro_real_libro_documentacion_extendida.md
+./docsII/synergia_core_next_visual_cms_progression_01.md
+./docsII/system_map/00_MASTER_MAP.md
+./docsII/system_map/01_AI_SYSTEM.md
+./docsII/system_map/02_RENDER_SYSTEM.md
+./docsII/system_map/03_EDITOR_SYSTEM.md
+./docsII/system_map/04_BLOCK_SYSTEM.md
+./docsII/system_map/05_BACKEND_API.md
+./docsII/system_map/06_STORAGE_SYSTEM.md
+./docsII/system_map/07_TEMPLATE_SYSTEM.md
+./docsII/system_map/08_VISUAL_GRAPH_SYSTEM.md
+./docs/MANUAL Operativo /📘 SYNERGIA CORE NEXT PRO.md
+./docs/MANUAL Operativo /290526_SynergiaOS_plan Maestro de Resestructuracion total.md
+./docs/MANUAL Operativo /Pasos para Mañana II.md
+./docs/MANUAL Operativo /Pasos para Mañana.md
+./docs/MAQ docs.md
+./docs/Nuevos/🧠 ESTADO GUARDADO.md
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/# 🚀 SYNERGIA CORE NEXT
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/00_MASTER_STRUCTURE.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/01_DIRECTORIES_ONLY.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/02_KERNEL_STRUCTURE.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/03_AI_STRUCTURE.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/04_CMS_STRUCTURE.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/05_CONTROL_CENTER_STRUCTURE.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/06_MEMORY_STRUCTURE.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/07_RENDER_STRUCTURE.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/08_ALL_PYTHON_FILES.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/09_ALL_JSON_FILES.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/10_FULL_INVENTORY.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/11_REQUIREMENTS.txt
+./docs/Nuevos Jueves/SYNERGIA_AI_CONTEXT/Avances.md
+./docs/Nuevos/20_05_2026/MASTER BOOK_V1_V6.md
+./docs/Nuevos/20_05_2026/Synergia Core Next V1 V6 Master State And Joomla Dna.md
+./docs/Nuevos/20_05_2026/SYNERGIA CORE NEXT_MASTER BOOK_V1_V6THE UNIVERSAL COGNITIVE OPERATING SYSTEM
+./docs/Nuevos/20_05_2026/synergia_core_next_v_1_v_6_master_book_and_joomla_dna.md
+./docs/Nuevos/22_05_2026/SYNERGIA CORE NEXT PRO — SAVEPOINT MAQ2 → MAQ1.md
+./docs/Nuevos/ESTADO REAL DEL DESARROLLO SYNERGIA.md
+./docs/Nuevos/SYNERGIA CORE NEXT PRO — MAQ2 SETUP & AI DEV STACK.md
+./docs/Nuevos/SYNERGIA CORE NEXT _PUNTO OFICIAL DE RETOMA v1--a--v6.MD
+./docs/Nuevos/SYNERGIA_CORE_NEXT_PRO — ESTADO REAL MAQ2.md
+./docs/Nuevos/Todo lo nuevo y completo de Synergia.md
+./docs/PARA MAÑANA VIERNES SYNERGIA_BRAIN_SYSTEM_LOG_v1.md
+./docs/PARA MAÑANANA VIERNESSYNERGIA_BRAIN_SYSTEM_LOG_v2.md
+./docs/PROYECTO HOY VIERNES <===> SYNERGIA CORE NEXT PRO v2.md
+./docs/README.md
+./docs/Session State Maq2 Synergia Core Next Pro.docx
+./docs/session_state_maq_2_synergia_core_next_pro.md
+./docs/SOCIAL_AUTOMATION_ENGINE.md
+./docs/visto viernes 01.md
+./docs/visto viernes 03.md
+./docs/vistoviernes 02.md
+DOCUMENTO MAESTRO COMPLETO .md
+DOCUMENTO MAESTRO COMPLETO .md
+DOCUMENTO MAESTRO COMPLETO.md
+DOCUMENTO MAESTRO COMPLETO.md
+./editor/cms_editor/app.js
+./editor/cms_editor/config.json 
+./editor/cms_editor/index.html
+./editor/cms_editor/styles.css  
+./editor/visual_editor/app.js
+./editor/visual_editor/blocks.js
+./editor/visual_editor/index.html
+./editor/visual_editor/styles.css
+./ESTADO HISTÓRICO DEL PROYECTO-F1_F2proxF3.md
+./ESTRUCTURA_COMPLETA.txt
+./estructura_total.txt
+Fecha: 2026-05-28.md
+./frontend/dashboard/cms_editor.html
+./frontend/dashboard/cms.html
+./frontend/dashboard/dashboard.html
+./frontend/dashboard/index.html
+./frontend/dashboard/synergia_visual_editor.jsx
+./gibhub.md
+./.git/COMMIT_EDITMSG
+./.git/config
+./.git/description
+./.git/FETCH_HEAD
+./.git/HEAD
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/fsmonitor-watchman.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/pre-merge-commit.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/pre-receive.sample
+./.git/hooks/push-to-checkout.sample
+./.git/hooks/sendemail-validate.sample
+./.git/hooks/update.sample
+./Github.md
+./.gitignore
+./.git/index
+./.git/info/exclude
+./.git/info/refs
+./.git/logs/HEAD
+./.git/logs/refs/heads/main
+./.git/logs/refs/heads/synergia_v2_stable_checkpoint
+./.git/logs/refs/heads/synergia_v3_core_restructure
+./.git/logs/refs/remotes/origin/main
+./.git/logs/refs/remotes/origin/synergia_v2_stable_checkpoint
+./.git/logs/refs/remotes/origin/synergia_v3_core_restructure
+./.git/objects/02/be44317d4e6778fe10a5cbf59817c56a047109
+./.git/objects/04/372eceb87be0c3d59a8ce8d8db9c49b7c6c0d0
+./.git/objects/04/58846d5e752ba6de280159365627e30c02e959
+./.git/objects/04/7e5b1edf6463db93616fc40e26b5d8cac1d93d
+./.git/objects/04/d5f1d6a620b0c9c6717f1b6159082a37a77d2b
+./.git/objects/05/45107bda9ce2d9fd2baaf8490810b69ee05abd
+./.git/objects/05/d7d217406d65ae1b66dc82de727ddd51f28a2d
+./.git/objects/06/22d4c2e0c8237929b5d7bd6ad1036152813654
+./.git/objects/07/8edc25891d3515136ca05f4a4303f905a48297
+./.git/objects/07/b2713d22c0a651c7889c02db4317041b133dad
+./.git/objects/0a/577140c3b681ab552fb37a55d05bdfa9e21a45
+./.git/objects/0a/8f81c679c37521590fca91816219c0b2079c13
+./.git/objects/0b/30b8f7a452f948dce494b46b25780436c0dc44
+./.git/objects/0b/e22296ce634483bd4eeda706e5aa3a523663d2
+./.git/objects/0c/287687d0159e5183cb24a4a9bc8aec2e3509b0
+./.git/objects/0c/f0b38df792befa7635b79877b55bc0dc5f2f1d
+./.git/objects/0e/99670b24d0fcbb1e5100d5bdf20d3ac133ce97
+./.git/objects/11/3428d51c41a8982f10bd92d52582c3f24d9726
+./.git/objects/11/40c727bd30b119d06f24dcc51f42daead5e83a
+./.git/objects/11/df869756cff97350aa11406f3cb9a939450f2d
+./.git/objects/12/d4b2e93911222a6dc0988e7b45b6828aaa053e
+./.git/objects/14/4475c38beab63ea302fc2f50e9c0ecdaf9f5d7
+./.git/objects/15/21fcb5a29e28ae2df42074508cf7f9700e36d1
+./.git/objects/15/7a232008ee3161b93f8cfa76c0fe8769755501
+./.git/objects/16/9c3860d57637cca8665a9263b02f6e9ccda90a
+./.git/objects/16/ac5bd9a80d60aa8af886deaed6e89f8061cd17
+./.git/objects/17/9bc4742e32d683dc114565a9ef73da8fb42f14
+./.git/objects/17/c73acdf9a5f45025c59420d2a3439e650a3285
+./.git/objects/18/5412eff5398f7d6e7221d7dbdf70bd1616ac80
+./.git/objects/19/0994abc19ec3cb3758965e17504cb2ad50a402
+./.git/objects/19/5e75af5566a14f02dd2f929fbe4e1dc53ee018
+./.git/objects/1a/247fbd72c3ef36c239bf2d5ea8b9fa8c12f839
+./.git/objects/1c/75d8216937a7749e84fa1503885403dc406461
+./.git/objects/1d/fa7ad0c93e083b94b2392808b9b31ca4bf9304
+./.git/objects/1e/99ff8c5b9f99600ab9cdb4876409a24359b36b
+./.git/objects/1e/ef1615bd316d7805f7b5e6b0abf7879c7bcf62
+./.git/objects/1e/f027e5338ae581fe57b6a1710d3f9b38eb2547
+./.git/objects/20/afb01ef4607c4d615f7732aca53ac6a7a1a42a
+./.git/objects/20/bb85bdbdfd591a1b1084d301ca5ffd6084b1a7
+./.git/objects/21/1525f8fa05dde28ad3284354fb40f5b501f559
+./.git/objects/22/52d60af32335b0f9a8e980f99bb3615edc2f79
+./.git/objects/22/bf5f1741b92a0f64e16b0d0e0a14702fd81b98
+./.git/objects/22/c835f8060483b752abba604786e270cd5f354b
+./.git/objects/24/29bd6d1435288425cd3d762953ec7b6e8e213a
+./.git/objects/25/8bfffdebd0f036b4f5f9b3c387e753a8c81171
+./.git/objects/27/f0834258da24bdc551d8ba345a8520ab45c886
+./.git/objects/28/26b32c81829246b4809bd91776875831ba35a3
+./.git/objects/28/37396a7a5fc8754b1af53de8171706cc1673ba
+./.git/objects/28/54c94c7c70b123dc829152c3cd912380e58fd2
+./.git/objects/29/5caf2f40bd34725b05b2ab64d44ffd7c7622d2
+./.git/objects/29/f7530db807ca7035ae8ae9a8f1956db943cd22
+./.git/objects/2b/039c12e3948e118e18cb2056f36ad025bf378b
+./.git/objects/2b/8c18c11c324032d43dc4b54d0767005ab97d6b
+./.git/objects/2b/b35e4240bab6dff836f7831455d73e0696c805
+./.git/objects/2c/a1069dd9a18cd0cdba6e48bc7af088c588f364
+./.git/objects/2c/df6caa3240a8bb6aaa902730cbdf216ab992b0
+./.git/objects/2d/bd67f4f261c6f0d306f370185353afdd7a218d
+./.git/objects/2d/dcd6387e52dbf165f63f8b2694805b2fbc83a6
+./.git/objects/2e/7cc1ce3de5b6f9ba3f9026481d12f5d7c8f2e7
+./.git/objects/2e/83080f6a97d40831fe94641d8ba81c94fc3406
+./.git/objects/2f/ef64be82faa881bec461f14608ca8db324a8c9
+./.git/objects/30/db658c651d94ef5ea9f6b23041e07b4b6cb1a2
+./.git/objects/31/ec2787e711dcdf25f215c4ec58ad4845919734
+./.git/objects/32/90dc8b290693ad86b8772e03914d6b00dcdc81
+./.git/objects/33/1288392b441fe6f36e57207dcc3f85cfa6b639
+./.git/objects/33/25a707c5e4b54786b7ca8c01b035177e914b73
+./.git/objects/34/33edd0b948c2c354f0c86d16f940229259adef
+./.git/objects/34/628004307d1abdf2dd755c46ba0b4d13149112
+./.git/objects/34/b8ee6f6fdb56ac8b78292dfc99458d4b6441a3
+./.git/objects/35/0f04c7c01140b8eea1c21e57ec72b989b0967b
+./.git/objects/35/32c439075b9b33963463df6ba67bd6f551551a
+./.git/objects/35/cc4574e60461dbd27249b4db9e80ba3c9d0f35
+./.git/objects/36/631e5e249a807218980aa92d1f9c07b30a32eb
+./.git/objects/36/9a2dbbdb6f24c17268ded3a95f1763a4702ef4
+./.git/objects/36/f6587fad48ec3f03d9df4013c86f1bd4738a88
+./.git/objects/38/960e5bbc0d601fefa86834d9fe51e2b627a191
+./.git/objects/38/bd2d796a02aee20edd4f115abbe88492b8be9b
+./.git/objects/39/b747fa5cb155bdc4e56b98bacd7275a44260a9
+./.git/objects/39/d771edb924fe030da5f553af7058c48d74505d
+./.git/objects/3a/9e11e329bc1d7b9539429c786c74c589cdce20
+./.git/objects/3c/5d9047b3da1acff197951961425065846ab7a3
+./.git/objects/3d/4cd1759d2fd008d0e30536a05f3843083e7c09
+./.git/objects/3d/633a4462ff57e8c3405a8fdc6fe11e806f2f7e
+./.git/objects/3d/fd5539c2ef07305a093f07507f852ed5164f3a
+./.git/objects/3e/0cbe60e92c2d92123bd2af4fbab7f8fb69fa2e
+./.git/objects/3e/a2219682d0c89aeba569a03f0919a0569c8b9f
+./.git/objects/3f/e70825593b361f312535407175664e3ccf80d3
+./.git/objects/40/4df5e2c682d7f37a366594fe960f3f2db5c148
+./.git/objects/40/612920ba210ee380a98da651228005e9446e03
+./.git/objects/40/b4560a7bbed9b70bf1d3289319c2e1ad3db288
+./.git/objects/40/c37e869aff4acee64d76b8444b6f9fcaaade7d
+./.git/objects/41/f44975d923862a6ef9f2fe43e72fc28c85761e
+./.git/objects/42/9bfb36157b29011de786c54e8663e11c38d981
+./.git/objects/42/cde0659c88bf84c80410939e44429732630389
+./.git/objects/42/e2eb886de8236866793856c856efaa51b9bc75
+./.git/objects/42/f8afb91bed38c9dba3a55c51838dd6ce1c923f
+./.git/objects/43/97154205384c67350d98454d09f946f79d6226
+./.git/objects/43/cbbbdac9f4af62e455b1dcf554d1b8bc2ee02d
+./.git/objects/43/cf2d0332c93149b5866778bc3098a2d2931c5b
+./.git/objects/44/4d61808b0d7ed4ed1372c53edaffd98982b7bd
+./.git/objects/44/931ddc6dfcd8a2beb87e8fea867f23a6396efe
+./.git/objects/44/ff935701c9bcf1ff99e868b44b47b17d7914a8
+./.git/objects/45/fb3805b9595e5a6b28a0b8be4531a81a2ea678
+./.git/objects/46/2ae69eb973727943e8dc7d604618cde111d8aa
+./.git/objects/46/6a5303af4aa296935bf34f049ba0f2958da7e3
+./.git/objects/47/0ae13468d10273dc5b9775b0c89e58efebce3a
+./.git/objects/47/1620482ab9947d3e6af6cd2ed25dc6dbd16ca5
+./.git/objects/49/d97be8a3739f7d3fcd9b7e30bbcbbcc7e7b0b1
+./.git/objects/4a/a2aed623089678b8805efe8d4b9523485e474a
+./.git/objects/4b/76b23ba45c8ecf5ccdbd5a888d517ebd2d81b1
+./.git/objects/4c/16384c12a0c2e41582f07800cee5b942b5b1ac
+./.git/objects/4d/4bf22a35158750777d67d337fead883c1947da
+./.git/objects/4d/75371d9ff6afa8b7c2bd35129a1915cbaa123b
+./.git/objects/4d/bdb645a42526232e3f2099f22605716bce8ca3
+./.git/objects/4d/bf1ec1170126bf58f717383c8e64c87d0e1210
+./.git/objects/4e/e1746c689c349d9052edd7d7bc55c1760d043d
+./.git/objects/4e/f1ce58b27614f042dce65291173227b2c91e32
+./.git/objects/4f/9ef1deb9f4d58cff6ccb381eb5f88acc8f2bbc
+./.git/objects/50/f9775096b120788bb96e45f81682f28d54197c
+./.git/objects/51/0b8cfbdfd0e5652745c04e84f1ce4128447d36
+./.git/objects/51/e576e78d3d7953ea3c6f36969f7768d3a84ce2
+./.git/objects/51/fb24415c45600978cc0441b96a7dff586ddc17
+./.git/objects/52/37f2ae2ec1bd2ce8cb3dd03f9ad034aab342bb
+./.git/objects/52/c7f35ebea39a851b2092d5ff2b6f5d57d80c4e
+./.git/objects/52/c8265994d39ce83aa41f1f9910c463681ecf1f
+./.git/objects/53/8c5c69911737f86dc9e71716b9094dd895c2c3
+./.git/objects/54/4e600aeef90e8b10e8d9c3ff245606495bf52d
+./.git/objects/54/cd9dd72016354ff113e862b881db9f08ada4eb
+./.git/objects/55/ad55f9c431b4c295bc4dc8b37d949b9ab1e99c
+./.git/objects/55/bf33f78fb590562f5853a8382545b8ed49fb6c
+./.git/objects/57/443dae46ca63dd5fb4c6b8661aa377d2f50e76
+./.git/objects/59/b6fc3c5c6e1fb9f65e5fabe5ec832157ce83b7
+./.git/objects/5a/03f87c4c4bcaf7b6df9a3a616b40238c25f732
+./.git/objects/5a/8672ef48b749ab28b0e2fab64d9b8afcaa57bd
+./.git/objects/5a/9811f34939f4881c59e59573584dcc615ef7fe
+./.git/objects/5c/847a02bf26503693426a78dde4531c526e6be4
+./.git/objects/5c/f9c3c9b73a7cff7885ade7264a3eda1defc414
+./.git/objects/5e/698d584337a35a0faea61410b2c30ed6852526
+./.git/objects/5e/ad2850f2a50e16929c5c11b848b5f438bacf5f
+./.git/objects/60/00c7190b897929b0a2699e618677d5e872e3bd
+./.git/objects/60/177b57760c97c0a7e1d17a9575293a6ee03117
+./.git/objects/60/f2c665ce3617e1832d1dc620a9ee912fe7f563
+./.git/objects/61/c9b32230cc755b3a328990f8db8976c55723af
+./.git/objects/64/04057ca7785ee512ef23b8d1c34be25553dde3
+./.git/objects/64/185eb4e35f23a0098bcfe603fe51a55a2874a6
+./.git/objects/65/491701e3b1d7e8ef8f10ee7987b8bfb22074b1
+./.git/objects/65/b0be976dcc2af9fe3e2d90384a396396725767
+./.git/objects/65/dda49d0af118de44bf1e6bc87480fbb08e3bf7
+./.git/objects/67/86c11b98721f1e0c240fb66a460bae17c475b1
+./.git/objects/68/25e3c0766c3c6c1bf23aa0b2d1fc9cfbdda4bc
+./.git/objects/68/380a3c9251de7f8b8c42ab9e4d482e1e8f0574
+./.git/objects/68/c80315dba2660a70358a3e437a6bb5b2fce068
+./.git/objects/6a/8f838fff8169eed5f4dc93a862a6ccfdc9a35b
+./.git/objects/6b/bbf61c28a46dc4c384e8a6c71ab35fc08a83d9
+./.git/objects/6c/749ba584ee88f681c6752c5873dda7cefefc8a
+./.git/objects/6c/9746dcc0ffdbdce61ec8244f1016a94c231a47
+./.git/objects/6e/d24d3e8c1d27f2a9a8dc807f3d9749d7d5283a
+./.git/objects/6f/c3fe1a21277412f374a1ceaec13dba00964309
+./.git/objects/70/fa31aaf74685c32937d428058c9a564411050f
+./.git/objects/71/74f3c6b059d2fe6ad9d44c5c200b533f6bf679
+./.git/objects/71/f42848ebb25c493f7fc7da90153f8c2eed0c93
+./.git/objects/73/07be9f4aa25b9d8c359eafece469332eca6c67
+./.git/objects/73/843963bfe9366bb64ab23b026a2f9e0d5104d7
+./.git/objects/75/b83b45ff32d9ff4c29fe51b68b5a3e627d0db6
+./.git/objects/76/df0776d3e33e19af14b0685eaf32a40ccef9f4
+./.git/objects/78/4b5cd6065bd46462d65a1b047d66933c428ab9
+./.git/objects/79/7dd73875131dd8757e27d51c02e7397f94da27
+./.git/objects/7d/2747a822d7ccdb77150e30d4f8dfbd4b87693c
+./.git/objects/7d/518b712445a425811da5e1be8c3360a31c7887
+./.git/objects/7d/c473aee91661e0a7a343a9e9ee757fcbd95bdd
+./.git/objects/7d/ed166bbcb826aada3f2845290c52a7deb199e1
+./.git/objects/7e/70aa4864f8d758f57952553d79df293e83ce89
+./.git/objects/7e/9390b64ba4e5240ef0862187f753c51b3da54e
+./.git/objects/80/464d7d41014c7c91d9cba757818cb2161dc4e5
+./.git/objects/81/19284e5af3836c06ae84005b12087870ad12c3
+./.git/objects/81/30ebaa67ceab1b10272337e894530a1624c098
+./.git/objects/82/21bccb27ce793723112f4810b03c822262d3fb
+./.git/objects/82/a0de9820f6d9cf558f97fe39c43c753e2a4abc
+./.git/objects/82/d0874201dc1492e5eee3167b283236714d614d
+./.git/objects/83/552799876fe321ae781480871bbdd28e13a8fd
+./.git/objects/85/42ba9f975c36097b825eea6bd50956d093f35c
+./.git/objects/85/d25d81718e33e59e6a74d18d4ee301e3f9c0ee
+./.git/objects/86/1ef18e31b3e203b005937d570f80cdb7462779
+./.git/objects/86/e70ab6f5c5be5ebef637a83c1cd4b9a1e4f8e8
+./.git/objects/8a/25ab460dab2bc304ba8eb2b732756a6e5c5a22
+./.git/objects/8a/d978e9cfe945d56b896f77dcbda7c93773ae22
+./.git/objects/8a/fbb530a0f9da7755733876877aa45144716608
+./.git/objects/8c/c978871890401838972b97f4b76031be731215
+./.git/objects/8d/0e61819b7bafd7d894a26f0e4a274a401fb086
+./.git/objects/8e/33261ea0d4486fb01d47c70aabf34b536df6e2
+./.git/objects/8e/7270ca54370f6120277723ba7e1f871ee13b95
+./.git/objects/8f/0d8bbd690829b56e3963d78827f40770ba231d
+./.git/objects/8f/3607631b8788a5b93ca057f74dddabac01be1f
+./.git/objects/8f/8819ea02e693473253a1028903a73d9ac18442
+./.git/objects/8f/faaa7b4cd84a3d899e12fc8e78d603613c6f53
+./.git/objects/90/32e8f08ed9a39b2d6481dea278d503c50a3b5e
+./.git/objects/90/a376755351beba30b4ef4e977d556761c3c26f
+./.git/objects/90/a7d565221a536639358bbaea79e5197c6acffa
+./.git/objects/90/b5949eb32dcdb840b7b5db00a3c98f5da0925e
+./.git/objects/91/484ddbfc8fa72575b5a5b4b33a99fc7624d5e4
+./.git/objects/91/a58f9cc5828356e2e9183d32764c5d7a2d4db4
+./.git/objects/93/bebf384dd20ee965651f53e0c45f11525bf96f
+./.git/objects/94/57c5ce785ee2bd5bc4ebaa58065987a2794287
+./.git/objects/95/283886fc06740b6d06af3a36367fd1a0cee1bb
+./.git/objects/96/148eca906d9ca0279c99d861891a1e6fe1eb9f
+./.git/objects/97/d7146e7d9c5886302ca2e8a1639ce97fe0d449
+./.git/objects/98/140cd077b02b7d8e9d3f0b35ce1faae3850c8e
+./.git/objects/9a/fa57f89994025db4d7f98257c4974cd4b6fd19
+./.git/objects/9b/8fd02c8fc7350102e644da245ac5c1c7602b78
+./.git/objects/9c/2d30534228cccbb1a6cd3e1c4220186172dcd8
+./.git/objects/9d/2611bf05f954d9d2f368e360e27a1b1233ca5d
+./.git/objects/9d/9735cf71220ad2f41bac48d0007e58c34dfd27
+./.git/objects/9d/f615334538821ed3364ad38340ca68caca5835
+./.git/objects/9e/7298c8c023ca8ed303384cbab8042ced186e82
+./.git/objects/9f/90b0f1682d2dc493e97187c53be5979eb2d506
+./.git/objects/9f/9ac6e08bbfe04f6e462ef8a78e483c472a356d
+./.git/objects/a0/9a0079b4eef735f7188792d75959a7b28c561c
+./.git/objects/a1/2e546bcbcabc6a229a86d76b8892d1a2ee4552
+./.git/objects/a1/46c2edef890ae66ef5d1a150d3139071e17698
+./.git/objects/a1/89f408ad93f156ccade3027dd7dd222cce0dbe
+./.git/objects/a3/84a44859a95df47fc13f3c1d8fbf79f810b3ba
+./.git/objects/a4/9ddfdd706e1d00fdd95c34a5bd976450cfbee8
+./.git/objects/a5/fd8b8eed8475500881f992ae9c5fa620288664
+./.git/objects/a6/bc08afad9caf8adcd664c57c7b14ada8bb48ea
+./.git/objects/a7/d5c5aed2df6a7c964a028f5e871bd3eb6ec28b
+./.git/objects/a8/9a31437b5f2ebf56094ca92184870ace87c26d
+./.git/objects/a9/1b8e520a11ba9aba726cbc7261f8d878c56755
+./.git/objects/aa/43c0877294253fc9850fbb41d593617973c34c
+./.git/objects/aa/8fc0fdbd55218235d2baf165258d3759c050b4
+./.git/objects/aa/9962b8006f1e17a849a432cc1608105dc111b8
+./.git/objects/ac/a3da3ebe6a345d3827cef97c96a07ddb3f0d4e
+./.git/objects/af/77545f431debb85f60c3390359c5001f162431
+./.git/objects/b0/ececb897f83bca43e937871aada30ddceed7c9
+./.git/objects/b2/d852034413f475d0c6a9f9a4c68a483d9e7171
+./.git/objects/b4/c92ca5f24793090deb3c0d7a9fbbe372b1500c
+./.git/objects/b4/fdb368b4586635e20ffe060117407853083921
+./.git/objects/b5/4a2f94dfa08869f116e0fe394e93bc83f7a8e6
+./.git/objects/b6/404631095d08c906ddf0d22ba24effe1a924ab
+./.git/objects/b8/18a7c46e1265c35739cf0485d240c218f42356
+./.git/objects/b8/661021184507eaa3174f2f87e550a10a13caa1
+./.git/objects/b8/d44c9ff6be2e3b4fc0868131f6ba48ffcdd4fc
+./.git/objects/b9/29d30a4b6a781ce842404dbc34fbeb00ecf39c
+./.git/objects/ba/62aa2aa3337f739a38a7e71e123d575ce5ecd9
+./.git/objects/ba/934769db2bf7edd645a8ba640648f8e669df72
+./.git/objects/ba/d9baa1638523ce6cbd1fe0fc8792eeca528375
+./.git/objects/bc/7c69c49becb2bdc63a9bc037e564e77b7275d3
+./.git/objects/bd/d11ac523ce0144ca674af755c81198fbc7f514
+./.git/objects/be/20b02451da790cb353ace9605f938eba1dc215
+./.git/objects/be/9bf808d5d22673ab9c5ad45bf6b6b1a3d433f5
+./.git/objects/be/aae2a56be9cbebd5d611749d4044ff77418211
+./.git/objects/bf/4dfd0d0074a5ac9b41f955b5a599a11dfc74c0
+./.git/objects/bf/bde10534993a1e3e376ed64332d83750da58ab
+./.git/objects/c1/fe4f3187dcd8c7687742eb1914cc8a26834949
+./.git/objects/c5/f10b8667968a72e97291e4fa8112b1f53fbfc0
+./.git/objects/c6/0830748cf239e10d095caa2b81cacad3d71c50
+./.git/objects/c6/30a141ed0862e6a8d0b2c3c643a2d60c1b30bf
+./.git/objects/c9/796d591a0b888451264196d5956f83a12b7c57
+./.git/objects/ca/d7b22cae245c8779b8eabbbb94a856ef28316e
+./.git/objects/ca/d944cbb804a2896931ba4f16b1dd45d4683552
+./.git/objects/cb/085d13b35d286e43126189c88901ca196f8544
+./.git/objects/cb/d98fe37eb71cc45de7cf377654d2de28f70fb9
+./.git/objects/cc/a6d487be91ac49790044f439a965ca1fec4d96
+./.git/objects/ce/bd4bbae6bd6549da1278e4401e463decaeb35f
+./.git/objects/ce/c8363fcb9372c7b62e57539bf9c8ef90444380
+./.git/objects/cf/47f308f615dec79bc25b74300308deadfa981b
+./.git/objects/cf/d9bbb7374fc7b22523179c740b17c69ad0e5f3
+./.git/objects/d1/ed17088b359b903455a4543a40211803ccb62c
+./.git/objects/d2/61e2f6966f1e029703db74346220ac809d1286
+./.git/objects/d2/92562f6e372db9f3f2a7590f9fdc71ea2162f9
+./.git/objects/d3/02faf99934e0c5cd1242bb29261313050a783e
+./.git/objects/d3/18173711f6e00535c87ae70e1d38c8bf88d91a
+./.git/objects/d3/ee4fd7c55748a08ed374d2472c58d8711f04b3
+./.git/objects/d4/8ed64c71643700929939bfd2bc888f241f834e
+./.git/objects/d4/c96057db4cf5cc841c585b8370616484027e14
+./.git/objects/d4/e44d7f29983719d89d57519a255ba468dc5d45
+./.git/objects/d5/3efe4257e2d3df2c606e8b881ecd2905b550ed
+./.git/objects/d5/64d0bc3dd917926892c55e3706cc116d5b165e
+./.git/objects/d5/f4c0fce03ba9f0aaa6fa8de7853f73e2775808
+./.git/objects/d6/4fac8410529235e28de212038924976abc036f
+./.git/objects/d6/53b7f12710973c4989094b63e13d840ff01b2c
+./.git/objects/d6/ce4b15133b903406847ecb7f282f648b533760
+./.git/objects/d7/0e1347da224601e2b12f03452309deb4ef36fe
+./.git/objects/d7/173f6480c456e9af891abe61906818f020ca53
+./.git/objects/d8/5274bb20b7e0d9314331a2655c9cd246982020
+./.git/objects/d8/ca600a645784c3a8587f8ee96d7dd53325f9bf
+./.git/objects/d9/3dd76673ea0c224f1d45d84d8c18127a6fa2ce
+./.git/objects/d9/a3030644b0b9e7c1bf5edc06ddf226d38e6f14
+./.git/objects/d9/cf2840e0b77ecf7ae6e1610f6099d81572e94f
+./.git/objects/da/81dc61725120c919838e6f97368e11c605241a
+./.git/objects/dd/ceb2efc6e951fc24e4bb159df04bad49ac83e9
+./.git/objects/de/16c8b28dcd2a4c2e619a21bc9d33f270d4680b
+./.git/objects/e1/a0e76511e1aee4ef41c6bb55ceae1bb971109f
+./.git/objects/e3/16191a7f3e77be50b550a9c462b003da7019b2
+./.git/objects/e3/247310b8957b116b2126b7659634e9234c94df
+./.git/objects/e3/29d5615e25bb485e291c9e5920831cb6169814
+./.git/objects/e3/4b5805d6c690607f0d1c9d66f1aef034cd96e3
+./.git/objects/e3/6616fc7f9c7360ef2dac0f58c28469d1ca6978
+./.git/objects/e4/8b2e5787c876b5c135a35e58d33d30db335c6f
+./.git/objects/e4/bd9a1e3a7d90a5b6323fc9b21e1501f172aa2e
+./.git/objects/e4/dab3f76c45fd90270cc3fd533fcd22e8e55efb
+./.git/objects/e6/c1c3eb6c32fc2ee421e8e8905bc6142f38221d
+./.git/objects/e7/55aa215b010a91998e5c837cebe7798cc9813d
+./.git/objects/e7/8b584f8e93a0e3b0c55fbb9b9527151c05f49f
+./.git/objects/e7/c8f59a1ab0ee04bb0db4ca4df26a473aedcff6
+./.git/objects/e7/eb005dd7e1cd7fe7b3046f3e52a6329b8fbf42
+./.git/objects/ea/be3e5c0f32a83c20b6f45d82b72e8634b35411
+./.git/objects/eb/5d1f77c84d899e7f4b85132a53ec7db011d603
+./.git/objects/eb/674e8392451427833e6a34416fc4ee2b1b03fe
+./.git/objects/eb/b507484746e1fa4cc56f325711d660faa12e52
+./.git/objects/ec/07d2ad544cadf18471477462d9ce79ba97f015
+./.git/objects/ec/0f56f8fc7eae083705129ca7900c6c962c00a8
+./.git/objects/ec/ce55418ae9604b122bd3e837d4a9d60ff15d71
+./.git/objects/ed/2bdbac9b308dc4f55c2a941b216d40389d7759
+./.git/objects/f2/198fcc0e96a9b4e144b7b7a992d8bcfb947912
+./.git/objects/f2/7ff7362ea35ad18992617a6db009ec55d0a924
+./.git/objects/f5/1e6f9e7d8d5f74fd28714de02d57a23d1243b6
+./.git/objects/f6/80d2865e3b9f8aebc8c1d0f4ac6d51f9eba526
+./.git/objects/f7/f191ebc369f88927701fb88af3ef603c150f53
+./.git/objects/fa/27ea580cff69f47e975edc2c50fc930960fe6d
+./.git/objects/fb/53a0ac6849117f43b60db6a7e3f35588a0eaa1
+./.git/objects/fb/d3f55c19b2274806930f027b13e4921caf7810
+./.git/objects/fc/01cb30408759ec28a366e28e0006036e2e48cf
+./.git/objects/fc/3872595c6b5c00d04c2adc193901c931639694
+./.git/objects/fd/3e046a56da617051c3ff2b343bf75ed6914631
+./.git/objects/fd/85805e4b750f437e7d0d0ec27774f393c1ce08
+./.git/objects/ff/10baf00017c16963f41914155548d63fb6d7b7
+./.git/objects/info/commit-graph
+./.git/objects/info/packs
+./.git/objects/pack/pack-56556a96240b4aafd98978d9a265fdeb63a92c47.idx
+./.git/objects/pack/pack-56556a96240b4aafd98978d9a265fdeb63a92c47.pack
+./.git/objects/pack/pack-56556a96240b4aafd98978d9a265fdeb63a92c47.rev
+./.git/ORIG_HEAD
+./.git/packed-refs
+./.git/refs/heads/main
+./.git/refs/heads/synergia_v2_stable_checkpoint
+./.git/refs/heads/synergia_v3_core_restructure
+./.git/refs/remotes/origin/main
+./.git/refs/remotes/origin/synergia_v2_stable_checkpoint
+./.git/refs/remotes/origin/synergia_v3_core_restructure
+./.git/refs/tags/SYNERGIA_MASTER
+./json_engine/client_data/clientes/cliente_001.json
+./json_engine/client_data/clientes/cliente_gastro_001.json
+./json_engine/client_data/clientes/estructura.txt
+./json_engine/client_data/clientes/mates_cordoba.json
+./kernel/bootstrap/bootstrap.py
+./kernel/bootstrap/__pycache__/bootstrap.cpython-312.pyc
+./kernel/core/module_registry.py
+./kernel/core/system_state.py
+./kernel/runtime/__pycache__/runtime_manager.cpython-312.pyc
+./kernel/runtime/runtime_manager.py
+./kernel/services/config_service.py
+./kernel/services/log_service.py
+./kernel/services/maq_service.py
+./kernel/services/model_service.py
+./kernel/services/__pycache__/config_service.cpython-312.pyc
+./kernel/services/__pycache__/maq_service.cpython-312.pyc
+./kernel/services/__pycache__/model_service.cpython-312.pyc
+./kernel/state/__pycache__/state_manager.cpython-312.pyc
+./kernel/state/state_manager.py
+./kernel/system_manager.py
+./legacy/experimental/arguments_schema.py
+./legacy/experimental/__init__.py
+./legacy/experimental/missing_sentinel.py
+./legacy/experimental/pipeline.py
+./legacy/tests/ansi_test.py
+./legacy/tests/ansitowin32_test.py
+./legacy/tests/initialise_test.py
+./legacy/tests/__init__.py
+./legacy/tests/isatty_test.py
+./legacy/tests/utils.py
+./legacy/tests/winterm_test.py
+./legacy/v1/annotated_types.py
+./legacy/v1/class_validators.py
+./legacy/v1/color.py
+./legacy/v1/config.py
+./legacy/v1/dataclasses.py
+./legacy/v1/datetime_parse.py
+./legacy/v1/decorator.py
+./legacy/v1/env_settings.py
+./legacy/v1/errors.py
+./legacy/v1/error_wrappers.py
+./legacy/v1/fields.py
+./legacy/v1/generics.py
+./legacy/v1/_hypothesis_plugin.py
+./legacy/v1/__init__.py
+./legacy/v1/json.py
+./legacy/v1/main.py
+./legacy/v1/mypy.py
+./legacy/v1/networks.py
+./legacy/v1/parse.py
+./legacy/v1/py.typed
+./legacy/v1/schema.py
+./legacy/v1/tools.py
+./legacy/v1/types.py
+./legacy/v1/typing.py
+./legacy/v1/utils.py
+./legacy/v1/validators.py
+./legacy/v1/version.py
+.md
+./outputs/crear_agencia_premium_ia_para__20260515_174223/website/website.txt
+./outputs/crear_agencia_premium_ia_para__20260515_180312/branding/branding.txt
+./outputs/crear_agencia_premium_ia_para__20260515_180312/social/social.txt
+./outputs/crear_agencia_premium_ia_para__20260515_180312/website/website.txt
+./projects/demo_site/page.json
+./projects/demo_site/pages/about.json
+./projects/demo_site/pages/contact.json
+./projects/demo_site/pages/home.json
+./render/block_engine/__init__.py
+./render/__init__.py
+./render/templates/hero/modern_dark.html
+./requirements.txt
+./RETOMAR EN CUALQUIER MOMONTO O PERFIL /SYNERGIA_SAVEPOINT_BOOTSTRAP_V1_V6.md
+./RETOMAR EN CUALQUIER MOMONTO O PERFIL/SYNERGIA_V6_KERNEL_BOOT_OK.md
+./run_ai_lab (copia).py
+./run_ai_lab.py
+./run_synergia.py
+./runtime/__pycache__/runtime_manager.cpython-312.pyc
+./runtime/runtime_manager.py
+./runtime/runtime_state.py
+./runtime/savepoints/SYNERGIA_V6_KERNEL_BOOT_OK.md
+./runtime/savepoints/SYNERGIA_V6_STATE_ENGINE_OK.md
+./runtime/sessions/system_state.json
+./storage/clientes/cliente_001.json
+./storage/clientes/cliente_gastro_001.json
+./storage/clientes/estructura.txt
+./storage/clientes/mates_cordoba.json
+./storage/output/demo_site_20260507_190236/index.html
+./storage/output/demo_site/about.html
+./storage/output/demo_site/contact.html
+./storage/output/demo_site/index.html
+./storage/output/demo_site_site_20260508_150105/about.html
+./storage/output/demo_site_site_20260508_150105/contact.html
+./storage/output/demo_site_site_20260508_150105/index.html
+./storage/output/demo_site_site_20260508_150533/about.html
+./storage/output/demo_site_site_20260508_150533/contact.html
+./storage/output/demo_site_site_20260508_150533/index.html
+./storage/output/demo_site_site_20260508_180937/about.html
+./storage/output/demo_site_site_20260508_180937/contact.html
+./storage/output/demo_site_site_20260508_180937/index.html
+./storage/output/project_20260505_165451/index.html
+./storage/output/project_20260505_165511/index.html
+./storage/output/project_20260505_172511/index.html
+./storage/output/project_20260505_172613/index.html
+./storage/output/project_20260505_182710/index.html
+./storage/output/project_20260505_182919/index.html
+./storage/projects/cms_20260505_182710.json
+./storage/projects/cms_20260505_182919.json
+./storage/projects/project_001.json
+./storage/projects/prompt_generated.json
+./STRUCTURE_V3_BEFORE.txt
+./SYNERGIA B — FASE 2__HARDENING INDUSTRIAL_2026-05-26.md
+./SYNERGIA_AGENT/00_NEXT_STEPS.md
+./SYNERGIA_AGENT/00_START_HERE.md
+./SYNERGIA_AGENT/01_BOOTSTRAP_SYSTEM.sh
+./SYNERGIA_AGENT/02_EXPORT_AI_CONTEXT.sh
+./SYNERGIA_AGENT/03_SAVEPOINT.sh
+./SYNERGIA_AGENT/04_GITHUB_PUSH.sh
+./SYNERGIA_AGENT/05_MAQ_SWITCH.sh
+./SYNERGIA_AGENT/06_RUNTIME_START.sh
+./SYNERGIA_AGENT/07_UPDATE_REQUIREMENTS.sh
+./SYNERGIA_AGENT/08_PROJECT_STATUS.md
+./SYNERGIA_AGENT/09_ARCHITECTURE.md
+./SYNERGIA_AGENT/run_synergia.py
+./SYNERGIA_AGENT/synergia_manager.sh
+./SYNERGIA_AI_LAB_PANEL_V2.docx
+./SYNERGIA_AI_LAB_PANEL_V2.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/00_MASTER/19_SYNERGIA_OVERVIEW.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/00_MASTER/README.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/01_ARCHITECTURE/00_BACKEND_SYSTEM.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/01_ARCHITECTURE/08_CORE_SYSTEM.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/02_AI_SYETEM/🤖 01 — AI.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/02_AI_SYETEM/10_AI_MODELS.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/03_RENDER_ENGINE/03_RENDER_ENGINE.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/04_EDITOR/04_VISUAL_EDITOR.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/05_BLOCK_SYSTEM/02_BLOCK_SYSTEM.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/06_TEMPLATES/05_TEMPLATE_ENGINE.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/07_STORAGE/06_STORAGE_SYSTEM.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/08_BUSINESS_ENGINE/11_BUSINESS_HISTORY_ENGINE.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/08_BUSINESS_ENGINE/29_BUSINESS_PLANNER_ENGINE.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/09_SOCIAL_ENGINE/SOCIAL_AUTOMATION_ENGINE.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/10_GRAPH_SYSTEN/15_VISUAL_GRAPH_SYSTEM.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/10_GRAPH_SYSTEN/20_OBSIDIAN_WIKI_SYSTEM.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/11_FUTURE/27_FUTURE_SYSTEM.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/12_MAQ_SYSTEM/MAQ docs.md
+./SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/appearance.json
+./SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/app.json
+./SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/core-plugins.json
+./SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/graph.json
+./SYNERGIA_CORE_NEXT_PRO Obsidian/.obsidian/workspace.json
+./SYNERGIA_CORE_NEXT_PRO Obsidian/Sin título.base
+./SYNERGIA_FULL_EXPORT.txt
+./synergiaGab.txt
+./SYNERGIA_MASTER_BOOK_v1.docx
+./SYNERGIA_MASTER_BOOK_v1.md
+./SYNERGIA_RUNTIME/ai_layer/agents/agent_collab.py
+./SYNERGIA_RUNTIME/ai_layer/agents/agent_collab_v2.py
+./SYNERGIA_RUNTIME/ai_layer/agents/agent_core.py
+./SYNERGIA_RUNTIME/ai_layer/agents/automation_agent.py
+./SYNERGIA_RUNTIME/ai_layer/agents/business_agent.py
+./SYNERGIA_RUNTIME/ai_layer/agents/cms_agent.py
+./SYNERGIA_RUNTIME/ai_layer/agents/dev_agent.py
+./SYNERGIA_RUNTIME/ai_layer/agents/__init__.py
+./SYNERGIA_RUNTIME/ai_layer/agents/__pycache__/agent_collab.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/agents/__pycache__/agent_collab_v2.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/agents/__pycache__/agent_core.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/agents/research_agent.py
+./SYNERGIA_RUNTIME/ai_layer/agents/social_agent.py
+./SYNERGIA_RUNTIME/ai_layer/agents/test_agents.py
+./SYNERGIA_RUNTIME/ai_layer/agents/test_collab.py
+./SYNERGIA_RUNTIME/ai_layer/agents/test_collab_v2.py
+./SYNERGIA_RUNTIME/ai_layer/ai_engine.py
+./SYNERGIA_RUNTIME/ai_layer/memory/experience_engine.py
+./SYNERGIA_RUNTIME/ai_layer/memory/experiences/.gitkeep
+./SYNERGIA_RUNTIME/ai_layer/memory/experiences.json
+./SYNERGIA_RUNTIME/ai_layer/memory/long_term/.gitkeep
+./SYNERGIA_RUNTIME/ai_layer/memory/memory_core.py
+./SYNERGIA_RUNTIME/ai_layer/memory/__pycache__/experience_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/memory/__pycache__/memory_core.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/memory/short_term/.gitkeep
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/agent_debate_engine.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/agent_registry.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/agent_router.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/build_orchestrator_v4.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/cognitive_task_router.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/collab_engine.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/collab_manager.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/context_manager.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/debate_engine.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/decision_engine.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/execution_engine.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/execution_engine_v2.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/experience_engine.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__init__.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/learning_engine.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/memory_router.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/multi_agent_router.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/orchestrator_v3.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/orchestrator_v4.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/orchestrator_v5.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/orchestrator_v6.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/orchestrator_v7.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/orchestrator_v8.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/project_memory.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/agent_debate_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/agent_registry.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/agent_router.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/cognitive_task_router.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/collab_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/collab_manager.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/context_manager.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/decision_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/execution_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/experience_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/__init__.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/learning_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/memory_router.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/multi_agent_router.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/project_memory.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/result_merger.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/task_classifier.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/__pycache__/workflow_builder.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/result_merger.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/shared_memory.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/task_classifier.py
+./SYNERGIA_RUNTIME/ai_layer/orchestrator/workflow_builder.py
+./SYNERGIA_RUNTIME/ai_layer/__pycache__/ai_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/ai_layer/synergia_memory.json
+./SYNERGIA_RUNTIME/ai_orchestrator.py
+./SYNERGIA_RUNTIME/ai_orchestrator_v2.py
+./SYNERGIA_RUNTIME/ARCHITECTURE_MAP_V3.md
+./SYNERGIA_RUNTIME/auto_sync_brain.py
+./SYNERGIA_RUNTIME/builder_engine/api_builder.py
+./SYNERGIA_RUNTIME/builder_engine/autonomous_builder.py
+./SYNERGIA_RUNTIME/builder_engine/backend_builder.py
+./SYNERGIA_RUNTIME/builder_engine/docker_builder.py
+./SYNERGIA_RUNTIME/builder_engine/frontend_builder.py
+./SYNERGIA_RUNTIME/builder_engine/generate_node_engine_v1.py
+./SYNERGIA_RUNTIME/builder_engine/project_generator.py
+./SYNERGIA_RUNTIME/builder_engine/projects/crear_crm_ia_para_inmobiliarias/backend/main.py
+./SYNERGIA_RUNTIME/builder_engine/projects/crear_crm_ia_para_inmobiliarias/frontend/App.jsx
+./SYNERGIA_RUNTIME/builder_engine/projects/crear_crm_ia_para_inmobiliarias/README.md
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/api/api_gateway.py
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/backend/config.py
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/backend/main.py
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/backend/models.py
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/backend/routes.py
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/database/db.py
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/docker-compose.yml
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/docker/Dockerfile
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/docs/architecture.md
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/frontend/app.js
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/frontend/index.html
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/frontend/style.css
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/README.md
+./SYNERGIA_RUNTIME/builder_engine/projects/restaurant_ai/requirements.txt
+./SYNERGIA_RUNTIME/builder_engine/__pycache__/autonomous_builder.cpython-312.pyc
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/core/context.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/core/engine.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/core/executor.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/core/graph.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/core/node.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/nodes/base_node.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/nodes/builder_node.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/nodes/business_node.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/nodes/cms_node.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/nodes/dev_node.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/nodes/social_node.py
+./SYNERGIA_RUNTIME/builder_engine/SYNERGIA_NODE_ENGINE_V1/test/run_demo.py
+./SYNERGIA_RUNTIME/build_orchestrator_v5.py
+./SYNERGIA_RUNTIME/build_orchestrator_v6.py
+./SYNERGIA_RUNTIME/build_orchestrator_v7.py
+./SYNERGIA_RUNTIME/build_synergia_orchestrator.py
+./SYNERGIA_RUNTIME/build_system_v1.py
+./SYNERGIA_RUNTIME/CHECKPOINTS/checkpoint_2026-05-26_19-07-07.md
+./SYNERGIA_RUNTIME/CHECKPOINTS/checkpoint_2026-05-26_19-10-00.md
+./SYNERGIA_RUNTIME/cognitive_kernel/event_bus.py
+./SYNERGIA_RUNTIME/cognitive_kernel/kernel.py
+./SYNERGIA_RUNTIME/cognitive_kernel/runtime_manager.py
+./SYNERGIA_RUNTIME/cognitive_kernel/state_engine.py
+./SYNERGIA_RUNTIME/cognitive_kernel/task_engine.py
+./SYNERGIA_RUNTIME/control_center/agent_monitor.py
+./SYNERGIA_RUNTIME/control_center/dashboard.py
+./SYNERGIA_RUNTIME/control_center/live_monitor.py
+./SYNERGIA_RUNTIME/control_center/runtime_console.py
+./SYNERGIA_RUNTIME/core/__init__.py
+./SYNERGIA_RUNTIME/core/__pycache__/__init__.cpython-312.pyc
+./SYNERGIA_RUNTIME/core/runtime/__init__.py
+./SYNERGIA_RUNTIME/core/runtime/live_agent_bus.py
+./SYNERGIA_RUNTIME/core/runtime/__pycache__/__init__.cpython-312.pyc
+./SYNERGIA_RUNTIME/core/runtime/__pycache__/live_agent_bus.cpython-312.pyc
+./SYNERGIA_RUNTIME/experiences.json
+./SYNERGIA_RUNTIME/kernel_loader.py
+./SYNERGIA_RUNTIME/module_registry.json
+./SYNERGIA_RUNTIME/output_engine/deploy_engine.py
+./SYNERGIA_RUNTIME/output_engine/export_manager.py
+./SYNERGIA_RUNTIME/output_engine/package_engine.py
+./SYNERGIA_RUNTIME/projects/🧠_task:_crear_crm_para_inmobiliarias/backend/main.py
+./SYNERGIA_RUNTIME/projects/🧠_task:_crear_crm_para_inmobiliarias/frontend/App.jsx
+./SYNERGIA_RUNTIME/projects/🧠_task:_crear_crm_para_inmobiliarias/README.md
+./SYNERGIA_RUNTIME/synergia_boot.py
+./SYNERGIA_RUNTIME/system_state.json
+./SYNERGIA_RUNTIME/tests/__init__.py
+./SYNERGIA_RUNTIME/tests/__pycache__/__init__.cpython-312.pyc
+./SYNERGIA_RUNTIME/tests/__pycache__/test_agent_bus.cpython-312.pyc
+./SYNERGIA_RUNTIME/tests/test_agent_bus.py
+./SYNERGIA_RUNTIME/visual_os/app.py
+./SYNERGIA_RUNTIME/visual_os/core/mode_manager.py
+./SYNERGIA_RUNTIME/visual_os/core/__pycache__/mode_manager.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os/core/__pycache__/synergia_bridge.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os/core/synergia_bridge.py
+./SYNERGIA_RUNTIME/visual_os_v2/app.py
+./SYNERGIA_RUNTIME/visual_os_v2/generate_visual_os_v2.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/app (copia).py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/app.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/assets/synergia_banner.jpg
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/canvas/__init__.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/canvas/live_brain_canvas.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/canvas/node_canvas.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/canvas/__pycache__/__init__.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/canvas/__pycache__/live_brain_canvas.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/canvas/__pycache__/node_canvas.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/core/bridge (copia).py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/core/bridge.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/core/node_mapper.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/core/__pycache__/bridge.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/core/__pycache__/node_mapper.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/core/__pycache__/visual_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/core/visual_engine.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/graph_engine/live_graph.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/graph_engine/__pycache__/live_graph.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/live_agents/agent_runtime.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/live_agents/__pycache__/agent_runtime.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/automatizar_tiktok_para_marca_premium_20260528_171651.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_backend_cloud_con_automatización_tiktok_20260528_172354.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_crm_inmobiliario_con_dashboard_20260528_171422.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_crm_inmobiliario_con_instagram_y_dashboard_20260528_162646.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_crm_inmobiliario_con_marketing_instagram_y_dashboard_20260528_163023.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_ecosistema_saas_multiagente_enterprise_20260528_172412.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_ecosistema_saas_para_restaurantes_con_ia,_tiktok_automation_y_backend_cloud_20260528_174527.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_ecosistema_saas_para_restaurantes_con_ia,_tiktok_automation_y_backend_cloud_20260528_174627.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_ecosistema_saas_para_restaurantes_con_ia,_tiktok_automation_y_backend_cloud_20260528_175624.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_ecosistema_saas_para_restaurantes_con_ia_y_automatización_instagram_20260528_170406.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_landing_page_para_gimnasio_20260529_192013.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_landing_page_para_gimnasio_20260529_192528.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_landing_page_para_gimnasio_20260529_192828.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_plataforma_educativa_con_tiktok_y_automatización_ia_20260528_162733.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_saas_inmobiliario_con_automatización_ia_20260528_171845.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_saas_para_restaurantes_con_automatización_instagram_e_ia_20260528_170056.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_saas_para_restaurantes_con_instagram_20260528_171339.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_saas_para_turnos_médicos_con_backend_y_panel_admin_20260528_180620.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_startup_ia_para_restaurantes_premium_20260528_172317.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/experiences/crear_startup_tiktok_automation_con_backend_cloud_20260528_171910.json
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/memory_engine.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/memory/__pycache__/memory_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/modes/__init__.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/modes/node_mapper.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/modes/__pycache__/__init__.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/modes/__pycache__/node_mapper.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/ollama_engine/ollama_runtime.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/ollama_engine/__pycache__/ollama_runtime.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/runtime/__init__.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/runtime/__pycache__/__init__.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/runtime/__pycache__/runtime_monitor.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/runtime/__pycache__/visual_engine.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/runtime/runtime_monitor.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/runtime/visual_engine.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/ui/__pycache__/runtime_panel.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/ui/__pycache__/terminal_panel.cpython-312.pyc
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/ui/runtime_panel.py
+./SYNERGIA_RUNTIME/visual_os_v2/visual_os_v2/ui/terminal_panel.py
+./templates/core_templates/01 SYNERGIA_CORE final_HTML
+./templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE/config.json
+./templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE/demo.html
+./templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE/doc.md
+./templates/core_templates/01_ACADEMIA_IDIOMAS_ELITE/template.html
+./templates/core_templates/02_SKYCODE_TECH_HUB/config.json
+./templates/core_templates/02_SKYCODE_TECH_HUB/demo.html
+./templates/core_templates/02_SKYCODE_TECH_HUB/doc.md
+./templates/core_templates/02_SKYCODE_TECH_HUB/template.html
+./templates/core_templates/02_Synergia_Core_html
+./templates/core_templates/03_vet_emotional_techh/config.json
+./templates/core_templates/03_vet_emotional_techh/demo.html
+./templates/core_templates/03_vet_emotional_techh/doc.md
+./templates/core_templates/03_vet_emotional_techh/template.html
+./templates/core_templates/04_arquitectura_interiorismo/auto_setup_templates.py
+./templates/core_templates/04_arquitectura_interiorismo/config.json
+./templates/core_templates/04_arquitectura_interiorismo/demo.html
+./templates/core_templates/04_arquitectura_interiorismo/doc.md
+./templates/core_templates/04_arquitectura_interiorismo/template.html
+./templates/core_templates/05_gastronomia_experiencial/config.json
+./templates/core_templates/05_gastronomia_experiencial/demo.html
+./templates/core_templates/05_gastronomia_experiencial/doc.md
+./templates/core_templates/05_gastronomia_experiencial/template.html
+./templates/core_templates/07_real_estate_global_scroll/config.json
+./templates/core_templates/07_real_estate_global_scroll/demo.html
+./templates/core_templates/07_real_estate_global_scroll/doc.md
+./templates/core_templates/07_real_estate_global_scroll/template.html
+./templates/core_templates/08_REALITY_BOND_INTERFACE/config.json
+./templates/core_templates/08_REALITY_BOND_INTERFACE/demo.html
+./templates/core_templates/08_REALITY_BOND_INTERFACE/doc.md
+./templates/core_templates/08_REALITY_BOND_INTERFACE/template.html
+./templates/core_templates/09retro_futuroe_aviation_maste/config.json
+./templates/core_templates/09retro_futuroe_aviation_maste/demo.html
+./templates/core_templates/09retro_futuroe_aviation_maste/doc.md
+./templates/core_templates/09retro_futuroe_aviation_maste/template.html
+./templates/core_templates/10_arq_bento/config.json
+./templates/core_templates/10_arq_bento/demo.html
+./templates/core_templates/10_arq_bento/doc.md
+./templates/core_templates/10_arq_bento/template.html
+./templates/core_templates/11_Ejemplo1/config.json
+./templates/core_templates/11_Ejemplo1/demo.html
+./templates/core_templates/11_Ejemplo1/doc.md
+./templates/core_templates/11_Ejemplo1/template.html
+./templates/core_templates/estructura.txt
+./test_business_generator.py
+./test_ollama_memory.py
+./tools/ai_lab/monitor.py
+./tools/ai_lab/prompt_console.py
+./tools/synergia_control_center.py
+./tools/test_memory.py
+URE_S-V1_2-I-A.md
+VISUAL OS v2 + NODE ENGINE + RUNTIME SYSTEM

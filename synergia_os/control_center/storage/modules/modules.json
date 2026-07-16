@@ -1,0 +1,210 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "icon": "📊",
+    "page": "dashboard",
+    "type": "core",
+    "category": "system",
+    "status": "online",
+    "version": "1.0",
+    "description": "Main enterprise control dashboard"
+  },
+
+  "ai_engine": {
+    "title": "AI Engine",
+    "icon": "🧠",
+    "page": "ai_engine",
+    "type": "core",
+    "category": "artificial_intelligence",
+    "status": "online",
+    "version": "1.0",
+    "description": "Artificial Intelligence Processing Engine"
+  },
+
+  "kernel": {
+    "title": "Kernel",
+    "icon": "⚙️",
+    "page": "kernel",
+    "type": "core",
+    "category": "system",
+    "status": "online",
+    "version": "1.0",
+    "description": "Operating System Core Kernel"
+  },
+
+  "runtime": {
+    "title": "Runtime Manager",
+    "icon": "🚀",
+    "page": "runtime",
+    "type": "core",
+    "category": "runtime",
+    "status": "online",
+    "version": "1.0",
+    "description": "Runtime execution environment"
+  },
+
+  "router": {
+    "title": "Cognitive Router",
+    "icon": "🧭",
+    "page": "cognitive_router",
+    "type": "core",
+    "category": "ai",
+    "status": "online",
+    "version": "1.0",
+    "description": "Intent and decision routing engine"
+  },
+
+  "agents": {
+    "title": "Agents",
+    "icon": "🤖",
+    "page": "agents",
+    "type": "core",
+    "category": "ai",
+    "status": "online",
+    "version": "1.0",
+    "description": "Agent orchestration center"
+  },
+
+  "models": {
+    "title": "Models Manager",
+    "icon": "🧩",
+    "page": "models",
+    "type": "core",
+    "category": "ai",
+    "status": "online",
+    "version": "1.0",
+    "description": "Manage local and cloud AI models"
+  },
+
+  "memory": {
+    "title": "Memory System",
+    "icon": "💾",
+    "page": "memory",
+    "type": "core",
+    "category": "ai",
+    "status": "online",
+    "version": "1.0",
+    "description": "Persistent cognitive memory"
+  },
+
+  "knowledge": {
+    "title": "Knowledge Base",
+    "icon": "📚",
+    "page": "knowledge",
+    "type": "core",
+    "category": "ai",
+    "status": "online",
+    "version": "1.0",
+    "description": "Knowledge management center"
+  },
+
+  "modules": {
+    "title": "Modules Manager",
+    "icon": "📦",
+    "page": "modules",
+    "type": "core",
+    "category": "system",
+    "status": "online",
+    "version": "1.0",
+    "description": "Installed modules administration"
+  },
+
+  "runtime_monitor": {
+    "title": "Runtime Monitor",
+    "icon": "📈",
+    "page": "runtime_monitor",
+    "type": "core",
+    "category": "monitor",
+    "status": "online",
+    "version": "1.0",
+    "description": "Runtime monitoring console"
+  },
+
+  "evolution": {
+    "title": "Evolution Engine",
+    "icon": "🧬",
+    "page": null,
+    "type": "future",
+    "category": "ai",
+    "status": "standby",
+    "version": "future",
+    "description": "Learning and adaptation framework"
+  },
+
+  "projects": {
+    "title": "Projects Center",
+    "icon": "📁",
+    "page": null,
+    "type": "future",
+    "category": "workspace",
+    "status": "standby",
+    "version": "future",
+    "description": "Projects management environment"
+  },
+
+  "documentation": {
+    "title": "Documentation Center",
+    "icon": "📖",
+    "page": null,
+    "type": "future",
+    "category": "documentation",
+    "status": "standby",
+    "version": "future",
+    "description": "Technical documentation system"
+  },
+
+  "storage": {
+    "title": "Storage Center",
+    "icon": "🗄️",
+    "page": null,
+    "type": "future",
+    "category": "storage",
+    "status": "standby",
+    "version": "future",
+    "description": "Storage and persistence layer"
+  },
+
+  "outputs": {
+    "title": "Outputs Center",
+    "icon": "📤",
+    "page": null,
+    "type": "future",
+    "category": "system",
+    "status": "standby",
+    "version": "future",
+    "description": "Generated outputs manager"
+  },
+
+  "monitor": {
+    "title": "System Monitor",
+    "icon": "📡",
+    "page": null,
+    "type": "future",
+    "category": "monitor",
+    "status": "standby",
+    "version": "future",
+    "description": "Enterprise monitoring center"
+  },
+
+  "tools": {
+    "title": "Tools Center",
+    "icon": "🛠️",
+    "page": null,
+    "type": "future",
+    "category": "utilities",
+    "status": "standby",
+    "version": "future",
+    "description": "System administration tools"
+  },
+
+  "settings": {
+    "title": "Settings",
+    "icon": "⚙️",
+    "page": null,
+    "type": "future",
+    "category": "configuration",
+    "status": "standby",
+    "version": "future",
+    "description": "Operating system configuration"
+  }
+}

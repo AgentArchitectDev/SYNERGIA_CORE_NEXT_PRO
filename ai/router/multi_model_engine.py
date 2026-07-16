@@ -1,115 +1,67 @@
-# =========================================================
-# FILE:
-# ai/router/multi_model_engine.py
-# =========================================================
+"""
+============================================================
+SYNERGIA MULTI MODEL ENGINE
+Ejecución real vía Ollama con fallback
+============================================================
+"""
 
-from ai.providers.ollama_provider import (
-    ollama_provider
-)
+import subprocess
 
+from ai.router.model_router import model_router
+from ai.router.fallback_models import FALLBACK_MODELS
 
-# =========================================================
-# MULTI MODEL ENGINE
-# =========================================================
 
 class MultiModelEngine:
 
-    # =====================================================
-    # INIT
-    # =====================================================
-
     def __init__(self):
+        self.last_model = None
 
-        print(
+    # -------------------------------------------------
 
-            "[MULTI MODEL ENGINE LOADED]"
-        )
+    def run(self, task: str, input_text: str):
 
-    # =====================================================
-    # RUN ALL
-    # =====================================================
+        model = model_router.select(task)
+        self.last_model = model
 
-    def run_all(
+        result = self._call_model(model, input_text)
 
-        self,
+        # fallback automático si falla
+        if result.get("status") == "error":
 
-        prompt,
+            for fb in FALLBACK_MODELS:
 
-        heavy_mode=False
-    ):
+                result = self._call_model(fb, input_text)
 
-        # =================================================
-        # LIGHT MODELS
-        # =================================================
+                if result.get("status") == "executed":
+                    break
 
-        if not heavy_mode:
+        return result
 
-            models = [
+    # -------------------------------------------------
 
-                "llama3.2:3b",
+    def _call_model(self, model: str, input_text: str):
 
-                "mistral:latest",
+        try:
+            proc = subprocess.run(
+                ["ollama", "run", model, input_text],
+                capture_output=True,
+                text=True,
+                timeout=60
+            )
 
-                "phi3:mini"
-            ]
-
-        # =================================================
-        # HEAVY MODELS
-        # =================================================
-
-        else:
-
-            models = [
-
-                "llama3:8b",
-
-                "gemma3:4b",
-
-                "qwen2.5-coder:7b"
-            ]
-
-        results = []
-
-        # =================================================
-        # EXECUTION
-        # =================================================
-
-        for model in models:
-
-            print(f"\n>>> RUNNING: {model}")
-
-            try:
-
-                response = ollama_provider.generate(
-
-                    model_name=model,
-
-                    prompt=prompt
-                )
-
-                if not response:
-
-                    response = "[NO RESPONSE]"
-
-            except Exception as e:
-
-                response = (
-
-                    f"[ERROR]: {str(e)}"
-                )
-
-            results.append({
-
+            return {
                 "model": model,
+                "status": "executed",
+                "output": proc.stdout.strip()
+            }
 
-                "response": response
-            })
+        except Exception as e:
 
-        return results
+            return {
+                "model": model,
+                "status": "error",
+                "error": str(e)
+            }
 
-
-# =========================================================
-# GLOBAL INSTANCE
-# =========================================================
 
 multi_model_engine = MultiModelEngine()

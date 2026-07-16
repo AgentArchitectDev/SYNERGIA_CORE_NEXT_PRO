@@ -1,0 +1,184 @@
+{
+    "version": "5.0",
+
+    "application": "SYNERGIA Control Center",
+
+    "modules": [
+
+        {
+            "id": "dashboard",
+
+            "title": "Dashboard",
+
+            "description": "Panel principal",
+
+            "icon": "dashboard",
+
+            "category": "system",
+
+            "module": "gui.pages.dashboard_page",
+
+            "class": "DashboardPage",
+
+            "enabled": true,
+
+            "visible": true,
+
+            "order": 1
+        },
+
+        {
+            "id": "runtime",
+
+            "title": "Runtime",
+
+            "description": "Runtime Manager",
+
+            "icon": "memory",
+
+            "category": "system",
+
+            "module": "gui.pages.runtime_page",
+
+            "class": "RuntimePage",
+
+            "enabled": true,
+
+            "visible": true,
+
+            "order": 2
+        },
+
+        {
+            "id": "kernel",
+
+            "title": "Kernel",
+
+            "description": "Kernel Monitor",
+
+            "icon": "cpu",
+
+            "category": "system",
+
+            "module": "gui.pages.kernel_page",
+
+            "class": "KernelPage",
+
+            "enabled": true,
+
+            "visible": true,
+
+            "order": 3
+        },
+
+        {
+            "id": "memory",
+
+            "title": "Memory",
+
+            "description": "Memory Manager",
+
+            "icon": "database",
+
+            "category": "ai",
+
+            "module": "gui.pages.memory_page",
+
+            "class": "MemoryPage",
+
+            "enabled": true,
+
+            "visible": true,
+
+            "order": 4
+        },
+
+        {
+            "id": "agents",
+
+            "title": "Agents",
+
+            "description": "Agent Manager",
+
+            "icon": "robot",
+
+            "category": "ai",
+
+            "module": "gui.pages.agents_page",
+
+            "class": "AgentsPage",
+
+            "enabled": true,
+
+            "visible": true,
+
+            "order": 5
+        },
+
+        {
+            "id": "models",
+
+            "title": "Models",
+
+            "description": "LLM Manager",
+
+            "icon": "brain",
+
+            "category": "ai",
+
+            "module": "gui.pages.models_page",
+
+            "class": "ModelsPage",
+
+            "enabled": true,
+
+            "visible": true,
+
+            "order": 6
+        },
+
+        {
+            "id": "knowledge",
+
+            "title": "Knowledge",
+
+            "description": "Knowledge Graph",
+
+            "icon": "graph",
+
+            "category": "ai",
+
+            "module": "gui.pages.knowledge_page",
+
+            "class": "KnowledgePage",
+
+            "enabled": true,
+
+            "visible": true,
+
+            "order": 7
+        },
+
+        {
+            "id": "settings",
+
+            "title": "Settings",
+
+            "description": "Configuración",
+
+            "icon": "settings",
+
+            "category": "system",
+
+            "module": "gui.pages.settings_page",
+
+            "class": "SettingsPage",
+
+            "enabled": true,
+
+            "visible": true,
+
+            "order": 8
+        }
+    ]
+}

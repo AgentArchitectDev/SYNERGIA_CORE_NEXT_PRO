@@ -1,18 +1,12 @@
 """
 =========================================================
 SYNERGIA OS
-Control Center V2.0 - Core Console
 
-Workspace Module Loader V2.7
+Workspace V3.5
 
-Integrated Modules:
+ACEA HYBRID RESTORE EDITION
 
-Dashboard
-AI Engine
-Kernel
-Runtime
-Agents
-Memory
+Real Pages + Module Registry + Future Loader
 
 Enterprise Cognitive Operating System AI
 =========================================================
@@ -22,31 +16,34 @@ Enterprise Cognitive Operating System AI
 from PySide6.QtWidgets import (
     QWidget,
     QVBoxLayout,
-    QLabel
+    QLabel,
+    QFrame
 )
 
 
 from PySide6.QtCore import Qt
 
 
+from core.module_registry import ModuleRegistry
+
+
 
 # =====================================================
-# REAL MODULE IMPORTS
+# REAL PAGES
 # =====================================================
 
 
 from pages.dashboard import DashboardPage
-
 from pages.ai_engine import AIEnginePage
-
 from pages.kernel import KernelPage
-
 from pages.runtime import RuntimePage
-
+from pages.cognitive_router import CognitiveRouterPage
 from pages.agents import AgentsPage
-
+from pages.models import ModelsPage
 from pages.memory import MemoryPage
-
+from pages.knowledge import KnowledgePage
+from pages.modules import ModulesPage
+from pages.runtime_monitor import RuntimeMonitorPage
 
 
 
@@ -59,12 +56,13 @@ class Workspace(QWidget):
         super().__init__()
 
 
-
-        self.workspace_layout = QVBoxLayout()
-
+        self.registry = ModuleRegistry()
 
 
-        self.workspace_layout.setContentsMargins(
+        self.layout_main = QVBoxLayout()
+
+
+        self.layout_main.setContentsMargins(
             20,
             20,
             20,
@@ -72,21 +70,17 @@ class Workspace(QWidget):
         )
 
 
-
-        self.workspace_layout.setAlignment(
-            Qt.AlignCenter
+        self.layout_main.setSpacing(
+            10
         )
-
 
 
         self.setLayout(
-            self.workspace_layout
+            self.layout_main
         )
 
 
-
         self.current_page = None
-
 
 
         self.show_home()
@@ -94,22 +88,20 @@ class Workspace(QWidget):
 
 
     # =====================================================
-    # CLEAR CURRENT MODULE
+    # CLEAR
     # =====================================================
 
 
     def clear_workspace(self):
 
 
-        while self.workspace_layout.count():
+        while self.layout_main.count():
 
 
-            item = self.workspace_layout.takeAt(0)
-
+            item = self.layout_main.takeAt(0)
 
 
             widget = item.widget()
-
 
 
             if widget:
@@ -119,16 +111,14 @@ class Workspace(QWidget):
 
 
 
-
-
     # =====================================================
-    # MODULE ROUTER ENGINE
+    # LOAD MODULE
     # =====================================================
 
 
     def load_module(
         self,
-        module
+        module_key
     ):
 
 
@@ -136,188 +126,147 @@ class Workspace(QWidget):
 
 
 
-        # ===============================================
-        # DASHBOARD
-        # ===============================================
+        # ---------------------------------------------
+        # Buscar información Registry
+        # ---------------------------------------------
 
 
-        if module == "dashboard":
-
-
-            self.current_page = DashboardPage()
-
-
-
-        # ===============================================
-        # AI ENGINE
-        # ===============================================
-
-
-        elif module == "ai_engine":
-
-
-            self.current_page = AIEnginePage()
+        module_info = self.registry.get_module(
+            module_key
+        )
 
 
 
-        # ===============================================
-        # KERNEL
-        # ===============================================
+        # ---------------------------------------------
+        # Buscar página real
+        # ---------------------------------------------
 
 
-        elif module == "kernel":
-
-
-            self.current_page = KernelPage()
-
-
-
-        # ===============================================
-        # RUNTIME
-        # ===============================================
-
-
-        elif module == "runtime":
-
-
-            self.current_page = RuntimePage()
+        page_class = self.get_real_page(
+            module_key
+        )
 
 
 
-        # ===============================================
-        # AGENTS
-        # ===============================================
+        if page_class:
 
 
-        elif module == "agents":
-
-
-            self.current_page = AgentsPage()
+            self.current_page = page_class()
 
 
 
-        # ===============================================
-        # MEMORY
-        # ===============================================
+        elif module_info:
 
 
-        elif module == "memory":
+            self.current_page = self.future_module_page(
+                module_info
+            )
 
-
-            self.current_page = MemoryPage()
-
-
-
-        # ===============================================
-        # FUTURE MODULES
-        # ===============================================
 
 
         else:
 
 
-            self.current_page = self.create_placeholder(
-                module
+            self.current_page = self.unknown_module(
+                module_key
             )
 
 
 
-        self.workspace_layout.addWidget(
+        self.layout_main.addWidget(
             self.current_page
         )
 
 
 
     # =====================================================
-    # DEFAULT HOME
+    # REAL PAGE MAP
     # =====================================================
 
 
-    def show_home(self):
-
-
-        self.clear_workspace()
-
-
-
-        title = QLabel(
-            "SYNERGIA OS"
-        )
-
-
-        title.setAlignment(
-            Qt.AlignCenter
-        )
-
-
-
-        title.setStyleSheet("""
-
-            font-size:48px;
-
-            font-weight:bold;
-
-            color:white;
-
-        """)
-
-
-
-        subtitle = QLabel(
-            "Control Center V2.0 - Core Console"
-        )
-
-
-        subtitle.setAlignment(
-            Qt.AlignCenter
-        )
-
-
-
-        subtitle.setStyleSheet("""
-
-            font-size:20px;
-
-            color:#BFBFBF;
-
-        """)
-
-
-
-        self.workspace_layout.addWidget(
-            title
-        )
-
-
-        self.workspace_layout.addWidget(
-            subtitle
-        )
-
-
-
-    # =====================================================
-    # FUTURE MODULE PLACEHOLDER
-    # =====================================================
-
-
-    def create_placeholder(
+    def get_real_page(
         self,
-        module
+        key
+    ):
+
+
+        pages = {
+
+
+            "dashboard":
+            DashboardPage,
+
+
+            "ai_engine":
+            AIEnginePage,
+
+
+            "kernel":
+            KernelPage,
+
+
+            "runtime":
+            RuntimePage,
+
+
+            "router":
+            CognitiveRouterPage,
+
+
+            "agents":
+            AgentsPage,
+
+
+            "models":
+            ModelsPage,
+
+
+            "memory":
+            MemoryPage,
+
+
+            "knowledge":
+            KnowledgePage,
+
+
+            "modules":
+            ModulesPage,
+
+
+            "runtime_monitor":
+            RuntimeMonitorPage
+
+
+        }
+
+
+
+        return pages.get(
+            key
+        )
+
+
+
+    # =====================================================
+    # FUTURE MODULE VIEW
+    # =====================================================
+
+
+    def future_module_page(
+        self,
+        info
     ):
 
 
         page = QWidget()
 
 
-
         layout = QVBoxLayout()
-
 
 
         layout.setAlignment(
             Qt.AlignCenter
         )
-
 
 
         page.setLayout(
@@ -326,8 +275,65 @@ class Workspace(QWidget):
 
 
 
+        card = QFrame()
+
+
+
+        card.setStyleSheet("""
+
+        QFrame{
+
+            background:#20232b;
+
+            border-radius:18px;
+
+            padding:35px;
+
+        }
+
+        """)
+
+
+
+        card_layout = QVBoxLayout()
+
+
+        card.setLayout(
+            card_layout
+        )
+
+
+
+        icon = QLabel(
+
+            info.get(
+                "icon",
+                "🧠"
+            )
+
+        )
+
+
+        icon.setAlignment(
+            Qt.AlignCenter
+        )
+
+
+        icon.setStyleSheet("""
+
+        font-size:55px;
+
+        """)
+
+
+
         title = QLabel(
-            module.upper()
+
+            info.get(
+                "title",
+                "Module"
+            )
+
         )
 
 
@@ -338,45 +344,183 @@ class Workspace(QWidget):
 
         title.setStyleSheet("""
 
-            font-size:40px;
+        color:#00C853;
 
-            font-weight:bold;
+        font-size:30px;
 
-            color:white;
+        font-weight:bold;
 
         """)
 
 
 
-        status = QLabel(
-            "SYNERGIA Module - Loading..."
+        description = QLabel(
+
+f"""
+Reading Module...
+
+
+Description:
+
+{info.get("description","Future module")}
+
+
+
+Type:
+
+{info.get("type","unknown")}
+
+
+
+Version:
+
+{info.get("version","future")}
+
+
+
+Status:
+
+{info.get("status","standby")}
+
+"""
+
         )
 
 
-        status.setAlignment(
+        description.setAlignment(
             Qt.AlignCenter
         )
 
 
-        status.setStyleSheet("""
+        description.setStyleSheet("""
 
-            font-size:18px;
+        color:white;
 
-            color:#BFBFBF;
+        font-size:18px;
 
         """)
 
 
 
-        layout.addWidget(
+        card_layout.addWidget(
+            icon
+        )
+
+
+        card_layout.addWidget(
             title
         )
 
 
-        layout.addWidget(
-            status
+        card_layout.addWidget(
+            description
         )
 
 
+        layout.addWidget(
+            card
+        )
+
 
         return page
+
+
+
+    # =====================================================
+    # UNKNOWN
+    # =====================================================
+
+
+    def unknown_module(
+        self,
+        key
+    ):
+
+
+        label = QLabel(
+
+f"""
+SYNERGIA OS
+
+
+Unknown Module
+
+
+{key}
+
+
+NOT REGISTERED
+
+"""
+
+        )
+
+
+        label.setAlignment(
+            Qt.AlignCenter
+        )
+
+
+        label.setStyleSheet("""
+
+        color:white;
+
+        font-size:25px;
+
+        """)
+
+
+        return label
+
+
+
+    # =====================================================
+    # HOME
+    # =====================================================
+
+
+    def show_home(
+        self
+    ):
+
+
+        self.clear_workspace()
+
+
+
+        home = QLabel(
+
+"""
+🧠 SYNERGIA OS
+
+
+Enterprise Cognitive Operating System
+
+
+SYSTEM READY
+
+
+Module Registry ONLINE
+
+"""
+
+        )
+
+
+        home.setAlignment(
+            Qt.AlignCenter
+        )
+
+
+        home.setStyleSheet("""
+
+        color:white;
+
+        font-size:32px;
+
+        """)
+
+
+        self.layout_main.addWidget(
+            home
+        )
