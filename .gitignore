@@ -63,3 +63,15 @@ ollama_models/
 *.gguf
 *.safetensors
 .venv/
+# Python environments
+.venv/
+venv/
+*/.venv/
+*/venv/
+tools/venv/
+
+# Secrets
+Github.md
+gibhub.md
+*.token
+*.secret
