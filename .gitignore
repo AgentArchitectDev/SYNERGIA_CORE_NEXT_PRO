@@ -62,3 +62,4 @@ ollama_models/
 *.pt
 *.gguf
 *.safetensors
+.venv/
