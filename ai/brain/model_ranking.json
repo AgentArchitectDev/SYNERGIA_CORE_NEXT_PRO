@@ -1,0 +1,29 @@
+{
+  "llama3.2:3b": {
+    "score": 100.21,
+    "uses": 28,
+    "success": 28,
+    "failures": 0,
+    "total_time": 4032.79,
+    "avg_time": 144.03,
+    "last_execution": "2026-08-06T16:17:25.244782"
+  },
+  "gemma3:4b": {
+    "score": 100.11,
+    "uses": 13,
+    "success": 13,
+    "failures": 0,
+    "total_time": 3547.0899999999997,
+    "avg_time": 272.85,
+    "last_execution": "2026-08-06T16:15:19.898716"
+  },
+  "mistral:latest": {
+    "score": 100.09,
+    "uses": 13,
+    "success": 13,
+    "failures": 0,
+    "total_time": 4399.400000000001,
+    "avg_time": 338.42,
+    "last_execution": "2026-08-06T16:20:53.020702"
+  }
+}

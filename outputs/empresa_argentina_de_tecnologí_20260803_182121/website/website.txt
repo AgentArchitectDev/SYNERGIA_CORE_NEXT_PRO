@@ -1,0 +1,94 @@
+**Estructura Web Profesional para una Empresa Argentina de Tecnología Sustentable con Inteligencia Artificial**
+
+**Nombre del proyecto:** "Síntesis"
+
+**Objetivos:**
+
+* Presentar la empresa y sus servicios de manera atractiva y profesional
+* Generar confianza y credibilidad en los visitantes
+* Atratar a clientes potenciales y aumentar las ventas
+
+**Landing Page**
+
+La landing page será el punto de entrada principal para la mayoría de los visitantes. Su objetivo es captar la atención del público objetivo y llevarlo a un destino específico.
+
+* Título: "Síntesis: Tecnología Sustentable con Inteligencia Artificial"
+* Imagen o video de bienvenida
+* Breve introducción sobre la empresa y sus servicios
+* Llamada a acción (CTA) para solicitar información o contactar con la empresa
+
+**Secciones Principales**
+
+1. **Overview**: Presenta una visión general de la empresa y sus servicios.
+2. **Servicios**: Detalla los diferentes servicios ofrecidos por la empresa, incluyendo soluciones de inteligencia artificial y tecnología sustentable.
+3. **Beneficios**: Explica los beneficios de utilizar las soluciones de la empresa para las empresas y organizaciones.
+4. **Testimonios**: Muestra testimonios de clientes satisfechos y reconocidos.
+5. **Noticias**: Publica artículos y noticias relacionadas con la industria de la tecnología sustentable y la inteligencia artificial.
+
+**SEO**
+
+Para mejorar el SEO, implementaremos las siguientes estrategias:
+
+1. **Palabras clave**: Identificamos las palabras clave relevantes para la empresa y las incluyimos en la estructura del sitio web.
+2. **Optimización de imágenes**: Utilizamos descripciones detalladas para las imágenes utilizadas en el sitio web.
+3. **Meta descripciones**: Crea metadescritos precisos y atractivos para cada página del sitio web.
+4. **Enlaces internos**: Crear enlaces internos para ayudar a los visitantes a navegar por el sitio web de manera sencilla.
+
+**Diseño Moderno**
+
+El diseño del sitio web será moderno, minimalista y fácil de usar. Utilizaremos colores que se ajusten al tono de la empresa, como el azul y el verde. La tipografía será clara y legible.
+
+* **Imágenes**: Utilizamos imágenes de alta calidad que representen la tecnología sustentable y la inteligencia artificial.
+* **Iconos**: Utilizamos iconos modernos y sencillos para ilustrar los servicios ofrecidos.
+* **Resaltar el llamado a acción (CTA)**: Utilizamos colores llamativos y tamaños grandes para resaltar el CTA.
+
+**Experiencia de usuario**
+
+La experiencia del usuario será central en la creación de esta estructura web. El sitio web estará diseñado para ser fácil de navegar y utilizar, con las siguientes características:
+
+1. **Menú**: Un menú desplegable para facilitar la navegación.
+2. **Páginas estáticas**: Páginas estáticas con información clara y concisa.
+3. **Búsqueda**: Una búsqueda eficiente para ayudar a los visitantes a encontrar información específica.
+
+**Estrategia web**
+
+La estrategia web estará enfocada en:
+
+1. **Generar confianza**: Presentar la empresa de manera creíble y profesional.
+2. **Atraer visitantes**: Utilizar técnicas de SEO y publicidad para atraer visitantes al sitio web.
+3. **Convertir visitantes en clientes**: Ofrecer servicios personalizados y de alta calidad.
+
+**Estructura del sitio web**
+
+La estructura del sitio web será la siguiente:
+
+* **Landing page**
+	+ Overview
+	+ Servicios
+	+ Beneficios
+	+ Testimonios
+	+ Noticias
+* **Servicios**
+	+ Soluciones de inteligencia artificial
+	+ Tecnología sustentable
+	+ Desarrollo de aplicaciones móviles
+* **Beneficios**
+	+ Mejoras en la eficiencia
+	+ Reducción del impacto ambiental
+	+ Aumento de la productividad
+* **Testimonios**
+	+ Citas y reconocimientos de clientes satisfechos
+* **Noticias**
+	+ Artículos y noticias relacionadas con la industria
+
+**Desarrollo**
+
+El desarrollo del sitio web se realizará utilizando tecnologías como HTML5, CSS3 y JavaScript. Utilizaremos frameworks como Bootstrap para asegurar una experiencia de usuario fluida y responsive.
+
+**Lanzamiento**
+
+El sitio web estará listo para lanzarse en un plazo de 8 semanas después de la aprobación del diseño y el contenido.
+
+**Revisión y actualización**
+
+La estructura web se revisará y actualizará regularmente para asegurarse de que esté al día con las últimas tendencias en tecnología y diseño.

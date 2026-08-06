@@ -4,20 +4,30 @@ from ai.providers.ollama_provider import (
     OllamaProvider
 )
 
+from ai.core_system.core.ai_orchestrator import (
+    ai_orchestrator
+)
+
 
 # =========================================================
 # SOCIAL GENERATOR
+# SYNERGIA CORE NEXT PRO
+#
+# STAGE 6.3.8.3
+# AI ORCHESTRATOR INTEGRATION
 # =========================================================
 
-print(
 
+print(
     "[SOCIAL GENERATOR LOADED]"
 )
+
 
 
 # =========================================================
 # GENERATE SOCIAL
 # =========================================================
+
 
 def generate_social(
 
@@ -25,50 +35,84 @@ def generate_social(
 
     project_path,
 
-    model
+    model=None
+
 ):
 
+
     provider = OllamaProvider()
+
+
+
+    # =====================================================
+    # ADAPTIVE MODEL SELECTION
+    # =====================================================
+
+
+    if model is None:
+
+        model = ai_orchestrator.select_model(
+            "social"
+        )
+
+
+
+    print()
+
+    print(
+        f"[SOCIAL MODEL] {model}"
+    )
+
+
 
     # =====================================================
     # AI PROMPT
     # =====================================================
 
+
     ai_prompt = f"""
 
-    Crear estrategia completa de redes sociales para:
+Crear estrategia de redes sociales profesional para:
 
-    {prompt}
+{prompt}
 
-    Generar:
 
-    - Instagram
-    - TikTok
-    - Facebook
-    - campañas
-    - hashtags
-    - reels
-    - copies
-    - calendario contenido
-    - ideas virales
-    - automatización social
+Generar:
 
-    """
+- Publicaciones iniciales
+- Calendario de contenido
+- Tono de comunicación
+- Hashtags
+- Estrategia de crecimiento
+- Llamados a la acción
+- Ideas para campañas
+
+
+Responder con estructura organizada.
+
+"""
+
+
 
     # =====================================================
     # GENERATE
     # =====================================================
+
 
     response = provider.generate(
 
         prompt=ai_prompt,
 
         model=model
+
     )
 
+
+
     # =====================================================
-    # SAVE TXT
+    # SAVE OUTPUT
     # =====================================================
+
 
     output_file = (
 
@@ -77,7 +121,19 @@ def generate_social(
         / "social"
 
         / "social.txt"
+
     )
+
+
+    output_file.parent.mkdir(
+
+        parents=True,
+
+        exist_ok=True
+
+    )
+
+
 
     with open(
 
@@ -86,11 +142,33 @@ def generate_social(
         "w",
 
         encoding="utf-8"
+
     ) as f:
 
         f.write(response)
 
-    print(
 
-        f"\n[SOCIAL GENERATED]\n{output_file}"
+
+    print()
+
+    print(
+        "[SOCIAL GENERATED]"
     )
+
+    print(
+        output_file
+    )
+
+
+
+    return {
+
+        "module": "social",
+
+        "model": model,
+
+        "file": str(output_file),
+
+        "status": "completed"
+
+    }

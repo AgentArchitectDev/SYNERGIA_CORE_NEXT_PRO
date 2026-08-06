@@ -1,0 +1,190 @@
+# =========================================================
+# AI ORCHESTRATOR - SYNERGIA CORE NEXT PRO
+# STAGE 6.3.5 - ADAPTIVE ROUTER LAYER
+# =========================================================
+
+print("[AI ORCHESTRATOR LOADED]")
+
+
+from ai.core_system.brain.model_ranker import (
+    model_ranker
+)
+
+
+# =========================================================
+# AI ORCHESTRATOR
+# =========================================================
+
+
+class AIOrchestrator:
+
+
+    # =====================================================
+    # INIT
+    # =====================================================
+
+    def __init__(self):
+
+
+        # =================================================
+        # ROUTING BASE ESTABLE
+        # =================================================
+
+        self.routing = {
+
+
+            # WEB
+            "website":
+            "llama3.2:3b",
+
+
+            # BRANDING
+            "branding":
+            "gemma3:4b",
+
+
+            # SOCIAL
+            "social":
+            "llama3.2:3b",
+
+
+            # DOCUMENTATION
+            "docs":
+            "mistral:latest"
+
+
+        }
+
+
+
+        # MODO ADAPTIVE FUTURO
+
+        self.adaptive_enabled = True
+
+
+
+    # =====================================================
+    # SELECT MODEL
+    # =====================================================
+
+    def select_model(
+        self,
+        task_type
+    ):
+
+
+        base_model = self.routing.get(
+
+            task_type,
+
+            "llama3.2:3b"
+
+        )
+
+
+
+        print(
+
+            f"\n[ROUTER] task={task_type} → model={base_model}"
+
+        )
+
+
+        return base_model
+
+
+
+    # =====================================================
+    # REGISTER PERFORMANCE
+    # =====================================================
+
+    def register_execution(
+
+        self,
+
+        model,
+
+        duration,
+
+        success=True
+
+    ):
+
+
+        result = model_ranker.register_execution(
+
+            model=model,
+
+            duration=duration,
+
+            success=success
+
+        )
+
+
+        print(
+
+            "\n[MODEL PERFORMANCE UPDATED]"
+
+        )
+
+
+        print(result)
+
+
+        return result
+
+
+
+    # =====================================================
+    # BEST MODEL
+    # =====================================================
+
+    def best_model(self):
+
+
+        model = model_ranker.best_model()
+
+
+        print(
+
+            f"\n[BEST MODEL] {model}"
+
+        )
+
+
+        return model
+
+
+
+    # =====================================================
+    # SCORE COMPATIBILITY
+    # =====================================================
+
+    def score_model(
+
+        self,
+
+        model,
+
+        score=1
+
+    ):
+
+
+        return model_ranker.register_execution(
+
+            model=model,
+
+            score=score
+
+        )
+
+
+
+# =========================================================
+# GLOBAL SINGLETON
+# =========================================================
+
+
+ai_orchestrator = AIOrchestrator()

@@ -1,0 +1,12 @@
+{
+  "project": "empresa_argentina_de_tecnologí_20260803_182121",
+  "created": "2026-08-03T18:42:29.691097",
+  "files": [
+    "social/social.txt",
+    "branding/branding.txt",
+    "docs/docs.txt",
+    "website/website.txt"
+  ],
+  "total_files": 4,
+  "status": "ready"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "VALID",
+  "project": "outputs/empresa_argentina_de_servicios_20260805_161225",
+  "score": 100.0,
+  "approved": 4,
+  "total_checks": 4,
+  "checks": {
+    "website": {
+      "file": "outputs/empresa_argentina_de_servicios_20260805_161225/website/website.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 2805,
+      "status": "OK"
+    },
+    "branding": {
+      "file": "outputs/empresa_argentina_de_servicios_20260805_161225/branding/branding.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 4576,
+      "status": "OK"
+    },
+    "social": {
+      "file": "outputs/empresa_argentina_de_servicios_20260805_161225/social/social.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3103,
+      "status": "OK"
+    },
+    "docs": {
+      "file": "outputs/empresa_argentina_de_servicios_20260805_161225/docs/docs.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 2776,
+      "status": "OK"
+    }
+  },
+  "errors": [],
+  "validated_at": "2026-08-05T16:28:14.360338"
+}

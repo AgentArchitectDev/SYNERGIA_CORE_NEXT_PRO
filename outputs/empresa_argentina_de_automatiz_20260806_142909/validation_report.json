@@ -1,0 +1,39 @@
+{
+  "status": "VALID",
+  "project": "outputs/empresa_argentina_de_automatiz_20260806_142909",
+  "score": 100.0,
+  "approved": 4,
+  "total_checks": 4,
+  "checks": {
+    "website": {
+      "file": "outputs/empresa_argentina_de_automatiz_20260806_142909/website/website.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3073,
+      "status": "OK"
+    },
+    "branding": {
+      "file": "outputs/empresa_argentina_de_automatiz_20260806_142909/branding/branding.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 4489,
+      "status": "OK"
+    },
+    "social": {
+      "file": "outputs/empresa_argentina_de_automatiz_20260806_142909/social/social.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 4270,
+      "status": "OK"
+    },
+    "docs": {
+      "file": "outputs/empresa_argentina_de_automatiz_20260806_142909/docs/docs.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3104,
+      "status": "OK"
+    }
+  },
+  "errors": [],
+  "validated_at": "2026-08-06T14:44:52.267394"
+}

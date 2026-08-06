@@ -1,0 +1,158 @@
+import ollama
+import time
+
+
+from ai.runtime.execution_history import (
+    execution_history
+)
+
+
+# =========================================================
+# OLLAMA PROVIDER
+# STAGE 6.3.2 - RUNTIME METRICS INTEGRATION
+# =========================================================
+
+
+print("[OLLAMA PROVIDER LOADED]")
+
+
+class OllamaProvider:
+
+
+    # =====================================================
+    # GENERATE
+    # =====================================================
+
+    def generate(
+        self,
+        prompt,
+        model="llama3.2:3b"
+    ):
+
+        start_time = time.time()
+
+
+        try:
+
+            print("\n[OLLAMA CALL]")
+            print(f"MODEL: {model}")
+
+
+            response = ollama.chat(
+
+                model=model,
+
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ]
+            )
+
+
+            duration = round(
+                time.time() - start_time,
+                2
+            )
+
+
+            print(
+                f"[OLLAMA OK] time={duration}s"
+            )
+
+
+            content = response.get(
+                "message",
+                {}
+            ).get(
+                "content",
+                ""
+            )
+
+
+            if not content:
+
+
+                execution_history.register(
+
+                    task="OLLAMA_GENERATE",
+
+                    node="MAQ2",
+
+                    model=model,
+
+                    result="empty_response"
+
+                )
+
+
+                return "[OLLAMA ERROR] empty response"
+
+
+
+            # =============================================
+            # STAGE 6.3.2
+            # REGISTER SUCCESS
+            # =============================================
+
+
+            execution_history.register(
+
+                task="OLLAMA_GENERATE",
+
+                node="MAQ2",
+
+                model=model,
+
+                result=f"completed_{duration}s"
+
+            )
+
+
+            return content
+
+
+
+        except Exception as e:
+
+
+            duration = round(
+                time.time() - start_time,
+                2
+            )
+
+
+            print("\n[OLLAMA ERROR]")
+            print(str(e))
+
+
+            execution_history.register(
+
+                task="OLLAMA_GENERATE",
+
+                node="MAQ2",
+
+                model=model,
+
+                result=f"failed_{duration}s"
+
+            )
+
+
+            return f"[OLLAMA FAIL] {str(e)}"
+
+
+
+    # =====================================================
+    # SIMPLE GENERATE
+    # =====================================================
+
+    def simple(
+        self,
+        prompt
+    ):
+
+        return self.generate(
+            prompt
+        )

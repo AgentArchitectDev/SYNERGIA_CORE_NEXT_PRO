@@ -1,0 +1,39 @@
+{
+  "status": "VALID",
+  "project": "outputs/empresa_argentina_de_software__20260805_151253",
+  "score": 100.0,
+  "approved": 4,
+  "total_checks": 4,
+  "checks": {
+    "website": {
+      "file": "outputs/empresa_argentina_de_software__20260805_151253/website/website.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3081,
+      "status": "OK"
+    },
+    "branding": {
+      "file": "outputs/empresa_argentina_de_software__20260805_151253/branding/branding.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 4244,
+      "status": "OK"
+    },
+    "social": {
+      "file": "outputs/empresa_argentina_de_software__20260805_151253/social/social.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3298,
+      "status": "OK"
+    },
+    "docs": {
+      "file": "outputs/empresa_argentina_de_software__20260805_151253/docs/docs.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3171,
+      "status": "OK"
+    }
+  },
+  "errors": [],
+  "validated_at": "2026-08-05T15:29:04.227066"
+}

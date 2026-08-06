@@ -4,20 +4,30 @@ from ai.providers.ollama_provider import (
     OllamaProvider
 )
 
+from ai.core_system.core.ai_orchestrator import (
+    ai_orchestrator
+)
+
 
 # =========================================================
 # BRANDING GENERATOR
+# SYNERGIA CORE NEXT PRO
+#
+# STAGE 6.3.8.2
+# AI ORCHESTRATOR INTEGRATION
 # =========================================================
 
-print(
 
+print(
     "[BRANDING GENERATOR LOADED]"
 )
+
 
 
 # =========================================================
 # GENERATE BRANDING
 # =========================================================
+
 
 def generate_branding(
 
@@ -25,48 +35,85 @@ def generate_branding(
 
     project_path,
 
-    model
+    model=None
+
 ):
 
+
     provider = OllamaProvider()
+
+
+
+    # =====================================================
+    # ADAPTIVE MODEL SELECTION
+    # =====================================================
+
+
+    if model is None:
+
+        model = ai_orchestrator.select_model(
+            "branding"
+        )
+
+
+
+    print()
+
+    print(
+        f"[BRANDING MODEL] {model}"
+    )
+
+
 
     # =====================================================
     # AI PROMPT
     # =====================================================
 
+
     ai_prompt = f"""
 
-    Crear branding profesional para:
+Crear identidad de marca profesional para:
 
-    {prompt}
+{prompt}
 
-    Generar:
 
-    - naming
-    - slogans
-    - identidad visual
-    - colores
-    - branding moderno
-    - concepto de marca
-    - estilo visual
-    - tono comunicacional
+Generar:
 
-    """
+- Nombre de marca
+- Concepto
+- Identidad visual
+- Colores sugeridos
+- Tipografía
+- Personalidad de marca
+- Diferenciación comercial
+- Eslogan
+
+
+Responder con estructura clara.
+
+"""
+
+
 
     # =====================================================
     # GENERATE
     # =====================================================
+
 
     response = provider.generate(
 
         prompt=ai_prompt,
 
         model=model
+
     )
 
+
+
     # =====================================================
-    # SAVE TXT
+    # SAVE OUTPUT
     # =====================================================
+
 
     output_file = (
 
@@ -75,7 +122,19 @@ def generate_branding(
         / "branding"
 
         / "branding.txt"
+
     )
+
+
+    output_file.parent.mkdir(
+
+        parents=True,
+
+        exist_ok=True
+
+    )
+
+
 
     with open(
 
@@ -84,11 +143,33 @@ def generate_branding(
         "w",
 
         encoding="utf-8"
+
     ) as f:
 
         f.write(response)
 
-    print(
 
-        f"\n[BRANDING GENERATED]\n{output_file}"
+
+    print()
+
+    print(
+        "[BRANDING GENERATED]"
     )
+
+    print(
+        output_file
+    )
+
+
+
+    return {
+
+        "module": "branding",
+
+        "model": model,
+
+        "file": str(output_file),
+
+        "status": "completed"
+
+    }

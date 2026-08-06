@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "path": "outputs/empresa_argentina_de_innovació_20260804_161959",
+            "status": "VALIDATED",
+            "score": 100,
+            "created_at": "2026-08-04T18:17:32.770744"
+        },
+        {
+            "path": "outputs/empresa_argentina_de_solucione_20260805_135223",
+            "status": "VALID",
+            "score": 100.0,
+            "created_at": "2026-08-05T14:05:54.203764"
+        },
+        {
+            "path": "outputs/empresa_argentina_de_software__20260805_151253",
+            "status": "VALID",
+            "score": 100.0,
+            "created_at": "2026-08-05T15:29:04.253508"
+        },
+        {
+            "path": "outputs/empresa_argentina_de_software__20260805_153144",
+            "status": "VALID",
+            "score": 100.0,
+            "created_at": "2026-08-05T15:48:41.456512"
+        }
+    ]
+}

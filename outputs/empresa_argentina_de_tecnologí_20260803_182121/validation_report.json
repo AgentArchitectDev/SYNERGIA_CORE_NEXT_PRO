@@ -1,0 +1,39 @@
+{
+  "status": "VALID",
+  "project": "outputs/empresa_argentina_de_tecnologí_20260803_182121",
+  "score": 100.0,
+  "approved": 4,
+  "total_checks": 4,
+  "checks": {
+    "website": {
+      "file": "outputs/empresa_argentina_de_tecnologí_20260803_182121/website/website.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 4373,
+      "status": "OK"
+    },
+    "branding": {
+      "file": "outputs/empresa_argentina_de_tecnologí_20260803_182121/branding/branding.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 4463,
+      "status": "OK"
+    },
+    "social": {
+      "file": "outputs/empresa_argentina_de_tecnologí_20260803_182121/social/social.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3433,
+      "status": "OK"
+    },
+    "docs": {
+      "file": "outputs/empresa_argentina_de_tecnologí_20260803_182121/docs/docs.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3809,
+      "status": "OK"
+    }
+  },
+  "errors": [],
+  "validated_at": "2026-08-04T16:19:07.991329"
+}

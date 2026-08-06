@@ -1,47 +1,74 @@
 [
     {
         "id": 1,
-        "task": "crear aplicación web cliente",
+        "task": "OLLAMA_GENERATE",
         "node": "MAQ2",
-        "agent": "Developer Agent",
-        "model": "deepseek-coder",
-        "result": "completed",
-        "timestamp": 1784236315.234214
+        "agent": null,
+        "model": "llama3.2:3b",
+        "result": "completed_183.35s",
+        "timestamp": 1786043452.3924117
     },
     {
         "id": 2,
-        "task": "analizar arquitectura",
+        "task": "WEBSITE",
         "node": "MAQ2",
-        "agent": "Business Agent",
-        "model": "qwen",
+        "agent": null,
+        "model": null,
         "result": "completed",
-        "timestamp": 1784236315.2346754
+        "timestamp": 1786043452.3942094
     },
     {
         "id": 3,
-        "task": "crear aplicación web",
+        "task": "OLLAMA_GENERATE",
         "node": "MAQ2",
-        "agent": "Developer Agent",
-        "model": "deepseek-coder",
-        "result": "completed",
-        "timestamp": 1784236948.3037853
+        "agent": null,
+        "model": "gemma3:4b",
+        "result": "completed_267.5s",
+        "timestamp": 1786043719.8983
     },
     {
         "id": 4,
-        "task": "crear aplicación web",
+        "task": "BRANDING",
         "node": "MAQ2",
-        "agent": "Developer Agent",
-        "model": "deepseek-coder",
+        "agent": null,
+        "model": null,
         "result": "completed",
-        "timestamp": 1784237410.7022786
+        "timestamp": 1786043719.899357
     },
     {
         "id": 5,
-        "task": "crear aplicación web cliente",
+        "task": "OLLAMA_GENERATE",
         "node": "MAQ2",
-        "agent": "Developer Agent",
-        "model": "deepseek-coder",
+        "agent": null,
+        "model": "llama3.2:3b",
+        "result": "completed_125.34s",
+        "timestamp": 1786043845.2445602
+    },
+    {
+        "id": 6,
+        "task": "SOCIAL",
+        "node": "MAQ2",
+        "agent": null,
+        "model": null,
         "result": "completed",
-        "timestamp": 1784237597.2940962
+        "timestamp": 1786043845.2452354
+    },
+    {
+        "id": 7,
+        "task": "OLLAMA_GENERATE",
+        "node": "MAQ2",
+        "agent": null,
+        "model": "mistral:latest",
+        "result": "completed_207.77s",
+        "timestamp": 1786044053.0195565
+    },
+    {
+        "id": 8,
+        "task": "DOCS",
+        "node": "MAQ2",
+        "agent": null,
+        "model": null,
+        "result": "completed",
+        "timestamp": 1786044053.0378327
     }
 ]

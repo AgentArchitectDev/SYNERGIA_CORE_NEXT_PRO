@@ -1,0 +1,39 @@
+{
+  "status": "VALID",
+  "project": "outputs/empresa_argentina_de_inteligen_20260806_160749",
+  "score": 100.0,
+  "approved": 4,
+  "total_checks": 4,
+  "checks": {
+    "website": {
+      "file": "outputs/empresa_argentina_de_inteligen_20260806_160749/website/website.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3791,
+      "status": "OK"
+    },
+    "branding": {
+      "file": "outputs/empresa_argentina_de_inteligen_20260806_160749/branding/branding.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 4762,
+      "status": "OK"
+    },
+    "social": {
+      "file": "outputs/empresa_argentina_de_inteligen_20260806_160749/social/social.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3962,
+      "status": "OK"
+    },
+    "docs": {
+      "file": "outputs/empresa_argentina_de_inteligen_20260806_160749/docs/docs.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3030,
+      "status": "OK"
+    }
+  },
+  "errors": [],
+  "validated_at": "2026-08-06T16:20:53.039343"
+}

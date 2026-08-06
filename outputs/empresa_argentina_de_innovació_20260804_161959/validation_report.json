@@ -1,0 +1,39 @@
+{
+  "status": "VALID",
+  "project": "outputs/empresa_argentina_de_innovació_20260804_161959",
+  "score": 100.0,
+  "approved": 4,
+  "total_checks": 4,
+  "checks": {
+    "website": {
+      "file": "outputs/empresa_argentina_de_innovació_20260804_161959/website/website.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3773,
+      "status": "OK"
+    },
+    "branding": {
+      "file": "outputs/empresa_argentina_de_innovació_20260804_161959/branding/branding.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 4146,
+      "status": "OK"
+    },
+    "social": {
+      "file": "outputs/empresa_argentina_de_innovació_20260804_161959/social/social.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3942,
+      "status": "OK"
+    },
+    "docs": {
+      "file": "outputs/empresa_argentina_de_innovació_20260804_161959/docs/docs.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 2913,
+      "status": "OK"
+    }
+  },
+  "errors": [],
+  "validated_at": "2026-08-04T16:37:41.847250"
+}

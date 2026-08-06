@@ -1,0 +1,198 @@
+# =========================================================
+# SYNERGIA CORE NEXT PRO
+# FASTAPI APPLICATION
+# STAGE 6.3.15.7.6.2
+# AI RUNTIME OBSERVABILITY API INTEGRATION
+# =========================================================
+
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+
+import os
+import json
+
+
+
+# =========================================================
+# OBSERVABILITY ROUTER
+# =========================================================
+
+from backend.observability.routes import (
+    router as observability_router
+)
+
+
+
+print("[SYNERGIA FASTAPI APP LOADED]")
+
+
+
+# =========================================================
+# FASTAPI INSTANCE
+# =========================================================
+
+
+app = FastAPI(
+    title="SYNERGIA CORE NEXT PRO",
+    description="AI Business Operating System API",
+    version="6.3.15.7.6.2"
+)
+
+
+
+# =========================================================
+# CORS
+# =========================================================
+
+
+app.add_middleware(
+    CORSMiddleware,
+
+    allow_origins=["*"],
+
+    allow_methods=["*"],
+
+    allow_headers=["*"]
+)
+
+
+
+# =========================================================
+# OBSERVABILITY API
+# =========================================================
+
+
+app.include_router(
+    observability_router
+)
+
+
+
+# =========================================================
+# CMS STORAGE
+# =========================================================
+
+
+BASE = "projects"
+
+
+
+# =========================================================
+# CMS PAGE LOAD
+# =========================================================
+
+
+@app.get("/page/{project}/{page}")
+
+def get_page(
+    project,
+    page
+):
+
+    path = (
+        f"{BASE}/{project}/pages/{page}.json"
+    )
+
+
+    if not os.path.exists(path):
+
+        return {
+
+            "slug": page,
+
+            "title": page,
+
+            "blocks": []
+
+        }
+
+
+
+    with open(path) as f:
+
+        return json.load(f)
+
+
+
+# =========================================================
+# CMS PAGE SAVE
+# =========================================================
+
+
+@app.post("/page/save")
+
+async def save_page(
+    data: dict
+):
+
+    project = data["project"]
+
+    page = data["page"]
+
+
+    os.makedirs(
+
+        f"{BASE}/{project}/pages",
+
+        exist_ok=True
+
+    )
+
+
+    with open(
+
+        f"{BASE}/{project}/pages/{page['slug']}.json",
+
+        "w"
+
+    ) as f:
+
+
+        json.dump(
+
+            page,
+
+            f,
+
+            indent=4
+
+        )
+
+
+
+    return {
+
+        "status":
+
+        "saved"
+
+    }
+
+
+
+# =========================================================
+# ROOT HEALTH CHECK
+# =========================================================
+
+
+@app.get("/")
+
+def root():
+
+    return {
+
+        "system":
+
+        "SYNERGIA CORE NEXT PRO",
+
+        "status":
+
+        "running",
+
+        "stage":
+
+        "6.3.15.7.6.2"
+
+    }

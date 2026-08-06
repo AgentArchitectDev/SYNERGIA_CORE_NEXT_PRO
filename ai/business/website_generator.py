@@ -4,20 +4,30 @@ from ai.providers.ollama_provider import (
     OllamaProvider
 )
 
+from ai.core_system.core.ai_orchestrator import (
+    ai_orchestrator
+)
+
 
 # =========================================================
 # WEBSITE GENERATOR
+# SYNERGIA CORE NEXT PRO
+#
+# STAGE 6.3.8.1
+# AI ORCHESTRATOR INTEGRATION
 # =========================================================
 
-print(
 
+print(
     "[WEBSITE GENERATOR LOADED]"
 )
+
 
 
 # =========================================================
 # GENERATE WEBSITE
 # =========================================================
+
 
 def generate_website(
 
@@ -25,46 +35,84 @@ def generate_website(
 
     project_path,
 
-    model
+    model=None
+
 ):
 
+
     provider = OllamaProvider()
+
+
+
+    # =====================================================
+    # ADAPTIVE MODEL SELECTION
+    # =====================================================
+
+
+    if model is None:
+
+        model = ai_orchestrator.select_model(
+            "website"
+        )
+
+
+
+    print()
+
+    print(
+        f"[WEBSITE MODEL] {model}"
+    )
+
+
 
     # =====================================================
     # AI PROMPT
     # =====================================================
 
+
     ai_prompt = f"""
 
-    Crear estructura web profesional para:
+Crear estructura web profesional para:
 
-    {prompt}
+{prompt}
 
-    Generar:
 
-    - Landing page
-    - Secciones
-    - SEO
-    - CTA
-    - Diseño moderno
-    - Estrategia web
+Generar:
 
-    """
+- Landing page
+- Secciones principales
+- SEO
+- CTA
+- Diseño moderno
+- Experiencia usuario
+- Estrategia web
+
+
+Responder con estructura clara.
+
+"""
+
+
 
     # =====================================================
     # GENERATE
     # =====================================================
+
 
     response = provider.generate(
 
         prompt=ai_prompt,
 
         model=model
+
     )
 
+
+
     # =====================================================
-    # SAVE
+    # SAVE OUTPUT
     # =====================================================
+
 
     output_file = (
 
@@ -73,7 +121,19 @@ def generate_website(
         / "website"
 
         / "website.txt"
+
     )
+
+
+    output_file.parent.mkdir(
+
+        parents=True,
+
+        exist_ok=True
+
+    )
+
+
 
     with open(
 
@@ -82,11 +142,33 @@ def generate_website(
         "w",
 
         encoding="utf-8"
+
     ) as f:
 
         f.write(response)
 
-    print(
 
-        f"\n[WEBSITE GENERATED]\n{output_file}"
+
+    print()
+
+    print(
+        "[WEBSITE GENERATED]"
     )
+
+    print(
+        output_file
+    )
+
+
+
+    return {
+
+        "module": "website",
+
+        "model": model,
+
+        "file": str(output_file),
+
+        "status": "completed"
+
+    }

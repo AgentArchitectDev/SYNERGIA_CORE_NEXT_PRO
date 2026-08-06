@@ -1,0 +1,13 @@
+{
+  "project": "empresa_argentina_de_software__20260805_153144",
+  "created": "2026-08-05T15:48:41.648743",
+  "files": [
+    "validation_report.json",
+    "social/social.txt",
+    "branding/branding.txt",
+    "docs/docs.txt",
+    "website/website.txt"
+  ],
+  "total_files": 5,
+  "status": "ready"
+}

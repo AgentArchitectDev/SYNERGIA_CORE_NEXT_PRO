@@ -1,0 +1,13 @@
+{
+  "project": "empresa_argentina_de_solucione_20260805_135223",
+  "created": "2026-08-05T14:05:54.494799",
+  "files": [
+    "validation_report.json",
+    "social/social.txt",
+    "branding/branding.txt",
+    "docs/docs.txt",
+    "website/website.txt"
+  ],
+  "total_files": 5,
+  "status": "ready"
+}

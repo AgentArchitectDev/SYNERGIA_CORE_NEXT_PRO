@@ -1,0 +1,39 @@
+{
+  "status": "VALID",
+  "project": "outputs/empresa_argentina_de_solucione_20260805_175811",
+  "score": 100.0,
+  "approved": 4,
+  "total_checks": 4,
+  "checks": {
+    "website": {
+      "file": "outputs/empresa_argentina_de_solucione_20260805_175811/website/website.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3799,
+      "status": "OK"
+    },
+    "branding": {
+      "file": "outputs/empresa_argentina_de_solucione_20260805_175811/branding/branding.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 5014,
+      "status": "OK"
+    },
+    "social": {
+      "file": "outputs/empresa_argentina_de_solucione_20260805_175811/social/social.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3929,
+      "status": "OK"
+    },
+    "docs": {
+      "file": "outputs/empresa_argentina_de_solucione_20260805_175811/docs/docs.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 2481,
+      "status": "OK"
+    }
+  },
+  "errors": [],
+  "validated_at": "2026-08-05T18:14:40.505996"
+}

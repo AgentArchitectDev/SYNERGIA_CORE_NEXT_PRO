@@ -1,0 +1,65 @@
+**Estructura Web Profesional para Empresa de Tecnología Sustentable**
+
+**Landing Page**
+
+* **Título**: "Desarrollamos tecnologías sostenibles para un futuro más verde"
+* **Descripción**: "Nuestra empresa se enfoca en desarrollar soluciones tecnológicas innovadoras y sostenibles para reducir el impacto ambiental. Descubre cómo podemos ayudarte a alcanzar tus objetivos de sostenibilidad."
+* **Imágenes**: Imágenes de tecnología y naturaleza, con un tono moderno y minimalista.
+* **Botón de llamada a la acción (CTA)**: "Descubre más" o "Conoce nuestras soluciones"
+
+**Secciones Principales**
+
+1. **Inicio**
+	* **Portafolio**: Sección para mostrar proyectos y logros de la empresa
+	* **Noticias**: Sección para publicar noticias y actualizaciones sobre la empresa
+2. **¿Qué hacemos?**
+	* **Soluciones**: Sección para describir las soluciones tecnológicas que ofrece la empresa
+	* **Beneficios**: Sección para explicar los beneficios de trabajar con la empresa
+3. **Nuestro equipo**
+	* **Equipo**: Sección para mostrar la formación y experiencia del equipo
+	* **Contacto**: Sección para proporcionar información de contacto
+4. **Servicios**
+	* **Servicios**: Sección para describir los servicios que ofrece la empresa
+
+**SEO**
+
+* **Palabras clave**:
+ + "Tecnología sostenible"
+ + "Innovación ambiental"
+ + "Soluciones tecnológicas"
+* **Meta títulos y descripciones**:
+ + Título: "Desarrollamos tecnologías sostenibles para un futuro más verde"
+ + Descripción: "Nuestra empresa se enfoca en desarrollar soluciones tecnológicas innovadoras y sostenibles para reducir el impacto ambiental."
+* **Etiquetas**:
+ + Etiqueta de "Tecnología sostenible" en la sección de inicio
+	+ Etiqueta de "Innovación ambiental" en la sección de "¿Qué hacemos?"
+
+**CTA**
+
+* **Botón de llamada a la acción**: "Descubre más" o "Conoce nuestras soluciones"
+* **Enlace a página de contacto**: Para que los visitantes puedan obtener más información sobre la empresa
+
+**Diseño Moderno**
+
+* **Fondo**: Fondo de color claro y minimalista
+* **Tipografía**: Tipografía moderna y fácil de leer
+* **Imágenes**: Imágenes de tecnología y naturaleza, con un tono moderno y minimalista
+* **Iconos**: Iconos simples y elegantes para destacar los elementos clave
+
+**Experiencia del Usuario**
+
+* **Menú desplegable**: Menú desplegable para facilitar la navegación
+* **Botones de llamada a la acción**: Botones de llamada a la acción (CTA) claros y prominentes
+* **Formularios de contacto**: Formularios de contacto sencillos y fáciles de usar
+
+**Estrategia Web**
+
+1. **Objetivos**: Reducir el impacto ambiental y aumentar la visibilidad de la empresa.
+2. **Alcance**: Atender a empresas y organizaciones que buscan soluciones tecnológicas sostenibles.
+3. **Mensajes clave**:
+ + "Nuestra empresa se enfoca en desarrollar soluciones tecnológicas innovadoras y sostenibles para reducir el impacto ambiental."
+ + "Descubre cómo podemos ayudarte a alcanzar tus objetivos de sostenibilidad."
+
+4. **Contenido**: Publicar contenido regularmente sobre las soluciones tecnológicas sostenibles, noticias y actualizaciones sobre la empresa.
+
+5. **Marketing**: Utilizar redes sociales y SEO para aumentar la visibilidad de la empresa y atraer visitantes.

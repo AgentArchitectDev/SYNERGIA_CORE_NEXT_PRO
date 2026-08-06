@@ -1,0 +1,188 @@
+# =========================================================
+# SYNERGIA TASK ENGINE
+# COMPATIBILITY + LEGACY BUSINESS SUPPORT
+# =========================================================
+
+
+class TaskEngine:
+
+    def __init__(self):
+
+        # Cola de tareas utilizada por AI BUSINESS
+        self.tasks = []
+
+
+    # =====================================================
+    # BUSINESS TASK API
+    # =====================================================
+
+    def add_task(self, name, function):
+
+        if not callable(function):
+
+            raise TypeError(
+                f"Task '{name}' is not callable"
+            )
+
+        self.tasks.append(
+            {
+                "name": name,
+                "function": function,
+            }
+        )
+
+        print(
+            f"[TASK ADDED] {name}"
+        )
+
+
+    # =====================================================
+    # RUN QUEUED TASKS
+    # =====================================================
+
+    def run(self):
+
+        results = []
+
+        total = len(
+            self.tasks
+        )
+
+        print(
+            f"\n[TASK ENGINE] Running {total} task(s)"
+        )
+
+        for index, task in enumerate(
+            self.tasks,
+            start=1
+        ):
+
+            name = task["name"]
+
+            print(
+                f"\n[TASK {index}/{total}] {name}"
+            )
+
+            try:
+
+                result = (
+                    task["function"]()
+                )
+
+                results.append(
+                    {
+                        "name": name,
+                        "status": "success",
+                        "result": result,
+                    }
+                )
+
+                print(
+                    f"[TASK OK] {name}"
+                )
+
+            except Exception as e:
+
+                results.append(
+                    {
+                        "name": name,
+                        "status": "error",
+                        "error": str(e),
+                    }
+                )
+
+                print(
+                    f"[TASK ERROR] {name}"
+                )
+
+                print(
+                    str(e)
+                )
+
+        successful = sum(
+            1
+            for item in results
+            if item["status"] == "success"
+        )
+
+        failed = total - successful
+
+        summary = {
+            "total": total,
+            "successful": successful,
+            "failed": failed,
+            "results": results,
+        }
+
+        print(
+            "\n[TASK ENGINE FINISHED]"
+        )
+
+        print(
+            f"SUCCESS: {successful}"
+        )
+
+        print(
+            f"FAILED: {failed}"
+        )
+
+        return summary
+
+
+    # =====================================================
+    # MODERN EXECUTION API
+    # =====================================================
+
+    def execute(
+        self,
+        user_input,
+        context=None
+    ):
+
+        text = user_input.lower()
+
+        if "calcular" in text:
+
+            return self._calc(
+                user_input
+            )
+
+        if "estado" in text:
+
+            return {
+                "status": "system_ok"
+            }
+
+        return {
+            "status": "executed",
+            "task": user_input,
+            "analysis": "generic_task_handled",
+        }
+
+
+    # =====================================================
+    # CALC PLACEHOLDER
+    # =====================================================
+
+    def _calc(
+        self,
+        text
+    ):
+
+        return {
+            "type": "calc",
+            "result": "simulación de cálculo (placeholder)",
+        }
+
+
+# =========================================================
+# GLOBAL SINGLETON
+# =========================================================
+
+task_engine = TaskEngine()
+
+
+__all__ = [
+    "TaskEngine",
+    "task_engine",
+]

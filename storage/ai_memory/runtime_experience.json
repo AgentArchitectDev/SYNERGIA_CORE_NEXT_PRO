@@ -1,0 +1,17 @@
+{
+    "experiences": [
+        {
+            "id": 1,
+            "task": "WEBSITE",
+            "model": "llama3.2:3b",
+            "status": "SUCCESS",
+            "duration_seconds": 120.5,
+            "metadata": {},
+            "timestamp": "2026-08-06T16:35:35.785734"
+        }
+    ],
+    "total_executions": 1,
+    "successful": 1,
+    "failed": 0,
+    "created_at": "2026-08-06T16:35:35.785687"
+}

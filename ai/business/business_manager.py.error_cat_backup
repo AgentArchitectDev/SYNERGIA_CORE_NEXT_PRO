@@ -1,0 +1,348 @@
+cat > ai/business/business_manager.py <<'EOF'
+import json
+
+from pathlib import Path
+from datetime import datetime
+
+
+# =========================================================
+# SYNERGIA BUSINESS MANAGER
+# STAGE 6.3.13
+#
+# Autonomous Business Project Management Foundation
+# =========================================================
+
+
+print("[BUSINESS MANAGER LOADED]")
+
+
+# =========================================================
+# PATHS
+# =========================================================
+
+
+BASE_PATH = Path(
+    "ai/business"
+)
+
+
+PROJECT_REGISTRY = (
+    BASE_PATH /
+    "project_registry.json"
+)
+
+
+BUSINESS_HISTORY = (
+    BASE_PATH /
+    "business_history.json"
+)
+
+
+# =========================================================
+# INTERNAL LOADERS
+# =========================================================
+
+
+def _load_json(path, default):
+
+    if not path.exists():
+
+        return default
+
+
+    try:
+
+        with open(
+            path,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            return json.load(file)
+
+
+    except Exception:
+
+        return default
+
+
+
+# =========================================================
+# INTERNAL SAVERS
+# =========================================================
+
+
+def _save_json(path, data):
+
+    with open(
+        path,
+        "w",
+        encoding="utf-8"
+    ) as file:
+
+        json.dump(
+            data,
+            file,
+            indent=4,
+            ensure_ascii=False
+        )
+
+
+# =========================================================
+# REGISTER PROJECT
+# =========================================================
+
+
+def register_project(
+
+    project_path,
+
+    status="CREATED",
+
+    score=None
+
+):
+
+
+    registry = _load_json(
+
+        PROJECT_REGISTRY,
+
+        {
+            "projects": []
+        }
+
+    )
+
+
+    project = {
+
+        "path": str(project_path),
+
+        "status": status,
+
+        "score": score,
+
+        "created_at":
+            datetime.now()
+            .isoformat()
+
+    }
+
+
+    registry["projects"].append(
+
+        project
+
+    )
+
+
+    _save_json(
+
+        PROJECT_REGISTRY,
+
+        registry
+
+    )
+
+
+    save_history(
+
+        "PROJECT_REGISTERED",
+
+        project
+
+    )
+
+
+    print(
+
+        "[PROJECT REGISTERED]"
+
+    )
+
+
+    return project
+
+
+
+# =========================================================
+# LOAD PROJECTS
+# =========================================================
+
+
+def load_projects():
+
+
+    registry = _load_json(
+
+        PROJECT_REGISTRY,
+
+        {
+            "projects": []
+        }
+
+    )
+
+
+    return registry["projects"]
+
+
+
+# =========================================================
+# UPDATE STATUS
+# =========================================================
+
+
+def update_project_status(
+
+    project_path,
+
+    status,
+
+    score=None
+
+):
+
+
+    registry = _load_json(
+
+        PROJECT_REGISTRY,
+
+        {
+            "projects": []
+        }
+
+    )
+
+
+    updated = False
+
+
+    for project in registry["projects"]:
+
+
+        if project["path"] == str(project_path):
+
+
+            project["status"] = status
+
+            project["score"] = score
+
+            project["updated_at"] = (
+                datetime.now()
+                .isoformat()
+            )
+
+
+            updated = True
+
+
+
+    _save_json(
+
+        PROJECT_REGISTRY,
+
+        registry
+
+    )
+
+
+    save_history(
+
+        "STATUS_UPDATED",
+
+        {
+
+            "project": str(project_path),
+
+            "status": status,
+
+            "score": score
+
+        }
+
+    )
+
+
+    return updated
+
+
+
+# =========================================================
+# BUSINESS HISTORY
+# =========================================================
+
+
+def save_history(
+
+    event,
+
+    data
+
+):
+
+
+    history = _load_json(
+
+        BUSINESS_HISTORY,
+
+        {
+            "history": []
+        }
+
+    )
+
+
+    history["history"].append(
+
+        {
+
+            "event": event,
+
+            "data": data,
+
+            "timestamp":
+                datetime.now()
+                .isoformat()
+
+        }
+
+    )
+
+
+    _save_json(
+
+        BUSINESS_HISTORY,
+
+        history
+
+    )
+
+
+
+# =========================================================
+# REPORT
+# =========================================================
+
+
+def get_project_report():
+
+
+    projects = load_projects()
+
+
+    return {
+
+        "total_projects":
+            len(projects),
+
+        "projects":
+            projects,
+
+        "generated_at":
+            datetime.now()
+            .isoformat()
+
+    }
+EOF
