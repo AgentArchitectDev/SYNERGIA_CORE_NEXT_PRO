@@ -1,6 +1,8 @@
 # =========================================================
+#
 # SYNERGIA TASK ENGINE
-# COMPATIBILITY + LEGACY BUSINESS SUPPORT
+#
+# RUNTIME MEMORY INTEGRATION
 #
 # STAGE 6.3.1
 # AI RUNTIME EXECUTION HISTORY
@@ -14,13 +16,28 @@
 # STAGE 6.3.15.7.6.3
 # REAL PIPELINE OBSERVABILITY
 #
-# STAGE 6.3.15.7.7.1
-# RUNTIME MEMORY INTEGRATION
+# STAGE 6.3.15.7.7.2
+# TASK ENGINE → RUNTIME MEMORY
+# AUTOMATIC EXPERIENCE STORAGE
+#
+# STAGE 6.3.15.7.9.1
+# REAL MODEL TRACKING
+#
+# AdaptiveModelRouter
+#        ↓
+# Generator
+#        ↓
+# TaskEngine
+#        ↓
+# RuntimeMemory
+#        ↓
+# Learning Loop
+#
 # =========================================================
 
 
-from datetime import datetime
 import time
+
 
 
 from ai.runtime.execution_history import (
@@ -28,9 +45,11 @@ from ai.runtime.execution_history import (
 )
 
 
+
 from ai.runtime.progress_monitor import (
     ProgressMonitor
 )
+
 
 
 from ai.runtime.live_dashboard import (
@@ -38,8 +57,14 @@ from ai.runtime.live_dashboard import (
 )
 
 
+
+# =========================================================
+# RUNTIME MEMORY
+# =========================================================
+
+
 from ai.memory.runtime_memory import (
-    RuntimeMemory
+    runtime_memory
 )
 
 
@@ -50,7 +75,25 @@ print(
 
 
 
+print(
+    "[TASK ENGINE RUNTIME MEMORY ENABLED]"
+)
+
+
+
+print(
+    "[TASK ENGINE REAL MODEL TRACKING ENABLED]"
+)
+
+
+
+# =========================================================
+# TASK ENGINE
+# =========================================================
+
+
 class TaskEngine:
+
 
 
     def __init__(self):
@@ -60,26 +103,21 @@ class TaskEngine:
         # BUSINESS TASK QUEUE
         # =========================================
 
+
         self.tasks = []
 
 
 
         # =========================================
-        # RUNTIME OBSERVABILITY
+        # RUNTIME COMPONENTS
         # =========================================
+
 
         self.monitor = None
 
 
+
         self.dashboard = LiveDashboard()
-
-
-
-        # =========================================
-        # AI EXPERIENCE MEMORY
-        # =========================================
-
-        self.memory = RuntimeMemory()
 
 
 
@@ -89,29 +127,58 @@ class TaskEngine:
 
 
     def add_task(
+
         self,
+
         name,
-        function
+
+        function,
+
+        model=None
+
     ):
+
 
 
         if not callable(function):
 
+
             raise TypeError(
+
                 f"Task '{name}' is not callable"
+
             )
 
 
+
         self.tasks.append(
+
             {
-                "name": name,
-                "function": function,
+
+                "name":
+
+                    name,
+
+
+                "function":
+
+                    function,
+
+
+                "model":
+
+                    model
+
             }
+
         )
 
 
+
         print(
+
             f"[TASK ADDED] {name}"
+
         )
 
 
@@ -127,14 +194,23 @@ class TaskEngine:
         results = []
 
 
+
         total = len(
+
             self.tasks
+
         )
 
 
 
+        print()
+
+
+
         print(
-            f"\n[TASK ENGINE] Running {total} task(s)"
+
+            f"[TASK ENGINE] Running {total} task(s)"
+
         )
 
 
@@ -143,114 +219,264 @@ class TaskEngine:
         # CREATE MONITOR
         # =========================================
 
+
         self.monitor = ProgressMonitor(
+
             total_tasks=total
+
         )
 
 
 
         self.dashboard.attach_monitor(
+
             self.monitor
+
         )
 
 
 
+        # =========================================
+        # EXECUTION LOOP
+        # =========================================
+
+
         for index, task in enumerate(
+
             self.tasks,
+
             start=1
+
         ):
+
 
 
             name = task["name"]
 
 
-            print(
-                f"\n[TASK {index}/{total}] {name}"
+
+            requested_model = task.get(
+
+                "model",
+
+                "AUTO"
+
             )
 
 
+
+            print()
+
+
+
+            print(
+
+                f"[TASK {index}/{total}] {name}"
+
+            )
+
+
+
             start_time = time.time()
-
-
-            model_used = "AUTO"
 
 
 
             try:
 
 
+
                 self.monitor.start_task(
+
                     name,
-                    model_used
+
+                    requested_model
+
                 )
 
 
 
+                # =====================================
+                # EXECUTE GENERATOR
+                # =====================================
+
+
                 result = (
+
                     task["function"]()
+
                 )
 
 
 
                 duration = round(
+
                     time.time() - start_time,
+
                     2
+
                 )
+
+
+
+                # =====================================
+                # REAL MODEL TRACKING
+                #
+                # STAGE 6.3.15.7.9.1
+                #
+                # Capture the model returned
+                # by generators
+                # =====================================
+
+
+                real_model = requested_model
+
+
+
+                model_source = "TASK_DEFAULT"
+
+
+
+                if isinstance(result, dict):
+
+
+                    real_model = result.get(
+
+                        "model",
+
+                        requested_model
+
+                    )
+
+
+
+                    if "model" in result:
+
+
+                        model_source = (
+
+                            "GENERATOR_OUTPUT"
+
+                        )
 
 
 
                 self.monitor.complete_task(
+
                     name
+
                 )
 
+
+
+                # =====================================
+                # EXECUTION HISTORY
+                # =====================================
 
 
                 execution_history.register(
+
                     task=name,
+
                     node="MAQ2",
+
                     result="completed"
+
                 )
 
 
 
                 # =====================================
-                # SAVE EXPERIENCE MEMORY
+                # RUNTIME EXPERIENCE MEMORY
+                #
+                # REAL MODEL STORAGE
                 # =====================================
 
-                self.memory.add_experience(
+
+                runtime_memory.add_experience(
 
                     task=name,
 
-                    model=model_used,
+                    model=real_model,
 
                     status="SUCCESS",
 
                     duration_seconds=duration,
 
                     metadata={
+
+                        "result_type":
+
+                            type(result).__name__,
+
+
+                        "requested_model":
+
+                            requested_model,
+
+
+                        "real_model":
+
+                            real_model,
+
+
+                        "model_source":
+
+                            model_source,
+
+
                         "stage":
-                        "6.3.15.7.7.1",
-                        "source":
-                        "TaskEngine"
+
+                            "6.3.15.7.9.1"
+
                     }
 
                 )
-
-
-
                 results.append(
+
                     {
-                        "name": name,
-                        "status": "success",
-                        "result": result,
-                        "duration_seconds": duration
+
+                        "name":
+
+                            name,
+
+
+                        "status":
+
+                            "success",
+
+
+                        "result":
+
+                            result,
+
+
+                        "model":
+
+                            real_model,
+
+
+                        "duration_seconds":
+
+                            duration
+
                     }
+
                 )
 
 
 
                 print(
+
                     f"[TASK OK] {name}"
+
+                )
+
+
+
+                print(
+
+                    f"[REAL MODEL] {real_model}"
+
                 )
 
 
@@ -260,38 +486,63 @@ class TaskEngine:
 
 
                 duration = round(
+
                     time.time() - start_time,
+
                     2
+
                 )
 
+
+
+                # =====================================
+                # FAILED EXECUTION HISTORY
+                # =====================================
 
 
                 execution_history.register(
+
                     task=name,
+
                     node="MAQ2",
+
                     result="failed"
+
                 )
 
 
 
                 # =====================================
-                # SAVE FAILED EXPERIENCE
+                # FAILED EXPERIENCE MEMORY
                 # =====================================
 
-                self.memory.add_experience(
+
+                runtime_memory.add_experience(
 
                     task=name,
 
-                    model=model_used,
+                    model=requested_model,
 
                     status="FAILED",
 
                     duration_seconds=duration,
 
                     metadata={
-                        "error": str(e),
+
+                        "error":
+
+                            str(e),
+
+
+                        "requested_model":
+
+                            requested_model,
+
+
                         "stage":
-                        "6.3.15.7.7.1"
+
+                            "6.3.15.7.9.1"
+
                     }
 
                 )
@@ -299,25 +550,58 @@ class TaskEngine:
 
 
                 results.append(
+
                     {
-                        "name": name,
-                        "status": "error",
-                        "error": str(e),
-                        "duration_seconds": duration
+
+                        "name":
+
+                            name,
+
+
+                        "status":
+
+                            "error",
+
+
+                        "error":
+
+                            str(e),
+
+
+                        "model":
+
+                            requested_model,
+
+
+                        "duration_seconds":
+
+                            duration
+
                     }
+
                 )
 
 
 
                 print(
+
                     f"[TASK ERROR] {name}"
+
                 )
+
 
 
                 print(
+
                     str(e)
+
                 )
 
+
+
+        # =========================================
+        # EXECUTION SUMMARY
+        # =========================================
 
 
         successful = sum(
@@ -340,18 +624,22 @@ class TaskEngine:
 
 
             "total":
+
                 total,
 
 
             "successful":
+
                 successful,
 
 
             "failed":
+
                 failed,
 
 
             "results":
+
                 results,
 
 
@@ -359,14 +647,15 @@ class TaskEngine:
 
                 self.monitor.status()
 
-            if self.monitor
+                if self.monitor
 
-            else {},
+                else {},
+
 
 
             "memory":
 
-                self.memory.status()
+                runtime_memory.status()
 
         }
 
@@ -374,24 +663,53 @@ class TaskEngine:
 
         print()
 
+
+
         print(
+
             "[TASK ENGINE FINISHED]"
+
         )
 
 
+
         print(
+
             f"SUCCESS: {successful}"
+
         )
 
 
+
         print(
+
             f"FAILED: {failed}"
+
+        )
+
+
+
+        print()
+
+
+
+        print(
+
+            "[RUNTIME MEMORY STATUS]"
+
+        )
+
+
+
+        print(
+
+            runtime_memory.status()
+
         )
 
 
 
         return summary
-
 
 
 
@@ -401,9 +719,13 @@ class TaskEngine:
 
 
     def execute(
+
         self,
+
         user_input,
+
         context=None
+
     ):
 
 
@@ -415,13 +737,18 @@ class TaskEngine:
         if "calcular" in text:
 
 
+
             return {
 
-                "type":
-                "calculator",
 
-                "input":
-                user_input
+                "type":
+
+                    "calculator",
+
+
+                "message":
+
+                    "Calculation request detected"
 
             }
 
@@ -431,12 +758,17 @@ class TaskEngine:
 
 
             "type":
-            "generic",
+
+                "general",
+
 
             "input":
-            user_input,
+
+                user_input,
+
 
             "context":
-            context
+
+                context
 
         }
