@@ -1,0 +1,44 @@
+{
+  "status": "INVALID",
+  "project": "outputs/\n\ncrear_una_empresa_de_servici_20260807_165401",
+  "score": 0.0,
+  "approved": 0,
+  "total_checks": 4,
+  "checks": {
+    "website": {
+      "file": "outputs/\n\ncrear_una_empresa_de_servici_20260807_165401/website/website.txt",
+      "exists": false,
+      "has_content": false,
+      "size_bytes": 0,
+      "status": "FAILED"
+    },
+    "branding": {
+      "file": "outputs/\n\ncrear_una_empresa_de_servici_20260807_165401/branding/branding.txt",
+      "exists": false,
+      "has_content": false,
+      "size_bytes": 0,
+      "status": "FAILED"
+    },
+    "social": {
+      "file": "outputs/\n\ncrear_una_empresa_de_servici_20260807_165401/social/social.txt",
+      "exists": false,
+      "has_content": false,
+      "size_bytes": 0,
+      "status": "FAILED"
+    },
+    "docs": {
+      "file": "outputs/\n\ncrear_una_empresa_de_servici_20260807_165401/docs/docs.txt",
+      "exists": false,
+      "has_content": false,
+      "size_bytes": 0,
+      "status": "FAILED"
+    }
+  },
+  "errors": [
+    "website: required file not found",
+    "branding: required file not found",
+    "social: required file not found",
+    "docs: required file not found"
+  ],
+  "validated_at": "2026-08-07T16:54:01.466679"
+}

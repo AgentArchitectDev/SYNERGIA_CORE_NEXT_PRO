@@ -1,0 +1,39 @@
+{
+  "status": "VALID",
+  "project": "outputs/\n\ncrear_una_empresa_de_servici_20260807_145237",
+  "score": 100.0,
+  "approved": 4,
+  "total_checks": 4,
+  "checks": {
+    "website": {
+      "file": "outputs/\n\ncrear_una_empresa_de_servici_20260807_145237/website/website.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3197,
+      "status": "OK"
+    },
+    "branding": {
+      "file": "outputs/\n\ncrear_una_empresa_de_servici_20260807_145237/branding/branding.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 4784,
+      "status": "OK"
+    },
+    "social": {
+      "file": "outputs/\n\ncrear_una_empresa_de_servici_20260807_145237/social/social.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3927,
+      "status": "OK"
+    },
+    "docs": {
+      "file": "outputs/\n\ncrear_una_empresa_de_servici_20260807_145237/docs/docs.txt",
+      "exists": true,
+      "has_content": true,
+      "size_bytes": 3429,
+      "status": "OK"
+    }
+  },
+  "errors": [],
+  "validated_at": "2026-08-07T15:10:48.663788"
+}

@@ -96,7 +96,7 @@ class TaskEngine:
 
 
 
-    def __init__(self, adaptive_router=None):
+    def __init__(self):
 
 
         # =========================================
@@ -119,92 +119,7 @@ class TaskEngine:
 
         self.dashboard = LiveDashboard()
 
-        # =========================================
-        # ADAPTIVE MODEL ROUTER
-        # =========================================
 
-        self.adaptive_router = adaptive_router
-
-        # =========================================
-        # ADAPTIVE MODEL TRACKING
-        # =========================================
-
-        self.last_selected_model = None
-
-        self.last_model_source = None
-
-    # =====================================================
-    # ADAPTIVE MODEL RESOLUTION
-    #
-    # STAGE 6.3.15.7.10.6
-    #
-    # TaskEngine -> AdaptiveModelRouter
-    # =====================================================
-
-    def resolve_model(
-        self,
-        task,
-        requested_model=None
-    ):
-
-        if requested_model is None:
-            requested_model = "AUTO"
-
-
-        # =========================================
-        # MANUAL MODEL
-        # =========================================
-
-        if requested_model != "AUTO":
-
-            if self.adaptive_router:
-
-                selected_model = (
-                    self.adaptive_router.select_model(
-                        task,
-                        requested_model
-                    )
-                )
-
-                return (
-                    selected_model,
-                    "MANUAL"
-                )
-
-            return (
-                requested_model,
-                "TASK_REQUEST"
-            )
-
-
-        # =========================================
-        # AUTO MODEL
-        # =========================================
-
-        if self.adaptive_router:
-
-            selected_model = (
-                self.adaptive_router.select_model(
-                    task
-                )
-            )
-
-            if selected_model:
-
-                return (
-                    selected_model,
-                    "ADAPTIVE_ROUTER"
-                )
-
-
-        # =========================================
-        # SAFE FALLBACK
-        # =========================================
-
-        return (
-            "llama3.2:1b",
-            "FALLBACK"
-        )
 
     # =====================================================
     # ADD TASK
@@ -801,38 +716,6 @@ class TaskEngine:
     # =====================================================
     # MODERN EXECUTION API
     # =====================================================
-
-
-    # =====================================================
-    # STATUS
-    # =====================================================
-
-    def status(self):
-
-        return {
-            "tasks": len(self.tasks),
-            "adaptive_router": self.adaptive_router is not None,
-            "last_selected_model": self.last_selected_model,
-            "last_model_source": self.last_model_source
-        }
-
-
-    # =====================================================
-    # ROUTER STATUS
-    # =====================================================
-
-    def get_router_status(self):
-
-        if self.adaptive_router is None:
-
-            return {
-                "enabled": False
-            }
-
-        return {
-            "enabled": True,
-            "status": self.adaptive_router.status()
-        }
 
 
     def execute(

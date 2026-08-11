@@ -1,29 +1,29 @@
 {
   "llama3.2:3b": {
-    "score": 100.21,
-    "uses": 28,
-    "success": 28,
+    "score": 100.2,
+    "uses": 32,
+    "success": 32,
     "failures": 0,
-    "total_time": 4032.79,
-    "avg_time": 144.03,
-    "last_execution": "2026-08-06T16:17:25.244782"
+    "total_time": 4856.28,
+    "avg_time": 151.76,
+    "last_execution": "2026-08-07T15:55:29.846160"
   },
   "gemma3:4b": {
-    "score": 100.11,
-    "uses": 13,
-    "success": 13,
+    "score": 100.1,
+    "uses": 15,
+    "success": 15,
     "failures": 0,
-    "total_time": 3547.0899999999997,
-    "avg_time": 272.85,
-    "last_execution": "2026-08-06T16:15:19.898716"
+    "total_time": 4291.83,
+    "avg_time": 286.12,
+    "last_execution": "2026-08-07T15:52:02.761791"
   },
   "mistral:latest": {
     "score": 100.09,
-    "uses": 13,
-    "success": 13,
+    "uses": 15,
+    "success": 15,
     "failures": 0,
-    "total_time": 4399.400000000001,
-    "avg_time": 338.42,
-    "last_execution": "2026-08-06T16:20:53.020702"
+    "total_time": 5132.300000000001,
+    "avg_time": 342.15,
+    "last_execution": "2026-08-07T16:02:05.510476"
   }
 }
