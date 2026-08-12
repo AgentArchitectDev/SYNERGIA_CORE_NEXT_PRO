@@ -1,0 +1,55 @@
+# SECURITY INVENTORY S5.3 -> S5.19
+
+## VALIDATED SECURITY STAGES
+
+S5.3
+S5.4
+S5.5
+S5.6
+S5.7
+S5.8
+S5.9
+S5.10
+S5.11
+S5.12
+S5.13
+S5.14
+S5.15
+S5.16
+S5.17
+S5.18
+S5.19
+
+## S5.19
+
+S5.19 — SECURITY CONTROL STATE REINSTANTIATION CONSISTENCY
+
+### S5.19-A
+
+POSITIVE VALIDATION = PASS
+
+### S5.19-B
+
+CONTROLLED NEGATIVE TEST = PASS
+
+### S5.19 FINAL
+
+S5.19-A = PASS
+S5.19-B = PASS
+S5.19 = VALIDATED
+
+NEXT:
+
+S5.20
+
+## S5.20 — SECURITY CONTROL STATE RELOAD CONSISTENCY
+
+### S5.20-A
+PASS — Real security core reload preserved canonical security authority and state.
+
+### S5.20-B
+PASS — Controlled reload tamper was detected and rejected.
+
+### S5.20
+VALIDATED
+

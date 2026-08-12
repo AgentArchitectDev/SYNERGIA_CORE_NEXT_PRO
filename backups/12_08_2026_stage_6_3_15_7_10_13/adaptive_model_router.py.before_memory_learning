@@ -333,24 +333,6 @@ class AdaptiveModelRouter:
         task_type
     ):
 
-        """
-        STAGE 6.3.15.7.10.13
-
-        Obtiene una recomendacion de modelo
-        a partir de experiencias reales almacenadas
-        en RuntimeMemory.
-
-        Reglas:
-
-        - Solo considera SUCCESS.
-        - Ignora experiencias sin modelo.
-        - Ignora duraciones <= 0 como evidencia
-          de rendimiento.
-        - Requiere evidencia valida.
-        - Prioriza confiabilidad, frecuencia y velocidad.
-        - No modifica RuntimeMemory.
-        """
-
         if not self.runtime_memory:
 
             return None
@@ -358,172 +340,22 @@ class AdaptiveModelRouter:
 
         try:
 
-            experiences = (
-                self.runtime_memory.get_experiences()
+            data = self.runtime_memory.get(
+                "preferred_models"
             )
 
 
-            if not experiences:
+            if not data:
 
                 return None
 
 
-            candidates = {}
-
-
-            for item in experiences:
-
-                if item.get("status") != "SUCCESS":
-
-                    continue
-
-
-                model = item.get("model")
-
-                if not model:
-
-                    continue
-
-
-                if model not in self.models:
-
-                    continue
-
-
-                item_task_type = self.detect_task_type(
-                    item.get("task", "")
-                )
-
-
-                if item_task_type != task_type:
-
-                    continue
-
-
-                duration = item.get(
-                    "duration_seconds",
-                    0
-                )
-
-
-                if duration <= 0:
-
-                    continue
-
-
-                if model not in candidates:
-
-                    candidates[model] = []
-
-                candidates[model].append(
-                    duration
-                )
-
-
-            if not candidates:
-
-                return None
-
-
-            ranking = []
-
-
-            for model, durations in candidates.items():
-
-                uses = len(durations)
-
-
-                average_time = (
-                    sum(durations)
-                    / uses
-                )
-
-
-                profile = self.models.get(
-                    model
-                )
-
-
-                if profile is None:
-
-                    continue
-
-
-                score = 0.0
-
-
-                # Confiabilidad / evidencia.
-                score += min(
-                    uses,
-                    10
-                ) * 10
-
-
-                # Velocidad.
-                score += (
-                    1000.0
-                    /
-                    max(
-                        average_time,
-                        1.0
-                    )
-                )
-
-
-                # Prioridad configurada.
-                score += profile.priority
-
-
-                # Penalizacion ligera por
-                # requerimiento de memoria.
-                score -= (
-                    profile.memory_required
-                    * 0.25
-                )
-
-
-                ranking.append(
-                    (
-                        score,
-                        model,
-                        uses,
-                        average_time
-                    )
-                )
-
-
-            if not ranking:
-
-                return None
-
-
-            ranking.sort(
-                key=lambda item: item[0],
-                reverse=True
+            return data.get(
+                task_type
             )
 
 
-            selected = ranking[0]
-
-
-            logger.info(
-                "Runtime Memory recommendation -> "
-                f"{selected[1]} "
-                f"[task_type={task_type}, "
-                f"uses={selected[2]}, "
-                f"avg={selected[3]:.2f}s]"
-            )
-
-
-            return selected[1]
-
-
-        except Exception as exc:
-
-            logger.warning(
-                "Runtime Memory recommendation "
-                f"failed: {exc}"
-            )
+        except Exception:
 
             return None
 
