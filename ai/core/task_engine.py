@@ -166,6 +166,8 @@ class TaskEngine:
                     )
                 )
 
+                self.last_selected_model = selected_model
+                self.last_model_source = "MANUAL"
                 return (
                     selected_model,
                     "MANUAL"
@@ -190,6 +192,9 @@ class TaskEngine:
             )
 
             if selected_model:
+
+                self.last_selected_model = selected_model
+                self.last_model_source = "ADAPTIVE_ROUTER"
 
                 return (
                     selected_model,

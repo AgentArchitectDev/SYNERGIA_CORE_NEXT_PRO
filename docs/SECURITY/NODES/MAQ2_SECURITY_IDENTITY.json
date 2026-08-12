@@ -1,0 +1,15 @@
+{
+  "stage": "6.3.15.7.11.3-S5.5-B",
+  "node_role": "AUTHORIZED_SYNERGIA_NODE",
+  "node": "gerardoalbertobergoglio-H510M-S2H",
+  "authority": "HUMAN_ADMINISTRATOR",
+  "direction": "ADMIN_TO_SYNERGIA_ONLY",
+  "autonomous_security_authority": "ZERO",
+  "secret_backdoor": false,
+  "autonomous_access": false,
+  "security_specification": "docs/SECURITY/SOVEREIGN_SECURITY_SPEC.md",
+  "security_specification_sha256": "9dfedcef3959358c146d964ddb36c32aebe085cf32b74c3a7c9ca88b49d1984e",
+  "platform": "Linux",
+  "python": "3.12.3",
+  "status": "VALIDATED"
+}
