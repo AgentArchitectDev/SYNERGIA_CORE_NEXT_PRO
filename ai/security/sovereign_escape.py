@@ -68,6 +68,31 @@ class SovereignEscape:
             "reason": self.reason
         }
 
+    def reset(
+        self,
+        administrator_authorized=False
+    ):
+
+        if administrator_authorized is not True:
+
+            return {
+                "status": "BLOCKED",
+                "activated": True,
+                "reason":
+                    "ADMINISTRATOR_AUTHORIZATION_REQUIRED"
+            }
+
+        self.active = False
+        self.reason = None
+
+        return {
+            "status": "RESET",
+            "activated": False,
+            "authority": self.AUTHORITY,
+            "direction": self.DIRECTION
+        }
+
+
     def status(self):
 
         return {
