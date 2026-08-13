@@ -411,10 +411,115 @@
                 "stage": "6.3.15.7.10.6"
             },
             "timestamp": "2026-08-12T18:34:40.141454"
+        },
+        {
+            "id": 36,
+            "task": "STAGE_6_3_15_7_10_40_PERSISTENCE_TEST",
+            "model": "llama3.2:1b",
+            "status": "SUCCESS",
+            "duration_seconds": 0.01,
+            "metadata": {
+                "stage": "6.3.15.7.10.40",
+                "test": "persistent_runtime_memory_loop",
+                "requested_model": "llama3.2:1b",
+                "real_model": "llama3.2:1b",
+                "model_source": "adaptive_router"
+            },
+            "timestamp": "2026-08-12T19:20:20.818727"
+        },
+        {
+            "id": 37,
+            "task": "STAGE_6_3_15_7_10_40_PERSISTENCE_TEST",
+            "model": "llama3.2:1b",
+            "status": "SUCCESS",
+            "duration_seconds": 0.01,
+            "metadata": {
+                "stage": "6.3.15.7.10.40",
+                "test": "persistent_runtime_memory_loop",
+                "requested_model": "llama3.2:1b",
+                "real_model": "llama3.2:1b",
+                "model_source": "adaptive_router"
+            },
+            "timestamp": "2026-08-12T19:20:57.448673"
+        },
+        {
+            "id": 38,
+            "task": "STAGE_6_3_15_7_10_42_DECISION_TEST",
+            "model": "llama3.2:1b",
+            "status": "SUCCESS",
+            "duration_seconds": 0.01,
+            "metadata": {
+                "stage": "6.3.15.7.10.42",
+                "test": "memory_influenced_decision"
+            },
+            "timestamp": "2026-08-12T19:22:25.455886"
+        },
+        {
+            "id": 39,
+            "task": "STAGE_6_3_15_7_10_42_DECISION_TEST",
+            "model": "llama3.2:1b",
+            "status": "SUCCESS",
+            "duration_seconds": 0.01,
+            "metadata": {
+                "stage": "6.3.15.7.10.42",
+                "test": "memory_influenced_decision"
+            },
+            "timestamp": "2026-08-12T19:22:51.625976"
+        },
+        {
+            "id": 40,
+            "task": "STAGE_6_3_15_7_10_45_MEMORY_BRIDGE_TEST",
+            "model": "llama3.2:1b",
+            "status": "SUCCESS",
+            "duration_seconds": 0.01,
+            "metadata": {
+                "stage": "6.3.15.7.10.45",
+                "test": "memory_task_type_bridge"
+            },
+            "timestamp": "2026-08-13T13:58:30.806196"
+        },
+        {
+            "id": 41,
+            "task": "STAGE_6_3_15_7_10_46",
+            "model": "llama3.2:1b",
+            "status": "SUCCESS",
+            "duration_seconds": 5.0,
+            "metadata": {
+                "stage": "6.3.15.7.10.46",
+                "test": "competitive_routing",
+                "model_role": "slow"
+            },
+            "timestamp": "2026-08-13T13:59:46.453202"
+        },
+        {
+            "id": 42,
+            "task": "STAGE_6_3_15_7_10_46",
+            "model": "llama3.2:3b",
+            "status": "SUCCESS",
+            "duration_seconds": 0.01,
+            "metadata": {
+                "stage": "6.3.15.7.10.46",
+                "test": "competitive_routing",
+                "model_role": "fast"
+            },
+            "timestamp": "2026-08-13T13:59:46.453614"
+        },
+        {
+            "id": 43,
+            "task": "python STAGE_6_3_15_7_10_42_FINAL",
+            "model": "qwen2.5-coder:7b",
+            "status": "SUCCESS",
+            "duration_seconds": 0.01,
+            "metadata": {
+                "stage": "6.3.15.7.10.42",
+                "test": "memory_influenced_decision_final",
+                "model_source": "historical_experience"
+            },
+            "timestamp": "2026-08-13T14:03:17.380486"
         }
     ],
-    "total_executions": 35,
-    "successful": 27,
+    "total_executions": 43,
+    "successful": 35,
     "failed": 8,
     "created_at": "2026-08-06T16:35:35.785687"
 }
