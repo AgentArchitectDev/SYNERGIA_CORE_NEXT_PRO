@@ -1,70 +1,166 @@
 # SYNERGIA_CORE_NEXT_PRO
 
+# 🧠 MASTER INDEX
+
 AI Business Operating System
 
 ---
 
-# Índice General
+# 📚 00 — MASTER
 
-## Sistemas Base
+## Visión General
+
+- [[19_SYNERGIA_OVERVIEW]]
+
+---
+
+# 🏗️ 01 — ARCHITECTURE
+
+## Sistemas principales
 
 - [[00_BACKEND_SYSTEM]]
-- [[01_AI_SYSTEM]]
-- [[02_BLOCK_SYSTEM]]
-- [[03_RENDER_ENGINE]]
-- [[04_VISUAL_EDITOR]]
-- [[05_TEMPLATE_ENGINE]]
-- [[06_STORAGE_SYSTEM]]
-- [[07_PROJECT_SYSTEM]]
 - [[08_CORE_SYSTEM]]
-- [[09_FRONTEND_SYSTEM]]
+
+---
+
+# 🤖 02 — AI SYSTEM
+
+## Inteligencia Artificial
+
+- [[🤖 01 — AI]]
 - [[10_AI_MODELS]]
 
 ---
 
-# Arquitectura Avanzada
+# 🎨 03 — RENDER ENGINE
 
-- [[15_VISUAL_GRAPH_SYSTEM]]
-- [[16_GRAPH_STRUCTURE]]
-- [[17_SYSTEM_RELATIONS]]
-- [[18_FUTURE_VISUALIZATION]]
+- [[03_RENDER_ENGINE]]
 
 ---
 
-# Sistema Tipo Operativo
+# 🖥️ 04 — VISUAL EDITOR
 
-- [[24_OPERATING_SYSTEM_LEVEL]]
-- [[25_SYSTEM_CONCEPT]]
-- [[26_SYSTEM_LAYERS]]
+- [[04_VISUAL_EDITOR]]
 
 ---
 
-# Engines Futuros
+# 🧩 05 — BLOCK SYSTEM
 
-- [[27_FUTURE_SYSTEM]]
-- [[28_CONTENT_PUBLICATION_ENGINE]]
+- [[02_BLOCK_SYSTEM]]
+
+---
+
+# 📄 06 — TEMPLATE SYSTEM
+
+- [[05_TEMPLATE_ENGINE]]
+
+---
+
+# 💾 07 — STORAGE SYSTEM
+
+- [[06_STORAGE_SYSTEM]]
+
+---
+
+# 🏢 08 — BUSINESS ENGINE
+
+## Business Intelligence
+
+- [[11_BUSINESS_HISTORY_ENGINE]]
 - [[29_BUSINESS_PLANNER_ENGINE]]
 
 ---
 
-# Conceptos Globales
+# 📱 09 — SOCIAL ENGINE
 
-- [[19_SYNERGIA_OVERVIEW]]
-- [[30_POWERFUL_IDEAS_SYNERGIA]]
+- [[SOCIAL_AUTOMATION_ENGINE]]
 
 ---
 
-# Estado del Proyecto
+# 🕸️ 10 — GRAPH SYSTEM
 
-SYNERGIA_CORE_NEXT_PRO actualmente funciona como:
+## Arquitectura visual y conocimiento
 
-- AI Orchestrator
-- Visual CMS
-- Dynamic Render Engine
-- Template Ecosystem
-- Business Automation Platform
-- AI Documentation System
+- [[15_VISUAL_GRAPH_SYSTEM]]
+- [[20_OBSIDIAN_WIKI_SYSTEM]]
 
-con evolución futura hacia:
+---
 
-AI Business Operating System.
+# 🚀 11 — FUTURE
+
+- [[27_FUTURE_SYSTEM]]
+
+---
+
+# 🖥️ 12 — MAQ SYSTEM
+
+## Infraestructura distribuida
+
+- [[MAQ docs]]
+
+---
+
+# 🧠 ARQUITECTURA GLOBAL
+
+SYNERGIA_CORE_NEXT_PRO integra:
+
+- AI
+- Backend
+- Core
+- Block System
+- Render Engine
+- Visual Editor
+- Template Engine
+- Storage
+- Business Engine
+- Social Automation
+- Graph System
+- Knowledge System
+- MAQ Infrastructure
+
+---
+
+# 🔄 FLUJO PRINCIPAL
+
+Usuario
+→ Backend
+→ AI System
+→ Business / Core
+→ Block System
+→ Template Engine
+→ Render Engine
+→ Visual Editor / Output
+
+---
+
+# 🌐 VISIÓN
+
+SYNERGIA_CORE_NEXT_PRO evoluciona hacia:
+
+**AI Business Operating System**
+
+integrando:
+
+- Inteligencia Artificial
+- CMS
+- Business Automation
+- Social Automation
+- Visual Rendering
+- Documentation
+- Knowledge Graph
+- Distributed Infrastructure
+- SaaS
+
+---
+
+# 📌 ESTADO DOCUMENTAL
+
+Este README representa únicamente los sistemas y documentos
+existentes actualmente dentro del Vault.
+
+Los conceptos históricos o futuros que no poseen un documento
+independiente se mantienen documentados dentro de:
+
+- [[19_SYNERGIA_OVERVIEW]]
+- [[27_FUTURE_SYSTEM]]
+- [[20_OBSIDIAN_WIKI_SYSTEM]]

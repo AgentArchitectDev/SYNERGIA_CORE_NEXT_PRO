@@ -299,7 +299,7 @@ outputs HTML reales
 y continúa evolucionando hacia una plataforma empresarial integral impulsada por Inteligencia Artificial.
 # Relacionado con
 
-[[01_AI_SYSTEM]]
+[[🤖 01 — AI]]
 [[00_BACKEND_SYSTEM]]
 [[03_RENDER_ENGINE]]
 [[04_VISUAL_EDITOR]]
