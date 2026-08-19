@@ -1,4 +1,4 @@
-🧠 BUSINESS HISTORY ENGINE
+# 🧠 BUSINESS HISTORY ENGINE
 
 SYNERGIA podría registrar y reconstruir:
 

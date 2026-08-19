@@ -1,4 +1,4 @@
-SYNERGIA_CORE_NEXT_PRO — AI Business Operating System
+# SYNERGIA_CORE_NEXT_PRO — AI Business Operating System
 
 SYNERGIA_CORE_NEXT_PRO es una nueva generación de plataforma modular impulsada por Inteligencia Artificial diseñada para funcionar como un ecosistema integral de automatización, generación de software, gestión visual, renderizado dinámico y operación empresarial asistida por IA.
 
