@@ -1,6 +1,7 @@
 properties:
-  file.name:SYNERGIA_CORE_NEXT_PRO
+  file.name:
     displayName: Indice Carpetas
+
 views:
   - type: table
     name: Tabla
