@@ -4,20 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d3b9c5c3e2bba596",
+        "id": "05d5bf78614dfc20",
         "type": "tabs",
         "children": [
           {
-            "id": "a6323b9a554f4534",
+            "id": "95ca052b183dd5f6",
             "type": "leaf",
             "state": {
-              "type": "bases",
-              "state": {
-                "file": "Sin título.base",
-                "viewName": "Tabla"
-              },
-              "icon": "lucide-table",
-              "title": "Sin título"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -40,7 +37,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -182,17 +181,22 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "a6323b9a554f4534",
+  "active": "95ca052b183dd5f6",
   "lastOpenFiles": [
+    "02_AI_SYETEM/🤖 01 — AI.md",
+    "12_MAQ_SYSTEM/MAQ docs.md",
     "02_AI_SYETEM/10_AI_MODELS.md",
+    "12_MAQ_SYSTEM/A12 — RECONCILIACION IA MAQ2.md",
+    "SYNERGIA — INDICE GENERAL.base",
+    "2026-08-19.md",
+    "Sin título.canvas",
+    "01_ARCHITECTURE/00_BACKEND_SYSTEM.md",
+    "00_MASTER/19_SYNERGIA_OVERVIEW.md",
     "Sin título.base",
     "05_BLOCK_SYSTEM/02_BLOCK_SYSTEM.md",
-    "00_MASTER/19_SYNERGIA_OVERVIEW.md",
     "08_BUSINESS_ENGINE/11_BUSINESS_HISTORY_ENGINE.md",
     "03_RENDER_ENGINE/03_RENDER_ENGINE.md",
-    "02_AI_SYETEM/🤖 01 — AI.md",
     "09_SOCIAL_ENGINE/SOCIAL_AUTOMATION_ENGINE.md",
-    "12_MAQ_SYSTEM/MAQ docs.md",
     "11_FUTURE/27_FUTURE_SYSTEM.md",
     "10_GRAPH_SYSTEN/20_OBSIDIAN_WIKI_SYSTEM.md",
     "10_GRAPH_SYSTEN/15_VISUAL_GRAPH_SYSTEM.md",
@@ -201,7 +205,6 @@
     "06_TEMPLATES/05_TEMPLATE_ENGINE.md",
     "04_EDITOR/04_VISUAL_EDITOR.md",
     "01_ARCHITECTURE/08_CORE_SYSTEM.md",
-    "01_ARCHITECTURE/00_BACKEND_SYSTEM.md",
     "00_MASTER/README.md",
     "00_MASTER.md",
     "00_MASTER",
@@ -212,7 +215,6 @@
     "10_GRAPH_SYSTEN",
     "09_SOCIAL_ENGINE",
     "08_BUSINESS_ENGINE",
-    "07_STORAGE",
-    "06_TEMPLATES"
+    "07_STORAGE"
   ]
 }

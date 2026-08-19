@@ -1,7 +1,6 @@
 properties:
   file.name:
     displayName: Indice Carpetas
-
 views:
   - type: table
     name: Tabla
