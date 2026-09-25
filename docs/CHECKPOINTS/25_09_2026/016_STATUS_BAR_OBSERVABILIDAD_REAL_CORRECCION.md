@@ -220,3 +220,46 @@ ModuleRegistry desde CommandCenterPage.
 No demuestra todavía persistencia dinámica ni recarga automática desde
 modules.json.
 
+
+---
+
+## CORRECCIÓN Y PRUEBA POST-CORRECCIÓN — RECARGA DINÁMICA
+
+Fecha: 25_09_2026
+
+Se corrigió `refresh_module_statistics()` para ejecutar `ModuleRegistry.reload()` antes de obtener las estadísticas.
+
+Corrección aplicada:
+
+```python
+def refresh_module_statistics(self):
+    self.module_registry.reload()
+    self.module_statistics = self.module_registry.statistics()
+```
+
+Compilación:
+
+```text
+COMMAND CENTER COMPILE OK
+```
+
+Prueba externa posterior a la corrección:
+
+```text
+ARCHIVO EXTERNO CAMBIADO: online -> standby
+[ModuleRegistry] 19 modules loaded.
+REFRESH SIN RELOAD MANUAL: 10 9
+ARCHIVO RESTAURADO: OK
+[ModuleRegistry] 19 modules loaded.
+ESTADO FINAL: 11 8
+```
+
+Resultado:
+
+**PRUEBA POST-CORRECCIÓN: APROBADA**
+
+El cambio externo en `modules.json` fue detectado mediante `refresh_module_statistics()` sin invocar manualmente `reload()`.
+
+El archivo persistente fue restaurado y el estado final volvió a `ONLINE 11 / STANDBY 8`.
+
+No se modificaron mecanismos de seguridad, autorización ni ejecución.
