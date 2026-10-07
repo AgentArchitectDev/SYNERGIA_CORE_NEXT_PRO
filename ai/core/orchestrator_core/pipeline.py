@@ -58,7 +58,19 @@ class Pipeline:
 
             input_text,
 
-            plan
+            plan,
+
+            execution_envelope=getattr(
+                context,
+                "execution_envelope",
+                None,
+            ),
+
+            execution_grant=getattr(
+                context,
+                "execution_grant",
+                None,
+            ),
 
         )
 
@@ -75,7 +87,13 @@ class Pipeline:
 
             context.results = results
 
-            context.status = "completed"
+            blocked = any(
+                isinstance(result, dict)
+                and result.get("status") in {"BLOCKED", "error"}
+                for result in results
+            )
+
+            context.status = "blocked" if blocked else "completed"
 
 
             return context
@@ -89,7 +107,13 @@ class Pipeline:
 
             context["results"] = results
 
-            context["status"] = "completed"
+            blocked = any(
+                isinstance(result, dict)
+                and result.get("status") in {"BLOCKED", "error"}
+                for result in results
+            )
+
+            context["status"] = "blocked" if blocked else "completed"
 
 
             return context

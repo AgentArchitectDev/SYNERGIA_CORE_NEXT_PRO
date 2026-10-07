@@ -68,6 +68,44 @@ from ai.memory.runtime_memory import (
 )
 
 
+# =========================================================
+# EXECUTION SECURITY
+# SECURITY-17.5
+# =========================================================
+
+from ai.security.execution_security_gate import (
+    ExecutionSecurityGate
+)
+
+from ai.decision_validation.execution_envelope import (
+    ExecutionEnvelope
+)
+
+from ai.decision_validation.execution_grant import (
+    ExecutionGrant
+)
+
+from ai.security.last_mile_gate import (
+    LastMileGate
+)
+
+from ai.security.emergency_stop import (
+    emergency_stop
+)
+
+from ai.security.autonomy_off import (
+    autonomy_off
+)
+
+from ai.security.master_lock import (
+    master_security_lock
+)
+
+from ai.security.sovereign_escape import (
+    sovereign_escape
+)
+
+
 
 print(
     "[TASK ENGINE LOADED]"
@@ -132,6 +170,27 @@ class TaskEngine:
         self.last_selected_model = None
 
         self.last_model_source = None
+
+        # =========================================
+        # EXECUTION SECURITY GATE
+        # SECURITY-17.5
+        #
+        # Central execution interception point.
+        # FAIL-CLOSED.
+        # =========================================
+
+        self.execution_security_gate = (
+            ExecutionSecurityGate(
+                emergency_stop=emergency_stop,
+                autonomy_off=autonomy_off,
+                master_security_lock=master_security_lock,
+                sovereign_escape=sovereign_escape,
+            )
+        )
+
+        self.last_mile_gate = LastMileGate(
+            security_gate=self.execution_security_gate
+        )
 
     # =====================================================
     # ADAPTIVE MODEL RESOLUTION
@@ -278,7 +337,11 @@ class TaskEngine:
     # =====================================================
 
 
-    def run(self):
+    def run(
+        self,
+        execution_envelope=None,
+        execution_grant=None,
+    ):
 
 
         results = []
@@ -386,13 +449,279 @@ class TaskEngine:
 
 
                 # =====================================
-                # EXECUTE GENERATOR
+                # SECURITY-17.5
+                # EXECUTION SECURITY GATE
+                #
+                # TODA EJECUCION DE GENERATOR DEBE
+                # PASAR POR ESTE GATE.
+                #
+                # FAIL-CLOSED:
+                # si no existe autorizacion explicita,
+                # la funcion NO se ejecuta.
                 # =====================================
 
+                security_decision = (
+                    self.execution_security_gate.check_execution(
+                        execution_name=name
+                    )
+                )
+
+                print()
+                print(
+                    "[SECURITY-17.5] SECURITY DECISION:"
+                )
+                print(
+                    security_decision
+                )
+
+                if not security_decision.get(
+                    "authorized",
+                    False
+                ):
+
+                    print()
+                    print(
+                        f"[SECURITY-17.5] BLOCKED: {name}"
+                    )
+
+                    duration = round(
+                        time.time() - start_time,
+                        2
+                    )
+
+                    result = {
+                        "status": "BLOCKED",
+                        "authorized": False,
+                        "security": security_decision,
+                        "execution": name,
+                    }
+
+                    # =================================
+                    # REGISTER SECURITY BLOCK
+                    # =================================
+
+                    try:
+
+                        execution_history.register(
+                            task=name,
+                            node="MAQ2",
+                            result="SECURITY_BLOCKED",
+                            model=requested_model,
+                        )
+
+                    except Exception:
+
+                        pass
+
+                    # =================================
+                    # SECURITY-17.5.5
+                    # RUNTIME MEMORY SECURITY EVENT
+                    #
+                    # IMPORTANTE:
+                    # SECURITY_BLOCKED NO ES FAILED.
+                    #
+                    # El Gate impidio la ejecucion
+                    # antes de llamar a la funcion.
+                    # =================================
+
+                    try:
+
+                        runtime_memory.add_experience(
+
+                            task=name,
+
+                            model=requested_model,
+
+                            status="SECURITY_BLOCKED",
+
+                            duration_seconds=duration,
+
+                            metadata={
+
+                                "security":
+                                    True,
+
+                                "security_status":
+                                    "BLOCKED",
+
+                                "security_reason":
+                                    security_decision.get(
+                                        "reason"
+                                    ),
+
+                                "authorized":
+                                    security_decision.get(
+                                        "authorized",
+                                        False
+                                    ),
+
+                                "execution":
+                                    name,
+
+                                "requested_model":
+                                    requested_model,
+
+                                "stage":
+                                    "6.3.15.7.9.1",
+
+                                "security_blocked_memory":
+                                    True,
+                            }
+                        )
+
+                    except Exception as memory_error:
+
+                        print()
+
+                        print(
+                            "[SECURITY-17.5.5] "
+                            "RUNTIME MEMORY ERROR:"
+                        )
+
+                        print(
+                            memory_error
+                        )
+
+                    continue
+
+                # =====================================
+                # EXECUTE GENERATOR
+                # SECURITY-17.5 AUTHORIZED
+                # =====================================
+
+                print()
+                print(
+                    f"[SECURITY-17.5] SECURITY CONTROLS ALLOWED: {name}"
+                )
+
+                # =====================================
+                # SECURITY-17.5 / LAST MILE ENFORCEMENT
+                #
+                # Formal execution requires:
+                # ExecutionEnvelope + ExecutionGrant
+                # + LastMileGate == EXECUTABLE.
+                #
+                # No authorization is fabricated here.
+                # Missing formal authorization FAILS CLOSED.
+                # =====================================
+
+                if not isinstance(
+                    execution_envelope,
+                    ExecutionEnvelope
+                ):
+
+                    last_mile_decision = {
+                        "status": "BLOCKED",
+                        "execution": name,
+                        "authorized": False,
+                        "fail_closed": True,
+                        "reason": "EXECUTION_ENVELOPE_MISSING_OR_INVALID",
+                        "runtime_execution": False,
+                    }
+
+                elif not isinstance(
+                    execution_grant,
+                    ExecutionGrant
+                ):
+
+                    last_mile_decision = {
+                        "status": "BLOCKED",
+                        "execution": name,
+                        "authorized": False,
+                        "fail_closed": True,
+                        "reason": "EXECUTION_GRANT_MISSING_OR_INVALID",
+                        "runtime_execution": False,
+                    }
+
+                else:
+
+                    last_mile_decision = self.last_mile_gate.check(
+                        envelope=execution_envelope,
+                        execution_name=name,
+                        requested_scope=name,
+                        grant=execution_grant,
+                    )
+
+                print()
+                print(
+                    "[SECURITY-17.5] LAST MILE DECISION:"
+                )
+                print(
+                    last_mile_decision
+                )
+
+                if last_mile_decision.get("status") != "EXECUTABLE":
+
+                    print()
+                    print(
+                        f"[SECURITY-17.5] LAST MILE BLOCKED: {name}"
+                    )
+
+                    results.append({
+                        "status": "BLOCKED",
+                        "authorized": False,
+                        "security": security_decision,
+                        "last_mile": last_mile_decision,
+                        "execution": name,
+                    })
+
+                    continue
+
+                # =====================================
+                # ADAPTIVE MODEL RESOLUTION
+                #
+                # STAGE 6.3.15.7.10.16
+                #
+                # SECURITY AUTHORIZED
+                #        ↓
+                # MODEL RESOLUTION
+                #        ↓
+                # GENERATOR EXECUTION
+                # =====================================
+
+                resolved_model, resolved_source = (
+                    self.resolve_model(
+                        name,
+                        requested_model
+                    )
+                )
+
+                if isinstance(
+                    resolved_model,
+                    dict
+                ):
+
+                    execution_model = resolved_model.get(
+                        "model",
+                        "llama3.2:1b"
+                    )
+
+                else:
+
+                    execution_model = resolved_model
+
+                print(
+                    f"[TASK ENGINE MODEL] {execution_model}"
+                )
+
+                print(
+                    f"[TASK ENGINE SOURCE] {resolved_source}"
+                )
+
+                # =====================================
+                # PROPAGATE EXECUTION MODEL
+                #
+                # STAGE 6.3.15.7.10.17
+                #
+                # TaskEngine is the authoritative
+                # model resolution point.
+                # =====================================
 
                 result = (
 
-                    task["function"]()
+                    task["function"](
+                        execution_model
+                    )
 
                 )
 
@@ -469,7 +798,8 @@ class TaskEngine:
 
                     node="MAQ2",
 
-                    result="completed"
+                    result="completed",
+                    model=real_model,
 
                 )
 
@@ -547,7 +877,17 @@ class TaskEngine:
 
                         "duration_seconds":
 
-                            duration
+                            duration,
+
+
+                        "security":
+
+                            security_decision,
+
+
+                        "last_mile":
+
+                            last_mile_decision
 
                     }
 
@@ -596,7 +936,8 @@ class TaskEngine:
 
                     node="MAQ2",
 
-                    result="failed"
+                    result="failed",
+                    model=requested_model,
 
                 )
 

@@ -197,6 +197,35 @@ class ExecutionEnvelope:
 
         return True
 
+    def bind_execution_grant(self, grant) -> None:
+        """
+        Vincula explícitamente un ExecutionGrant ya emitido.
+
+        Esta operación:
+            - NO crea autorización.
+            - NO crea ExecutionGrant.
+            - NO ejecuta.
+            - NO modifica DVC.
+            - NO modifica Safety.
+            - NO modifica Security.
+
+        Requiere que el Grant sea válido para este Envelope.
+        """
+        from ai.decision_validation.execution_grant import ExecutionGrant
+
+        if not isinstance(grant, ExecutionGrant):
+            raise TypeError("EXECUTION_GRANT_INVALID")
+
+        if not grant.valid(self):
+            raise ValueError("EXECUTION_GRANT_NOT_VALID_FOR_ENVELOPE")
+
+        self.authorization_status = "GRANTED"
+        self.authorization_id = grant.authorization_id
+        self.execution_grant = True
+        self.expires_at = grant.expires_at
+        self.revocation_state = grant.revocation_state
+        self.seal()
+
     def authorization_granted(self) -> bool:
         """
         Determina si existe autorización explícita y vinculada.
@@ -285,6 +314,8 @@ class ExecutionEnvelope:
             "dvc_status": self.dvc_status,
             "safety_status": self.safety_status,
             "authorization_status": self.authorization_status,
+            "security_gate_status": self.security_gate_status,
+            "revocation_state": self.revocation_state,
             "created_at": self._normalize_datetime(self.created_at),
             "expires_at": (
                 self._normalize_datetime(self.expires_at)

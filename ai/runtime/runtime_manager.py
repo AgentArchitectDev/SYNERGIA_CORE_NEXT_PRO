@@ -109,7 +109,9 @@ class RuntimeManager:
 
     def execute(
             self,
-            input_text: str
+            input_text: str,
+            execution_envelope=None,
+            execution_grant=None,
     ):
 
 
@@ -145,7 +147,9 @@ class RuntimeManager:
         # ----------------------------
 
         result = orchestrator.run(
-            input_text
+            input_text,
+            execution_envelope=execution_envelope,
+            execution_grant=execution_grant,
         )
 
 
