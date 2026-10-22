@@ -1,5 +1,10 @@
 # SYNERGIA S.O.I.A. — Índice Maestro de Continuidad Universal
 
+SYNERGIA OS — AI New Generation
+Conocimiento — Inteligencia — Acción
+Continuidad — Verificación — Legado
+
+
 Fecha: 21 de octubre de 2026
 Versión: 1.0
 Estado: índice inicial; expediente integral pendiente.
